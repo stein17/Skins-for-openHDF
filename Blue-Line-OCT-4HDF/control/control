@@ -1,0 +1,12 @@
+Package: enigma2-plugin-skins-blue-line-oct-4hdf
+Version: 1.0
+Section: base
+OE: Enigma2 Skin
+License: open
+Priority: optional
+Architecture: all
+Maintainer: stein17
+Description: Skin Full HD for openHDF Images by stein17
+Source: http://www.hdfreaks.cc/index.php/Board/498-Skins/?s=0762a9a6f3b9ca4b6438488986f97889e504877e
+Homepage: http://www.hdfreaks.cc/
+
