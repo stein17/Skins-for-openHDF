@@ -1,7 +1,21 @@
 #!/bin/sh
-echo "                                                          "
-echo " ...Skin Blue-Line-OCT-4HDF by stein17 successful installed.  "
-echo "                                                          "
-exit 0
+if grep -qs 'getMachineBrand=Octagon' cat /tmp/boxbranding.cfg  ; then
+	echo "                                 "
+	echo "*********************************"
+	echo "Octagon Box found!"
+	echo "*********************************"
+	echo "                                 "
+	cp /tmp/octagon/*.png /usr/share/enigma2/Blue-Line-OCT-4HDF/menu	
+else
+	echo "                                 "
+	echo "*********************************"
+	echo "No Octagon Box found!"
+	echo "*********************************"
+	echo "                                 "
+       	cp /tmp/hdf/*.png /usr/share/enigma2/Blue-Line-OCT-4HDF/menu
+fi
 
+echo " Skin Blue-Line-OCT-4HDF installed "
+
+exit 0
 

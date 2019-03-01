@@ -1,8 +1,7 @@
 #!/bin/sh
-rm -rf /usr/share/enigma2/Blue-Line-OCT-4HDF
-rm -rf /usr/lib/enigma2/python/Components/Converter/BL*
-rm -rf /usr/lib/enigma2/python/Components/Renderer/BL*
-echo "                                                          "
-echo "              ...Skin successful removed.                 "
-echo "                                                          "
-
+rm -rf /usr/share/enigma2/Blue-Line-OCT-4HDF/
+echo ""
+echo ""
+echo "Skin removed! You should restart GUI now!"
+echo ""
+exit 0
