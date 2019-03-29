@@ -1,0 +1,11 @@
+Package: enigma2-plugin-skins-multibox
+Version: 1.5
+Section: base
+Priority: optional
+Architecture: all
+Maintainer: stein17
+Description: Skin Full HD by stein17
+Source: https://github.com/stein17/Skins-for-openHDF
+Homepage: https://www.hdfreaks.cc/index.php/Board/498-Skins/
+OE: Enigma2 Skin
+License: open
