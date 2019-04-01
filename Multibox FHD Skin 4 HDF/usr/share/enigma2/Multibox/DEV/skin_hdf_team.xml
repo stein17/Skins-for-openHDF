@@ -1,11 +1,11 @@
-  <skin>
+ <skin>
   <!-- HDF_DEV_TEAM_Screens_FHD  -->
   <!--######################################### -->
   
     <!-- ********** HDF TOOLBOX ********** -->
 <!-- HDF DownloadMenu FHD -->
   <screen name="Hdf_Downloader" position="0,0" size="1920,1080" title="Select your Download" backgroundColor="background" flags="wfNoBorder">
-    <widget name="downloadmenu" position="30,130" size="1160,440" itemHeight="40" font="Regular;30" scrollbarMode="showNever" transparent="1" />
+    <widget name="downloadmenu" position="30,130" size="1160,440" itemHeight="40" font="Regular;30" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
     <widget source="description2" render="Label" position="30,620" size="800,40" font="Regular;28"  transparent="0" zPosition="1" />
     <widget source="description" render="Label" position="30,680" size="800,260" font="Regular;28"  transparent="1" zPosition="1" />
     <widget source="size2" render="Label" position="595,680" size="120,40" font="Regular;28" foregroundColor="white" halign="right" backgroundColor="background" transparent="1" zPosition="1" />
@@ -212,8 +212,8 @@
   </screen>
 <!-- Software Manager FHD -->
  <!--HDF Update Plugin Menu FHD -->
-	<screen name="UpdatePluginMenu" flags="wfNoBorder" position="0,0" size="1920,1080" title="Update Plugin Menu" backgroundColor="transparent">
-	<widget name="hdfStatusPic" position="70,805" size="150,177" backgroundColor="background" transparent="1" alphatest="on" />
+<screen name="UpdatePluginMenu" flags="wfNoBorder" position="0,0" size="1920,1080" title="Update Plugin Menu" backgroundColor="transparent">
+	<widget name="hdfStatusPic" position="100,852" size="150,177" backgroundColor="background" transparent="1" alphatest="on" />
 	<widget source="menu" render="Listbox" position="10,300" size="1180,460" backgroundColor="background" transparent="1">
     <convert type="TemplatedMultiContent">
 					{"template": [
@@ -240,7 +240,7 @@
     <eLabel text="Empfohlen wird ein Fullbackup vor dem Update!" position="1223,910" size="1180,40" zPosition="1" font="Regular; 30" foregroundColor="red" halign="left" backgroundColor="background" transparent="1" />
 	<ePixmap pixmap="Multibox/buttons/key_red.png" position="18,1022" size="35,35" />
 	<widget source="key_red" render="Label" position="61,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="black" transparent="1" />
-	<eLabel text="Feed-Status" position="40,770" size="200,36" zPosition="1" font="Regular; 32" foregroundColor="cyan1" halign="center" backgroundColor="background" transparent="1" />
+	<eLabel text="Feed-Status" position="53,808" size="200,36" zPosition="1" font="Regular; 32" foregroundColor="cyan1" halign="center" backgroundColor="background" transparent="1" />
 	<eLabel text="update recommend / Alles OK!" position="280,940" size="710,45" zPosition="1" font="Regular; 36" halign="left" foregroundColor="black" backgroundColor="green" transparent="0" />
 	<eLabel text="No Update! / nicht updaten!" position="280,800" size="710,45" zPosition="1" font="Regular; 36" foregroundColor="white" halign="left" backgroundColor="red" transparent="0" />
     <eLabel text="update at your own risk / auf eigene Gefahr!" position="280,870" size="710,45" zPosition="1" font="Regular; 36" halign="left" foregroundColor="black" backgroundColor="yellow" transparent="0" />
@@ -521,3 +521,4 @@
  
  
  </skin>
+
