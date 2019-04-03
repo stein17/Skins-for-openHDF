@@ -47,17 +47,17 @@
   </widget>
   <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_sd_on.png" position="1350,1033" size="82,44" zPosition="1" alphatest="blend">
     <convert type="ServiceInfo">VideoHeight</convert>
-    <convert type="ValueRange">0,719</convert>
+    <convert type="ValueRange">0,576</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_off.png" position="1350,1033" size="82,44" zPosition="1" alphatest="blend">
     <convert type="ServiceInfo">VideoHeight</convert>
-    <convert type="ValueRange">720,1079</convert>
+    <convert type="ValueRange">577,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_on.png" position="1350,1033" size="82,44" zPosition="1" alphatest="blend">
     <convert type="ServiceInfo">VideoHeight</convert>
-    <convert type="ValueRange">720,1080</convert>
+    <convert type="ValueRange">721,1080</convert>
     <convert type="ConditionalShowHide" />
   </widget>
    <widget alphatest="blend" pixmap="Multibox/icons/ico_uhd_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >

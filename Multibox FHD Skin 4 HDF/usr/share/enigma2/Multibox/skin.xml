@@ -284,9 +284,9 @@
   <widget source="session.CurrentService" render="Label" position="382,859" size="580,50" font="Regular; 40" halign="left" backgroundColor="Multiboxlabel" transparent="1" zPosition="3" foregroundColor="white">
     <convert type="ServiceName">Name</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="1666,1054" size="250,24" font="Regular; 24" halign="left" foregroundColor="white" backgroundColor="background" transparent="1" zPosition="3">
-    <convert type="AMBCaidInfo">CurCam</convert>
-  </widget>
+  <widget source="session.CurrentService" render="Label" position="1646,928" size="250,24" font="Regular; 22" halign="left" foregroundColor="white" backgroundColor="background" transparent="1" zPosition="3">
+  <convert type="AMBCaidInfo">CurCam</convert>
+</widget>
   <widget source="session.Event_Now" render="Label" position="383,915" size="120,45" font="Regular; 40" backgroundColor="background" transparent="1" zPosition="3" halign="center" foregroundColor="white">
     <convert type="EventTime">StartTime</convert>
     <convert type="ClockToText">Default</convert>
@@ -347,9 +347,9 @@
   <widget source="session.CurrentService" render="Label" position="710,1033" size="200,44" font="Regular; 27" halign="left" valign="center" backgroundColor="background" transparent="1" zPosition="2">
     <convert type="ServiceName">Provider</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="1666,1054" size="250,24" font="Regular; 24" halign="left" foregroundColor="green" backgroundColor="background" transparent="1" zPosition="1">
-    <convert type="AMBEmuInfo">Emu</convert>
-  </widget>
+  <widget source="session.CurrentService" render="Label" position="1666,1054" size="250,24" font="Regular; 22" halign="right" foregroundColor="green" backgroundColor="background" transparent="1" zPosition="1">
+  <convert type="AMBEmuInfo">Emu</convert>
+</widget>
   <widget alphatest="blend" position="16,868" size="347,197" render="Picon" source="session.CurrentService" transparent="1" zPosition="1">
     <convert type="ServiceName">Reference</convert>
   </widget>
@@ -359,17 +359,17 @@
   </widget>
   <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_sd_on.png" position="1350,1033" size="82,44" zPosition="1" alphatest="blend">
     <convert type="ServiceInfo">VideoHeight</convert>
-    <convert type="ValueRange">0,719</convert>
+    <convert type="ValueRange">0,576</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_off.png" position="1350,1033" size="82,44" zPosition="1" alphatest="blend">
     <convert type="ServiceInfo">VideoHeight</convert>
-    <convert type="ValueRange">720,1079</convert>
+    <convert type="ValueRange">577,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_on.png" position="1350,1033" size="82,44" zPosition="1" alphatest="blend">
     <convert type="ServiceInfo">VideoHeight</convert>
-    <convert type="ValueRange">720,1080</convert>
+    <convert type="ValueRange">721,1080</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <widget alphatest="blend" pixmap="Multibox/icons/ico_uhd_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
@@ -703,36 +703,36 @@
 
   <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_sd_on.png" position="1630,1028" size="82,44" zPosition="1" alphatest="blend">
     <convert type="ServiceInfo">VideoHeight</convert>
-    <convert type="ValueRange">0,719</convert>
+    <convert type="ValueRange">0,576</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_off.png" position="1630,1028" size="82,44" zPosition="1" alphatest="blend">
     <convert type="ServiceInfo">VideoHeight</convert>
-    <convert type="ValueRange">720,1079</convert>
+    <convert type="ValueRange">577,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_on.png" position="1630,1028" size="82,44" zPosition="1" alphatest="blend">
     <convert type="ServiceInfo">VideoHeight</convert>
-    <convert type="ValueRange">720,1080</convert>
+    <convert type="ValueRange">721,1080</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget alphatest="blend" pixmap="Multibox/icons/ico_uhd_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+   <widget alphatest="blend" pixmap="Multibox/icons/ico_uhd_on.png" position="1630,1028" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">Is4K</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hd_hdr_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hd_hdr_on.png" position="1630,1028" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHDHDR</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr_on.png" position="1630,1028" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHDR</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr10_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr10_on.png" position="1630,1028" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHDR10</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hlg_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hlg_on.png" position="1630,1028" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHLG</convert>
       <convert type="ConditionalShowHide" />
     </widget>
@@ -1118,38 +1118,38 @@ self['config'].l.setSeperation(int(300*f))
       <convert type="ServiceInfo">IsStereo</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" pixmap="Multibox/icons/ico_sd_on.png" render="Pixmap" position="1816,1020" size="82,44" zPosition="1" alphatest="blend">
-      <convert type="ServiceInfo">VideoHeight</convert>
-      <convert type="ValueRange">0,719</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" pixmap="Multibox/icons/ico_hd_off.png" render="Pixmap" position="1816,1020" size="82,44" zPosition="1" alphatest="blend">
-      <convert type="ServiceInfo">VideoHeight</convert>
-      <convert type="ValueRange">720,1079</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" pixmap="Multibox/icons/ico_hd_on.png" render="Pixmap" position="1816,1020" size="82,44" zPosition="1" alphatest="blend">
-      <convert type="ServiceInfo">VideoHeight</convert>
-      <convert type="ValueRange">720,1080</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-  <widget alphatest="blend" pixmap="Multibox/icons/ico_uhd_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+ <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_sd_on.png" position="1816,1028" size="82,44" zPosition="1" alphatest="blend">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">0,576</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_off.png" position="1816,1028" size="82,44" zPosition="1" alphatest="blend">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">577,720</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_on.png" position="1816,1028" size="82,44" zPosition="1" alphatest="blend">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">721,1080</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+   <widget alphatest="blend" pixmap="Multibox/icons/ico_uhd_on.png" position="1816,1028" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">Is4K</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hd_hdr_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hd_hdr_on.png" position="1816,1028" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHDHDR</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr_on.png" position="1816,1028" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHDR</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr10_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr10_on.png" position="1816,1028" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHDR10</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hlg_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hlg_on.png" position="1816,1028" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHLG</convert>
       <convert type="ConditionalShowHide" />
     </widget>
@@ -1246,38 +1246,38 @@ self['config'].l.setSeperation(int(300*f))
       <convert type="ServiceInfo">IsStereo</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" pixmap="Multibox/icons/ico_sd_on.png" render="Pixmap" position="1816,1020" size="82,44" zPosition="1" alphatest="blend">
-      <convert type="ServiceInfo">VideoHeight</convert>
-      <convert type="ValueRange">0,719</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" pixmap="Multibox/icons/ico_hd_off.png" render="Pixmap" position="1816,1020" size="82,44" zPosition="1" alphatest="blend">
-      <convert type="ServiceInfo">VideoHeight</convert>
-      <convert type="ValueRange">720,1079</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" pixmap="Multibox/icons/ico_hd_on.png" render="Pixmap" position="1816,1020" size="82,44" zPosition="1" alphatest="blend">
-      <convert type="ServiceInfo">VideoHeight</convert>
-      <convert type="ValueRange">720,1080</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-   <widget alphatest="blend" pixmap="Multibox/icons/ico_uhd_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+     <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_sd_on.png" position="1816,1020" size="82,44" zPosition="1" alphatest="blend">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">0,576</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_off.png" position="1816,1020" size="82,44" zPosition="1" alphatest="blend">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">577,720</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_on.png" position="1816,1020" size="82,44" zPosition="1" alphatest="blend">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">721,1080</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+   <widget alphatest="blend" pixmap="Multibox/icons/ico_uhd_on.png" position="1816,1020" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">Is4K</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hd_hdr_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hd_hdr_on.png" position="1816,1020" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHDHDR</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr_on.png" position="1816,1020" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHDR</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr10_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr10_on.png" position="1816,1020" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHDR10</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hlg_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hlg_on.png" position="1816,1020" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHLG</convert>
       <convert type="ConditionalShowHide" />
     </widget>
@@ -3138,38 +3138,38 @@ self['config'].l.setSeperation(int(300*f))
     <eLabel name="" position="10,152" size="1180,1" backgroundColor="Line" />
     <eLabel name="" position="10,907" size="1180,1" backgroundColor="Line" />
     <eLabel name="" position="1223,624" size="670,1" backgroundColor="Line" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_sd_on.png" position="1352,1020" size="82,44" zPosition="1" alphatest="blend">
-      <convert type="ServiceInfo">VideoHeight</convert>
-      <convert type="ValueRange">0,719</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_off.png" position="1352,1020" size="82,44" zPosition="1" alphatest="blend">
-      <convert type="ServiceInfo">VideoHeight</convert>
-      <convert type="ValueRange">720,1079</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_on.png" position="1352,1020" size="82,44" zPosition="1" alphatest="blend">
-      <convert type="ServiceInfo">VideoHeight</convert>
-      <convert type="ValueRange">720,1080</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-   <widget alphatest="blend" pixmap="Multibox/icons/ico_uhd_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_sd_on.png" position="1352,1020" size="82,44" zPosition="1" alphatest="blend">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">0,576</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_off.png" position="1352,1020" size="82,44" zPosition="1" alphatest="blend">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">577,720</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_on.png" position="1352,1020" size="82,44" zPosition="1" alphatest="blend">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">721,1080</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+   <widget alphatest="blend" pixmap="Multibox/icons/ico_uhd_on.png" position="1352,1020" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">Is4K</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hd_hdr_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hd_hdr_on.png" position="1352,1020" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHDHDR</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr_on.png" position="1352,1020" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHDR</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr10_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr10_on.png" position="1352,1020" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHDR10</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hlg_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hlg_on.png" position="1352,1020" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHLG</convert>
       <convert type="ConditionalShowHide" />
     </widget>
@@ -3283,38 +3283,38 @@ self['config'].l.setSeperation(int(300*f))
     </widget>
     <ePixmap position="1340,717" size="30,29" zPosition="10" pixmap="Multibox/buttons/left.png" transparent="1" alphatest="blend" />
     <ePixmap position="1746,717" size="30,29" zPosition="10" pixmap="Multibox/buttons/right.png" transparent="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_sd_on.png" position="1515,890" size="82,44" zPosition="1" alphatest="blend">
-      <convert type="ServiceInfo">VideoHeight</convert>
-      <convert type="ValueRange">0,719</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_off.png" position="1515,890" size="82,44" zPosition="1" alphatest="blend">
-      <convert type="ServiceInfo">VideoHeight</convert>
-      <convert type="ValueRange">720,1079</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_on.png" position="1515,890" size="82,44" zPosition="1" alphatest="blend">
-      <convert type="ServiceInfo">VideoHeight</convert>
-      <convert type="ValueRange">720,1080</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget alphatest="blend" pixmap="Multibox/icons/ico_uhd_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+<widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_sd_on.png" position="1515,890" size="82,44" zPosition="1" alphatest="blend">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">0,576</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_off.png" position="1515,890" size="82,44" zPosition="1" alphatest="blend">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">577,720</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_on.png" position="1515,890" size="82,44" zPosition="1" alphatest="blend">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">721,1080</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+   <widget alphatest="blend" pixmap="Multibox/icons/ico_uhd_on.png" position="1515,890" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">Is4K</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hd_hdr_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hd_hdr_on.png" position="1515,890" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHDHDR</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr_on.png" position="1515,890" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHDR</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr10_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hdr10_on.png" position="1515,890" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHDR10</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-	<widget alphatest="blend" pixmap="Multibox/icons/ico_hlg_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+	<widget alphatest="blend" pixmap="Multibox/icons/ico_hlg_on.png" position="1515,890" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">IsHLG</convert>
       <convert type="ConditionalShowHide" />
     </widget>
@@ -3479,15 +3479,6 @@ self['config'].l.setSeperation(int(300*f))
     <eLabel position="632,0" size="2,185" backgroundColor="Line" transparent="0" zPosition="5" />
     <eLabel position="106,139" size="2,43" backgroundColor="Line" transparent="0" zPosition="5" />
     <eLabel position="422,3" size="2,134" backgroundColor="Line" transparent="0" zPosition="5" />
-  </screen>
-  <screen name="UserInterfacePositioner" position="0,0" size="1920,1080" flags="wfNoBorder">
-    <widget name="config" position="10,100" size="1180,740" zPosition="1" itemHeight="50" font="Regular; 36" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1" />
-    <widget source="status" render="Label" position="10,860" size="1180,120" zPosition="1" font="Regular; 36" halign="center" valign="center" />
-    <widget source="Title" render="Label" position="180,20" size="1300,50" font="Italic; 40" halign="left" valign="center" foregroundColor="white" backgroundColor="background" borderColor="Multiboxlabel" borderWidth="3" transparent="1" zPosition="1" />
-    <panel name="template_fullscreen" />
-    <panel name="template_pixmap_BG" />
-    <panel name="template_source_red_o_yellow" />
-    <panel name="template_pig_setup" />
   </screen>
   <screen name="ParentalControlChangePin" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="background">
     <eLabel text="Change pin code" position="180,20" size="1300,50" font="Italic; 40" halign="left" valign="center" foregroundColor="white" backgroundColor="background" borderColor="Multiboxlabel" borderWidth="3" transparent="1" zPosition="1" />
@@ -4650,7 +4641,26 @@ self['config'].l.setSeperation(int(300*f))
     <panel name="template_pig_setup" />
   </screen>
   <!--UserInterfacePositioner2 /-->
-  <screen name="UserInterfacePositioner2" size="1920,1080" backgroundColor="background" title="OSD Adjustment" flags="wfNoBorder">
+  <screen name="UserInterfacePositioner2" size="1920,1080" backgroundColor="background" title="UserInterfacePositioner2" flags="wfNoBorder">
+    <eLabel text="Position Setup" render="Label" position="839,-9" size="400,75" valign="bottom" font="Regular;51" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <ePixmap pixmap="Multibox/menu/Testbild.png" position="0,0" zPosition="-10" size="1920,1080" />
+    <eLabel backgroundColor="background" font="Regular; 40" halign="center" position="466,68" size="980,93" text="Die roten Winkel genau in den Ecken des TV-Bildschirms positionieren" valign="center" foregroundColor="red" />
+    <eLabel backgroundColor="background" font="Regular; 32" halign="center" position="680,278" size="561,65" text="Danach die Grüne Taste drücken" valign="center" foregroundColor="green" />
+    <widget name="config" position="679,343" zPosition="1" size="561,315" itemHeight="45" font="Regular;30" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+    <widget source="status" render="Label" position="680,666" zPosition="1" size="561,129" font="Regular;30" halign="center" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <ePixmap pixmap="Multibox/buttons/key_red.png" position="475,1027" size="35,35" alphatest="blend" />
+    <ePixmap pixmap="Multibox/buttons/key_green.png" position="806,1027" size="35,35" alphatest="blend" />
+    <ePixmap pixmap="Multibox/buttons/key_yellow.png" position="1142,1027" size="35,35" alphatest="blend" />
+    <widget source="key_red" render="Label" position="519,1025" size="255,40" noWrap="1" zPosition="1" valign="center" font="Regular;30" halign="left" backgroundColor="background" foregroundColor="white" transparent="1" />
+    <widget source="key_green" render="Label" position="853,1025" size="255,40" noWrap="1" zPosition="1" valign="center" font="Regular;30" halign="left" backgroundColor="background" foregroundColor="white" transparent="1" />
+    <widget source="key_yellow" render="Label" position="1189,1025" size="255,40" noWrap="1" zPosition="1" valign="center" font="Regular;30" halign="left" backgroundColor="background" foregroundColor="white" transparent="1" />
+    <eLabel name="black" position="680,424" size="560,319" backgroundColor="background" zPosition="-1" />
+    <eLabel name="black" position="795,-11" size="461,75" backgroundColor="background" zPosition="-1" />
+    <eLabel name="black" position="465,1010" size="989,66" backgroundColor="background" zPosition="-1" />
+    <eLabel  position="681,661" size="560,2" backgroundColor="Line" zPosition="2" />
+    <eLabel  position="680,341" size="560,2" backgroundColor="Line" zPosition="2" />
+  </screen>
+  <screen name="UserInterfacePositioner" size="1920,1080" backgroundColor="background" title="UserInterfacePositioner" flags="wfNoBorder">
     <eLabel text="Position Setup" render="Label" position="839,-9" size="400,75" valign="bottom" font="Regular;51" foregroundColor="white" backgroundColor="background" transparent="1" />
     <ePixmap pixmap="Multibox/menu/Testbild.png" position="0,0" zPosition="-10" size="1920,1080" />
     <eLabel backgroundColor="background" font="Regular; 40" halign="center" position="466,68" size="980,93" text="Die roten Winkel genau in den Ecken des TV-Bildschirms positionieren" valign="center" foregroundColor="red" />
@@ -5193,7 +5203,7 @@ self['config'].l.setSeperation(int(300*f))
     <panel name="template_menu_exit" />
     <panel name="template_pig_setup" />
   </screen>
-  <screen name="ImageBackup" position="0,0" size="1920,1080" title="Image Backup" flags="wfNoBorder" backgroundColor="background">
+<!--   <screen name="ImageBackup" position="0,0" size="1920,1080" title="Image Backup" flags="wfNoBorder" backgroundColor="background">
     <widget source="Title" render="Label" position="180,20" size="1300,50" font="Italic; 40" halign="left" valign="center" foregroundColor="white" backgroundColor="background" borderColor="Multiboxlabel" borderWidth="3" transparent="1" zPosition="1" />
     <widget name="info-hdd" position="10,100" zPosition="1" size="1180,250" font="Regular;34" foregroundColor="greenlight" backgroundColor="background" halign="left" valign="top" transparent="1" />
     <widget name="info-usb" position="10,370" zPosition="1" size="1180,350" font="Regular;34" foregroundColor="yellow" backgroundColor="background" halign="left" valign="top" transparent="1" />
@@ -5203,7 +5213,7 @@ self['config'].l.setSeperation(int(300*f))
     <panel name="template_source_red_o_blue" />
     <panel name="template_menu_exit" />
     <panel name="template_pig_setup" />
-  </screen>
+  </screen> -->
   <screen name="BackupSelection" position="0,0" size="1920,1080" title="Select files/folders to backup..." flags="wfNoBorder" backgroundColor="transparent">
     <widget source="title_text" render="Label" position="180,20" size="1300,50" font="Italic; 40" halign="left" valign="center" foregroundColor="white" backgroundColor="background" borderColor="Multiboxlabel" borderWidth="3" transparent="1" zPosition="1" />
     <widget name="checkList" position="10,100" size="1180,700" itemHeight="50" font="Regular; 36" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />

@@ -7,9 +7,9 @@
   <widget source="session.CurrentService" render="Label" position="382,859" size="580,50" font="Regular; 40" halign="left" backgroundColor="Multiboxlabel" transparent="1" zPosition="3" foregroundColor="white">
     <convert type="ServiceName">Name</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="1666,1054" size="250,24" font="Regular; 24" halign="left" foregroundColor="white" backgroundColor="background" transparent="1" zPosition="3">
-    <convert type="AMBCaidInfo">CurCam</convert>
-  </widget>
+  <widget source="session.CurrentService" render="Label" position="1646,928" size="250,24" font="Regular; 22" halign="left" foregroundColor="white" backgroundColor="background" transparent="1" zPosition="3">
+  <convert type="AMBCaidInfo">CurCam</convert>
+</widget>
   <widget source="session.Event_Now" render="Label" position="383,915" size="120,45" font="Regular; 40" backgroundColor="background" transparent="1" zPosition="3" halign="center" foregroundColor="white">
     <convert type="EventTime">StartTime</convert>
     <convert type="ClockToText">Default</convert>
@@ -70,9 +70,9 @@
   <widget source="session.CurrentService" render="Label" position="710,1033" size="200,44" font="Regular; 27" halign="left" valign="center" backgroundColor="background" transparent="1" zPosition="2">
     <convert type="ServiceName">Provider</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="1666,1054" size="250,24" font="Regular; 24" halign="left" foregroundColor="green" backgroundColor="background" transparent="1" zPosition="1">
-    <convert type="AMBEmuInfo">Emu</convert>
-  </widget>
+  <widget source="session.CurrentService" render="Label" position="1666,1054" size="250,24" font="Regular; 22" halign="right" foregroundColor="green" backgroundColor="background" transparent="1" zPosition="1">
+  <convert type="AMBEmuInfo">Emu</convert>
+</widget>
   <widget alphatest="blend" position="16,868" size="347,197" render="Picon" source="session.CurrentService" transparent="1" zPosition="1">
     <convert type="ServiceName">Reference</convert>
   </widget>
@@ -82,17 +82,17 @@
   </widget>
   <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_sd_on.png" position="1350,1033" size="82,44" zPosition="1" alphatest="blend">
     <convert type="ServiceInfo">VideoHeight</convert>
-    <convert type="ValueRange">0,719</convert>
+    <convert type="ValueRange">0,576</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_off.png" position="1350,1033" size="82,44" zPosition="1" alphatest="blend">
     <convert type="ServiceInfo">VideoHeight</convert>
-    <convert type="ValueRange">720,1079</convert>
+    <convert type="ValueRange">577,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_hd_on.png" position="1350,1033" size="82,44" zPosition="1" alphatest="blend">
     <convert type="ServiceInfo">VideoHeight</convert>
-    <convert type="ValueRange">720,1080</convert>
+    <convert type="ValueRange">721,1080</convert>
     <convert type="ConditionalShowHide" />
   </widget>
    <widget alphatest="blend" pixmap="Multibox/icons/ico_uhd_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >

@@ -1228,7 +1228,7 @@
     <widget source="menu" render="Listbox" position="10,100" size="1180,870" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (60, 6), size = (983, 45), flags = RT_HALIGN_LEFT, text = 0) ],
-				"fonts": [gFont("screen_text", 36)],
+				"fonts": [gFont("Regular", 36)],
 				"itemHeight": 75
 				}
 			</convert>
@@ -1242,7 +1242,7 @@
     <widget source="menu" render="Listbox" position="10,100" size="1180,870" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (60, 6), size = (983, 45), flags = RT_HALIGN_LEFT, text = 0) ],
-				"fonts": [gFont("screen_text", 36)],
+				"fonts": [gFont("Regular", 36)],
 				"itemHeight": 75
 				}
 			</convert>
@@ -1287,7 +1287,7 @@
     <widget source="menu" render="Listbox" position="10,100" size="1180,870" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (60, 6), size = (983, 45), flags = RT_HALIGN_LEFT, text = 0) ],
-				"fonts": [gFont("screen_text", 36)],
+				"fonts": [gFont("Regular", 36)],
 				"itemHeight": 75
 				}
 			</convert>
