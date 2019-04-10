@@ -1,13 +1,14 @@
    <skin>
- <!-- Infobar Default FHD -->
+  <!-- Infobar Weather  FHD -->
 <screen name="InfoBar" flags="wfNoBorder" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent">
+
   <widget source="session.CurrentService" render="Label" position="1829,1028" size="100,24" font="Regular; 24" halign="left" text="DVB-T" backgroundColor="background" transparent="1" zPosition="1">
     <convert type="ServiceOrbitalPosition" />
   </widget>
-  <widget source="session.CurrentService" render="Label" position="382,859" size="580,50" font="Regular; 40" halign="left" backgroundColor="Multiboxlabel" transparent="1" zPosition="3" foregroundColor="white">
+  <widget source="session.CurrentService" render="Label" position="382,859" size="580,50" font="Regular; 40" halign="left" backgroundColor="background" transparent="1" zPosition="3" foregroundColor="white">
     <convert type="ServiceName">Name</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="1646,928" size="250,24" font="Regular; 22" halign="left" foregroundColor="white" backgroundColor="background" transparent="1" zPosition="3">
+<widget source="session.CurrentService" render="Label" position="1666,1054" size="250,24" font="Regular; 22" halign="left" foregroundColor="white" backgroundColor="background" transparent="1" zPosition="3">
   <convert type="AMBCaidInfo">CurCam</convert>
 </widget>
   <widget source="session.Event_Now" render="Label" position="383,915" size="120,45" font="Regular; 40" backgroundColor="background" transparent="1" zPosition="3" halign="center" foregroundColor="white">
@@ -36,7 +37,7 @@
     <convert type="EventTime">EndTime</convert>
     <convert type="ClockToText">Format:- %H:%M</convert>
   </widget>
-  <!--   <widget source="session.Event_Now" render="Progress" pixmap="Multibox/Multibox_Progress.png" position="386,964" size="985,11" zPosition="1" transparent="1">
+<!--   <widget source="session.Event_Now" render="Progress" pixmap="Multibox/Multibox_Progress.png" position="386,964" size="985,11" zPosition="1" transparent="1">
     <convert type="EventTime">Progress</convert>
   </widget> -->
 <!--   <ePixmap pixmap="Multibox/Progress_BG.png" position="386,964" size="985,11" zPosition="2" alphatest="blend" /> -->
@@ -67,13 +68,13 @@
     <convert type="ValueRange">1,1</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Label" position="710,1033" size="200,44" font="Regular; 27" halign="left" valign="center" backgroundColor="background" transparent="1" zPosition="2">
+  <widget source="session.CurrentService" render="Label" position="712,1033" size="200,44" font="Regular; 27" halign="left" valign="center" backgroundColor="background" transparent="1" zPosition="2">
     <convert type="ServiceName">Provider</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="1666,1054" size="250,24" font="Regular; 22" halign="right" foregroundColor="green" backgroundColor="background" transparent="1" zPosition="1">
   <convert type="AMBEmuInfo">Emu</convert>
 </widget>
-  <widget alphatest="blend" position="16,868" size="347,197" render="Picon" source="session.CurrentService" transparent="1" zPosition="1">
+  <widget alphatest="blend" position="16,871" size="347,197" render="Picon" source="session.CurrentService" transparent="1" zPosition="1">
     <convert type="ServiceName">Reference</convert>
   </widget>
   <ePixmap alphatest="blend" pixmap="Multibox/icons/ico_rec_off.png" position="913,870" size="80,26" zPosition="1" />
@@ -185,12 +186,13 @@
   </widget>
   <eLabel text="Provider :" position="568,1033" size="140,44" font="Regular; 27" backgroundColor="background" transparent="1" zPosition="1" valign="center" halign="right" />
   <eLabel text="Orb:" position="1774,1028" size="60,24" font="Regular; 24" backgroundColor="background" transparent="1" zPosition="1" />
-  <widget source="session.CurrentService" render="Label" position="1000,857" size="540,55" font="Console; 20" transparent="1" halign="left" noWrap="1" valign="center" zPosition="3" backgroundColor="background" foregroundColor="cyan1">
-    <convert type="CryptoInfo">VerboseInfo</convert>
-  </widget>
+<widget source="session.CurrentService" render="Label" position="1000,857" size="540,55" font="Console; 20" transparent="1" halign="left" noWrap="1" valign="center" zPosition="3" backgroundColor="background" foregroundColor="cyan1">
+  <convert type="CryptoInfo">VerboseInfo</convert>
+</widget>
   <panel name="template_right_tuner_info" />
+  <panel name="template_weather" />
   <panel name="template_progress_default" />
-  <panel name="template_progress_bg_default" />
   <panel name="template_pixmap_Infobar_full" />
+  <panel name="template_progress_bg_default" />
 </screen>
   </skin>
