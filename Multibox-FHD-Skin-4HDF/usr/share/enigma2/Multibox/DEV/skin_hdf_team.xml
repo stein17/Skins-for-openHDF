@@ -48,7 +48,7 @@
     <ePixmap pixmap="Multibox/buttons/key_exit.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" alphatest="blend" />
     <widget name="config" position="10,100" size="1180,880" itemHeight="80" font="Regular;36" backgroundColor="background" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
     <widget name="helperimage" position="895,630" size="0,0" zPosition="1" backgroundColor="red" />
-    <widget source="help" render="Label" position="1227,543" size="670,450" font="Regular; 36" backgroundColor="black" foregroundColor="white" halign="center" valign="top" transparent="1" />
+    <widget source="help" render="Label" position="1227,543" size="670,450" font="Regular; 36" backgroundColor="background" foregroundColor="white" halign="center" valign="top" transparent="1" />
   <ePixmap pixmap="Multibox/buttons/key_red.png" position="18,1022" size="35,35" />
   <ePixmap pixmap="Multibox/buttons/key_green.png" position="318,1022" size="35,35" />
   <ePixmap pixmap="Multibox/buttons/key_yellow.png" position="618,1022" size="35,35" />
