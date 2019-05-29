@@ -69,31 +69,32 @@
     <panel name="template_menu_info" />
     <panel name="template_pig_setup" />
   </screen>
-  <screen name="CoolInfoGuide" position="0,0" size="1920,1080" zPosition="1" title="Cool Info Guide" flags="wfNoBorder" backgroundColor="background">
+<screen name="CoolInfoGuide" position="0,0" size="1920,1080" zPosition="1" title="Cool Info Guide" flags="wfNoBorder" backgroundColor="background">
     <eLabel text="C o o l   I n f o   G u i d e" position="180,20" size="1300,50" font="Italic; 40" halign="left" valign="center" foregroundColor="white" backgroundColor="background" borderColor="Multiboxlabel" borderWidth="3" transparent="1" zPosition="1" />
     <eLabel name="line" position="1223,548" size="670,2" backgroundColor="Line" />
-    <widget source="Service" render="Label" position="1332,1020" size="330,45" font="Regular;30" noWrap="1" valign="center" halign="right" foregroundColor="default" backgroundColor="background" transparent="1">
+    <widget source="Service" render="Label" position="1332,1020" size="330,45" font="Regular;30" noWrap="1" valign="center" halign="right" foregroundColor="cyan" backgroundColor="background" transparent="1">
       <convert type="ServiceName2">Bouquet</convert>
     </widget>
-    <widget source="Event" render="Label" position="10,100" size="110,60" font="Regular;36" halign="left" backgroundColor="background" foregroundColor="default" transparent="1">
+    <widget source="Event" render="Label" position="10,100" size="110,60" font="Regular;36" halign="left" backgroundColor="background" foregroundColor="cyan" transparent="1">
       <convert type="EventTime">StartTime</convert>
       <convert type="ClockToText">Format:%H:%M</convert>
     </widget>
-    <widget source="Event" render="Label" position="120,100" size="140,60" font="Regular;36" halign="left" backgroundColor="background" foregroundColor="default" transparent="1">
+    <widget source="Event" render="Label" position="120,100" size="140,60" font="Regular;36" halign="left" backgroundColor="background" foregroundColor="cyan" transparent="1">
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Format:- %H:%M</convert>
     </widget>
-    <widget source="Event" render="Label" position="260,100" size="760,60" font="Regular;36" halign="left" backgroundColor="background" foregroundColor="default" transparent="1">
-      <convert type="EventName">Name</convert>
+    <widget source="Service" render="Label" position="260,100" size="760,60" font="Regular;36" halign="left" backgroundColor="background" foregroundColor="cyan" transparent="1">
+      <convert type="ServiceName">Name</convert>
     </widget>
-    <widget source="Event" render="Label" position="1019,100" size="170,60" font="Regular;36" backgroundColor="background" foregroundColor="default" transparent="1" halign="right">
+    <widget source="Event" render="Label" position="1019,100" size="170,60" font="Regular;36" backgroundColor="background" foregroundColor="cyan" transparent="1" halign="right">
       <convert type="EventTime">Remaining</convert>
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
-    <eLabel text="Similar broadcasts:" position="1223,550" size="670,45" font="Regular; 36" foregroundColor="default" backgroundColor="background" transparent="1" />
-    <widget name="CoolSimilar" position="1223,602" size="670,390" font="Regular; 36" itemHeight="45" noWrap="1" foregroundColor="default" backgroundColor="background" transparent="1" />
-    <widget name="CoolShort" position="10,900" size="1180,85" font="Regular; 36" zPosition="1" halign="center" backgroundColor="background" foregroundColor="default" transparent="1" />
-    <widget name="CoolEvent" position="240,100" size="790,48" itemHeight="48" Coolfont="Regular;36" CoolDayPos="0" CoolTimePos="0" CoolTimeHPos="0" CoolEventPos="0" CoolDaySize="0" CoolTimeSize="0" CoolEventSize="810" CoolDurationPos="0" CoolDurationSize="0" CoolEventColor="white" CoolBackColor="background" CoolBackColorSel="verydarkgrey" CoolFontColSel="white" CoolDayColor="yellow" CoolTimeColor="cyan" CoolTunerCol="cyan" CoolDurationColor="cyan" CoolRecColor="red" CoolRecAlarmCol="orange" enableWrapAround="1" scrollbarMode="showNever" zPosition="5" transparent="1" />
+    <eLabel text="Similar broadcasts:" position="1223,550" size="670,45" font="Regular; 36" foregroundColor="cyan" backgroundColor="background" transparent="1" />
+    <widget name="CoolSimilar" position="1223,602" size="670,390" font="Regular; 36" itemHeight="45" noWrap="1" foregroundColor="cyan" backgroundColor="background" transparent="1" />
+    <widget name="CoolShort" position="10,170" size="1180,160" font="Regular; 36" zPosition="1" halign="center" backgroundColor="background" foregroundColor="cyan" transparent="1" />
+	<widget name="CoolDescription" position="11,400" size="1180,590" itemHeight="45" font="Regular;34" zPosition="0" transparent="1" />
+    <widget name="CoolEvent" position="10,340" size="1180,50" itemHeight="48" Coolfont="Regular;36" CoolDayPos="0" CoolTimePos="0" CoolTimeHPos="0" CoolEventPos="0" CoolDaySize="0" CoolTimeSize="0" CoolEventSize="810" CoolDurationPos="0" CoolDurationSize="0" CoolEventColor="white" CoolBackColor="background" CoolBackColorSel="verydarkgrey" CoolFontColSel="white" CoolDayColor="yellow" CoolTimeColor="cyan" CoolTunerCol="cyan" CoolDurationColor="cyan" CoolRecColor="red" CoolRecAlarmCol="orange" enableWrapAround="1" scrollbarMode="showNever" zPosition="5" transparent="1" />
     <panel name="template_name_red_o_yellow" />
     <panel name="template_cool_all" />
     <panel name="template_fullscreen" />
@@ -101,6 +102,7 @@
     <panel name="template_menu_info" />
     <panel name="template_pig_setup" />
   </screen>
+
   <screen name="CoolSingleGuide" position="0,0" size="1920,1080" zPosition="1" title="Cool Single Guide" flags="wfNoBorder" backgroundColor="background">
     <eLabel text="C o o l   S i n g l e   G u i d e" position="180,20" size="1300,50" font="Italic; 40" halign="left" valign="center" foregroundColor="white" backgroundColor="background" borderColor="Multiboxlabel" borderWidth="3" transparent="1" zPosition="1" />
     <widget source="Service" render="Label" position="1333,1020" size="330,45" font="Regular;30" noWrap="1" valign="center" halign="right" foregroundColor="default" backgroundColor="background" transparent="1">
@@ -1245,22 +1247,22 @@
   <!-- EPGRefresh -->
   <!-- Cutlist Editor -->
 <screen name="CutListEditor" position="0,0" size="1920,1080" title="Cutlist editor" flags="wfNoBorder" backgroundColor="background">
-    <eLabel text="Cutlist editor" position="180,20" size="1300,50" font="Italic; 40" halign="left" valign="center" foregroundColor="white" backgroundColor="background" borderColor="Multiboxlabel" borderWidth="3" transparent="1" zPosition="1" />
-    <eLabel position="105,195" size="1050,572" backgroundColor="Multiboxlabel" />
-    <eLabel position="108,198" size="1044,566" backgroundColor="background" />
-    <widget name="Video" position="108,198" zPosition="1" size="1044,566" backgroundColor="transparent" />
-    <widget source="session.CurrentService" render="Label" position="105,780" size="1050,48" font="Regular;36" halign="center" valign="center">
-      <convert type="ServiceName">Name</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="255,840" size="900,38" font="Regular; 36" halign="center" valign="center" zPosition="1" backgroundColor="background" foregroundColor="greenlight">
-      <convert type="ServicePosition">Position,Detailed</convert>
-    </widget>
-	<widget name="SeekState" position="105,840" zPosition="1" size="150,38" halign="right" font="Regular; 36" valign="center" />
-    <widget name="Timeline" position="105,896" size="1050,30" backgroundColor="Multiboxlabel" pointer="skin_default/position_arrow.png:3,5" foregroundColor="white" />
-    <eLabel position="1201,195" size="630,660" zPosition="1" backgroundColor="background" />
-    <eLabel position="1203,198" size="624,654" zPosition="2" backgroundColor="Multiboxlabel" />
-    <widget source="cutlist" render="Listbox" position="1215,211" size="600,630" zPosition="1" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
+  <eLabel text="Cutlist editor" position="180,20" size="1300,50" font="Italic; 40" halign="left" valign="center" foregroundColor="white" backgroundColor="background" borderColor="Multiboxlabel" borderWidth="3" transparent="1" zPosition="1" />
+  <eLabel position="105,195" size="1050,572" backgroundColor="Multiboxlabel" />
+  <eLabel position="108,198" size="1044,566" backgroundColor="background" />
+  <widget name="Video" position="108,198" zPosition="1" size="1044,566" backgroundColor="transparent" />
+  <widget source="session.CurrentService" render="Label" position="105,780" size="1050,48" font="Regular;36" halign="center" valign="center">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="255,840" size="900,38" font="Regular; 36" halign="center" valign="center" zPosition="1" backgroundColor="background" foregroundColor="greenlight">
+    <convert type="ServicePosition">Position,Detailed</convert>
+  </widget>
+  <widget name="SeekState" position="105,839" zPosition="1" size="150,38" halign="right" font="Regular; 36" valign="center" />
+  <widget name="Timeline" position="105,896" size="1050,30" backgroundColor="Multiboxlabel" pointer="skin_default/position_arrow.png:3,5" foregroundColor="white" />
+  <eLabel position="1201,195" size="630,660" zPosition="1" backgroundColor="background" />
+  <eLabel position="1203,198" size="624,654" zPosition="2" backgroundColor="Multiboxlabel" />
+  <widget source="cutlist" render="Listbox" position="1215,211" size="600,630" zPosition="1" scrollbarMode="showOnDemand" transparent="1">
+    <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (0, 6), size = (420, 50), text = 1, flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER, backcolor = MultiContentTemplateColor(3)),
 						MultiContentEntryText(pos = (420, 6), size = (180, 50), text = 2, flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER, backcolor = MultiContentTemplateColor(3))
@@ -1269,11 +1271,11 @@
 				 "itemHeight": 55
 				}
 			</convert>
-    </widget>
-    <ePixmap pixmap="Multibox/mmp/mp_buttons.png" position="1302,880" size="450,60" alphatest="blend" />
-    <panel name="template_fullscreen" />
-    <panel name="template_pixmap_BG" />
-  </screen>
+  </widget>
+  <ePixmap pixmap="Multibox/mmp/mp_buttons.png" position="1302,880" size="450,60" alphatest="blend" />
+  <panel name="template_fullscreen" />
+  <panel name="template_pixmap_BG" />
+</screen>
   <screen name="CutListContextMenu" position="0,0" size="1920,1080" title="Menu Cutlisteditor" flags="wfNoBorder" backgroundColor="background">
     <widget source="menu" render="Listbox" position="10,100" size="1180,870" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
       <convert type="TemplatedMultiContent">
@@ -2015,7 +2017,7 @@
   </screen>
   <!-- Infobar Tunerstate IBTS -->
 	<screen name="TunerState" title="Tuner State" flags="wfNoBorder" position="0,75" size="1500,48" zPosition="5" padding="20" spacing="15" backgroundColor="transparent">
-    <widget name="Background" pixmap="Multibox/colors/25Black_000000.png" position="0,0" size="1920,48" zPosition="-1" transparent="1" alphatest="off"/> 
+    <widget name="Background" pixmap="Multibox/colors/48Red_ff0000.png" position="0,0" size="1920,48" zPosition="-1" transparent="1" alphatest="off"/> 
 	<widget name="Type" pixmaps="Multibox/skin_default/icons/record.png,Multibox/skin_default/icons/stream.png,Multibox/skin_default/icons/lock_on.png,Multibox/skin_default/icons/info.png,Multibox/skin_default/icons/live.png,Multibox/skin_default/icons/unknown.png" position="0,0" size="48,48" zPosition="1" transparent="1" alphatest="blend"/>  
 	<widget name="Progress" pixmap="Multibox/menu/Progress_CS_color.png" position="0,0" size="120,12" zPosition="1" borderWidth="1" borderColor="black" backgroundColor="black" transparent="1"/>
 	<widget name="Field0" font="Regular;33" noWrap="1" halign="left" valign="bottom" foregroundColor="white" backgroundColor="transparent" borderColor="black" borderWidth="1" transparent="1" zPosition="1"/>
@@ -4198,7 +4200,7 @@
 <panel name="template_pig_setup" />
 <panel name="template_ok_exit" />
 </screen>
-	<!-- Birthday Reminder -->
+	<!-- File Commander -->
  <screen name="BirthdayReminder" position="0,0" size="1920,1080" flags="wfNoBorder" title="Birthday Reminder" backgroundColor="background">
 	<widget name="name" position="80,120" size="270,50" zPosition="5" valign="center" halign="left" font="Regular; 36" transparent="1" foregroundColor="white" />
 	<widget name="birthday" position="600,120" size="265,50" zPosition="5" valign="center" halign="center" font="Regular; 36" transparent="1" foregroundColor="white" />
