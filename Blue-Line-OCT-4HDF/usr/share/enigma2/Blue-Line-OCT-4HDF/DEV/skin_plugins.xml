@@ -1446,9 +1446,9 @@
     <ePixmap position="1450,1011" size="60,50" zPosition="10" pixmap="Blue-Line-OCT-4HDF/buttons/key_exit.png" transparent="1" alphatest="blend" />
     <eLabel name="background" backgroundColor="background" position="1290,1000" size="230,70" />
   </screen>
-  <!-- OscamInfoMenu FHD -->
+   <!-- OscamInfoMenu FHD -->
   <screen name="OscamInfoMenu" position="0,0" size="1920,1080" title="OscamInfo Menu" flags="wfNoBorder" backgroundColor="transparent">
-    <widget source="Title" render="Label" position="10,25" size="900,50" font="Regular; 36" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1" />
+    <widget source="Title" render="Label" position="10,25" size="1200,50" font="Regular; 36" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1" />
     <ePixmap pixmap="Blue-Line-OCT-4HDF/menu/bg1280.png" position="0,0" zPosition="-20" size="1280,1080" />
     <widget source="global.CurrentTime" render="Label" position="508,30" size="600,40" font="Regular; 32" halign="right" foregroundColor="white" backgroundColor="black" transparent="1">
       <convert type="ClockToText">Format:%a, %d.%m.%Y   %H:%M</convert>
@@ -1464,7 +1464,7 @@
     <widget source="global.CurrentTime" render="Label" position="1218,25" size="600,50" font="Regular; 36" halign="right" foregroundColor="white" backgroundColor="black" transparent="1">
       <convert type="ClockToText">Format:%a, %d.%m.%Y   %H:%M</convert>
     </widget>
-    <widget source="Title" render="Label" position="10,25" size="900,50" font="Regular; 36" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1" />
+    <widget source="Title" render="Label" position="10,25" size="1200,50" font="Regular; 36" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1" />
     <widget name="status" position="70,180" size="820,720" font="Regular;26" itemHeight="45" scrollbarMode="showOnDemand" backgroundColor="dark" transparent="1" />
   </screen>
   <!-- oscECMInfo FHD -->
@@ -1473,7 +1473,7 @@
     <widget source="global.CurrentTime" render="Label" position="508,30" size="600,40" font="Regular; 32" halign="right" foregroundColor="white" backgroundColor="black" transparent="1">
       <convert type="ClockToText">Format:%a, %d.%m.%Y   %H:%M</convert>
     </widget>
-    <widget source="Title" render="Label" position="10,25" size="900,50" font="Regular; 36" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1" />
+    <widget source="Title" render="Label" position="10,25" size="1200,50" font="Regular; 36" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1" />
     <widget name="output" font="Regular;30" position="30,130" size="875,820" itemHeight="45" backgroundColor="background" foregroundColor="white" zPosition="1" transparent="1" />
     <ePixmap pixmap="Blue-Line-OCT-4HDF/buttons/key_ok.png" position="1052,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
     <ePixmap pixmap="Blue-Line-OCT-4HDF/buttons/key_exit.png" position="1123,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
@@ -1482,7 +1482,7 @@
   </screen>
   <!-- OscamInfoConfigScreen FHD -->
   <screen name="OscamInfoConfigScreen" position="0,0" size="1920,1080" title="OscamInfo Menu" flags="wfNoBorder" backgroundColor="transparent">
-    <widget source="Title" render="Label" position="10,25" size="900,50" font="Regular; 36" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1" />
+    <widget source="Title" render="Label" position="10,25" size="1200,50" font="Regular; 36" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1" />
     <ePixmap pixmap="Blue-Line-OCT-4HDF/menu/bg1280.png" position="0,0" zPosition="-20" size="1280,1080" />
     <widget source="global.CurrentTime" render="Label" position="508,30" size="600,40" font="Regular; 32" halign="right" foregroundColor="white" backgroundColor="black" transparent="1">
       <convert type="ClockToText">Format:%a, %d.%m.%Y   %H:%M</convert>
@@ -1506,7 +1506,7 @@
     <widget source="global.CurrentTime" render="Label" position="1088,25" size="600,50" font="Regular; 36" halign="right" foregroundColor="white" backgroundColor="black" transparent="1">
       <convert type="ClockToText">Format:%a, %d.%m.%Y   %H:%M</convert>
     </widget>
-    <widget source="Title" render="Label" position="10,25" size="900,50" font="Regular; 36" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1" />
+    <widget source="Title" render="Label" position="10,25" size="1200,50" font="Regular; 36" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1" />
     <widget name="output" position="103,134" size="1710,780" scrollbarMode="showNever" backgroundColor="background" foregroundColor="white" zPosition="1" transparent="1" />
     <ePixmap pixmap="Blue-Line-OCT-4HDF/buttons/key_red.png" position="23,1015" size="35,35" alphatest="blend" />
     <ePixmap pixmap="Blue-Line-OCT-4HDF/buttons/key_green.png" position="325,1018" size="35,35" alphatest="blend" />
@@ -1518,19 +1518,10 @@
     <widget source="key_blue" render="Label" position="983,1000" size="240,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="black" transparent="1" />
     <ePixmap position="1574,1018" size="60,50" zPosition="10" pixmap="Blue-Line-OCT-4HDF/buttons/key_ok.png" transparent="1" alphatest="on" />
     <ePixmap position="1707,1018" size="60,50" zPosition="10" pixmap="Blue-Line-OCT-4HDF/buttons/key_exit.png" transparent="1" alphatest="on" />
-    <!--applet type="onLayoutFinish">
-from enigma import eSize,ePoint, getDesktop
-deskwidth = getDesktop(0).size().width()
-deskheight = getDesktop(0).size().height()
-# resize
-self.instance.resize(eSize(*(deskwidth,deskheight)))
-# center
-self.instance.move(ePoint(0,0))
-		</applet-->
   </screen>
   <!-- oscReaderStats FHD -->
   <screen name="oscReaderStats" position="0,80" size="1920,1020" title="OscamReader Stats" backgroundColor="background">
-    <widget source="Title" render="Label" position="10,25" size="900,50" font="Regular; 36" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1" />
+    <widget source="Title" render="Label" position="10,25" size="1200,50" font="Regular; 36" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1" />
     <widget source="global.CurrentTime" render="Label" position="1211,25" size="600,50" font="Regular; 36" halign="right" foregroundColor="white" backgroundColor="black" transparent="1">
       <convert type="ClockToText">Format:%a, %d.%m.%Y   %H:%M</convert>
     </widget>
@@ -1575,7 +1566,7 @@ self.instance.move(ePoint(0,0))
     </widget>
     <eLabel position="0,94" size="1920,2" foregroundColor="backgroundBlue" backgroundColor="backgroundBlue" zPosition="2" />
     <eLabel position="5,989" size="1920,2" foregroundColor="backgroundBlue" backgroundColor="backgroundBlue" zPosition="2" />
-    <widget source="Title" render="Label" position="10,25" size="900,50" font="Regular; 36" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1" />
+    <widget source="Title" render="Label" position="10,25" size="1200,50" font="Regular; 36" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1" />
     <widget source="output" render="Listbox" position="107,123" size="1710,810" backgroundColor="background" foregroundColor="white" itemHeight="45" font="Regular;30" scrollbarMode="showOnDemand" zPosition="1" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"templates":
