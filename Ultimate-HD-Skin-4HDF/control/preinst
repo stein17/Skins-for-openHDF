@@ -1,0 +1,23 @@
+#!/bin/sh
+echo "                                                                            "
+echo "                         ***** WARNING ****                                 "
+echo "UltimateHD skin requires a minimal dual core.                         "
+echo "UltimateHD is NOT guaranteed to work on slower or older receivers.    "
+echo "                                                                            "
+echo "                                                                            "
+echo "                                                                            "
+echo "Check if a previous version of the UltimateHD skin is installed"
+if [ -f /usr/share/enigma2/Ultimate/skin.xml ]; then
+    cp -R /usr/share/enigma2/Ultimate/ /tmp
+    rm -rf /usr/share/enigma2/Ultimate
+    rm -rf /usr/lib/enigma2/python/Components/Converter/Ultimate*
+    rm -rf /usr/lib/enigma2/python/Components/Renderer/Ultimate*
+    echo "                                                   "
+    echo "Previous UltimateHD skin installation        "
+    echo "    was found and removed successfully!            "
+    echo "                                                   "
+fi
+echo "                                                       "
+echo "UltimateHD skin is now being installed...        "
+echo "                                                       "
+exit 0
