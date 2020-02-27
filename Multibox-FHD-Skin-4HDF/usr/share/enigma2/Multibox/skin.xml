@@ -341,7 +341,7 @@
   <!--   <widget source="session.Event_Now" render="Progress" pixmap="Multibox/Multibox_Progress.png" position="386,964" size="985,11" zPosition="1" transparent="1">
     <convert type="EventTime">Progress</convert>
   </widget> -->
-  <ePixmap pixmap="Multibox/Progress_BG.png" position="386,964" size="985,11" zPosition="2" alphatest="blend" />
+<!--   <ePixmap pixmap="Multibox/Progress_BG.png" position="386,964" size="985,11" zPosition="2" alphatest="blend" /> -->
   <widget source="session.Event_Next" render="Label" position="1223,981" size="150,45" font="Regular; 40" halign="center" foregroundColor="greyblue" backgroundColor="background" transparent="1" zPosition="2">
     <convert type="EventTime">EndTime</convert>
     <convert type="ClockToText">Format:- %H:%M</convert>
@@ -382,7 +382,7 @@
   <widget alphatest="blend" pixmap="Multibox/icons/ico_rec_on.png" position="913,870" render="Pixmap" size="80,26" source="session.RecordState" zPosition="2">
     <convert type="ConditionalShowHide">Blink</convert>
   </widget>
-  <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_sd_on.png" position="1350,1033" size="82,44" zPosition="1" alphatest="blend">
+ <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/ico_sd_on.png" position="1350,1033" size="82,44" zPosition="1" alphatest="blend">
     <convert type="ServiceInfo">VideoHeight</convert>
     <convert type="ValueRange">0,576</convert>
     <convert type="ConditionalShowHide" />
@@ -397,7 +397,7 @@
     <convert type="ValueRange">721,1080</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget alphatest="blend" pixmap="Multibox/icons/ico_uhd_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
+   <widget alphatest="blend" pixmap="Multibox/icons/ico_uhd_on.png" position="1350,1033" render="Pixmap" size="82,44" source="session.CurrentService" zPosition="1" >
       <convert type="ServiceInfo">Is4K</convert>
       <convert type="ConditionalShowHide" />
     </widget>
@@ -455,9 +455,6 @@
     <convert type="ServiceInfo">SubservicesAvailable</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget backgroundColor="background" font="DIGI; 66" noWrap="1" valign="center" halign="left" position="1735,862" render="Label" size="190,66" source="global.CurrentTime" transparent="1" zPosition="1" foregroundColor="white">
-    <convert type="ClockToText">Default</convert>
-  </widget>
   <widget backgroundColor="background" font="Regular; 24" noWrap="1" valign="center" halign="right" position="1560,903" render="Label" size="160,30" source="global.CurrentTime" transparent="1" zPosition="1" foregroundColor="white">
     <convert type="ClockToText">Format:%e. %B</convert>
   </widget>
@@ -487,12 +484,14 @@
   </widget>
   <eLabel text="Provider :" position="568,1033" size="140,44" font="Regular; 27" backgroundColor="background" transparent="1" zPosition="1" valign="center" halign="right" />
   <eLabel text="Orb:" position="1774,1028" size="60,24" font="Regular; 24" backgroundColor="background" transparent="1" zPosition="1" />
-  <panel name="template_right_tuner_info" />
-  <panel name="template_progress_default" />
-  <panel name="template_pixmap_Infobar_full" />
   <widget source="session.CurrentService" render="Label" position="1000,857" size="540,55" font="Console; 20" transparent="1" halign="left" noWrap="1" valign="center" zPosition="3" backgroundColor="background" foregroundColor="default">
     <convert type="CryptoInfo">VerboseInfo</convert>
   </widget>
+  <panel name="template_infobar_digitalclock_widget" />
+  <panel name="template_right_tuner_info" />
+  <panel name="template_progress_default" />
+  <panel name="template_progress_bg_default" />
+  <panel name="template_pixmap_Infobar_full" />
 </screen>
   <!-- ChannelSelection  -->
   <screen name="ChannelSelection" position="0,0" title="Channel Selection" backgroundColor="background" flags="wfNoBorder" size="1920,1080">
