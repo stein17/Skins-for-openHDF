@@ -187,14 +187,14 @@
     <panel name="template_menu_ok_exit" />
 </screen>
 <!-- FlashOnline -->
-	<screen name="FlashOnline" position="0,0" size="1920,1080" title="Flash On the Fly" flags="wfNoBorder">
-    <widget name="info-online" position="10,100" size="1180,340" font="Regular;36" halign="center" transparent="1" zPosition="1" foregroundColor="yellow" />
-    <widget name="info-local" position="10,460" size="1180,340" font="Regular;36" halign="center" transparent="1" zPosition="1" foregroundColor="green" />
-     <eLabel text="OPEN SOURCE" position="1223,600" size="670,40" font="Replacement; 36" halign="left" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" zPosition="1" />
+<screen name="FlashOnline" position="0,0" size="1920,1080" title="Flash On the Fly" flags="wfNoBorder">
+    <widget name="info-online" position="10,100" size="1180,340" font="Regular;36" halign="center" transparent="1" zPosition="1" foregroundColor="green" />
+    <widget name="info-local" position="10,460" size="1180,340" font="Regular;36" halign="center" transparent="1" zPosition="1" foregroundColor="yellow" /> 
+    <eLabel text="OPEN SOURCE" position="1223,600" size="670,40" font="Replacement; 36" halign="left" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" zPosition="1" />
     <eLabel text="https://www.hdfreaks.cc/" position="1223,802" size="670,40" font="Replacement; 36" halign="left" transparent="1" zPosition="1" />
     <eLabel text="https://github.com/oe-alliance" position="1223,700" size="670,40" font="Replacement; 36" halign="left" transparent="1" zPosition="1" />
     <eLabel text="https://github.com/openhdf" position="1223,900" size="670,40" font="Replacement; 36" backgroundColor="background" halign="left" transparent="1" zPosition="12" />
-   <widget source="Title" render="Label" position="180,20" size="1300,50" font="Italic; 40" halign="left" valign="center" foregroundColor="white" backgroundColor="background" borderColor="Multiboxlabel" borderWidth="3" transparent="1" zPosition="1" />
+    <widget source="Title" render="Label" position="180,20" size="1300,50" font="Italic; 40" halign="left" valign="center" foregroundColor="white" backgroundColor="background" borderColor="Multiboxlabel" borderWidth="3" transparent="1" zPosition="1" />
     <panel name="template_fullscreen" />
     <panel name="template_pixmap_BG" />
     <panel name="template_pig_setup" />
