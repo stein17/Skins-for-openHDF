@@ -402,7 +402,15 @@
   <screen name="template_pixmap_Infobar_Player">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Ultimate/Skinparts/Infobar/Infobar_movie.png" />
   </screen>
-
+   <!-- TEMPLATES Pixmaps Infobar-->
+  <screen name="template_pixmap_Infobar_black">
+    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Ultimate/Skinparts/Infobar/Infobar_Org.png" />
+	<ePixmap pixmap="Ultimate/colors/00ff0000.png" position="0,535" size="1280,185" zPosition="-50" />
+  </screen>
+  <!-- TEMPLATES Infobar transparent-->
+  <screen name="template_I_bar_transparent">
+	<eLabel name="background_infobar" position="0,535" size="1280,185" backgroundColor="transparent" zPosition="-12"/>
+  </screen>
   <!-- TEMPLATES Pixmaps Frame 1280x720-->
   <screen name="template_pixmap_rahmen">
     <ePixmap pixmap="Ultimate/Skinparts/Rahmen/Rahmen_Org.png" position="0,0" zPosition="-25" size="1280,720" />
@@ -447,11 +455,17 @@
     <widget position="490,70" size="750,50" source="session.CurrentService" render="Label" font="Regular;32" foregroundColor="selectedFG" backgroundColor="background" transparent="1" valign="center" halign="left" noWrap="1" zPosition="5">
       <convert type="ServiceName">Name</convert>
     </widget>
-    <widget   position="490,610" size="750,50" source="session.Event_Now" render="Label" font="Regular;32" halign="left" valign="center" backgroundColor="background" foregroundColor="selectedFG" transparent="1" zPosition="1">
+<!--     <widget   position="490,610" size="750,50" source="session.Event_Now" render="Label" font="Regular;32" halign="left" valign="center" backgroundColor="background" foregroundColor="selectedFG" transparent="1" zPosition="1">
       <convert type="EventName">Name</convert>
-    </widget>
+    </widget> -->
+	 <widget position="490,595" size="750,76" source="session.Event_Now" render="Label" font="Regular;32" halign="left" valign="center" backgroundColor="background" foregroundColor="selectedFG" transparent="1" zPosition="1">
+  <convert type="EventName">Name</convert>
+</widget>
     <widget position="488,154" size="749,419" source="session.VideoPicture" render="Pig" zPosition="3" backgroundColor="background-pig" />
   </screen>
+  
+ 
+  
   <screen name="template_pig_mini_left">
     <widget position="34,60" size="307,172" source="session.VideoPicture" render="Pig" zPosition="3" backgroundColor="background-pig" />
     <widget position="30,243" size="315,30" source="session.CurrentService" render="Label" font="Regular;22" transparent="1" valign="center" halign="center" noWrap="1" zPosition="5" backgroundColor="background" foregroundColor="selectedFG">
@@ -704,119 +718,155 @@
   </screen>
   <!-- TEMPLATES crypt_tuner_info-->
   <screen name="template_crypt_tuner_info">
-    <!--  TunerInfo -->
-    <eLabel text="Tuner:" position="763,658" size="60,18" font="Regular; 16" backgroundColor="background" transparent="1" zPosition="1" valign="center" foregroundColor="selectedFG" />
-    <eLabel text="A" position="814,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="B" position="833,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="C" position="852,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="D" position="871,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+<!--  TunerInfo -->
+    <eLabel text="A" position="762,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+    <eLabel text="B" position="781,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+    <eLabel text="C" position="800,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+    <eLabel text="D" position="819,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
     <!--text="E" results "O" -> text="E " results "E"-->
-    <eLabel text="E " position="890,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="F" position="909,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="G" position="928,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="H" position="947,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="I" position="966,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="813,658" size="17,18" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="832,658" size="17,18" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="851,658" size="17,18" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="870,658" size="17,18" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="0" position="889,658" size="17,18" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="908,658" size="17,18" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="927,658" size="17,18" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="946,658" size="17,18" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="965,658" size="17,18" />
-    <widget source="session.TunerInfo" render="FixedLabel" text="A" position="814,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <eLabel text="E " position="838,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+    <eLabel text="F" position="857,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+    <eLabel text="G" position="876,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+    <eLabel text="H" position="895,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+    <eLabel text="I" position="914,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+	<eLabel text="J" position="933,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+    <eLabel text="K" position="952,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+    <eLabel text="L" position="971,659" zPosition="2" size="15,16" font="Regular; 16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="761,658" size="17,18" />
+    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="780,658" size="17,18" />
+    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="799,658" size="17,18" />
+    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="818,658" size="17,18" />
+    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="0" position="837,658" size="17,18" />
+    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="856,658" size="17,18" />
+    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="875,658" size="17,18" />
+    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="894,658" size="17,18" />
+    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="913,658" size="17,18" />
+	<eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="932,658" size="17,18" />
+    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="951,658" size="17,18" />
+    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="970,658" size="17,18" />
+    <widget source="session.TunerInfo" render="FixedLabel" text="A" position="762,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
       <convert type="TunerInfo">TunerUseMask</convert>
       <convert type="ValueBitTest">1</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="B" position="833,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <widget source="session.TunerInfo" render="FixedLabel" text="B" position="781,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
       <convert type="TunerInfo">TunerUseMask</convert>
       <convert type="ValueBitTest">2</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="C" position="852,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <widget source="session.TunerInfo" render="FixedLabel" text="C" position="800,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
       <convert type="TunerInfo">TunerUseMask</convert>
       <convert type="ValueBitTest">4</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="D" position="871,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <widget source="session.TunerInfo" render="FixedLabel" text="D" position="819,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
       <convert type="TunerInfo">TunerUseMask</convert>
       <convert type="ValueBitTest">8</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <!--text="E" results "O" -> text="E " results "E"-->
-    <widget source="session.TunerInfo" render="FixedLabel" text="E " position="890,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <widget source="session.TunerInfo" render="FixedLabel" text="E " position="838,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
       <convert type="TunerInfo">TunerUseMask</convert>
       <convert type="ValueBitTest">16</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="F" position="909,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <widget source="session.TunerInfo" render="FixedLabel" text="F" position="857,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
       <convert type="TunerInfo">TunerUseMask</convert>
       <convert type="ValueBitTest">32</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="G" position="928,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <widget source="session.TunerInfo" render="FixedLabel" text="G" position="876,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
       <convert type="TunerInfo">TunerUseMask</convert>
       <convert type="ValueBitTest">64</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="H" position="947,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <widget source="session.TunerInfo" render="FixedLabel" text="H" position="895,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
       <convert type="TunerInfo">TunerUseMask</convert>
       <convert type="ValueBitTest">128</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="I" position="966,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <widget source="session.TunerInfo" render="FixedLabel" text="I" position="914,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
       <convert type="TunerInfo">TunerUseMask</convert>
       <convert type="ValueBitTest">256</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="A" position="814,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+	    <widget source="session.TunerInfo" render="FixedLabel" text="J" position="933,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">512</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.TunerInfo" render="FixedLabel" text="K" position="952,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">1024</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.TunerInfo" render="FixedLabel" text="L" position="971,659" zPosition="3" size="15,16" font="Regular; 16" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">1048</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="FixedLabel" text="A" position="762,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
       <convert type="FrontendInfo">NUMBER</convert>
       <convert type="ValueRange">0,0</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="B" position="833,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <widget source="session.FrontendInfo" render="FixedLabel" text="B" position="781,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
       <convert type="FrontendInfo">NUMBER</convert>
       <convert type="ValueRange">1,1</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="C" position="852,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <widget source="session.FrontendInfo" render="FixedLabel" text="C" position="800,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
       <convert type="FrontendInfo">NUMBER</convert>
       <convert type="ValueRange">2,2</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="D" position="871,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <widget source="session.FrontendInfo" render="FixedLabel" text="D" position="819,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
       <convert type="FrontendInfo">NUMBER</convert>
       <convert type="ValueRange">3,3</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <!--text="E" results "O" -> text="E " results "E"-->
-    <widget source="session.FrontendInfo" render="FixedLabel" text="E " position="890,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <widget source="session.FrontendInfo" render="FixedLabel" text="E " position="838,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
       <convert type="FrontendInfo">NUMBER</convert>
       <convert type="ValueRange">4,4</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="F" position="909,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <widget source="session.FrontendInfo" render="FixedLabel" text="F" position="857,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
       <convert type="FrontendInfo">NUMBER</convert>
       <convert type="ValueRange">5,5</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="G" position="928,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <widget source="session.FrontendInfo" render="FixedLabel" text="G" position="876,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
       <convert type="FrontendInfo">NUMBER</convert>
       <convert type="ValueRange">6,6</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="H" position="947,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <widget source="session.FrontendInfo" render="FixedLabel" text="H" position="895,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
       <convert type="FrontendInfo">NUMBER</convert>
       <convert type="ValueRange">7,7</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="I" position="966,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <widget source="session.FrontendInfo" render="FixedLabel" text="I" position="914,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
       <convert type="FrontendInfo">NUMBER</convert>
       <convert type="ValueRange">8,8</convert>
       <convert type="ConditionalShowHide" />
     </widget>
+	    <widget source="session.FrontendInfo" render="FixedLabel" text="J" position="933,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">9,9</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="FixedLabel" text="K" position="952,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">10,10</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="FixedLabel" text="L" position="971,659" zPosition="5" size="15,16" font="Regular; 16" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">11,11</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+	
     <!--  Crypt info-->
     <eLabel text="Crypt:" position="993,658" size="55,18" font="Regular; 16" halign="left" backgroundColor="black" transparent="1" valign="center" foregroundColor="selectedFG" zPosition="5" />
     <eLabel text="B" font="Regular; 16" position="1048,659" size="15,16" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" zPosition="2" />
@@ -902,120 +952,156 @@
     <!-- CRYPT  -->
   </screen>
   <!--Template SecondInfoBar Tuner Info  -->
-  <screen name="template_sib_tuner_info">
-    <eLabel text="Tuner:" position="20,692" size="70,20" font="Regular; 20" backgroundColor="background" transparent="1" zPosition="1" valign="center" foregroundColor="selectedFG" />
-    <eLabel text="A" position="92,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="B" position="112,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="C" position="132,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="D" position="152,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <!--text="E" results "O" -> text="E " results "E"-->
-    <eLabel text="E " position="172,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="F" position="192,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="G" position="212,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="H" position="232,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="I" position="252,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="91,691" size="18,22" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="111,691" size="18,22" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="131,691" size="18,22" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="151,691" size="18,22" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="0" position="171,691" size="18,22" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="191,691" size="18,22" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="211,691" size="18,22" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="231,691" size="18,22" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="251,691" size="18,22" />
-    <widget source="session.TunerInfo" render="FixedLabel" text="A" position="92,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">1</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="B" position="112,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">2</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="C" position="132,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">4</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="D" position="152,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">8</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <!--text="E" results "O" -> text="E " results "E"-->
-    <widget source="session.TunerInfo" render="FixedLabel" text="E " position="172,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">16</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="F" position="192,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">32</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="G" position="212,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">64</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="H" position="232,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">128</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="I" position="252,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">256</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="A" position="92,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">0,0</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="B" position="112,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">1,1</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="C" position="132,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">2,2</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="D" position="152,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">3,3</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <!--text="E" results "O" -> text="E " results "E"-->
-    <widget source="session.FrontendInfo" render="FixedLabel" text="E " position="172,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">4,4</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="F" position="192,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">5,5</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="G" position="212,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">6,6</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="H" position="232,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">7,7</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="I" position="252,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">8,8</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-  </screen>
+ <screen name="template_sib_tuner_info">
+  <eLabel text="A" position="21,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="B" position="41,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="C" position="61,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="D" position="81,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <!--text="E" results "O" -> text="E " results "E"-->
+  <eLabel text="E " position="101,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="F" position="121,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="G" position="141,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="H" position="161,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="I" position="181,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="J" position="201,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="K" position="221,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="L" position="241,692" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="20,691" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="40,691" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="60,691" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="80,691" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="0" position="100,691" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="120,691" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="140,691" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="160,691" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="180,691" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="200,691" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="220,691" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="240,691" size="18,22" />
+  <widget source="session.TunerInfo" render="FixedLabel" text="A" position="21,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="B" position="41,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="C" position="61,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="D" position="81,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!--text="E" results "O" -> text="E " results "E"-->
+  <widget source="session.TunerInfo" render="FixedLabel" text="E " position="101,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">16</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="F" position="121,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">32</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="G" position="141,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">64</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="H" position="161,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">128</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="I" position="181,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">256</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+    <widget source="session.TunerInfo" render="FixedLabel" text="J" position="201,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">512</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="K" position="221,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1024</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="L" position="241,692" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2048</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="A" position="21,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">0,0</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="B" position="41,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">1,1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="C" position="61,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">2,2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="D" position="81,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">3,3</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!--text="E" results "O" -> text="E " results "E"-->
+  <!--  <widget source="session.FrontendInfo" render="Pixmap" pixmap="Ultimate/skin_default/system/ValueRange4,4.png" position="172,692" zPosition="5" size="16,20" alphatest="blend"> -->
+  <widget source="session.FrontendInfo" render="FixedLabel" text="E " position="101,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">4,4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="F" position="121,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">5,5</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="G" position="141,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">6,6</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="H" position="161,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">7,7</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="I" position="181,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">8,8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+    <widget source="session.FrontendInfo" render="FixedLabel" text="J" position="201,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">9,9</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="K" position="221,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">10,10</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="L" position="241,692" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">11,11</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+ </screen>
   <!--Template SecondInfoBar Crypt Info  -->
   <screen name="template_sib_crypt_info">
     <eLabel text="Crypt:" position="304,692" size="65,20" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" valign="center" foregroundColor="selectedFG" zPosition="5" />
@@ -1102,120 +1188,155 @@
   </screen>
   <!--Template InfoBar Tuner Info  -->
   <screen name="template_infobar_tuner_info">
-    <eLabel text="Tuner:" position="2,697" size="70,20" font="Regular; 20" backgroundColor="background" transparent="1" zPosition="1" valign="center" foregroundColor="selectedFG" />
-    <eLabel text="A" position="74,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="B" position="94,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="C" position="114,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="D" position="134,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <!--text="E" results "O" -> text="E " results "E"-->
-    <eLabel text="E " position="154,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="F" position="174,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="G" position="194,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="H" position="214,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel text="I" position="234,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="73,696" size="18,22" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="93,696" size="18,22" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="113,696" size="18,22" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="133,696" size="18,22" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="0" position="153,696" size="18,22" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="173,696" size="18,22" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="193,696" size="18,22" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="213,696" size="18,22" />
-    <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="233,696" size="18,22" />
-    <widget source="session.TunerInfo" render="FixedLabel" text="A" position="74,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">1</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="B" position="94,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">2</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="C" position="114,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">4</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="D" position="134,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">8</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <!--text="E" results "O" -> text="E " results "E"-->
-    <widget source="session.TunerInfo" render="FixedLabel" text="E " position="154,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">16</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="F" position="174,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">32</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="G" position="194,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">64</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="H" position="214,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">128</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="I" position="234,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">256</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="A" position="74,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">0,0</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="B" position="94,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">1,1</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="C" position="114,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">2,2</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="D" position="134,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">3,3</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <!--text="E" results "O" -> text="E " results "E"-->
-    <!--  <widget source="session.FrontendInfo" render="Pixmap" pixmap="Ultimate/skin_default/system/ValueRange4,4.png" position="172,697" zPosition="5" size="16,20" alphatest="blend"> -->
-    <widget source="session.FrontendInfo" render="FixedLabel" text="E " position="154,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">4,4</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="F" position="174,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">5,5</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="G" position="194,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">6,6</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="H" position="214,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">7,7</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="I" position="234,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">8,8</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-  </screen>
+  <eLabel text="A" position="11,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="B" position="31,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="C" position="51,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="D" position="71,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <!--text="E" results "O" -> text="E " results "E"-->
+  <eLabel text="E " position="91,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="F" position="111,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="G" position="131,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="H" position="151,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="I" position="171,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="J" position="191,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="K" position="211,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel text="L" position="231,697" zPosition="2" size="16,20" font="Regular; 20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="0" valign="center" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="10,696" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="30,696" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="50,696" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="70,696" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="0" position="90,696" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="110,696" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="130,696" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="150,696" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="170,696" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="190,696" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="210,696" size="18,22" />
+  <eLabel name="Rahmem_tuner" backgroundColor="selectedFG" zPosition="1" position="230,696" size="18,22" />
+  <widget source="session.TunerInfo" render="FixedLabel" text="A" position="11,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="B" position="31,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="C" position="51,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="D" position="71,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!--text="E" results "O" -> text="E " results "E"-->
+  <widget source="session.TunerInfo" render="FixedLabel" text="E " position="91,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">16</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="F" position="111,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">32</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="G" position="131,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">64</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="H" position="151,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">128</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="I" position="171,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">256</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+    <widget source="session.TunerInfo" render="FixedLabel" text="J" position="191,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">512</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="K" position="211,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1024</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="L" position="231,697" zPosition="3" size="16,20" font="Regular; 20" halign="center" foregroundColor="yellow2" backgroundColor="background" transparent="0" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2048</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="A" position="11,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">0,0</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="B" position="31,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">1,1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="C" position="51,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">2,2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="D" position="71,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">3,3</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!--text="E" results "O" -> text="E " results "E"-->
+  <!--  <widget source="session.FrontendInfo" render="Pixmap" pixmap="Ultimate/skin_default/system/ValueRange4,4.png" position="172,697" zPosition="5" size="16,20" alphatest="blend"> -->
+  <widget source="session.FrontendInfo" render="FixedLabel" text="E " position="91,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">4,4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="F" position="111,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">5,5</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="G" position="131,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">6,6</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="H" position="151,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">7,7</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="I" position="171,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">8,8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+    <widget source="session.FrontendInfo" render="FixedLabel" text="J" position="191,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">9,9</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="K" position="211,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">10,10</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="L" position="231,697" zPosition="5" size="16,20" font="Regular; 20" halign="center" foregroundColor="menu" backgroundColor="selectedFG" transparent="0" valign="center">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">11,11</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+</screen>
   <!--Template MSN Weather  -->
   <screen name="template_weather">
     <widget noWrap="1" foregroundColor="yellow" backgroundColor="background" font="Regular; 18" render="Label" position="295,3" size="60,20" source="session.MSNWeather" transparent="1" zPosition="8" halign="center">
@@ -1290,7 +1411,7 @@
   </screen>
   <!--Template Setup Config  -->
   <screen name="template_setup_config">
-    <widget name="config" position="30,60" size="700,440" itemHeight="32" font="Regular; 20" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png"  alphatest="blend" enableWrapAround="1" backgroundColor="background" transparent="1" />
+    <widget name="config" position="30,60" size="700,440" itemHeight="36" font="Regular; 22" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png"  alphatest="blend" enableWrapAround="1" backgroundColor="background" transparent="1" />
     <widget name="description" position="30,520" size="700,100" font="Regular; 22" halign="center" valign="center" transparent="1" foregroundColor="selectedFG" />
     <widget name="HelpWindow" position="78,300" size="600,200" zPosition="2" transparent="1" alphatest="blend" />
     <widget name="footnote" position="30,640" size="700,30" font="Regular; 22" halign="right" valign="center" transparent="1" />
@@ -1302,7 +1423,7 @@
 	
       <convert type="TemplatedMultiContent">
 					{"template": [ MultiContentEntryText(pos = (2, 4), size = (440, 40), flags = RT_HALIGN_LEFT, text = 0) ],
-					"fonts": [gFont("Regular", 27)],
+					"fonts": [gFont("Regular", 26)],
 					"itemHeight": 40
 					}
 				</convert>
@@ -1313,7 +1434,7 @@
     <widget source="menu" render="Listbox" position="30,60" size="740,610"  scrollbarMode="showOnDemand" sliderPixmap="Ultimate/menu/Scrollbar.png"  backgroundColor="listboxBG" foregroundColor="foreground"  enableWrapAround="1" transparent="1">
       <convert type="TemplatedMultiContent">
 					{"template": [ MultiContentEntryText(pos = (6, 4), size = (730, 40), flags = RT_HALIGN_LEFT, text = 0) ],
-					"fonts": [gFont("Regular", 27)],
+					"fonts": [gFont("Regular", 26)],
 					"itemHeight": 40
 					}
 				</convert>
@@ -1525,9 +1646,26 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
     <ePixmap pixmap="Ultimate/Wettericons/cold_hot.png" position="998,3" size="9,24" alphatest="blend" transparent="1" zPosition="1" />
     <ePixmap pixmap="Ultimate/Wettericons/cold_hot.png" position="782,3" size="9,24" alphatest="blend" transparent="1" zPosition="1" />
   </screen>
+
   <!--Template List ChannelSelection Default -->
   <screen name="ChannelSelection_color_default">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways"  progressPercentWidth="100"  transparent="1" sliderPixmap="Ultimate/menu/Scrollbar.png" fieldMargins="5" itemsDistances="5" progressbarHeight="8" progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;24" serviceInfoFont="Regular;22"  colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="30,60" size="820,570" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	alphatest="blend" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;22" 
+	serviceNameFont="Regular;24" 
+	serviceInfoFont="Regular;22" 
+	progressInfoFont="Regular;18"
+	transparent="1" 
+	colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+	scrollbarMode="showAlways"  progressPercentWidth="100"   sliderPixmap="Ultimate/menu/Scrollbar.png" 
 	colorServiceDescription="white" 
 	colorServiceDescriptionSelected="selectedFG" 
 	colorEventProgressbarBorder="selectedFG" 
@@ -1539,7 +1677,23 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_color_2.png" />
   </screen>
   <screen name="ChannelSelection_color_stein17">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showOnDemand" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" fieldMargins="5" itemsDistances="5" progressbarHeight="8" progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;24" serviceInfoFont="Regular;22" transparent="1" 
+    <widget name="list" position="30,60" size="820,570" 
+	scrollbarMode="showOnDemand" 
+	sliderPixmap="Ultimate/menu/Scrollbar.png" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	alphatest="blend" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;22" 
+	serviceNameFont="Regular;24" 
+	serviceInfoFont="Regular;22" 
+	progressInfoFont="Regular;18"
+	transparent="1" 
 	colorServiceRecorded="red" 
 	colorServicePseudoRecorded="pink" 
 	colorServiceStreamed="orange" 
@@ -1547,16 +1701,36 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	foregroundColorMarkedSelected="rosa" 
 	colorServiceDescription="lightblue" 
 	colorServiceDescriptionSelected="bernstein" 
-	colorEventProgressbarBorder="white" 
-	colorEventProgressbarBorderSelected="white" 
+	colorEventProgressbarBorder="lightblue" 
+	colorEventProgressbarBorderSelected="lightblue" 
 	backgroundColor="background" 
-	backgroundColorSelected="verydarkgrey" 
+	backgroundColorSelected="black" 
 	foregroundColor="white" 
 	foregroundColorSelected="lightblue" 
-	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_color.png" />
+	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_color_2.png" />
   </screen>
     <screen name="ChannelSelection_color_Lemon">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways"  progressPercentWidth="100"  transparent="1" sliderPixmap="Ultimate/menu/Scrollbar.png" fieldMargins="5" itemsDistances="5" progressbarHeight="8" progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;24" serviceInfoFont="Regular;22"  colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways"  progressPercentWidth="100"  
+	sliderPixmap="Ultimate/menu/Scrollbar.png" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	alphatest="blend" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;22" 
+	serviceNameFont="Regular;24" 
+	serviceInfoFont="Regular;22" 
+	progressInfoFont="Regular;18"
+	transparent="1"  
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	colorServiceDescription="white" 
 	colorServiceDescriptionSelected="lemon" 
 	colorEventProgressbarBorder="lemon" 
@@ -1568,7 +1742,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_lemon.png" />
   </screen>
   <screen name="ChannelSelection_color_Bernstein">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" fieldMargins="5" itemsDistances="5" progressbarHeight="8" progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;24" serviceInfoFont="Regular;22" transparent="1" colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;22" 
+	serviceNameFont="Regular;24" 
+	serviceInfoFont="Regular;22" 
+	progressInfoFont="Regular;18"
+	transparent="1"  
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	colorServiceDescription="white" 
 	colorServiceDescriptionSelected="bernstein" 
 	colorEventProgressbarBorder="bernstein" 
@@ -1580,7 +1772,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_bernstein.png" />
   </screen>
   <screen name="ChannelSelection_color_Orange">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" fieldMargins="5" itemsDistances="5" progressbarHeight="8" progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;24" serviceInfoFont="Regular;22" transparent="1" colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;22" 
+	serviceNameFont="Regular;24" 
+	serviceInfoFont="Regular;22" 
+	progressInfoFont="Regular;18"
+	transparent="1"  
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	colorServiceDescription="white" 
 	colorServiceDescriptionSelected="orange2" 
 	colorEventProgressbarBorder="orange2" 
@@ -1592,7 +1802,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_orange.png" />
   </screen>
   <screen name="ChannelSelection_color_Green">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" fieldMargins="5" itemsDistances="5" progressbarHeight="8" progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;24" serviceInfoFont="Regular;22" transparent="1" colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;22" 
+	serviceNameFont="Regular;24" 
+	serviceInfoFont="Regular;22" 
+	progressInfoFont="Regular;18"
+	transparent="1"  
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	foregroundColorSelected="green" 
 	foregroundColor="green" 
 	colorServiceDescription="white" 
@@ -1604,7 +1832,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_green.png" />
   </screen>
   <screen name="ChannelSelection_color_Grey">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" fieldMargins="5" itemsDistances="5" progressbarHeight="8" progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;24" serviceInfoFont="Regular;22" transparent="1" colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;22" 
+	serviceNameFont="Regular;24" 
+	serviceInfoFont="Regular;22" 
+	progressInfoFont="Regular;18"
+	transparent="1"   
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	foregroundColor="grey" 
 	foregroundColorSelected="grey" 
 	colorServiceDescription="white" 
@@ -1616,7 +1862,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_color.png" />
   </screen>
   <screen name="ChannelSelection_color_Red_White">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" fieldMargins="5" itemsDistances="5" progressbarHeight="8" progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;24" serviceInfoFont="Regular;22" transparent="1" colorServiceRecording="red" colorServicePseudoRecorded="orange" colorServiceStreamed="rose" foregroundColorMarkedSelected="yellow" foregroundColorServiceNotAvail="dark" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;22" 
+	serviceNameFont="Regular;24" 
+	serviceInfoFont="Regular;22" 
+	progressInfoFont="Regular;18"
+	transparent="1"  
+	colorServiceRecording="red" 
+	colorServicePseudoRecorded="orange" 
+	colorServiceStreamed="rose" 
+	foregroundColorMarkedSelected="yellow" 
+	foregroundColorServiceNotAvail="dark" 
 	foregroundColor="red" 
 	foregroundColorSelected="white" 
 	colorServiceDescription="white" 
@@ -1628,7 +1892,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_red.png" />
   </screen>
     <screen name="ChannelSelection_color_White_Red">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" fieldMargins="5" itemsDistances="5" progressbarHeight="8" progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;24" serviceInfoFont="Regular;22" transparent="1" colorServiceRecording="red" colorServicePseudoRecorded="orange" colorServiceStreamed="rose" foregroundColorMarkedSelected="yellow" foregroundColorServiceNotAvail="dark" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;22" 
+	serviceNameFont="Regular;24" 
+	serviceInfoFont="Regular;22" 
+	progressInfoFont="Regular;18"
+	transparent="1"  
+	colorServiceRecording="red" 
+	colorServicePseudoRecorded="orange" 
+	colorServiceStreamed="rose" 
+	foregroundColorMarkedSelected="yellow" 
+	foregroundColorServiceNotAvail="dark" 
 	foregroundColor="red" 
 	foregroundColorSelected="red" 
 	colorServiceDescription="white" 
@@ -1640,7 +1922,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_red.png" />
   </screen>
   <screen name="ChannelSelection_color_Pink">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" fieldMargins="5" itemsDistances="5" progressbarHeight="8" progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;24" serviceInfoFont="Regular;22" transparent="1" colorServiceRecorded="red" colorServicePseudoRecorded="orange" colorServiceStreamed="green" foregroundColorServiceNotAvail="orange2" foregroundColorMarkedSelected="yellow" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;22" 
+	serviceNameFont="Regular;24" 
+	serviceInfoFont="Regular;22" 
+	progressInfoFont="Regular;18"
+	transparent="1"   
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="orange" 
+	colorServiceStreamed="green" 
+	foregroundColorServiceNotAvail="orange2" 
+	foregroundColorMarkedSelected="yellow" 
 	colorServiceDescription="white" 
 	colorServiceDescriptionSelected="pink" 
 	colorEventProgressbarBorder="pink" 
@@ -1652,7 +1952,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_pink.png" />
 	</screen>
   <screen name="ChannelSelection_color_Cyan">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" fieldMargins="5" itemsDistances="5" progressbarHeight="8" progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;24" serviceInfoFont="Regular;22" transparent="1" colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;22" 
+	serviceNameFont="Regular;24" 
+	serviceInfoFont="Regular;22" 
+	progressInfoFont="Regular;18"
+	transparent="1"   
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	colorServiceDescription="white" 
 	colorServiceDescriptionSelected="cyan" 
 	colorEventProgressbarBorder="cyan" 
@@ -1664,7 +1982,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_cyan.png" />
 	</screen>
   <screen name="ChannelSelection_color_Black_White">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" fieldMargins="5" itemsDistances="5" progressbarHeight="8" progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;24" serviceInfoFont="Regular;22" transparent="1" colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;22" 
+	serviceNameFont="Regular;24" 
+	serviceInfoFont="Regular;22" 
+	progressInfoFont="Regular;18"
+	transparent="1"  
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	colorServiceDescription="white" 
 	colorServiceDescriptionSelected="white" 
 	colorEventProgressbarBorder="white" 
@@ -1676,7 +2012,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_grey.png" />
   </screen>
     <screen name="ChannelSelection_color_Grey_Black">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" fieldMargins="5" itemsDistances="5" progressbarHeight="8" progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;24" serviceInfoFont="Regular;22" transparent="1" colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;22" 
+	serviceNameFont="Regular;24" 
+	serviceInfoFont="Regular;22" 
+	progressInfoFont="Regular;18"
+	transparent="1"  
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	colorServiceDescription="white" 
 	colorServiceDescriptionSelected="black" 
 	colorEventProgressbarBorder="white" 
@@ -1688,7 +2042,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_grey.png" />
   </screen>
   <screen name="ChannelSelection_color_Blue">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" fieldMargins="5" itemsDistances="5" progressbarHeight="8" progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;24" serviceInfoFont="Regular;22" transparent="1" colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;22" 
+	serviceNameFont="Regular;24" 
+	serviceInfoFont="Regular;22" 
+	progressInfoFont="Regular;18"
+	transparent="1"  
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	foregroundColor="bluetitle" 
 	foregroundColorSelected="bluetitle" 
 	colorServiceDescription="white" 
@@ -1700,7 +2072,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_blue.png" />
   </screen>
   <screen name="ChannelSelection_color_White_Blue">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" fieldMargins="5" itemsDistances="5" progressbarHeight="8" progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;24" serviceInfoFont="Regular;22" transparent="1" colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;22" 
+	serviceNameFont="Regular;24" 
+	serviceInfoFont="Regular;22" 
+	progressInfoFont="Regular;18"
+	transparent="1"  
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	foregroundColor="bluetitle" 
 	foregroundColorSelected="white" 
 	colorServiceDescription="white" 
@@ -1717,9 +2107,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
   </screen>
    <!--Template List ChannelSelection 3 Fields -->
   <screen name="ChannelSelection_3_fields_color_default">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" transparent="1" sliderPixmap="Ultimate/menu/Scrollbar.png" fieldMargins="5" itemsDistances="5" progressbarHeight="8" 
-	progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;20" serviceNameFont="Regular;22" serviceInfoFont="Regular;20"  
-	colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;20" 
+	serviceNameFont="Regular;22" 
+	serviceInfoFont="Regular;20" 
+	progressInfoFont="Regular;18"
+	transparent="1"    
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	colorServiceDescription="white" 
 	colorServiceDescriptionSelected="selectedFG" 
 	colorEventProgressbarBorder="selectedFG" 
@@ -1731,9 +2137,26 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_color_2.png" />
   </screen>
    <screen name="ChannelSelection_3_fields_color_Lemon">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" transparent="1" sliderPixmap="Ultimate/menu/Scrollbar.png" fieldMargins="5" itemsDistances="5" progressbarHeight="8" 
-	progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;20" serviceNameFont="Regular;22" serviceInfoFont="Regular;20"  
-	colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" 
+    sliderPixmap="Ultimate/menu/Scrollbar.png" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;20" 
+	serviceNameFont="Regular;22" 
+	serviceInfoFont="Regular;20" 
+	progressInfoFont="Regular;18"
+	transparent="1"  
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	colorServiceDescription="white" 
 	colorServiceDescriptionSelected="lemon" 
 	colorEventProgressbarBorder="lemon" 
@@ -1745,9 +2168,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_lemon.png" />
   </screen>
    <screen name="ChannelSelection_3_fields_color_Bernstein">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" transparent="1" sliderPixmap="Ultimate/menu/Scrollbar.png" fieldMargins="5" itemsDistances="5" progressbarHeight="8" 
-	progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;20" serviceNameFont="Regular;22" serviceInfoFont="Regular;20"  
-	colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;20" 
+	serviceNameFont="Regular;22" 
+	serviceInfoFont="Regular;20" 
+	progressInfoFont="Regular;18"
+	transparent="1"  
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	colorServiceDescription="white" 
 	colorServiceDescriptionSelected="bernstein" 
 	colorEventProgressbarBorder="bernstein" 
@@ -1759,9 +2198,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_bernstein.png" />
   </screen>
     <screen name="ChannelSelection_3_fields_color_Orange">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" transparent="1" sliderPixmap="Ultimate/menu/Scrollbar.png" fieldMargins="5" itemsDistances="5" progressbarHeight="8" 
-	progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;20" serviceNameFont="Regular;22" serviceInfoFont="Regular;20" 
-	colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="Ultimate/menu/Scrollbar.png" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;20" 
+	serviceNameFont="Regular;22" 
+	serviceInfoFont="Regular;20" 
+	progressInfoFont="Regular;18"
+	transparent="1" 
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	colorServiceDescription="white" 
 	colorServiceDescriptionSelected="orange2" 
 	colorEventProgressbarBorder="orange2" 
@@ -1773,9 +2228,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_orange.png" />
   </screen>
     <screen name="ChannelSelection_3_fields_color_Green">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" transparent="1" sliderPixmap="Ultimate/menu/Scrollbar.png" fieldMargins="5" itemsDistances="5" progressbarHeight="8" 
-	progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;20" serviceNameFont="Regular;22" serviceInfoFont="Regular;20" 
-	colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="Ultimate/menu/Scrollbar.png" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;18" 
+	serviceNameFont="Regular;20" 
+	serviceInfoFont="Regular;19" 
+	progressInfoFont="Regular;16"
+	transparent="1" 
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	foregroundColorSelected="green" 
 	foregroundColor="green" 
 	colorServiceDescription="white" 
@@ -1787,9 +2258,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_green.png" />
   </screen>
     <screen name="ChannelSelection_3_fields_color_Grey">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" transparent="1" sliderPixmap="Ultimate/menu/Scrollbar.png" fieldMargins="5" itemsDistances="5" progressbarHeight="8" 
-	progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;20" serviceNameFont="Regular;22" serviceInfoFont="Regular;20" 
-	colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="Ultimate/menu/Scrollbar.png" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;20" 
+	serviceNameFont="Regular;22" 
+	serviceInfoFont="Regular;20" 
+	progressInfoFont="Regular;18"
+	transparent="1" 
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	foregroundColor="grey" 
 	foregroundColorSelected="grey" 
 	colorServiceDescription="white" 
@@ -1801,9 +2288,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_color.png" />
   </screen>
     <screen name="ChannelSelection_3_fields_color_Red_White">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" transparent="1" sliderPixmap="Ultimate/menu/Scrollbar.png" fieldMargins="5" itemsDistances="5" progressbarHeight="8" 
-	progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;20" serviceNameFont="Regular;22" serviceInfoFont="Regular;20" 
-	colorServiceRecording="red" colorServicePseudoRecorded="orange" colorServiceStreamed="rose" foregroundColorMarkedSelected="yellow" foregroundColorServiceNotAvail="dark" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="Ultimate/menu/Scrollbar.png" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;20" 
+	serviceNameFont="Regular;22" 
+	serviceInfoFont="Regular;20" 
+	progressInfoFont="Regular;18"
+	transparent="1" 
+	colorServiceRecording="red" 
+	colorServicePseudoRecorded="orange" 
+	colorServiceStreamed="rose" 
+	foregroundColorMarkedSelected="yellow" 
+	foregroundColorServiceNotAvail="dark" 
 	foregroundColor="red" 
 	foregroundColorSelected="white" 
 	colorServiceDescription="white" 
@@ -1815,9 +2318,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_red.png" />
   </screen>
     <screen name="ChannelSelection_3_fields_color_White_Red">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" transparent="1" sliderPixmap="Ultimate/menu/Scrollbar.png" fieldMargins="5" itemsDistances="5" progressbarHeight="8" 
-	progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;20" serviceNameFont="Regular;22" serviceInfoFont="Regular;20" 
-	colorServiceRecording="red" colorServicePseudoRecorded="orange" colorServiceStreamed="rose" foregroundColorMarkedSelected="yellow" foregroundColorServiceNotAvail="dark" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="Ultimate/menu/Scrollbar.png" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;20" 
+	serviceNameFont="Regular;22" 
+	serviceInfoFont="Regular;20" 
+	progressInfoFont="Regular;18"
+	transparent="1"  
+	colorServiceRecording="red" 
+	colorServicePseudoRecorded="orange" 
+	colorServiceStreamed="rose" 
+	foregroundColorMarkedSelected="yellow" 
+	foregroundColorServiceNotAvail="dark" 
 	foregroundColor="red" 
 	foregroundColorSelected="red" 
 	colorServiceDescription="white" 
@@ -1829,9 +2348,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_red.png" />
   </screen>
     <screen name="ChannelSelection_3_fields_color_Pink">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" transparent="1" sliderPixmap="Ultimate/menu/Scrollbar.png" fieldMargins="5" itemsDistances="5" progressbarHeight="8" 
-	progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;20" serviceNameFont="Regular;22" serviceInfoFont="Regular;20"  
-	colorServiceRecorded="red" colorServicePseudoRecorded="orange" colorServiceStreamed="green" foregroundColorServiceNotAvail="orange2" foregroundColorMarkedSelected="yellow" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="Ultimate/menu/Scrollbar.png" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;20" 
+	serviceNameFont="Regular;22" 
+	serviceInfoFont="Regular;20" 
+	progressInfoFont="Regular;18"
+	transparent="1"  
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="orange" 
+	colorServiceStreamed="green" 
+	foregroundColorServiceNotAvail="orange2" 
+	foregroundColorMarkedSelected="yellow" 
 	colorServiceDescription="white" 
 	colorServiceDescriptionSelected="pink" 
 	colorEventProgressbarBorder="pink" 
@@ -1843,9 +2378,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_pink.png" />
 	</screen>
     <screen name="ChannelSelection_3_fields_color_Cyan">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" transparent="1" sliderPixmap="Ultimate/menu/Scrollbar.png" fieldMargins="5" itemsDistances="5" progressbarHeight="8" 
-	progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;20" serviceNameFont="Regular;22" serviceInfoFont="Regular;20" 
-	colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" sliderPixmap="Ultimate/menu/Scrollbar.png" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;20" 
+	serviceNameFont="Regular;22" 
+	serviceInfoFont="Regular;20" 
+	progressInfoFont="Regular;18"
+	transparent="1" 
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	colorServiceDescription="white" 
 	colorServiceDescriptionSelected="cyan" 
 	colorEventProgressbarBorder="cyan" 
@@ -1857,9 +2408,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_cyan.png" />
 	</screen>
     <screen name="ChannelSelection_3_fields_color_Black_White">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" transparent="1" sliderPixmap="Ultimate/menu/Scrollbar.png" fieldMargins="5" itemsDistances="5" progressbarHeight="8" 
-	progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;20" serviceNameFont="Regular;22" serviceInfoFont="Regular;20" 
-	colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="Ultimate/menu/Scrollbar.png" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;20" 
+	serviceNameFont="Regular;22" 
+	serviceInfoFont="Regular;20" 
+	progressInfoFont="Regular;18"
+	transparent="1" 
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	colorServiceDescription="white" 
 	colorServiceDescriptionSelected="white" 
 	colorEventProgressbarBorder="white" 
@@ -1871,9 +2438,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_grey.png" />
   </screen>
     <screen name="ChannelSelection_3_fields_color_Grey_Black">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" transparent="1" sliderPixmap="Ultimate/menu/Scrollbar.png" fieldMargins="5" itemsDistances="5" progressbarHeight="8" 
-	progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;20" serviceNameFont="Regular;22" serviceInfoFont="Regular;20" 
-	colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="Ultimate/menu/Scrollbar.png" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;20" 
+	serviceNameFont="Regular;22" 
+	serviceInfoFont="Regular;20" 
+	progressInfoFont="Regular;18"
+	transparent="1" 
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	colorServiceDescription="white" 
 	colorServiceDescriptionSelected="black" 
 	colorEventProgressbarBorder="white" 
@@ -1885,9 +2468,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_grey.png" />
   </screen>
     <screen name="ChannelSelection_3_fields_color_Blue">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" transparent="1" sliderPixmap="Ultimate/menu/Scrollbar.png" fieldMargins="5" itemsDistances="5" progressbarHeight="8" 
-	progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;20" serviceNameFont="Regular;22" serviceInfoFont="Regular;20" 
-	colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="Ultimate/menu/Scrollbar.png" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;20" 
+	serviceNameFont="Regular;22" 
+	serviceInfoFont="Regular;20" 
+	progressInfoFont="Regular;18"
+	transparent="1" 
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	foregroundColor="bluetitle" 
 	foregroundColorSelected="bluetitle" 
 	colorServiceDescription="white" 
@@ -1899,9 +2498,25 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/Skinparts/Progress/Progress_CS_blue.png" />
   </screen>
     <screen name="ChannelSelection_3_fields_color_White_Blue">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" transparent="1" sliderPixmap="Ultimate/menu/Scrollbar.png" fieldMargins="5" itemsDistances="5" progressbarHeight="8" 
-	progressBarWidth="50" progressbarBorderWidth="1" serviceItemHeight="30" serviceNumberFont="Regular;20" serviceNameFont="Regular;22" serviceInfoFont="Regular;20" 
-	colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="Ultimate/menu/Scrollbar.png" 
+	listMarginLeft="5" 
+    listMarginRight="18" 
+	fieldMargins="5" 
+	itemsDistances="5" 
+	progressbarHeight="8" 
+	progressBarWidth="50" 
+	progressbarBorderWidth="1" 
+	serviceItemHeight="30" 
+	serviceNumberFont="Regular;20" 
+	serviceNameFont="Regular;22" 
+	serviceInfoFont="Regular;20" 
+	progressInfoFont="Regular;18"
+	transparent="1" 
+	colorServiceRecorded="red" 
+	colorServicePseudoRecorded="pink" 
+	colorServiceStreamed="orange" 
+	foregroundColorServiceNotAvail="lila" 
+	foregroundColorMarkedSelected="rosa" 
 	foregroundColor="bluetitle" 
 	foregroundColorSelected="white" 
 	colorServiceDescription="white" 

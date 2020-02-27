@@ -165,7 +165,7 @@
   <eLabel text="Skin Selector" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
   <widget name="SkinList" position="30,60" size="700,260" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand" backgroundColor="background" enableWrapAround="1" transparent="1" />
   <widget name="Preview" position="140,337" size="480,280" alphatest="blend" />
-  <eLabel text="Skinanpassungen in Menu/Oberfläche/Setup-Ultimate." position="30,630" size="700,30" zPosition="2" font="Regular; 21" transparent="1" backgroundColor="black" halign="center" foregroundColor="selectedFG" />
+  <eLabel text="Skinanpassungen in Menu/Erweiterungen/Ultimate HD Config Tool." position="30,630" size="700,30" zPosition="2" font="Regular; 21" transparent="1" backgroundColor="black" halign="center" foregroundColor="selectedFG" />
   <widget source="introduction" render="Label" position="250,689" size="580,25" font="Regular; 20" halign="center" valign="center" transparent="1" foregroundColor="selectedFG" />
   <widget source="key_red" render="Label" position="49,689" size="170,25" zPosition="1" valign="center" font="Regular;20" halign="left" noWrap="1" transparent="1" />
   <ePixmap pixmap="Ultimate/buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
@@ -213,6 +213,7 @@
   <panel name="template_pixmap_Userlogo" />
   <panel name="template_pixmap_center" />
   <panel name="template_pixmap_vert_line_738" />
+  <panel name="template_source_red_o_yellow" />
 </screen>
  <!-- HDF HotkeySetup HD  -->
   <screen name="HotkeySetup" position="0,0" size="1280,720" title="Tasteneinstellungen" flags="wfNoBorder" backgroundColor="background">
@@ -407,7 +408,7 @@
     <panel name="template_pixmap_center" />
   </screen>
   <!-- HDF Image Backup HD -->
-  <screen name="ImageBackup" position="0,0" size="1280,720" title="Image Backup" flags="wfNoBorder" backgroundColor="background">
+<!--   <screen name="ImageBackup" position="0,0" size="1280,720" title="Image Backup" flags="wfNoBorder" backgroundColor="background">
     <widget source="Title" render="Label" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
     <widget source="options" render="Label" position="30,60" zPosition="1" size="700,440" font="Regular;20" halign="left" valign="top" transparent="1" />
     <widget source="description" render="Label" position="30,520" zPosition="1" size="700,150" font="Regular;20" halign="left" valign="top" transparent="1" />
@@ -425,7 +426,7 @@
     <panel name="template_pixmap_Userlogo" />
     <panel name="template_pixmap_center" />
     <panel name="template_pixmap_vert_line_738" />
-  </screen>
+  </screen> -->
   <screen name="ImageBackup" position="0,0" size="1280,720" title="Image Backup" flags="wfNoBorder" backgroundColor="background">
   <widget source="Title" render="Label" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
   <widget name="info-hdd" position="30,60" zPosition="1" size="700,320" font="Regular;22" halign="left" valign="top" transparent="1" backgroundColor="background" />
@@ -433,7 +434,7 @@
   <ePixmap position="870,390" size="280,280" pixmap="Ultimate/icons/image_backup.png" transparent="1" alphatest="blend" />
   <panel name="template_date" />
   <panel name="template_pixmap_line_hor_380" />
-  <panel name="template_name_red_green" />
+  <panel name="template_name_red_o_blue" />
   <panel name="template_exit_1280" />
   <panel name="template_pig_menu" />
   <panel name="template_pixmap_pig_menu" />
@@ -884,7 +885,7 @@
     <panel name="template_pixmap_center" />
   </screen>
   <!-- AtileHD_Config HD -->
-  <screen name="AtileHD_Config" position="0,0" size="1280,720" title="AtileHD Setup" flags="wfNoBorder" backgroundColor="background">
+ <!--  <screen name="AtileHD_Config" position="0,0" size="1280,720" title="AtileHD Setup" flags="wfNoBorder" backgroundColor="background">
     <eLabel text="Help, Skin Einstellungen (Wetter)" position="101,588" size="620,40" font="Regular; 24" halign="left" backgroundColor="black" transparent="1" valign="center" foregroundColor="selectedFG" />
     <eLabel text="/ Speichern" position="259,691" size="160,22" font="Regular; 20" halign="center" backgroundColor="black" transparent="1" valign="center" />
     <eLabel text="Gelbe Taste Drücken, um die Skinparts auszuwählen" position="100,539" size="630,40" font="Regular; 24" halign="left" backgroundColor="black" transparent="1" valign="center" foregroundColor="yellow" />
@@ -934,9 +935,9 @@
     <panel name="template_pixmap_rahmen" />
     <panel name="template_pixmap_Userlogo" />
     <panel name="template_pixmap_center" />
-  </screen>
+  </screen> -->
   <!-- HDF AtileHD_About HD  -->
-  <screen name="AtileHD_About" position="0,0" size="1280,720" title="AtileHD_About" flags="wfNoBorder" backgroundColor="background">
+ <!--  <screen name="AtileHD_About" position="0,0" size="1280,720" title="AtileHD_About" flags="wfNoBorder" backgroundColor="background">
   <ePixmap pixmap="Ultimate/DEV/Ultimate_Logo.png" position="870,390" size="280,280" zPosition="1" transparent="1" alphatest="blend" />
   <ePixmap position="30,70" size="700,107" zPosition="10" pixmap="Ultimate/DEV/HDF_header.png" transparent="1" alphatest="blend" />
   <eLabel position="30,200" size="700,30" zPosition="2" font="Regular; 22" text="Einstellungen MSN-Wetter" transparent="1" backgroundColor="black" halign="left" valign="top" foregroundColor="selectedFG" />
@@ -957,7 +958,7 @@
   <panel name="template_pixmap_rahmen" />
   <panel name="template_pixmap_Userlogo" />
   <panel name="template_pixmap_center" />
-</screen>
+</screen> -->
   <!-- NFR4XBootImageChoose HD -->
   <screen name="NFR4XBootImageChoose" position="0,0" size="1280,720" title="NFR4XBoot - Menu" flags="wfNoBorder" backgroundColor="background">
     <eLabel text="NFR4XBoot - Menu" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
@@ -1233,5 +1234,208 @@
     <widget source="key_yellow" render="Label" position="780,680" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <eLabel name="" position="320,680" size="640,25" zPosition="-1" />
   </screen>
+   <!-- IceTV -->
+  <screen name="IceTVUserTypeScreen" position="0,0" size="1280,720" title="IceTV - Account selection" flags="wfNoBorder" backgroundColor="background">
+    <widget source="instructions" render="Label" position="30,60" size="700,200" font="Regular; 20" foregroundColor="white" backgroundColor="background" halign="center" valign="center" transparent="1" />
+    <widget name="menu" position="30,340" size="700,100" itemHeight="35" zPosition="1" font="Regular; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="selectedFG" scrollbarSliderBorderColor="selectedFG" scrollbarMode="showOnDemand" transparent="1" />
+    <ePixmap position="870,390" size="280,280" zPosition="10" pixmap="Ultimate/icons/icetv.png" transparent="1" alphatest="blend" />
+    <panel name="template_title_date" />
+    <panel name="template_ok_exit_1280" />
+    <panel name="template_pixmap_vert_line_738" />
+    <panel name="template_pig_menu" />
+    <panel name="template_pixmap_pig_menu" />  
+    <panel name="template_pixmap_line_ServiceName_pig_menu" />
+    <panel name="template_digitalclock_widget" />
+    <panel name="template_pixmap_rahmen" />
+    <panel name="template_pixmap_Userlogo" />
+    <panel name="template_pixmap_center" />
+  </screen>
+  <screen name="IceTVNewUserSetup" position="0,0" size="1280,720" title="IceTV - User Information" flags="wfNoBorder" backgroundColor="background">
+    <widget name="instructions" position="30,60" size="700,200" font="Regular; 20" foregroundColor="white" backgroundColor="background" halign="center" valign="center" transparent="1" />
+    <widget name="config" position="30,300" size="700,150" itemHeight="35" zPosition="1" font="Regular; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="selectedFG" scrollbarSliderBorderColor="selectedFG" scrollbarMode="showOnDemand" transparent="1" />
+    <ePixmap position="870,390" size="280,280" zPosition="10" pixmap="Ultimate/icons/icetv.png" transparent="1" alphatest="blend" />
+    <widget name="description" position="30,480" size="700,190" font="Regular; 20" foregroundColor="grey" halign="center" backgroundColor="background" valign="center" transparent="1" />
+    <panel name="template_source_red_green_blue" />
+    <panel name="template_title_date" />
+    <panel name="template_okay_exit_1280" />
+    <panel name="template_pixmap_vert_line_738" />
+    <panel name="template_pig_menu" />
+    <panel name="template_pixmap_pig_menu" />  
+    <panel name="template_pixmap_line_ServiceName_pig_menu" />
+    <panel name="template_digitalclock_widget" />
+    <panel name="template_pixmap_rahmen" />
+    <panel name="template_pixmap_Userlogo" />
+    <panel name="template_pixmap_center" />
+  </screen>
+  <screen name="IceTVRegionSetup" position="0,0" size="1280,720" title="IceTV - Region" flags="wfNoBorder" backgroundColor="background">
+    <widget name="instructions" position="30,60" size="700,200" font="Regular; 20" foregroundColor="white" backgroundColor="background" halign="center" valign="center" transparent="1" />
+    <widget name="config" position="30,270" size="700,300" itemHeight="35" zPosition="1" font="Regular; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="selectedFG" scrollbarSliderBorderColor="selectedFG" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="error" position="30,270" size="700,300" itemHeight="35" zPosition="1" font="Regular; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="selectedFG" scrollbarSliderBorderColor="selectedFG" scrollbarMode="showOnDemand" transparent="1" />
+    <ePixmap position="870,390" size="280,280" zPosition="10" pixmap="Ultimate/icons/icetv.png" transparent="1" alphatest="blend" />
+    <widget name="description" position="30,580" size="700,100" font="Regular; 20" foregroundColor="grey" halign="center" backgroundColor="background" valign="center" transparent="1" />
+    <panel name="template_source_red_green" />
+    <panel name="template_title_date" />
+    <panel name="template_ok_exit_1280" />
+    <panel name="template_pixmap_vert_line_738" />
+    <panel name="template_pig_menu" />
+    <panel name="template_pixmap_pig_menu" />  
+    <panel name="template_pixmap_line_ServiceName_pig_menu" />
+    <panel name="template_digitalclock_widget" />
+    <panel name="template_pixmap_rahmen" />
+    <panel name="template_pixmap_Userlogo" />
+    <panel name="template_pixmap_center" />
+  </screen>
+  <screen name="IceTVCreateLogin" position="0,0" size="1280,720" title="IceTV - Login" flags="wfNoBorder" backgroundColor="background">
+    <widget name="instructions" position="30,60" size="700,100" font="Regular; 20" foregroundColor="white" backgroundColor="background" halign="center" valign="center" transparent="1" />
+    <widget name="message" position="30,420" size="700,170" itemHeight="35" zPosition="1" font="Regular; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="selectedFG" scrollbarSliderBorderColor="selectedFG" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="qrcode" position="270,180" size="256,256" pixmap="/usr/lib/enigma2/python/Plugins/SystemPlugins/IceTV/qr_code.png" zPosition="1" transparent="1" />
+    <widget name="error" position="30,280" size="700,300" itemHeight="35" zPosition="1" font="Regular; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="selectedFG" scrollbarSliderBorderColor="selectedFG" scrollbarMode="showOnDemand" transparent="1" />
+    <ePixmap position="870,390" size="280,280" zPosition="10" pixmap="Ultimate/icons/icetv.png" transparent="1" alphatest="blend" />
+    <widget name="description" position="30,595" size="700,80" font="Regular; 20" foregroundColor="grey" halign="center" backgroundColor="background" valign="center" transparent="1" />
+    <panel name="template_source_red_green" />
+    <panel name="template_title_date" />
+    <panel name="template_ok_exit_1280" />
+    <panel name="template_pixmap_vert_line_738" />
+    <panel name="template_pig_menu" />
+    <panel name="template_pixmap_pig_menu" />  
+    <panel name="template_pixmap_line_ServiceName_pig_menu" />
+    <panel name="template_digitalclock_widget" />
+    <panel name="template_pixmap_rahmen" />
+    <panel name="template_pixmap_Userlogo" />
+    <panel name="template_pixmap_center" />
+  </screen>
+  <screen name="IceTVNeedPassword" position="0,0" size="1280,720" title="IceTV - Password required" flags="wfNoBorder" backgroundColor="background">
+    <widget name="instructions" position="30,60" size="700,210" font="Regular; 20" foregroundColor="white" backgroundColor="background" halign="center" valign="center" transparent="1" />
+    <widget name="config" position="30,300" size="700,170" itemHeight="35" zPosition="1" font="Regular; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="selectedFG" scrollbarSliderBorderColor="selectedFG" scrollbarMode="showOnDemand" transparent="1" />
+    <ePixmap position="870,390" size="280,280" zPosition="10" pixmap="Ultimate/icons/icetv.png" transparent="1" alphatest="blend" />
+    <widget name="description" position="30,500" size="700,170" font="Regular; 20" foregroundColor="grey" halign="center" backgroundColor="background" valign="center" transparent="1" />
+    <panel name="template_source_red_green_blue" />
+    <panel name="template_title_date" />
+    <panel name="template_ok_exit_1280" />
+    <panel name="template_pixmap_vert_line_738" />
+    <panel name="template_pig_menu" />
+    <panel name="template_pixmap_pig_menu" />  
+    <panel name="template_pixmap_line_ServiceName_pig_menu" />
+    <panel name="template_digitalclock_widget" />
+    <panel name="template_pixmap_rahmen" />
+    <panel name="template_pixmap_Userlogo" />
+    <panel name="template_pixmap_center" />
+  </screen>
+  <screen name="IceTVMain" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="background">
+    <widget source="windowtitle" render="Label" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget source="Title" render="Label" position="30,60" size="700,34" font="Regular;24" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget name="list" position="30,100" size="700,455" itemHeight="35" font="Regular; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="selectedFG" scrollbarSliderBorderColor="selectedFG" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" backgroundColor="background" foregroundColor="white" transparent="1" />
+    <widget name="text" position="30,560" size="700,110" font="Regular; 20" foregroundColor="grey" halign="center" backgroundColor="background" valign="center" transparent="1" />
+    <ePixmap position="870,390" size="280,280" zPosition="2" pixmap="Ultimate/icons/icetv.png" transparent="1" alphatest="blend" />
+    <panel name="template_date" />
+    <panel name="template_ok_exit_1280" />
+    <panel name="template_pixmap_vert_line_738" />
+    <panel name="template_pig_menu" />
+    <panel name="template_pixmap_pig_menu" />  
+    <panel name="template_pixmap_line_ServiceName_pig_menu" />
+    <panel name="template_digitalclock_widget" />
+    <panel name="template_pixmap_rahmen" />
+    <panel name="template_pixmap_Userlogo" />
+    <panel name="template_pixmap_center" />
+  </screen>
+  <!-- IceTV -->
+
+  <!-- UltimateHD Setup -->
+<screen name="Ultimate_Config" position="0,0" size="1280,720" title="UltimateHD Setup" flags="wfNoBorder" backgroundColor="background">
+    <eLabel text="/ Speichern" position="259,691" size="160,22" font="Regular; 20" halign="center" backgroundColor="black" transparent="1" valign="center" />
+    <eLabel text="Gelbe Taste Drücken, um die Skinparts auszuwählen" position="100,579" size="630,40" font="Regular; 24" halign="left" backgroundColor="black" transparent="1" valign="center" foregroundColor="yellow" />
+	<eLabel text="Drücken Sie Menü, um das Wetter einzustellen" position="100,636" size="620,40" font="Regular; 24" halign="left" backgroundColor="black" transparent="1" valign="center" foregroundColor="green" />
+    <eLabel text="Ultimate HD Config" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget name="config" position="30,60" size="700,560" font="Regular; 23" itemHeight="32" render="Listbox" scrollbarMode="showNever" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" scrollbarWidth="6" transparent="1"  />
+    <widget name="Picture" position="765,400" size="475,267" alphatest="on" />
+    <ePixmap pixmap="Ultimate/buttons/key_yellow.png" position="40,586" size="26,26" alphatest="blend" transparent="1" />
+	<ePixmap position="30,642" size="64,26" zPosition="10" pixmap="Ultimate/buttons/menu.png" transparent="1" alphatest="blend" />
+	<!-- <widget source="key_yellow" render="Label" position="462,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+ -->    <panel name="template_date" />
+    <panel name="template_name_red_o_yellow" />
+    <panel name="template_ok_exit_1280" />
+    <panel name="template_pixmap_vert_line_738" />
+    <panel name="template_pig_menu" />
+    <panel name="template_pixmap_pig_menu" />  
+    <panel name="template_pixmap_line_ServiceName_pig_menu" />
+    <panel name="template_digitalclock_widget" />
+    <panel name="template_pixmap_rahmen" />
+    <panel name="template_pixmap_Userlogo" />
+    <panel name="template_pixmap_center" />
+   </screen>
+   <!-- Ultimate SetupHD -->
+ <screen name="UltimateScreens" position="0,0" size="1280,720" title="Ultimate Setup" flags="wfNoBorder" backgroundColor="background">
+    <eLabel text="Configure Ultimate HD Skin" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget source="menu" render="Listbox" position="30,60" size="700,610" scrollbarMode="showOnDemand" sliderPixmap="Ultimate/menu/Scrollbar.png" alphatest="blend" enableWrapAround="1" transparent="1">
+      <convert type="TemplatedMultiContent">{"template":
+   [
+    MultiContentEntryPixmapAlphaTest(pos = (2, 2), size = (25, 24), png = 2),
+    MultiContentEntryText(pos = (35, 2), size = (680, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),
+   ],
+   "fonts": [gFont("Regular", 24),gFont("Regular", 18)],
+   "itemHeight": 36
+     }</convert>
+    </widget>
+    <widget name="Picture" position="765,400" size="475,267" alphatest="on" />
+	<panel name="template_date" />
+    <panel name="ScrollBarTemplate size=700,610" />
+    <panel name="template_source_red_green" />
+    <panel name="template_ok_exit_1280" />
+    <panel name="template_pixmap_vert_line_738" />
+    <panel name="template_pig_menu" />
+    <panel name="template_pixmap_pig_menu" />  
+    <panel name="template_pixmap_line_ServiceName_pig_menu" />
+    <panel name="template_digitalclock_widget" />
+    <panel name="template_pixmap_rahmen" />
+    <panel name="template_pixmap_Userlogo" />
+    <panel name="template_pixmap_center" />
+  </screen>
+    <!-- AtileHD_Config HD -->
+<screen name="AtileHD_Config" position="center,center" size="800,420" backgroundColor="background20">
+	<eLabel text="Ultimate HD" position="10,4" size="350,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+	<widget source="global.CurrentTime" render="Label" position="450,4" size="240,44" font="Regular;32" halign="right" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1">
+	<convert type="ClockToText">Format:%a, %d.%m.%Y</convert>
+	</widget>
+	<widget source="global.CurrentTime" render="Label" position="705,3" size="94,44" font="Regular;32" halign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1">
+	<convert type="ClockToText">Format:%H:%M</convert>
+	</widget>
+	<ePixmap pixmap="Ultimate/DEV/Ultimate_Setup.png" position="500,70" size="280,280" zPosition="1" transparent="1" alphatest="blend" />
+	<ePixmap pixmap="Ultimate/Skinparts/Line_Hor/Line_Hor_Org.png" position="0,120" zPosition="2" size="425,5" alphatest="blend" transparent="1" />
+	<ePixmap pixmap="Ultimate/Skinparts/Line_Hor/Line_Hor_Org.png" position="0,51" zPosition="2" size="800,5" alphatest="blend" transparent="1" />
+	<ePixmap pixmap="Ultimate/Skinparts/Line_Hor/Line_Hor_Org.png" position="0,365" zPosition="2" size="800,5" alphatest="blend" transparent="1" />
+	<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/UltimateHD/plugin.png" position="10,205" size="100,40" zPosition="1" alphatest="blend" transparent="1" />
+	<ePixmap pixmap="Ultimate/Skinparts/Rahmen/Rahmen_Org.png" position="0,0" zPosition="-25" size="800,51" />
+	<eLabel text="um Ihre Einstellungen vorzunehmen." position="10,290" size="480,40" font="Regular; 24" halign="left" backgroundColor="black" transparent="1" valign="center" foregroundColor="selectedFG" />
+	<eLabel text="Bitte rufen Sie das Plugin auf" position="10,250" size="480,40" font="Regular; 24" halign="left" backgroundColor="black" transparent="1" valign="center" foregroundColor="selectedFG" />
+	<eLabel text="Menü - Erweiterungen - Ultimate HD" position="10,80" size="480,40" font="Regular; 24" halign="left" backgroundColor="black" transparent="1" valign="center" foregroundColor="green" />
+	<ePixmap position="720,380" size="64,26" zPosition="10" pixmap="Ultimate/buttons/exit.png" transparent="1" alphatest="blend" />
+	<widget name="key_blue" position="51,381" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+	<ePixmap pixmap="Ultimate/buttons/key_blue.png" position="15,380" size="26,26" alphatest="blend" transparent="1" />
+  </screen>
+  <!-- ATV AtileHD_About HD  -->
+ 
+  <screen name="AtileHD_About" position="0,0" size="1280,720" title="AtileHD_About" flags="wfNoBorder" backgroundColor="background">
+    <ePixmap pixmap="Ultimate/DEV/Ultimate_Logo.png" position="870,390" size="280,280" zPosition="1" transparent="1" alphatest="blend" />
+    <ePixmap position="30,70" size="700,107" zPosition="10" pixmap="Ultimate/DEV/HDF_header.png" transparent="1" alphatest="blend" />
+    <eLabel position="30,200" size="700,30" zPosition="2" font="Regular; 22" text="Einstellungen MSN-Wetter" transparent="1" backgroundColor="black" halign="left" valign="top" foregroundColor="selectedFG" />
+    <eLabel text="*Ultimate* HD Skin for HDF Images by stein17" position="13,685" size="480,26" font="Regular; 20" align="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="1" halign="center" />
+    <eLabel position="30,240" size="700,160" zPosition="2" font="Regular; 22" text="Erweiterungen/Wetterinformationen/Menu, dann Grün Hinzufügen. Wenn ihr den Ort Eingegeben habt, ein mal runter auf Location-Code. Gelb für Code suchen, mit Grün (OK)bestätigen, wichtig wieder OK. Noch wichtiger mit Rot zurück, sonst müsst ihr wieder von vorne anfangen. Jetzt mit Exit beenden, Benutzer Oberfläche neustarten, eventuell kompletter Neustart.." transparent="1" backgroundColor="black" halign="left" valign="top" />
+    <eLabel position="29,490" size="700,180" zPosition="2" font="Regular; 22" text="Menu/ Einstellungen/ Benutzeroberfläche Einstellungen/ *2nd Infoleiste*  auf *2nd Infobar INFO* einstellen. Infotase mit Eventview belegen: Menu/ Einstellungen/ Geräte/ Fernbedienungs Einstellungen/ Hotkey-Tasten-Belegungen/Info Taste drücken,EPG auswählen, in EPG *Zeige Event Anzeige* auswählen.  Der Eintrag der vorhanden ist, durch klicken der OK Taste deaktivieren." transparent="1" backgroundColor="black" halign="left" valign="top" />
+    <eLabel position="30,425" size="700,55" zPosition="2" font="Regular; 21" text="Einstellungen 2te Infobar mit 2x Ok aufrufen, EventView durch Infotaste anzeigen lassen" transparent="1" backgroundColor="black" halign="left" valign="top" foregroundColor="selectedFG" />
+    <eLabel text="Ultimate HD About" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <panel name="template_pixmap_line_hor_190" />
+    <panel name="template_pixmap_line_hor_230" />
+    <panel name="template_pixmap_line_hor_480" />
+    <panel name="template_date" />
+    <panel name="template_pixmap_vert_line_738" />
+    <panel name="template_pig_menu" />
+    <panel name="template_pixmap_pig_menu" />
+    <panel name="template_pixmap_line_ServiceName_pig_menu" />
+    <panel name="template_digitalclock_widget" />
+    <panel name="template_pixmap_rahmen" />
+    <panel name="template_pixmap_Userlogo" />
+    <panel name="template_pixmap_center" />
+  </screen>
+
  </skin>
 
