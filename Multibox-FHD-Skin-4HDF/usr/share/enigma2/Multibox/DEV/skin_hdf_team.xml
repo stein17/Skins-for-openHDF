@@ -172,14 +172,13 @@
 </screen>
   <!-- ********** Flash Online ********** -->
 <!-- HDF FlashOnline FHD -->
-<screen name="FlashOnline" position="0,0" size="1920,1080" title="Flash Online" flags="wfNoBorder">
+<screen name="FlashOnline" position="0,0" size="1920,1080" title="FlashOnline" flags="wfNoBorder">
     <eLabel text="OPEN SOURCE" position="1223,600" size="670,40" font="Replacement; 36" halign="left" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" zPosition="1" />
     <eLabel text="https://www.hdfreaks.cc/" position="1223,802" size="670,40" font="Replacement; 36" halign="left" transparent="1" zPosition="1" />
     <eLabel text="https://github.com/oe-alliance" position="1223,700" size="670,40" font="Replacement; 36" halign="left" transparent="1" zPosition="1" />
     <eLabel text="https://github.com/openhdf" position="1223,900" size="670,40" font="Replacement; 36" backgroundColor="background" halign="left" transparent="1" zPosition="12" />
     <widget source="Title" render="Label" position="180,20" size="1300,50" font="Italic; 40" halign="left" valign="center" foregroundColor="white" backgroundColor="background" borderColor="Multiboxlabel" borderWidth="3" transparent="1" zPosition="1" />
     <widget name="list" position="10,100" zPosition="1" size="1180,765" itemHeight="55" font="Regular;36" scrollbarSliderBorderWidth="1" scrollbarWidth="12" scrollbarSliderForegroundColor="white" scrollbarSliderBorderColor="Line" scrollbarMode="showOnDemand" transparent="1" />
-    <widget name="description" position="10,450" zPosition="1" size="1180,540" itemHeight="55" font="Regular;36" scrollbarSliderBorderWidth="1" scrollbarWidth="12" scrollbarSliderForegroundColor="white" scrollbarSliderBorderColor="Line" scrollbarMode="showOnDemand" transparent="1" />
     <panel name="template_fullscreen" />
     <panel name="template_pixmap_BG" />
     <panel name="template_pig_setup" />
