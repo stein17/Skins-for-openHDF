@@ -4,6 +4,7 @@
     <widget alphatest="blend" position="525,336" render="Picon" size="90,51" source="session.CurrentService" transparent="1" zPosition="1">
       <convert type="ServiceName">Reference</convert>
     </widget>
+    <widget source="Title" render="Label" position="160,4" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
     <widget font="Regular; 22" halign="left" noWrap="1" position="30,386" render="Label" size="585,25" source="session.Event_Now" transparent="1" valign="center" zPosition="2" foregroundColor="selectedFG">
       <convert type="EventName">Name</convert>
     </widget>
@@ -84,9 +85,9 @@
       <convert type="ValueRange">1,1</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <eLabel text="Temperatur:" position="665,385" size="120,25" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="background" transparent="1" />
-    <widget source="global.CurrentTime" render="UltimateSYSTemp" position="785,385" size="470,25" font="Regular;20" halign="left" valign="center" backgroundColor="background" foregroundColor="white" noWrap="1" transparent="1" zPosition="3" />
-    <widget source="session.CurrentService" render="Label" position="665,535" size="590,25" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="background" transparent="1">
+     <eLabel text="CPU Temperatur:" position="665,385" size="180,25" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="background" transparent="1" />
+    <widget source="global.CurrentTime" render="UltimateSYSTemp" position="825,385" size="470,25" font="Regular;20" halign="left" valign="center" backgroundColor="background" noWrap="1" transparent="1" zPosition="3" />
+     <widget source="session.CurrentService" render="Label" position="665,535" size="590,25" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="background" transparent="1">
       <convert type="UltimateReceiverInfo">FlashInfo</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="665,505" size="590,25" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="background" transparent="1">
@@ -136,13 +137,62 @@
     <!--     <widget position="30,610" size="595,25" font="Regular; 20" halign="center" transparent="1" zPosition="10" render="Label" source="session.CurrentService">
       <convert type="UltimateExtServiceInfo">Config</convert>
     </widget> -->
-	<widget source="Title" position="160,4" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
-    <panel name="template_pixmap_lines_SecondInfoBar"/>
+	<widget alphatest="blend" pixmap="Ultimate/icons/ico_dolby_on.png" position="860,688" render="Pixmap" size="47,26" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Ultimate/icons/ico_dolby_off.png" position="860,688" size="47,26" zPosition="1" alphatest="blend">
+    <convert type="ServiceInfo">IsStereo</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" position="980,688" size="47,26" render="Pixmap" pixmap="Ultimate/icons/ico_sd_on.png" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">0,719</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" position="980,688" size="47,26" render="Pixmap" pixmap="Ultimate/icons/ico_hd_off.png" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">720,1079</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" position="980,688" size="47,26" render="Pixmap" pixmap="Ultimate/icons/ico_hd_on.png" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">720,1080</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" pixmap="Ultimate/icons/ico_uhd_on.png" position="980,688" render="Pixmap" size="47,26" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">Is4K</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" pixmap="Ultimate/icons/ico_hd_hdr_on.png" position="980,688" render="Pixmap" size="47,26" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">IsHDHDR</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" pixmap="Ultimate/icons/ico_hdr_on.png" position="980,688" render="Pixmap" size="47,26" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">IsHDR</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" pixmap="Ultimate/icons/ico_hdr10_on.png" position="980,688" render="Pixmap" size="47,26" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">IsHDR10</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" pixmap="Ultimate/icons/ico_hlg_on.png" position="980,688" render="Pixmap" size="47,26" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">IsHLG</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Ultimate/icons/ico_format_off.png" position="920,688" size="47,26" zPosition="1" alphatest="blend">
+    <convert type="ServiceInfo">IsNotWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" pixmap="Ultimate/icons/ico_format_on.png" position="920,688" render="Pixmap" size="47,26" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+    <panel name="template_pixmap_lines_SecondInfoBar" />
     <panel name="template_sib_crypt_info" />
     <panel name="template_sib_tuner_info" />
     <panel name="template_digitalclock_widget" />
     <panel name="template_pixmap_rahmen" />
-    
     <panel name="template_pixmap_Userlogo" />
     <panel name="template_pixmap_center" />
     <panel name="template_date" />
