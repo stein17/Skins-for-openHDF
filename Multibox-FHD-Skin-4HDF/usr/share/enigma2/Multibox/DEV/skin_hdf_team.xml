@@ -224,7 +224,7 @@
   <widget name="info-multi" position="10,740" zPosition="1" size="1180,250" font="Regular;34" foregroundColor="cyan1" backgroundColor="background" halign="left" valign="top" transparent="1" />
   <panel name="template_fullscreen" />
   <panel name="template_pixmap_BG" />
-  <panel name="template_source_red_o_blue" />
+  <panel name="template_name_red_o_blue" />
   <panel name="template_menu_exit" />
   <panel name="template_pig_setup" />
 </screen>
