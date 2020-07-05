@@ -1760,6 +1760,7 @@
     <widget foregroundColor="cyan" backgroundColor="background" font="LCD; 54" noWrap="1" valign="center" halign="center" position="261,648" render="Label" size="140,66" source="global.CurrentTime" transparent="1" zPosition="2">
       <convert type="ClockToText">Default</convert>
     </widget>
+    </screen>
   <!-- DVDPlayer -->
   <screen name="FileBrowser" position="0,0" size="1280,720" title="DVD File Browser" flags="wfNoBorder" backgroundColor="background">
     <eLabel text="DVD File Browser" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
