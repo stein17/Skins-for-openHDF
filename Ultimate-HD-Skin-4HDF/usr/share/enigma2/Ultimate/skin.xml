@@ -7519,18 +7519,15 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
     <panel name="template_pixmap_center" />
     <panel name="template_pixmap_vert_line_738" />
   </screen>
-  <screen name="Seekbar" position="center,center" zPosition="2" size="574,65" backgroundColor="background">
-    <widget name="cursor" position="2,-127" size="16,230" pixmap="Ultimate/epg/timeline-now_z.png" alphatest="blend" zPosition="6" />
-    <widget name="time" position="1,0" size="574,30" font="Regular; 24" halign="center" transparent="1" valign="center" foregroundColor="selectedFG" />
-    <widget source="session.CurrentService" render="Label" position="20,35" size="80,27" font="Regular;20" halign="right" valign="bottom">
-      <convert type="ServicePosition">Position</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="486,35" size="80,27" font="Regular;20" halign="left" valign="bottom">
-      <convert type="ServicePosition">Length</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Progress" position="155,43" size="270,10" foregroundColor="selectedFG" borderWidth="2" borderColor="grey" zPosition="5" transparent="1">
-      <convert type="ServicePosition">Position</convert>
-    </widget>
+  <screen name="Seekbar" position="center,120" size="560,55" backgroundColor="background20">
+        <widget name="cursor" position="0,15" size="8,18" pixmap="position_arrow.png" alphatest="on"/>
+	<widget source="session.CurrentService" render="PositionGauge" position="145,30" size="270,10" zPosition="2" pointer="position_pointer.png:540,0" transparent="1" foregroundColor="selectedFG">
+	<convert type="ServicePosition">Gauge</convert>
+	</widget>
+	<widget name="time" position="50,25" size="100,20" font="Regular;20" halign="left" backgroundColor="background" transparent="1"/>
+	<widget source="session.CurrentService" render="Label" position="420,25" size="90,24" font="Regular;20" halign="right" backgroundColor="background" transparent="1">
+	<convert type="ServicePosition">Length</convert>
+	</widget>
   </screen>
   <screen name="InstallWizardIpkgUpdater" position="center,center" size="600,50" title=" ">
     <widget source="statusbar" render="Label" position="10,5" zPosition="10" size="10,30" halign="center" valign="center" font="Regular;22" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
