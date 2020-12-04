@@ -1,0 +1,12 @@
+Package: enigma2-plugin-skins-steampunk
+Version: 0.1
+Section: base
+Priority: optional
+Architecture: all
+Maintainer: stein17
+Description: Steampunk HD Skin  for HDF by stein17
+Depends: enigma2-plugin-skincomponents-weathercomponent, enigma2-plugin-systemplugins-weathercomponenthandler
+Source: https://github.com/stein17/Skins-for-openHDF
+Homepage: https://github.com/stein17/Skins-for-openHDF
+OE: Enigma2 Skin
+License: open
