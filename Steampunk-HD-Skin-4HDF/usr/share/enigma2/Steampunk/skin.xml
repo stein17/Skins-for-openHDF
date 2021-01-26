@@ -4176,12 +4176,12 @@ self['config'].l.setSeperation(int(300*f))
     <widget name="epg_description" position="50,70" size="680,560" font="Regular;22" borderColor="black" borderWidth="1" transparent="1" />
     <widget name="channel" position="890,375" size="330,75" font="Regular;22" borderColor="black" borderWidth="1" halign="center" valign="center" transparent="1" />
     <eLabel text="Playback Time:" noWrap="1" font="Regular;20" borderColor="black" borderWidth="1" halign="center" position="800,460" size="160,30" transparent="1" />
-    <widget source="session.CurrentService" render="Label" font="Regular;20" borderColor="black" borderWidth="1" halign="right" position="952,460" size="70,30" transparent="1">
-      <convert type="ServiceTime">StartTime</convert>
+     <widget source="Title" render="Label" position="130,10" size="600,38" font="Regular;30" halign="left" valign="center" foregroundColor="brown" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget source="session.CurrentService" render="Label" position="952,460" size="70,30" backgroundColor="background" font="Regular;20" borderColor="black" borderWidth="1" halign="left" transparent="1" valign="center">
+      <convert type="SteampunkServiceTime">StartTime</convert>
     </widget>
-    <widget source="Title" position="130,10" size="600,38" font="Regular;30" halign="left" valign="center" foregroundColor="brown" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
-    <widget source="session.CurrentService" render="Label" font="Regular;20" borderColor="black" borderWidth="1" halign="left" position="1155,460" size="70,30" transparent="1">
-      <convert type="ServiceTime">EndTime</convert>
+    <widget source="session.CurrentService" render="Label" position="1155,460" size="70,30" backgroundColor="background" font="Regular;20" borderColor="black" borderWidth="1" halign="left" transparent="1" valign="center">
+      <convert type="SteampunkServiceTime">EndTime</convert>
     </widget>
     <widget source="Service" render="Picon" position="800,387" size="85,51" zPosition="5" transparent="1" alphatest="blend">
       <convert type="MovieInfo">RecordServiceRef</convert>
