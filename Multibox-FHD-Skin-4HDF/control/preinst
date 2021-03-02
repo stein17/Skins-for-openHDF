@@ -1,16 +1,24 @@
-#!/bin/sh                                                       
-rm -rf /usr/share/enigma2/Multibox
-rm -rf /usr/lib/enigma2/python/Components/Converter/AMB
-rm -rf /usr/lib/enigma2/python/Components/Renderer/AMB 
-echo "                                                                           "
-echo "                                                                           "
-echo "                                                                           "
-echo "                                                                           "
-echo "                                                                           "
-echo "                                                                           "
-echo "                                                                           "
-echo "  Multibox Skin Full HD by stein17 is now being installed...               "
-echo "                                                                           " 
-echo "                                                                           "
-echo "                                                                           "
+#!/bin/sh
+echo "                                                                            "
+echo "                         ***** WARNING ****                                 "
+echo "Multibox skin requires a minimal dual core.                         "
+echo "Multibox skin is NOT guaranteed to work on slower or older receivers.    "
+echo "                                                                            "
+echo "                                                                            "
+echo "                                                                            "
+echo "Check if a previous version of the Multibox skin is installed"
+if [ -f /usr/share/enigma2/Multibox/skin.xml ]; then
+    cp -R /usr/share/enigma2/Multibox/ /tmp
+    rm -rf /usr/share/enigma2/Multibox
+    rm -rf /usr/lib/enigma2/python/Components/Converter/AMB*
+    rm -rf /usr/lib/enigma2/python/Components/Renderer/AMB*
+	rm -rf /usr/lib/enigma2/python/Plugins/Extensions/MultiboxFHD*
+    echo "                                                   "
+    echo "Previous Multibox skin installation        "
+    echo "    was found and removed successfully!            "
+    echo "                                                   "
+fi
+echo "                                                       "
+echo "Multibox skin is now being installed...        "
+echo "                                                       "
 exit 0

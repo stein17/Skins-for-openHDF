@@ -1,4 +1,11 @@
 #!/bin/sh
-echo " ...Multibox Skin Full HD by stein17 successful installed.  "
+if [ -f /Multibox/skin.xml ]; then
+  rm -rf /usr/share/enigma2/Multibox/
+  mv /tmp/Multibox /usr/share/enigma2/
+  rm -rf /usr/lib/enigma2/python/Plugins/Extensions/MultiboxFHD/
+  mv /tmp/MultiboxFHD/Extensions/Plugins/python/enigma2/lib/usr/
+fi
+echo "                                                          "
+echo " ..Multibox Skin  by stein17 successful installed. "
 echo "                                                          "
 exit 0

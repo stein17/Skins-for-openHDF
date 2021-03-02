@@ -25,15 +25,15 @@
  </screen>
    <!-- TEMPLATES Clocks-->
   <screen name="template_pixmap_Clock">
-  <ePixmap pixmap="Multibox/icons/Clock.png" position="1812,3" zPosition="1" size="90,90" transparent="1" alphatest="on" />
+  <ePixmap pixmap="icons/Clock.png" position="1812,3" zPosition="1" size="90,90" transparent="1" alphatest="on" />
   </screen>
      <!-- TEMPLATES Clocks no Icon-->
   <screen name="template_no_pixmap_Clock">
-  <ePixmap pixmap="Multibox/icons/Clock.png" position="1930,-80" zPosition="1" size="1,1" transparent="1" alphatest="on" />
+  <ePixmap pixmap="icons/Clock.png" position="1930,-80" zPosition="1" size="1,1" transparent="1" alphatest="on" />
   </screen>
   <!-- TEMPLATES Userlogos-->
  <screen name="template_pixmap_Userlogo">
- <ePixmap pixmap="Multibox/menu/User_Logo.png" position="11,20" size="150,48" zPosition="1" alphatest="blend" />
+ <ePixmap pixmap="menu/User_Logo.png" position="11,20" size="150,48" zPosition="1" alphatest="blend" />
   </screen>
    <!-- template_digitalclock_widget-->
   <screen name="template_digitalclock_widget">
@@ -55,15 +55,83 @@
   <widget backgroundColor="background" font="LCD; 66" noWrap="1" valign="center" halign="left" position="1735,862" render="Label" size="190,66" source="global.CurrentTime" transparent="1" zPosition="1" foregroundColor="white">
     <convert type="ClockToText">Default</convert>
   </widget>
+  <widget backgroundColor="background" font="Regular; 24" noWrap="1" valign="center" halign="right" position="1560,903" render="Label" size="160,30" source="global.CurrentTime" transparent="1" zPosition="1" foregroundColor="white">
+    <convert type="ClockToText">Format:%e. %B</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 24" valign="center" halign="right" noWrap="1" position="1560,872" render="Label" size="160,30" source="global.CurrentTime" transparent="1" zPosition="1" foregroundColor="white">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
   </screen>
  <!-- Time_Infobar_WITH_SECONDS -->
- <screen name="template_infobar_digitalclock_widget_seconds">
-<widget source="global.CurrentTime" render="Label" position="1730,862" size="190,66" font="LCD; 66" halign="left" foregroundColor="white" backgroundColor="background" borderColor="Multiboxlabel" borderWidth="1" transparent="1">
-<convert type="ClockToText">Format:%H:%M</convert>
-</widget>
-<widget source="global.CurrentTime" render="Label" position="1880,866" size="50,40" font="LCD; 34" valign="top" halign="left" foregroundColor="white" backgroundColor="background" borderColor="Multiboxlabel" borderWidth="1" transparent="1">
-<convert type="ClockToText">Format:%S</convert>
-</widget>
+ <screen name="template_infobar_digitalclock_widget_seconds_Top_LCD">
+		<widget source="global.CurrentTime" position="1680,861" size="165,66" font="LCD; 57" render="Label" halign="right" valign="center" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="AMBClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" position="1853,867" size="75,66" font="LCD;36" render="Label" halign="left" valign="top" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="ClockToText">Format:: %S</convert>
+		</widget>
+		<widget source="global.CurrentTime" position="1550,865" size="160,36" font="Regular;24" render="Label" halign="center" valign="center" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="AMBClockToText">Format:%A</convert>
+		</widget>
+		<widget source="global.CurrentTime" position="1550,895" size="160,36" font="Regular;24" render="Label" halign="center" valign="center" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="AMBClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+</screen>
+ <screen name="template_infobar_digitalclock_widget_seconds_Top_Regular">
+		<widget source="global.CurrentTime" position="1680,861" size="165,66" font="Regular; 57" render="Label" halign="right" valign="center" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="AMBClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" position="1853,866" size="75,66" font="Regular;36" render="Label" halign="left" valign="top" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="ClockToText">Format:: %S</convert>
+		</widget>
+		<widget source="global.CurrentTime" position="1550,865" size="160,36" font="Regular;24" render="Label" halign="center" valign="center" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="AMBClockToText">Format:%A</convert>
+		</widget>
+		<widget source="global.CurrentTime" position="1550,895" size="160,36" font="Regular;24" render="Label" halign="center" valign="center" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="AMBClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+</screen>
+ <screen name="template_infobar_digitalclock_widget_seconds_Regular">
+		<widget source="global.CurrentTime" position="1680,861" size="165,66" font="Regular; 57" render="Label" halign="right" valign="center" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="AMBClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" position="1853,873" size="75,66" font="Regular;36" render="Label" halign="left" valign="top" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="ClockToText">Format:: %S</convert>
+		</widget>
+		<widget source="global.CurrentTime" position="1550,865" size="160,36" font="Regular;24" render="Label" halign="center" valign="center" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="AMBClockToText">Format:%A</convert>
+		</widget>
+		<widget source="global.CurrentTime" position="1550,895" size="160,36" font="Regular;24" render="Label" halign="center" valign="center" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="AMBClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+</screen>
+ <screen name="template_infobar_digitalclock_widget_seconds_LCD">
+		<widget source="global.CurrentTime" position="1680,861" size="165,66" font="LCD; 57" render="Label" halign="right" valign="center" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="AMBClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" position="1853,873" size="75,66" font="LCD;36" render="Label" halign="left" valign="top" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="ClockToText">Format:: %S</convert>
+		</widget>
+		<widget source="global.CurrentTime" position="1550,865" size="160,36" font="Regular;24" render="Label" halign="center" valign="center" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="AMBClockToText">Format:%A</convert>
+		</widget>
+		<widget source="global.CurrentTime" position="1550,895" size="160,36" font="Regular;24" render="Label" halign="center" valign="center" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="AMBClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+</screen>
+<screen name="template_infobar_digitalclock_widget_Seconds">
+		<widget source="global.CurrentTime" position="1662,861" size="165,66" font="LCD; 55" render="Label" halign="right" valign="center" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="AMBClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" position="1840,861" size="80,66" font="LCD;55" render="Label" halign="left" valign="center" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="ClockToText">Format:: %S</convert>
+		</widget>
+		<widget source="global.CurrentTime" position="1550,865" size="160,36" font="Regular;24" render="Label" halign="center" valign="center" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="AMBClockToText">Format:%A</convert>
+		</widget>
+		<widget source="global.CurrentTime" position="1550,895" size="160,36" font="Regular;24" render="Label" halign="center" valign="center" zPosition="12" backgroundColor="background" foregroundColor="white" transparent="1">
+			<convert type="AMBClockToText">Format:%d.%m.%Y</convert>
+		</widget>
 </screen>
    <!--  Analog Clock-->
 <screen name="template_analogclock_widget">
@@ -89,141 +157,230 @@
     <convert type="ClockToText">Format:%M</convert>
   </widget>
   <widget alphatest="blend" render="MSNWeatherPixmap" position="1585,858" size="300,183" source="session.MSNWeather" transparent="1" zPosition="1">
-<convert type="MSNWeather">weathericon,current,/usr/share/enigma2/Multibox/Android/,png</convert>
+   <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/Multibox/Android/,png</convert>
 </widget>
   <widget noWrap="1" font="Regular;30" foregroundColor="black" backgroundColor="grey" borderWidth="1" borderColor="bluelabel" render="Label" position="1708,989" size="150,37" source="session.MSNWeather" zPosition="2" halign="right" valign="center" transparent="1">
     <convert type="MSNWeather">temperature_current</convert>
   </widget>
   </screen>
-  
+  <!-- TEMPLATES SecondInfoBar Poster-->
+  <screen name="template_SecondInfoBar_Poster">
+  <widget source="session.Event_Next" render="AMBPoster" borderColor="Line" borderWidth="3" position="925,662" size="185,279" zPosition="10" />
+  <widget source="session.Event_Now" render="AMBPoster" borderColor="Line" borderWidth="3" position="925,224" size="185,279" zPosition="10" />
+  </screen> 
+  <!-- TEMPLATES-SIB_session_Event_Now_Next-Poster-->
+  <screen name="template_SIB_session_Event_Now_Next" >
+  <widget source="session.Event_Next" render="AMBRunningText" options="movetype=running,startdelay=6000,steptime=60,direction=top,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" size="1000,310" position="110,635" font="Regular; 36" halign="left" backgroundColor="background" transparent="1" foregroundColor="white" zPosition="1">
+    <convert type="EventName">FullDescription</convert>
+  </widget>
+  <widget source="session.Event_Now" render="AMBRunningText" options="movetype=running,startdelay=6000,steptime=60,direction=top,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" size="1000,320" position="110,170" font="Regular; 36" halign="left" backgroundColor="background" transparent="1" foregroundColor="white" zPosition="1">
+    <convert type="EventName">FullDescription</convert>
+  </widget>
+  </screen>
+  <!-- TEMPLATES-ChannelSelection-Poster-Default-->
+  <screen name="template_ChannelSelection_Poster_D">
+  <widget source="ServiceEvent" render="AMBPoster" position="1730,400" size="185,279" zPosition="10" borderColor="Line" borderWidth="1" />
+  </screen>
+  <!-- TEMPLATES-ChannelSelection-Poster-Left-->
+  <screen name="template_ChannelSelection_Poster_L">
+  <widget source="ServiceEvent" render="AMBPoster" position="1035,400" size="185,279" zPosition="10" borderColor="Line" borderWidth="1" />
+  </screen>
+  <!-- TEMPLATES-ChannelSelection-Poster-Default-3Fields-->
+   <screen name="template_ChannelSelection_Poster_3">
+  <widget source="ServiceEvent" render="AMBPoster" position="1280,470" size="112,169" zPosition="10" borderColor="Line" borderWidth="1" />
+  </screen>
+ <!-- skin_infobar_Poster_Infobar_Now -->
+<screen name="template_Poster_Infobar_Now">
+ <widget source="session.Event_Now" render="AMBPoster" borderColor="Line" borderWidth="3" position="19,280" size="342,514" zPosition="10" />
+</screen>
+  <!-- TEMPLATES-EMCMediaCenter-Poster-->
+  <screen name="template_EMCMediaCenter_Backdrop_Poster">
+  <widget source="session.Event_Now
+  " render="AMBPoster" borderColor="Line" borderWidth="3" position="1320,610" size="156,234" zPosition="10" />
+  <widget source="session.Event_Now" render="AMBBackdrop" borderColor="Line" borderWidth="3" position="1490,610" size="415,234" zPosition="10" />
+  </screen> 
+   <!-- TEMPLATES-EV_session_Event_Now_Next-Poster-->
+ <screen name="template_EV_session_Event_Now_Next" >
+	<eLabel text="Start:" position="10,909" size="110,40" font="Regular; 34" halign="left" transparent="1" valign="center" foregroundColor="default" />
+	<widget name="datetime" position="90,909" size="340,40" font="Regular; 34" halign="center" transparent="1" backgroundColor="background" />
+	<widget name="duration" position="430,909" size="170,40" font="Regular; 34" halign="center" transparent="1" backgroundColor="background" />
+	<widget source="Service" render="Progress" foregroundColor="Line" backgroundColor="Line" position="605,921" size="300,16" borderWidth="1" borderColor="grey" transparent="1" zPosition="1">
+	 <convert type="EventTime">Progress</convert>
+	</widget>
+	<eLabel text="ENDE:" position="926,909" size="110,40" font="Regular; 34" halign="left" transparent="1" valign="center" foregroundColor="default" />
+	<widget source="session.Event_Now" render="Label" position="1037,909" size="160,40" transparent="1" zPosition="1" font="Regular; 34" halign="left" backgroundColor="background">
+	 <convert type="EventTime">Remaining</convert>
+	 <convert type="RemainingToText">InMinutes</convert>
+	</widget>
+	<eLabel text="Next:" position="1223,533" size="100,40" font="Regular; 34" halign="left" transparent="1" valign="center" foregroundColor="default" />
+	<widget source="session.Event_Next" render="AMBRunningText" position="1314,533" size="583,40" font="Regular;34" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=2000,always=0" foregroundColor="white" transparent="1" noWrap="1" zPosition="5">
+	 <convert type="EventName">Name</convert>
+	</widget>
+	<eLabel text="Start:" position="1223,582" size="100,40" font="Regular; 34" halign="left" transparent="1" valign="center" foregroundColor="default" />
+	<widget source="session.Event_Next" render="Label" position="1312,582" size="110,40" font="Regular; 34" transparent="1" zPosition="2" halign="center" backgroundColor="background">
+	 <convert type="EventTime">StartTime</convert>
+	 <convert type="ClockToText">Default</convert>
+	</widget>
+	<eLabel text="-" position="1422,582" size="25,40" font="Regular; 34" halign="left" transparent="1" valign="center" />
+	<widget source="session.Event_Next" render="Label" position="1447,582" size="110,40" font="Regular; 34" transparent="1" zPosition="2" halign="center">
+	 <convert type="EventTime">EndTime</convert>
+	 <convert type="ClockToText">Default</convert>
+	</widget>
+	<eLabel text="Ende:" position="1681,582" size="100,40" font="Regular; 34" halign="left" transparent="1" valign="center" foregroundColor="default" />
+	<widget source="session.Event_Next" render="Label" position="1770,582" size="140,40" font="Regular; 34" transparent="1" zPosition="2" halign="left" backgroundColor="background">
+	 <convert type="EventTime">Duration</convert>
+	 <convert type="ClockToText">InMinutes</convert>
+	</widget>
+	<eLabel name="" position="1223,624" size="670,1" backgroundColor="Line" />
+	<widget source="session.Event_Next" render="AMBRunningText" options="movetype=running,startdelay=10000,steptime=80,direction=top,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" position="1223,627" size="670,320" font="Regular;34" halign="center" transparent="1" zPosition="2">
+	 <convert type="EventName">FullDescription</convert>
+	</widget>
+ </screen>
+  <!-- EventView_Backdrop-->
+  <!-- TEMPLATES-EV_session_Event_Now_Next-Poster-->
+ <screen name="template_EV_session_Event_Now_Next_Backdrop" >
+	<eLabel text="Next:" position="10,909" size="100,40" font="Regular; 34" halign="left" transparent="1" valign="center" foregroundColor="default" />
+	<widget name="datetime" position="140,909" size="340,40" font="Regular; 34" halign="center" transparent="1" backgroundColor="background" />
+	<widget name="duration" position="530,909" size="170,40" font="Regular; 34" halign="center" transparent="1" backgroundColor="background" />
+	<widget source="Service" render="Progress" foregroundColor="Line" backgroundColor="Line" position="705,921" size="300,16" borderWidth="1" borderColor="grey" transparent="1" zPosition="1">
+	<convert type="EventTime">Progress</convert>
+	</widget>
+	<widget source="session.Event_Now" render="Label" position="1037,909" size="160,40" transparent="1" zPosition="1" font="Regular; 34" halign="left" backgroundColor="background">
+	<convert type="EventTime">Remaining</convert>
+	<convert type="RemainingToText">InMinutes</convert>
+	</widget>
+	<ePixmap pixmap="buttons/key_left.png" position="100,915" size="30,29" alphatest="blend" transparent="1" />
+	<ePixmap pixmap="buttons/key_right.png" position="490,915" size="30,29" alphatest="blend" transparent="1" />
+	<widget source="Event" render="AMBBackdrop" position="1235,560" size="650,366" borderColor="Line" borderWidth="2" zPosition="2" />
+ </screen>
      <!-- TEMPLATES Infobar Backgrounds-->
  <screen name="template_pixmap_Infobar_full">
-  <ePixmap pixmap="Multibox/menu/Infobar_full_default.png" position="0,856" zPosition="-20" size="1920,226" />
+  <ePixmap pixmap="menu/Infobar_full_default.png" position="0,856" zPosition="-20" size="1920,226" />
  </screen>
  <screen name="template_pixmap_Infobar">
-  <ePixmap pixmap="Multibox/menu/Infobar_default.png" position="0,810" zPosition="-20" size="1920,271" />
+  <ePixmap pixmap="menu/Infobar_default.png" position="0,810" zPosition="-20" size="1920,271" />
  </screen>
  <screen name="template_pixmap_Infobar_light">
- <ePixmap pixmap="Multibox/menu/Infobar_light_default.png" position="0,860" zPosition="-10" size="1920,221" />
+ <ePixmap pixmap="menu/Infobar_light_default.png" position="0,860" zPosition="-10" size="1920,221" />
 </screen>
  <screen name="template_pixmap_Infobar-Player">
-  <ePixmap pixmap="Multibox/menu/Player.png" position="0,854" zPosition="-20" size="1920,226" />
+  <ePixmap pixmap="menu/Player.png" position="0,854" zPosition="-20" size="1920,226" />
  </screen>
 
   <!-- TEMPLATES backgrounds-->
   <screen name="template_pixmap_BG">
-  <ePixmap pixmap="Multibox/menu/BG_default.png" position="0,0" zPosition="-20" size="1920,1080" />
+  <ePixmap pixmap="menu/BG_default.png" position="0,0" zPosition="-20" size="1920,1080" />
 </screen>
  <screen name="template_vertikalline">
  <eLabel name="vertikalline" position="0,1010" size="1920,2" foregroundColor="Line" backgroundColor="Line" zPosition="5" />
   </screen> 
  <screen name="template_pixmap_quick_menu_line">
- <ePixmap pixmap="Multibox/Skinparts/quick_menu_line.png" position="453,75" zPosition="2" size="13,596" />
+ <ePixmap pixmap="Skinparts/quick_menu_line.png" position="453,75" zPosition="2" size="13,596" />
   </screen> 
  <screen name="template_pixmap_channel_selection_line">
- <ePixmap pixmap="Multibox/Skinparts/quick_menu_line.png" position="335,69" zPosition="2" size="13,591" />
+ <ePixmap pixmap="Skinparts/quick_menu_line.png" position="335,69" zPosition="2" size="13,591" />
   </screen>
    <!-- TEMPLATES Progress BG-->
  <screen name="template_progress_bg_default">
-<ePixmap pixmap="Multibox/Progress_BG.png" position="386,964" size="985,10" zPosition="2" alphatest="blend" />
+<ePixmap pixmap="Progress_BG.png" position="386,964" size="985,10" zPosition="2" alphatest="blend" />
   </screen>
   <screen name="template_progress_bg_light_default">
-<ePixmap pixmap="Multibox/Progress_BG.png" position="284,1013" zPosition="2" size="985,10" alphatest="blend" />
+<ePixmap pixmap="Progress_BG.png" position="284,1013" zPosition="2" size="985,10" alphatest="blend" />
   </screen> 
   <!-- TEMPLATES Progress -->
   <screen name="template_progress_default">
-    <widget source="session.Event_Now" render="Progress" pixmap="Multibox/Progress.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey" >
+    <widget source="session.Event_Now" render="Progress" pixmap="Progress.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey" >
       <convert type="EventTime">Progress</convert>
     </widget>
   </screen>
   
   <screen name="template_progress_verlauf">
-<widget source="session.Event_Now" render="Progress" pixmap="Multibox/Skinparts/Progress_Verlauf.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey" >
+<widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Verlauf.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey" >
   <convert type="EventTime">Progress</convert>
   </widget>
   </screen>
   <screen name="template_progress_bernstein">
-<widget source="session.Event_Now" render="Progress" pixmap="Multibox/Skinparts/Progress_Bernstein.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
+<widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Bernstein.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
   <convert type="EventTime">Progress</convert>
   </widget>
   </screen>
   <screen name="template_progress_blue">
-<widget source="session.Event_Now" render="Progress" pixmap="Multibox/Skinparts/Progress_Blue.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
+<widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Blue.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
   <convert type="EventTime">Progress</convert>
   </widget>
   </screen>
   <screen name="template_progress_cyan">
-<widget source="session.Event_Now" render="Progress" pixmap="Multibox/Skinparts/Progress_Cyan.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
+<widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Cyan.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
   <convert type="EventTime">Progress</convert>
   </widget>
   </screen>
   <screen name="template_progress_green">
-<widget source="session.Event_Now" render="Progress" pixmap="Multibox/Skinparts/Progress_Green.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
+<widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Green.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
   <convert type="EventTime">Progress</convert>
   </widget>
   </screen>
   <screen name="template_progress_grey">
-<widget source="session.Event_Now" render="Progress" pixmap="Multibox/Skinparts/Progress_Grey.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
+<widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Grey.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
   <convert type="EventTime">Progress</convert>
   </widget>
   </screen>
     <screen name="template_progress_pink">
-<widget source="session.Event_Now" render="Progress" pixmap="Multibox/Skinparts/Progress_Pink.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
+<widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Pink.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
   <convert type="EventTime">Progress</convert>
   </widget>
   </screen>
     <screen name="template_progress_red">
-<widget source="session.Event_Now" render="Progress" pixmap="Multibox/Skinparts/Progress_Red.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
+<widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Red.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
   <convert type="EventTime">Progress</convert>
   </widget>
   </screen>
  <screen name="template_progress_light_default">
-<widget source="session.Event_Now" render="Progress" pixmap="Multibox/Progress.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
+<widget source="session.Event_Now" render="Progress" pixmap="Progress.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
   <convert type="EventTime">Progress</convert>
   </widget>
 </screen>
  <screen name="template_progress_light_verlauf">
-<widget source="session.Event_Now" render="Progress" pixmap="Multibox/Skinparts/Progress_Verlauf.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
+<widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Verlauf.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
   <convert type="EventTime">Progress</convert>
   </widget>
 </screen>
  <screen name="template_progress_light_blue">
-<widget source="session.Event_Now" render="Progress" pixmap="Multibox/Skinparts/Progress_Blue.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
+<widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Blue.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
   <convert type="EventTime">Progress</convert>
   </widget>
 </screen>
  <screen name="template_progress_light_bernstein">
-<widget source="session.Event_Now" render="Progress" pixmap="Multibox/Skinparts/Progress_Bernstein.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
+<widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Bernstein.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
   <convert type="EventTime">Progress</convert>
   </widget>
 </screen>
  <screen name="template_progress_light_cyan">
-<widget source="session.Event_Now" render="Progress" pixmap="Multibox/Skinparts/Progress_Cyan.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
+<widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Cyan.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
   <convert type="EventTime">Progress</convert>
   </widget>
 </screen>
  <screen name="template_progress_light_grey">
-<widget source="session.Event_Now" render="Progress" pixmap="Multibox/Skinparts/Progress_Grey.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
+<widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Grey.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
   <convert type="EventTime">Progress</convert>
   </widget>
 </screen>
  <screen name="template_progress_light_green">
-<widget source="session.Event_Now" render="Progress" pixmap="Multibox/Skinparts/Progress_Green.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
+<widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Green.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
   <convert type="EventTime">Progress</convert>
   </widget>
 </screen>
  <screen name="template_progress_light_pink">
-<widget source="session.Event_Now" render="Progress" pixmap="Multibox/Skinparts/Progress_Pink.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
+<widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Pink.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
   <convert type="EventTime">Progress</convert>
   </widget>
 </screen>
  <screen name="template_progress_light_red">
-<widget source="session.Event_Now" render="Progress" pixmap="Multibox/Skinparts/Progress_Red.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
+<widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Red.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
   <convert type="EventTime">Progress</convert>
   </widget>
 </screen>
 <screen name="template_progress_full_default">
- <widget  source="session.Event_Now" render="Progress" pixmap="Multibox/Progress.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
+ <widget  source="session.Event_Now" render="Progress" pixmap="Progress.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
  <convert type="EventTime">Progress</convert>
  </widget>
 </screen>
@@ -258,209 +415,209 @@
  </screen>
 
   <screen name="template_name_red_o_blue">
-    <ePixmap pixmap="Multibox/buttons/key_red.png" position="18,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_green.png" position="318,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_yellow.png" position="618,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_blue.png" position="918,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_red.png" position="18,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_green.png" position="318,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_yellow.png" position="618,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_blue.png" position="918,1022" size="35,35" />
     <widget name="key_red" render="Label" position="61,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget name="key_green" render="Label" position="362,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget name="key_yellow" render="Label" position="663,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget name="key_blue" render="Label" position="964,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
   </screen>
   <screen name="template_name_long_red_o_blue">
-    <ePixmap pixmap="Multibox/buttons/key_red.png" position="18,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_green.png" position="398,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_yellow.png" position="778,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_blue.png" position="1158,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_red.png" position="18,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_green.png" position="398,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_yellow.png" position="778,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_blue.png" position="1158,1022" size="35,35" />
     <widget name="key_red" render="Label" position="61,1005" size="320,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget name="key_green" render="Label" position="442,1005" size="320,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget name="key_yellow" render="Label" position="823,1005" size="320,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget name="key_blue" render="Label" position="1204,1005" size="300,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
   </screen>
   <screen name="template_name_red_o_yellow">
-    <ePixmap pixmap="Multibox/buttons/key_red.png" position="18,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_green.png" position="318,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_yellow.png" position="618,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_red.png" position="18,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_green.png" position="318,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_yellow.png" position="618,1022" size="35,35" />
     <widget name="key_red" render="Label" position="61,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget name="key_green" render="Label" position="362,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget name="key_yellow" render="Label" position="663,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
   </screen>
   <screen name="template_name_red_green_blue">
-    <ePixmap pixmap="Multibox/buttons/key_red.png" position="18,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_green.png" position="318,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_blue.png" position="618,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_red.png" position="18,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_green.png" position="318,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_blue.png" position="618,1022" size="35,35" />
     <widget name="key_red" render="Label" position="61,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget name="key_green" render="Label" position="362,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget name="key_blue" render="Label" position="663,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
   </screen>
   <screen name="template_name_red_green">
-    <ePixmap pixmap="Multibox/buttons/key_red.png" position="18,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_green.png" position="318,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_red.png" position="18,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_green.png" position="318,1022" size="35,35" />
     <widget name="key_red" render="Label" position="61,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget name="key_green" render="Label" position="362,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
   </screen>
   <screen name="template_source_red_o_blue">
-    <ePixmap pixmap="Multibox/buttons/key_red.png" position="18,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_green.png" position="318,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_yellow.png" position="618,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_blue.png" position="918,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_red.png" position="18,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_green.png" position="318,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_yellow.png" position="618,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_blue.png" position="918,1022" size="35,35" />
     <widget source="key_red" render="Label" position="63,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget source="key_green" render="Label" position="362,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget source="key_yellow" render="Label" position="663,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget source="key_blue" render="Label" position="964,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
   </screen>
   <screen name="template_source_long_red_o_blue">
-    <ePixmap pixmap="Multibox/skin_default/buttons/key_red.png" position="18,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/skin_default/buttons/key_green.png" position="398,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_yellow.png" position="778,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_blue.png" position="1158,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_red.png" position="18,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_green.png" position="398,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_yellow.png" position="778,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_blue.png" position="1158,1022" size="35,35" />
     <widget source="key_red" render="Label" position="61,1005" size="320,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget source="key_green" render="Label" position="442,1005" size="320,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget source="key_yellow" render="Label" position="823,1005" size="320,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget source="key_blue" render="Label" position="1204,1005" size="300,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
   </screen>
   <screen name="template_source_red_o_yellow">
-    <ePixmap pixmap="Multibox/buttons/key_red.png" position="18,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_green.png" position="318,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_yellow.png" position="618,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_red.png" position="18,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_green.png" position="318,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_yellow.png" position="618,1022" size="35,35" />
     <widget source="key_red" render="Label" position="61,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget source="key_green" render="Label" position="362,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget source="key_yellow" render="Label" position="663,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
   </screen>
   <screen name="template_source_red_green_blue">
-    <ePixmap pixmap="Multibox/buttons/key_red.png" position="18,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_green.png" position="318,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_blue.png" position="618,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_red.png" position="18,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_green.png" position="318,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_blue.png" position="618,1022" size="35,35" />
     <widget source="key_red" render="Label" position="61,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget source="key_green" render="Label" position="362,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget source="key_blue" render="Label" position="663,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
   </screen>
   <screen name="template_source_red_green">
-    <ePixmap pixmap="Multibox/buttons/key_red.png" position="18,1022" size="35,35" />
-    <ePixmap pixmap="Multibox/buttons/key_green.png" position="318,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_red.png" position="18,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_green.png" position="318,1022" size="35,35" />
     <widget source="key_red" render="Label" position="61,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget source="key_green" render="Label" position="362,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
   </screen>
   <screen name="template_ok_help_exit">
-    <ePixmap pixmap="Multibox/buttons/key_ok.png" position="1555,1022" size="103,35" zPosition="10" transparent="1" />
-    <ePixmap pixmap="Multibox/buttons/key_help.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
-    <ePixmap pixmap="Multibox/buttons/key_exit.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_ok.png" position="1555,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_help.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_exit.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
   </screen>
   <screen name="template_info_menu_exit">
-    <ePixmap pixmap="Multibox/buttons/key_info.png" position="1555,1022" size="103,35" zPosition="10" transparent="1" />
-    <ePixmap pixmap="Multibox/buttons/key_exit.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
-    <ePixmap pixmap="Multibox/buttons/key_menu.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_info.png" position="1555,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_exit.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_menu.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
   </screen>
   <screen name="template_info_ok_exit">
-    <ePixmap pixmap="Multibox/buttons/key_info.png" position="1555,1022" size="103,35" zPosition="10" transparent="1" />
-    <ePixmap pixmap="Multibox/buttons/key_ok.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
-    <ePixmap pixmap="Multibox/buttons/key_exit.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_info.png" position="1555,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_ok.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_exit.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
   </screen>
   <screen name="template_menu_ok_exit">
-    <ePixmap pixmap="Multibox/buttons/key_menu.png" position="1555,1022" size="103,35" zPosition="10" transparent="1" />
-    <ePixmap pixmap="Multibox/buttons/key_ok.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
-    <ePixmap pixmap="Multibox/buttons/key_exit.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_menu.png" position="1555,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_ok.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_exit.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
   </screen>
   <screen name="template_info_ok">
-    <ePixmap pixmap="Multibox/buttons/key_info.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
-    <ePixmap pixmap="Multibox/buttons/key_ok.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_info.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_ok.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
   </screen>
   <screen name="template_menu_ok">
-    <ePixmap pixmap="Multibox/buttons/key_menu.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
-    <ePixmap pixmap="Multibox/buttons/key_ok.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_menu.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_ok.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
   </screen>
   <screen name="template_ok_exit">
-    <ePixmap pixmap="Multibox/buttons/key_ok.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
-    <ePixmap pixmap="Multibox/buttons/key_exit.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_ok.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_exit.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
   </screen>
   <screen name="template_info_exit">
-    <ePixmap pixmap="Multibox/buttons/key_info.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
-    <ePixmap pixmap="Multibox/buttons/key_exit.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_info.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_exit.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
   </screen>
   <screen name="template_menu_exit">
-    <ePixmap pixmap="Multibox/buttons/key_menu.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
-    <ePixmap pixmap="Multibox/buttons/key_exit.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_menu.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_exit.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
   </screen>
   <screen name="template_menu_info">
-    <ePixmap pixmap="Multibox/buttons/key_menu.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
-    <ePixmap pixmap="Multibox/buttons/key_info.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_menu.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_info.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" />
   </screen>
   <screen name="template_exit">
-    <ePixmap pixmap="Multibox/buttons/key_exit.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
+    <ePixmap pixmap="buttons/key_exit.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
   </screen>
    <screen name="template_crypt_info">
     <!--  Crypt-->
     <eLabel text="Crypt:" position="401,963" size="110,36" font="Regular; 30" halign="left" backgroundColor="background" transparent="1" valign="center" foregroundColor="default" zPosition="5" />
     <eLabel text="B" font="Regular; 30" position="499,963" size="25,34" halign="center" backgroundColor="background" foregroundColor="darkgrey" transparent="0" valign="center" zPosition="2" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="499,963" size="25,34" halign="center" backgroundColor="background" zPosition="3" transparent="0" valign="center" text="B" foregroundColor="darkyellow">
-      <convert type="AMBCaidInfo">BetaCrypt</convert>
+      <convert type="AMBCryptInfo">BetaCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="499,963" size="25,34" halign="center" backgroundColor="Line" foregroundColor="menu" zPosition="4" transparent="0" valign="center" text="B">
-      <convert type="AMBCaidInfo">BetaEcm</convert>
+      <convert type="AMBCryptInfo">BetaEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="I" font="Regular; 30" position="528,963" size="25,34" halign="center" backgroundColor="background" foregroundColor="darkgrey" transparent="0" valign="center" zPosition="2" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="528,963" size="25,34" halign="center" backgroundColor="background" zPosition="3" transparent="0" valign="center" text="I" foregroundColor="darkyellow">
-      <convert type="AMBCaidInfo">IrdCrypt</convert>
+      <convert type="AMBCryptInfo">IrdCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="528,963" size="25,34" halign="center" backgroundColor="Line" foregroundColor="menu" zPosition="4" transparent="0" valign="center" text="I">
-      <convert type="AMBCaidInfo">IrdEcm</convert>
+      <convert type="AMBCryptInfo">IrdEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="S" font="Regular; 30" position="557,963" size="25,34" halign="center" backgroundColor="background" foregroundColor="darkgrey" transparent="0" valign="center" zPosition="2" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="557,963" size="25,34" halign="center" backgroundColor="background" zPosition="3" transparent="0" valign="center" text="S" foregroundColor="darkyellow">
-      <convert type="AMBCaidInfo">SecaCrypt</convert>
+      <convert type="AMBCryptInfo">SecaCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="557,963" size="25,34" halign="center" backgroundColor="Line" foregroundColor="menu" zPosition="4" transparent="0" valign="center" text="S">
-      <convert type="AMBCaidInfo">SecaEcm</convert>
+      <convert type="AMBCryptInfo">SecaEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="V" font="Regular; 30" position="586,963" size="25,34" halign="center" backgroundColor="background" transparent="0" valign="center" zPosition="2" foregroundColor="darkgrey" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="586,963" size="25,34" halign="center" backgroundColor="background" zPosition="3" transparent="0" valign="center" text="V" foregroundColor="darkyellow">
-      <convert type="AMBCaidInfo">ViaCrypt</convert>
+      <convert type="AMBCryptInfo">ViaCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="586,963" size="25,34" halign="center" backgroundColor="Line" foregroundColor="menu" zPosition="4" transparent="0" valign="center" text="V">
-      <convert type="AMBCaidInfo">ViaEcm</convert>
+      <convert type="AMBCryptInfo">ViaEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="N" font="Regular; 30" position="615,963" size="25,34" halign="center" backgroundColor="background" foregroundColor="darkgrey" transparent="0" valign="center" zPosition="2" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="615,963" size="25,34" halign="center" backgroundColor="background" zPosition="3" transparent="0" valign="center" text="N" foregroundColor="darkyellow">
-      <convert type="AMBCaidInfo">NagraCrypt</convert>
+      <convert type="AMBCryptInfo">NagraCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="615,963" size="25,34" halign="center" backgroundColor="Line" foregroundColor="menu" zPosition="4" transparent="0" valign="center" text="N">
-      <convert type="AMBCaidInfo">NagraEcm</convert>
+      <convert type="AMBCryptInfo">NagraEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="CW" font="Regular; 30" position="644,963" size="60,34" halign="center" backgroundColor="background" foregroundColor="darkgrey" transparent="0" valign="center" zPosition="2" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="644,963" size="60,34" halign="center" backgroundColor="background" zPosition="3" transparent="0" valign="center" text="CW" foregroundColor="darkyellow">
-      <convert type="AMBCaidInfo">CrwCrypt</convert>
+      <convert type="AMBCryptInfo">CrwCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="644,963" size="60,34" halign="center" backgroundColor="Line" foregroundColor="menu" zPosition="4" transparent="0" valign="top" text="CW">
-      <convert type="AMBCaidInfo">CrwEcm</convert>
+      <convert type="AMBCryptInfo">CrwEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="ND" font="Regular; 30" position="708,963" size="57,34" halign="center" backgroundColor="background" foregroundColor="darkgrey" transparent="0" valign="center" zPosition="2" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="708,963" size="57,34" halign="center" backgroundColor="background" zPosition="3" transparent="0" valign="center" text="ND" foregroundColor="darkyellow">
-      <convert type="AMBCaidInfo">NdsCrypt</convert>
+      <convert type="AMBCryptInfo">NdsCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="708,963" size="55,34" halign="center" backgroundColor="Line" foregroundColor="menu" zPosition="4" transparent="0" valign="top" text="ND">
-      <convert type="AMBCaidInfo">NdsEcm</convert>
+      <convert type="AMBCryptInfo">NdsEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="CO" font="Regular; 30" position="769,963" size="55,34" halign="center" backgroundColor="background" foregroundColor="darkgrey" transparent="0" valign="center" zPosition="2" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="769,963" size="55,34" halign="center" backgroundColor="background" zPosition="3" transparent="0" valign="center" text="CO" foregroundColor="darkyellow">
-      <convert type="AMBCaidInfo">ConaxCrypt</convert>
+      <convert type="AMBCryptInfo">ConaxCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="769,963" size="55,34" halign="center" backgroundColor="Line" foregroundColor="menu" zPosition="5" transparent="0" valign="center" text="CO">
-      <convert type="AMBCaidInfo">ConaxEcm</convert>
+      <convert type="AMBCryptInfo">ConaxEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel name="Rahmem_crypt" backgroundColor="Line" zPosition="1" position="707,962" size="59,36" />
@@ -1081,74 +1238,74 @@
     <eLabel text="Crypt:" position="401,1033" size="110,36" font="Regular; 30" halign="left" backgroundColor="background" transparent="1" valign="center" foregroundColor="default" zPosition="5" />
     <eLabel text="B" font="Regular; 30" position="499,1033" size="25,34" halign="center" backgroundColor="background" foregroundColor="darkgrey" transparent="0" valign="center" zPosition="2" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="499,1033" size="25,34" halign="center" backgroundColor="background" zPosition="3" transparent="0" valign="center" text="B" foregroundColor="darkyellow">
-      <convert type="AMBCaidInfo">BetaCrypt</convert>
+      <convert type="AMBCryptInfo">BetaCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="499,1033" size="25,34" halign="center" backgroundColor="Line" foregroundColor="menu" zPosition="4" transparent="0" valign="center" text="B">
-      <convert type="AMBCaidInfo">BetaEcm</convert>
+      <convert type="AMBCryptInfo">BetaEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="I" font="Regular; 30" position="528,1033" size="25,34" halign="center" backgroundColor="background" foregroundColor="darkgrey" transparent="0" valign="center" zPosition="2" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="528,1033" size="25,34" halign="center" backgroundColor="background" zPosition="3" transparent="0" valign="center" text="I" foregroundColor="darkyellow">
-      <convert type="AMBCaidInfo">IrdCrypt</convert>
+      <convert type="AMBCryptInfo">IrdCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="528,1033" size="25,34" halign="center" backgroundColor="Line" foregroundColor="menu" zPosition="4" transparent="0" valign="center" text="I">
-      <convert type="AMBCaidInfo">IrdEcm</convert>
+      <convert type="AMBCryptInfo">IrdEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="S" font="Regular; 30" position="557,1033" size="25,34" halign="center" backgroundColor="background" foregroundColor="darkgrey" transparent="0" valign="center" zPosition="2" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="557,1033" size="25,34" halign="center" backgroundColor="background" zPosition="3" transparent="0" valign="center" text="S" foregroundColor="darkyellow">
-      <convert type="AMBCaidInfo">SecaCrypt</convert>
+      <convert type="AMBCryptInfo">SecaCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="557,1033" size="25,34" halign="center" backgroundColor="Line" foregroundColor="menu" zPosition="4" transparent="0" valign="center" text="S">
-      <convert type="AMBCaidInfo">SecaEcm</convert>
+      <convert type="AMBCryptInfo">SecaEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="V" font="Regular; 30" position="586,1033" size="25,34" halign="center" backgroundColor="background" transparent="0" valign="center" zPosition="2" foregroundColor="darkgrey" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="586,1033" size="25,34" halign="center" backgroundColor="background" zPosition="3" transparent="0" valign="center" text="V" foregroundColor="darkyellow">
-      <convert type="AMBCaidInfo">ViaCrypt</convert>
+      <convert type="AMBCryptInfo">ViaCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="586,1033" size="25,34" halign="center" backgroundColor="Line" foregroundColor="menu" zPosition="4" transparent="0" valign="center" text="V">
-      <convert type="AMBCaidInfo">ViaEcm</convert>
+      <convert type="AMBCryptInfo">ViaEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget> 
     <eLabel text="N" font="Regular; 30" position="615,1033" size="25,34" halign="center" backgroundColor="background" foregroundColor="darkgrey" transparent="0" valign="center" zPosition="2" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="615,1033" size="25,34" halign="center" backgroundColor="background" zPosition="3" transparent="0" valign="center" text="N" foregroundColor="darkyellow">
-      <convert type="AMBCaidInfo">NagraCrypt</convert>
+      <convert type="AMBCryptInfo">NagraCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="615,1033" size="25,34" halign="center" backgroundColor="Line" foregroundColor="menu" zPosition="4" transparent="0" valign="center" text="N">
-      <convert type="AMBCaidInfo">NagraEcm</convert>
+      <convert type="AMBCryptInfo">NagraEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="CW" font="Regular; 30" position="644,1033" size="60,34" halign="center" backgroundColor="background" foregroundColor="darkgrey" transparent="0" valign="center" zPosition="2" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="644,1033" size="60,34" halign="center" backgroundColor="background" zPosition="3" transparent="0" valign="center" text="CW" foregroundColor="darkyellow">
-      <convert type="AMBCaidInfo">CrwCrypt</convert>
+      <convert type="AMBCryptInfo">CrwCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="644,1033" size="60,34" halign="center" backgroundColor="Line" foregroundColor="menu" zPosition="4" transparent="0" valign="top" text="CW">
-      <convert type="AMBCaidInfo">CrwEcm</convert>
+      <convert type="AMBCryptInfo">CrwEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="ND" font="Regular; 30" position="708,1033" size="57,34" halign="center" backgroundColor="background" foregroundColor="darkgrey" transparent="0" valign="center" zPosition="2" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="708,1033" size="57,34" halign="center" backgroundColor="background" zPosition="3" transparent="0" valign="center" text="ND" foregroundColor="darkyellow">
-      <convert type="AMBCaidInfo">NdsCrypt</convert>
+      <convert type="AMBCryptInfo">NdsCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="708,1033" size="57,34" halign="center" backgroundColor="Line" foregroundColor="menu" zPosition="4" transparent="0" valign="top" text="ND">
-      <convert type="AMBCaidInfo">NdsEcm</convert>
+      <convert type="AMBCryptInfo">NdsEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="CO" font="Regular; 30" position="769,1033" size="55,34" halign="center" backgroundColor="background" foregroundColor="darkgrey" transparent="0" valign="center" zPosition="2" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="769,1033" size="55,34" halign="center" backgroundColor="background" zPosition="3" transparent="0" valign="center" text="CO" foregroundColor="darkyellow">
-      <convert type="AMBCaidInfo">ConaxCrypt</convert>
+      <convert type="AMBCryptInfo">ConaxCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="769,1033" size="55,34" halign="center" backgroundColor="Line" foregroundColor="menu" zPosition="5" transparent="0" valign="center" text="CO">
-      <convert type="AMBCaidInfo">ConaxEcm</convert>
+      <convert type="AMBCryptInfo">ConaxEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel name="Rahmem_crypt" backgroundColor="Line" zPosition="1" position="707,1032" size="59,36" />
@@ -1163,83 +1320,162 @@
     <eLabel name="Rahmem_crypt" backgroundColor="Line" zPosition="1" position="99,1032" size="28,36" />
     <!-- CRYPT  -->
   </screen>
-  <screen name="template_weather">
-    <!-- WEATHER -->
-    <!--  <eLabel position="0,0" size="1280,50" transparent="0" zPosition="-2" /> -->
-    <widget noWrap="1" backgroundColor="background20" foregroundColor="green" font="Regular; 27" render="Label" position="420,18" size="90,30" source="session.MSNWeather" transparent="1" zPosition="8" halign="center">
-      <convert type="MSNWeather">temperature_current</convert>
-    </widget>
-    <widget Wrap="1" backgroundColor="background" font="Regular; 24" foregroundColor="white" render="Label" position="354,51" size="290,30" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
-      <convert type="MSNWeather">temperature_text,current</convert>
-    </widget>
-    <widget alphatest="blend" render="MSNWeatherPixmap" position="277,6" size="75,75" source="session.MSNWeather" transparent="1" zPosition="5">
-      <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/Multibox/Wettericons/,png</convert>
-    </widget>
-    <widget alphatest="blend" render="MSNWeatherPixmap" position="646,6" size="75,75" source="session.MSNWeather" transparent="1" zPosition="5">
-      <convert type="MSNWeather">weathericon,day2,/usr/share/enigma2/Multibox/Wettericons/,png</convert>
-    </widget>
-    <widget backgroundColor="background" font="Regular; 27" foregroundColor="default" render="Label" position="745,18" size="45,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
-      <convert type="MSNWeather">weekshortday,day2</convert>
-    </widget>
-    <widget backgroundColor="background" font="Regular; 27" foregroundColor="bernstein" render="Label" position="788,18" size="150,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
-      <convert type="MSNWeather">temperature_heigh_low,day2</convert>
-    </widget>
-    <widget Wrap="1" backgroundColor="background" font="Regular; 24" foregroundColor="white" render="Label" position="723,51" size="240,30" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
-      <convert type="MSNWeather">temperature_text,day2</convert>
-    </widget>
-    <widget alphatest="blend" render="MSNWeatherPixmap" position="965,6" size="75,75" source="session.MSNWeather" transparent="1" zPosition="5">
-      <convert type="MSNWeather">weathericon,day3,/usr/share/enigma2/Multibox/Wettericons/,png</convert>
-    </widget>
-    <widget backgroundColor="background" font="Regular; 27" foregroundColor="bernstein" render="Label" position="1105,18" size="150,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
-      <convert type="MSNWeather">temperature_heigh_low,day3</convert>
-    </widget>
-    <widget Wrap="1" backgroundColor="background" font="Regular; 24" foregroundColor="white" render="Label" position="1042,51" size="240,30" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
-      <convert type="MSNWeather">temperature_text,day3</convert>
-    </widget>
-    <widget backgroundColor="background" font="Regular; 27" foregroundColor="default" render="Label" position="1060,18" size="45,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
-      <convert type="MSNWeather">weekshortday,day3</convert>
-    </widget>
-    <widget backgroundColor="background" font="Regular; 27" foregroundColor="bernstein" render="Label" position="1421,18" size="150,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
-      <convert type="MSNWeather">temperature_heigh_low,day4</convert>
-    </widget>
-    <widget backgroundColor="background" font="Regular; 27" foregroundColor="default" render="Label" position="1376,18" size="45,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
-      <convert type="MSNWeather">weekshortday,day4</convert>
-    </widget>
-    <widget Wrap="1" backgroundColor="background" font="Regular; 24" foregroundColor="white" render="Label" position="1359,51" size="240,30" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
-      <convert type="MSNWeather">temperature_text,day4</convert>
-    </widget>
-    <widget alphatest="blend" render="MSNWeatherPixmap" position="1282,6" size="75,75" source="session.MSNWeather" transparent="1" zPosition="5">
-      <convert type="MSNWeather">weathericon,day4,/usr/share/enigma2/Multibox/Wettericons/,png</convert>
-    </widget>
-    <widget alphatest="blend" render="MSNWeatherPixmap" position="1600,6" size="75,75" font="Meteo; 40" source="session.MSNWeather" transparent="1" zPosition="5">
-      <convert type="MSNWeather">weathericon,day5,/usr/share/enigma2/Multibox/Wettericons/,png</convert>
-    </widget>
-    <widget Wrap="1" backgroundColor="background" font="Regular; 24" foregroundColor="white" render="Label" position="1677,51" size="240,30" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
-      <convert type="MSNWeather">temperature_text,day5</convert>
-    </widget>
-    <widget backgroundColor="background" font="Regular; 27" foregroundColor="bernstein" render="Label" position="1741,17" size="150,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
-      <convert type="MSNWeather">temperature_heigh_low,day5</convert>
-    </widget>
-    <widget backgroundColor="background" font="Regular; 27" foregroundColor="default" render="Label" position="1696,17" size="45,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
-      <convert type="MSNWeather">weekshortday,day5</convert>
-    </widget>
-    <eLabel text="Status:" position="40,51" size="100,30" zPosition="8" halign="left" font="Regular; 24" backgroundColor="background" transparent="1" />
-    <widget Wrap="1" backgroundColor="background" font="Regular; 24" foregroundColor="green" render="Label" position="2,15" size="285,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" valign="center">
-      <convert type="MSNWeather">city</convert>
-    </widget>
-    <widget render="Label" noWrap="1" source="session.MSNWeather" position="116,51" zPosition="8" size="75,30" font="Regular; 24" transparent="1" halign="right" backgroundColor="background">
-      <convert type="MSNWeather">observationtime</convert>
-    </widget>
-    <eLabel name="" position="0, 0" size="1920,85" backgroundColor="background" />
-    <eLabel name="" position="0,82" size="1920,1" backgroundColor="Line" zPosition="5" />
-    <eLabel name="" position="1598,7" size="1,70" backgroundColor="Line" zPosition="5" />
-    <eLabel name="" position="644,7" size="1,70" backgroundColor="Line" zPosition="5" />
-    <eLabel name="" position="963,7" size="1,70" backgroundColor="Line" zPosition="5" />
-    <eLabel name="" position="1280,7" size="1,70" backgroundColor="Line" zPosition="5" />
-  </screen>
+<screen name="template_weather">
+  <!-- WEATHER -->
+  <!--  <eLabel position="0,0" size="1280,50" transparent="0" zPosition="-2" /> -->
+  <widget noWrap="1" backgroundColor="background20" foregroundColor="green" font="Regular; 27" render="Label" position="420,18" size="90,30" source="session.MSNWeather" transparent="1" zPosition="8" halign="center">
+    <convert type="MSNWeather">temperature_current</convert>
+  </widget>
+  <widget Wrap="1" backgroundColor="background" font="Regular; 24" foregroundColor="white" render="Label" position="354,51" size="290,30" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
+    <convert type="MSNWeather">temperature_text,current</convert>
+  </widget>
+  <widget alphatest="blend" render="MSNWeatherPixmap" position="277,6" size="75,75" source="session.MSNWeather" transparent="1" zPosition="5">
+    <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/Multibox/Wettericons/,png</convert>
+  </widget>
+  <widget alphatest="blend" render="MSNWeatherPixmap" position="646,6" size="75,75" source="session.MSNWeather" transparent="1" zPosition="5">
+    <convert type="MSNWeather">weathericon,day2,/usr/share/enigma2/Multibox/Wettericons/,png</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 27" foregroundColor="cyan" render="Label" position="745,18" size="45,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">weekshortday,day2</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 27" foregroundColor="bernstein" render="Label" position="788,18" size="150,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">temperature_heigh_low,day2</convert>
+  </widget>
+  <widget Wrap="1" backgroundColor="background" font="Regular; 24" foregroundColor="white" render="Label" position="723,51" size="240,30" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
+    <convert type="MSNWeather">temperature_text,day2</convert>
+  </widget>
+  <widget alphatest="blend" render="MSNWeatherPixmap" position="965,6" size="75,75" source="session.MSNWeather" transparent="1" zPosition="5">
+    <convert type="MSNWeather">weathericon,day3,/usr/share/enigma2/Multibox/Wettericons/,png</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 27" foregroundColor="bernstein" render="Label" position="1105,18" size="150,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">temperature_heigh_low,day3</convert>
+  </widget>
+  <widget Wrap="1" backgroundColor="background" font="Regular; 24" foregroundColor="white" render="Label" position="1042,51" size="240,30" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
+    <convert type="MSNWeather">temperature_text,day3</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 27" foregroundColor="cyan" render="Label" position="1060,18" size="45,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">weekshortday,day3</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 27" foregroundColor="bernstein" render="Label" position="1421,18" size="150,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">temperature_heigh_low,day4</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 27" foregroundColor="cyan" render="Label" position="1376,18" size="45,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">weekshortday,day4</convert>
+  </widget>
+  <widget Wrap="1" backgroundColor="background" font="Regular; 24" foregroundColor="white" render="Label" position="1359,51" size="240,30" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
+    <convert type="MSNWeather">temperature_text,day4</convert>
+  </widget>
+  <widget alphatest="blend" render="MSNWeatherPixmap" position="1282,6" size="75,75" source="session.MSNWeather" transparent="1" zPosition="5">
+    <convert type="MSNWeather">weathericon,day4,/usr/share/enigma2/Multibox/Wettericons/,png</convert>
+  </widget>
+  <widget alphatest="blend" render="MSNWeatherPixmap" position="1600,6" size="75,75" font="Meteo; 40" source="session.MSNWeather" transparent="1" zPosition="5">
+    <convert type="MSNWeather">weathericon,day5,/usr/share/enigma2/Multibox/Wettericons/,png</convert>
+  </widget>
+  <widget Wrap="1" backgroundColor="background" font="Regular; 24" foregroundColor="white" render="Label" position="1677,51" size="240,30" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
+    <convert type="MSNWeather">temperature_text,day5</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 27" foregroundColor="bernstein" render="Label" position="1741,17" size="150,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">temperature_heigh_low,day5</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 27" foregroundColor="cyan" render="Label" position="1696,17" size="45,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">weekshortday,day5</convert>
+  </widget>
+  <eLabel text="Status:" position="40,51" size="100,30" zPosition="8" halign="left" font="Regular; 24" backgroundColor="background" transparent="1" />
+  <widget Wrap="1" backgroundColor="background" font="Regular; 24" foregroundColor="green" render="Label" position="2,15" size="285,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" valign="center">
+    <convert type="MSNWeather">city</convert>
+  </widget>
+  <widget render="Label" noWrap="1" source="session.MSNWeather" position="116,51" zPosition="8" size="75,30" font="Regular; 24" transparent="1" halign="right" backgroundColor="background">
+    <convert type="MSNWeather">observationtime</convert>
+  </widget>
+  <eLabel name="" position="0, 0" size="1920,85" backgroundColor="background" />
+  <eLabel name="" position="0,82" size="1920,1" backgroundColor="Line" zPosition="5" />
+  <eLabel name="" position="1598,7" size="1,70" backgroundColor="Line" zPosition="5" />
+  <eLabel name="" position="644,7" size="1,70" backgroundColor="Line" zPosition="5" />
+  <eLabel name="" position="963,7" size="1,70" backgroundColor="Line" zPosition="5" />
+  <eLabel name="" position="1280,7" size="1,70" backgroundColor="Line" zPosition="5" />
+</screen>
+<screen name="template_weather_2">
+  <!-- WEATHER -->
+  <!--  <eLabel position="0,0" size="1280,50" transparent="0" zPosition="-2" /> -->
+  <widget noWrap="1" backgroundColor="background20" foregroundColor="green" font="Regular; 27" render="Label" position="420,18" size="90,30" source="session.MSNWeather" transparent="1" zPosition="8" halign="center">
+    <convert type="MSNWeather">temperature_current</convert>
+  </widget>
+  <widget Wrap="1" backgroundColor="background" font="Regular; 24" foregroundColor="white" render="Label" position="354,51" size="290,30" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
+    <convert type="MSNWeather">temperature_text,current</convert>
+  </widget>
+  <widget alphatest="blend" render="MSNWeatherPixmap" position="277,6" size="75,75" source="session.MSNWeather" transparent="1" zPosition="5">
+    <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/Multibox/Wettericons_2/,png</convert>
+  </widget>
+  <widget alphatest="blend" render="MSNWeatherPixmap" position="646,6" size="75,75" source="session.MSNWeather" transparent="1" zPosition="5">
+    <convert type="MSNWeather">weathericon,day2,/usr/share/enigma2/Multibox/Wettericons_2/,png</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 27" foregroundColor="cyan" render="Label" position="740,18" size="45,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">weekshortday,day2</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 27" foregroundColor="bernstein" render="Label" position="798,18" size="150,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">temperature_heigh_low,day2</convert>
+  </widget>
+  <widget Wrap="1" backgroundColor="background" font="Regular; 24" foregroundColor="white" render="Label" position="723,51" size="240,30" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
+    <convert type="MSNWeather">temperature_text,day2</convert>
+  </widget>
+  <widget alphatest="blend" render="MSNWeatherPixmap" position="965,6" size="75,75" source="session.MSNWeather" transparent="1" zPosition="5">
+    <convert type="MSNWeather">weathericon,day3,/usr/share/enigma2/Multibox/Wettericons_2/,png</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 27" foregroundColor="bernstein" render="Label" position="1115,18" size="150,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">temperature_heigh_low,day3</convert>
+  </widget>
+  <widget Wrap="1" backgroundColor="background" font="Regular; 24" foregroundColor="white" render="Label" position="1042,51" size="240,30" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
+    <convert type="MSNWeather">temperature_text,day3</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 27" foregroundColor="cyan" render="Label" position="1055,18" size="45,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">weekshortday,day3</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 27" foregroundColor="bernstein" render="Label" position="1431,18" size="150,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">temperature_heigh_low,day4</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 27" foregroundColor="cyan" render="Label" position="1371,18" size="45,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">weekshortday,day4</convert>
+  </widget>
+  <widget Wrap="1" backgroundColor="background" font="Regular; 24" foregroundColor="white" render="Label" position="1359,51" size="240,30" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
+    <convert type="MSNWeather">temperature_text,day4</convert>
+  </widget>
+  <widget alphatest="blend" render="MSNWeatherPixmap" position="1282,6" size="75,75" source="session.MSNWeather" transparent="1" zPosition="5">
+    <convert type="MSNWeather">weathericon,day4,/usr/share/enigma2/Multibox/Wettericons_2/,png</convert>
+  </widget>
+  <widget alphatest="blend" render="MSNWeatherPixmap" position="1600,6" size="75,75" font="Meteo; 40" source="session.MSNWeather" transparent="1" zPosition="5">
+    <convert type="MSNWeather">weathericon,day5,/
+	usr/share/enigma2/Multibox/Wettericons_2/,png</convert>
+  </widget>
+  <widget Wrap="1" backgroundColor="background" font="Regular; 24" foregroundColor="white" render="Label" position="1677,51" size="240,30" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
+    <convert type="MSNWeather">temperature_text,day5</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 27" foregroundColor="bernstein" render="Label" position="1751,17" size="150,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">temperature_heigh_low,day5</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 27" foregroundColor="cyan" render="Label" position="1691,17" size="45,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">weekshortday,day5</convert>
+  </widget>
+  <eLabel text="Status:" position="40,51" size="100,30" zPosition="8" halign="left" font="Regular; 24" backgroundColor="background" transparent="1" />
+  <widget Wrap="1" backgroundColor="background" font="Regular; 24" foregroundColor="green" render="Label" position="2,15" size="285,30" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" valign="center">
+    <convert type="MSNWeather">city</convert>
+  </widget>
+  <widget render="Label" noWrap="1" source="session.MSNWeather" position="116,51" zPosition="8" size="75,30" font="Regular; 24" transparent="1" halign="right" backgroundColor="background">
+    <convert type="MSNWeather">observationtime</convert>
+  </widget>
+  <eLabel name="" position="0, 0" size="1920,85" backgroundColor="background" />
+  <eLabel name="" position="0,82" size="1920,1" backgroundColor="Line" zPosition="5" />
+  <eLabel name="" position="1598,7" size="1,70" backgroundColor="Line" zPosition="5" />
+  <eLabel name="" position="644,7" size="1,70" backgroundColor="Line" zPosition="5" />
+  <eLabel name="" position="963,7" size="1,70" backgroundColor="Line" zPosition="5" />
+  <eLabel name="" position="1280,7" size="1,70" backgroundColor="Line" zPosition="5" />
+<ePixmap pixmap="Wettericons_2/cold_hot.png" position="1100,18" size="11,30" alphatest="blend" transparent="1" backgroundColor="background" zPosition="1" />
+<ePixmap pixmap="Wettericons_2/cold_hot.png" position="1417,18" size="11,30" alphatest="blend" transparent="1" backgroundColor="background" zPosition="1" />
+<ePixmap pixmap="Wettericons_2/cold_hot.png" position="1736,17" size="11,30" alphatest="blend" transparent="1" backgroundColor="background" zPosition="1" />
+<ePixmap pixmap="Wettericons_2/cold_hot.png" position="785,18" size="11,30" alphatest="blend" transparent="1" backgroundColor="background" zPosition="1" />
+</screen>
   <screen name="MessageBox-template">
     <widget source="Title" render="Label" position="109,28" size="1080,60" font="Italic; 50" halign="left" valign="center" foregroundColor="white" backgroundColor="background" borderColor="Multiboxlabel" borderWidth="3" transparent="1" zPosition="1" />
-    <eLabel name="line1" position="8,91" size="1180,2" backgroundColor="Line" zPosition="1" />
+    <eLabel name="line1" position="8,91" size="1880,2" backgroundColor="Line" zPosition="1" />
     <widget name="text" position="10,97" size="1180,60" font="Regular; 40" valign="center" halign="center" foregroundColor="Line" />
     <widget name="ErrorPixmap" pixmap="Multibox/skin_default/icons/input_error.png" position="8,8" size="80,80" alphatest="blend" />
     <widget name="QuestionPixmap" pixmap="Multibox/skin_default/icons/input_question.png" position="8,8" size="80,80" alphatest="blend" />
@@ -1334,28 +1570,28 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
     </widget>
     <widget name="config" position="12,590" size="1180,400" itemHeight="50" font="Regular;36" zPosition="14" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="HelpWindow" position="1520,950" size="402,128" zPosition="1" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="Multibox/buttons/key_red.png" position="18,1022" size="35,35" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="buttons/key_red.png" position="18,1022" size="35,35" alphatest="blend" transparent="1" />
     <widget name="languagetext" position="61,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
-    <ePixmap pixmap="Multibox/buttons/key_board.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="Multibox/buttons/key_exit.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="buttons/key_board.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="buttons/key_exit.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" alphatest="blend" />
     <panel name="template_wizardrc" />
   </screen>
   <screen name="template_wizardrc">
     <widget name="rc" position="1300,560" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend" />
-    <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
-    <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
-    <widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
-    <widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
+    <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="Multibox/skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
+    <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="Multibox/skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
+    <widget name="arrowup" position="-100,-100" size="37,70" pixmap="Multibox/skin_default/arrowup.png" zPosition="11" alphatest="blend" />
+    <widget name="arrowup2" position="-100,-100" size="37,70" pixmap="Multibox/skin_default/arrowup.png" zPosition="11" alphatest="blend" />
   </screen>
   <screen name="template_setup_config">
-    <widget name="VKeyIcon" pixmap="Multibox/buttons/key_text.png" alphatest="on" zPosition="1" position="1535,1022" size="103,35" />
-    <eLabel text="Setup" position="180,20" size="1300,50" font="Italic; 40" halign="left" valign="center" foregroundColor="white" backgroundColor="background" borderColor="Multiboxlabel" borderWidth="3" transparent="1" zPosition="1" />
+    <widget name="VKeyIcon" pixmap="buttons/key_text.png" alphatest="on" zPosition="1" position="1535,1022" size="103,35" />
+    <widget source="Title" render="Label" position="180,20" size="1300,50" font="Italic; 40" halign="left" valign="center" foregroundColor="white" backgroundColor="background" borderColor="Multiboxlabel" borderWidth="3" transparent="1" zPosition="1" />
     <widget name="config" position="10,100" size="1170,820" itemHeight="50" font="Regular;40" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
     <widget name="description" position="1220,550" size="680,440" font="Regular;34" halign="center" valign="center" transparent="1" />
-    <widget name="HelpWindow" pixmap="Multibox/buttons/key_board.png" position="1405,1024" size="103,35" zPosition="1" transparent="1" alphatest="blend" />
+    <widget name="HelpWindow" pixmap="buttons/key_board.png" position="1405,1024" size="103,35" zPosition="1" transparent="1" alphatest="blend" />
     <widget name="footnote" position="10,940" size="1170,40" font="Regular; 36" halign="right" valign="center" backgroundColor="background" foregroundColor="default" transparent="1" />
-    <ePixmap pixmap="Multibox/buttons/key_red.png" position="18,1022" size="35,35" alphatest="blend" />
-    <ePixmap pixmap="Multibox/buttons/key_green.png" position="318,1022" size="35,35" alphatest="blend" />
+    <ePixmap pixmap="buttons/key_red.png" position="18,1022" size="35,35" alphatest="blend" />
+    <ePixmap pixmap="buttons/key_green.png" position="318,1022" size="35,35" alphatest="blend" />
     <widget source="key_red" render="Label" position="61,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget source="key_green" render="Label" position="362,1005" size="250,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
   </screen>
@@ -1382,7 +1618,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
     </widget>
   </screen>
   <screen name="template_cool_all">
-    <ePixmap pixmap="Multibox/buttons/key_blue.png" position="918,1022" size="35,35" />
+    <ePixmap pixmap="buttons/key_blue.png" position="918,1022" size="35,35" />
     <widget name="key_blue" render="Label" position="964,1005" size="400,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="1" />
     <widget name="date" position="820,20" size="375,50" font="Regular;40" valign="bottom" halign="left" backgroundColor="background" foregroundColor="default" transparent="1" />
     <widget source="Service" render="CoolPico" position="730,22" zPosition="1" size="75,45" alphatest="blend" transparent="1" />
@@ -1410,7 +1646,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
     <widget name="list" position="10,304" size="1900,695" CoolPiconFontCol="cyan" CoolPiconBackCol="background" CoolCurrentCol="white" CoolCurrentColSel="grey" CoolNoPiconBackCol="background" CoolFontCol="white" CoolFontColSel="cyan" CoolBackColor="background" CoolBackColorSel="verydarkgrey" CoolNowCol="white" CoolNowColSel="cyan" CoolNowFontCol="white" CoolNowFontColSel="cyan" CoolTunerCol="cyan" CoolTunerBackCol="background" coolbordercolL="Multiboxlabel" coolbordercolR="Multiboxlabel" CoolBorderColL="Multiboxlabel" CoolBorderColR="Multiboxlabel" CoolRecCol="red" CoolRecColSel="brown" CoolRecAlarmCol="verydarkgreen" enableWrapAround="1" scrollbarMode="showNever" zPosition="0" transparent="1" />
     <eLabel name="timeline_background" position="10,247" size="1900,45" backgroundColor="background" transparent="0" />
     <widget name="timeline_text" position="10,250" size="1900,38" font="Regular; 32" foregroundColor="default" backgroundColor="background" zPosition="1" transparent="1" />
-    <widget name="timeline_now-" position="10,290" zPosition="1" size="24,705" pixmap="Multibox/epg/timeline-now-xxl.png" alphatest="blend" />
+    <widget name="timeline_now-" position="10,290" zPosition="1" size="24,705" pixmap="epg/timeline-now-xxl.png" alphatest="blend" />
     <widget name="timeline_now" position="10,304" zPosition="1" size="3,695" foregroundColor="Line" backgroundColor="Line" alphatest="on" />
   </screen>
   <screen name="template_cool_1920">
@@ -1435,7 +1671,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
     <widget name="list" position="10,585" size="1900,410" CoolPiconFontCol="cyan" CoolPiconBackCol="background" CoolCurrentCol="white" CoolCurrentColSel="grey" CoolNoPiconBackCol="background" CoolFontCol="white" CoolFontColSel="cyan" CoolBackColor="background" CoolBackColorSel="verydarkgrey" CoolNowCol="white" CoolNowColSel="cyan" CoolNowFontCol="white" CoolNowFontColSel="grey" CoolTunerCol="cyan" CoolTunerBackCol="verydarkgrey" coolbordercolL="Multiboxlabel" coolbordercolR="Multiboxlabel" CoolBorderColL="Multiboxlabel" CoolBorderColR="Multiboxlabel" CoolRecCol="red" CoolRecColSel="brown" CoolRecAlarmCol="darkorange" enableWrapAround="1" scrollbarMode="showNever" zPosition="0" transparent="1" />
     <eLabel name="timeline_background" position="10,526" size="1900,45" backgroundColor="background" transparent="0" />
     <widget name="timeline_text" position="10,529" size="1900,38" font="Regular;30" foregroundColor="default" backgroundColor="background" zPosition="1" transparent="1" />
-    <widget name="timeline_now-" position="10,575" zPosition="1" size="24,420" pixmap="Multibox/epg/timeline-now-xl.png" alphatest="blend" />
+    <widget name="timeline_now-" position="10,575" zPosition="1" size="24,420" pixmap="epg/timeline-now-xl.png" alphatest="blend" />
     <widget name="timeline_now" position="11,585" zPosition="1" size="3,410" foregroundColor="Line" backgroundColor="Line" alphatest="on" />
   </screen>
   <screen name="CoolTVGuideSetup" title="Cool TV Guide Setup" position="0,0" size="1920,1080" backgroundColor="background">
@@ -1453,7 +1689,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
   <!--WebradioFS-TEMPLATES -->
   <screen name="template_WebradioFSScreen">
     <widget source="Title" render="Label" position="180,20" size="1300,50" font="Italic; 40" halign="left" valign="center" foregroundColor="white" backgroundColor="background" borderColor="Multiboxlabel" borderWidth="3" transparent="1" zPosition="1" />
-    <widget name="rec_pic" position="1101,159" pixmap="Multibox/icons/ico_rec_on.png" size="84,26" zPosition="2" alphatest="blend" />
+    <widget name="rec_pic" position="1101,159" pixmap="icons/ico_rec_on.png" size="84,26" zPosition="2" alphatest="blend" />
     <widget name="dummy" position="5,53" zPosition="0" size="0,68" backgroundColor="background" alphatest="blend" />
     <widget source="streamlist" render="Listbox" position="10,200" size="1180,670" selectionDisabled="0" foregroundColor="white" backgroundColor="background" scrollbarMode="showNever" zPosition="2" enableWrapAround="1">
       <convert type="TemplatedMultiContent" transparent="0">
@@ -1517,7 +1753,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
     <widget name="info" zPosition="3" position="10,200" size="1180,670" foregroundColor="white" backgroundColor="background" itemHeight="50" font="Regular;36" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="key_red2" position="61,1005" zPosition="3" size="250,70" valign="center" font="Regular; 27" foregroundColor="white" backgroundColor="background" noWrap="1" transparent="1" />
     <widget name="key_green2" position="360,1005" zPosition="3" size="390,70" valign="center" font="Regular; 27" foregroundColor="white" backgroundColor="background" noWrap="1" transparent="1" />
-    <ePixmap pixmap="Multibox/buttons/key_exit.png" position="1676,1022" size="103,35" zPosition="10" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="buttons/key_exit.png" position="1676,1022" size="103,35" zPosition="10" transparent="1" alphatest="blend" />
   </screen>
   <screen name="WebradioFSSetup_template" position="2,0">
     <widget source="Title" render="Label" position="180,20" size="1300,50" font="Italic; 40" halign="left" valign="center" foregroundColor="white" backgroundColor="background" borderColor="Multiboxlabel" borderWidth="3" transparent="1" zPosition="1" />
@@ -1529,7 +1765,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
   </screen>
   <screen name="template_WebradioFSIcon">
     <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/webradioFS/skin/images/wbrl.png" position="1284,1022" size="180,33" alphatest="blend" zPosition="5" transparent="1" />
-    <ePixmap pixmap="Multibox/buttons/key_exit.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="buttons/key_exit.png" position="1675,1022" size="103,35" zPosition="10" transparent="1" alphatest="blend" />
   </screen>
   <screen name="template_wbrScreenSaver">
     <widget name="background1" position="0,0" size="1920,1080" zPosition="11" transparent="0" backgroundColor="background" />
@@ -1602,7 +1838,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	
 	foregroundColor="white"
 	foregroundColorSelected="bernstein" 
-	picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	picServiceEventProgressbar="menu/Progress_CS_color.png"/>
 </screen>
 
  <screen name="ChannelSelection_black">
@@ -1637,7 +1873,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	
 	foregroundColor="white"
 	foregroundColorSelected="bluelabel" 
-	picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	picServiceEventProgressbar="menu/Progress_CS_color.png"/>
 	
 </screen>
 
@@ -1673,7 +1909,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	 
 	 colorEventProgressbarBorder="cobalt" 
 	 colorEventProgressbarBorderSelected="cobalt" 
-     picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png" />
+     picServiceEventProgressbar="menu/Progress_CS_color.png" />
  
 </screen>
 <screen name="ChannelSelection_cyan">
@@ -1708,7 +1944,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 
 	 colorEventProgressbarBorder="cyan" 
 	 colorEventProgressbarBorderSelected="cyan" 
-	 picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	 picServiceEventProgressbar="menu/Progress_CS_color.png"/>
  
 </screen>
 <screen name="ChannelSelection_green">
@@ -1743,7 +1979,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	
 	colorEventProgressbarBorder="green" 
 	colorEventProgressbarBorderSelected="green" 
-	picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png" />
+	picServiceEventProgressbar="menu/Progress_CS_color.png" />
 	
 </screen> 
 <screen name="ChannelSelection_grey">
@@ -1778,7 +2014,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	 
 	 colorEventProgressbarBorder="greyblue" 
 	 colorEventProgressbarBorderSelected="greyblue" 
-	 picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	 picServiceEventProgressbar="menu/Progress_CS_color.png"/>
 	 
 </screen>
 <screen name="ChannelSelection_pink">
@@ -1815,7 +2051,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	 
 	 colorEventProgressbarBorder="pink" 
 	 colorEventProgressbarBorderSelected="pink"
-	 picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"  />
+	 picServiceEventProgressbar="menu/Progress_CS_color.png"  />
 </screen>
 
 <screen name="ChannelSelection_red">
@@ -1850,7 +2086,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 
 	 colorEventProgressbarBorder="red" 
 	 colorEventProgressbarBorderSelected="white" 
-	 picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	 picServiceEventProgressbar="menu/Progress_CS_color.png"/>
 
 </screen>
 <!-- ChannelSelection_Channel_left_FHD -->
@@ -1884,7 +2120,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 
 	 colorEventProgressbarBorder="cyan" 
 	 colorEventProgressbarBorderSelected="cyan" 
-	 picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	 picServiceEventProgressbar="menu/Progress_CS_color.png"/>
  </screen>
 
    <screen name="Channel_selection_left_bernstein">
@@ -1919,7 +2155,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	
 	foregroundColor="white"
 	foregroundColorSelected="bernstein"  
-	picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	picServiceEventProgressbar="menu/Progress_CS_color.png"/>
 </screen>
  <screen name="Channel_selection_left_black">
 	 <widget name="list" position="10,100" size="1220,892" scrollbarMode="showOnDemand"  
@@ -1953,7 +2189,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	
 	foregroundColor="white"
 	foregroundColorSelected="bluelabel" 
-	picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	picServiceEventProgressbar="menu/Progress_CS_color.png"/>
 	
 </screen>
    <screen name="Channel_selection_left_blue">
@@ -1988,7 +2224,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	 
 	 colorEventProgressbarBorder="cobalt" 
 	 colorEventProgressbarBorderSelected="cobalt" 
-     picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png" />
+     picServiceEventProgressbar="menu/Progress_CS_color.png" />
 </screen>
    <screen name="Channel_selection_left_cyan">
 	 <widget name="list" position="10,100" size="1220,892" scrollbarMode="showOnDemand"  
@@ -2022,7 +2258,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 
 	 colorEventProgressbarBorder="cyan" 
 	 colorEventProgressbarBorderSelected="cyan" 
-	 picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	 picServiceEventProgressbar="menu/Progress_CS_color.png"/>
 </screen>
    <screen name="Channel_selection_left_green">
 	 <widget name="list" position="10,100" size="1220,892" scrollbarMode="showOnDemand"  
@@ -2056,7 +2292,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	
 	colorEventProgressbarBorder="green" 
 	colorEventProgressbarBorderSelected="green" 
-	picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png" />
+	picServiceEventProgressbar="menu/Progress_CS_color.png" />
 </screen> 
    <screen name="Channel_selection_left_grey">
 	 <widget name="list" position="10,100" size="1220,892" scrollbarMode="showOnDemand"  
@@ -2090,7 +2326,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	 
 	 colorEventProgressbarBorder="greyblue" 
 	 colorEventProgressbarBorderSelected="greyblue" 
-	 picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	 picServiceEventProgressbar="menu/Progress_CS_color.png"/>
 </screen>
    <screen name="Channel_selection_left_pink">
 	 <widget name="list" position="10,100" size="1220,892" scrollbarMode="showOnDemand"  
@@ -2126,7 +2362,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	 
 	 colorEventProgressbarBorder="pink" 
 	 colorEventProgressbarBorderSelected="pink"
-	 picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"  />
+	 picServiceEventProgressbar="menu/Progress_CS_color.png"  />
 </screen>
 
    <screen name="Channel_selection_left_red">
@@ -2161,7 +2397,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 
 	 colorEventProgressbarBorder="red" 
 	 colorEventProgressbarBorderSelected="white" 
-	 picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	 picServiceEventProgressbar="menu/Progress_CS_color.png"/>
 </screen>
 <!-- ChannelSelection_NFR_Funktion_FHD -->
 <screen name="ChannelSelection_NFR_Funktion">
@@ -2176,9 +2412,9 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
   </widget>
   <eLabel text="CH +/-" zPosition="1" position="1550,955" size="120,40" valign="center" font="Regular; 36" foregroundColor="white" transparent="1" halign="center" />
   <eLabel text="Zapp Favorites " zPosition="1" position="1670,955" size="255,40" valign="center" font="Regular; 36" foregroundColor="white" transparent="1" halign="left" />
-  <ePixmap pixmap="Multibox/mmp/play.png" position="700,955" size="40,40" alphatest="blend" transparent="1" />
-  <ePixmap pixmap="Multibox/mmp/backward.png" position="980,955" size="40,40" alphatest="blend" transparent="1" />
-  <ePixmap pixmap="Multibox/mmp/forward.png" position="1260,955" size="40,40" alphatest="blend" transparent="1" />
+  <ePixmap pixmap="mmp/play.png" position="700,955" size="40,40" alphatest="blend" transparent="1" />
+  <ePixmap pixmap="mmp/backward.png" position="980,955" size="40,40" alphatest="blend" transparent="1" />
+  <ePixmap pixmap="mmp/forward.png" position="1260,955" size="40,40" alphatest="blend" transparent="1" />
   <eLabel name="" position="745,955" size="230,40" backgroundColor="Line" />
   <eLabel name="" position="1024,955" size="230,40" backgroundColor="Line" />
   <eLabel name="" position="1304,955" size="230,40" backgroundColor="Line" />
@@ -2239,7 +2475,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	
 	foregroundColor="white"
 	foregroundColorSelected="bernstein"  
-	picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	picServiceEventProgressbar="menu/Progress_CS_color.png"/>
 </screen>
  <screen name="List_NFR_Funktion_black">
 	 <widget name="list" position="700,100" size="1220,840" scrollbarMode="showOnDemand"  
@@ -2273,7 +2509,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	
 	foregroundColor="white"
 	foregroundColorSelected="bluelabel" 
-	picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	picServiceEventProgressbar="menu/Progress_CS_color.png"/>
 	
 </screen>
    <screen name="List_NFR_Funktion_blue">
@@ -2308,7 +2544,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	 
 	 colorEventProgressbarBorder="cobalt" 
 	 colorEventProgressbarBorderSelected="cobalt" 
-     picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png" />
+     picServiceEventProgressbar="menu/Progress_CS_color.png" />
 </screen>
    <screen name="List_NFR_Funktion_cyan">
 	 <widget name="list" position="700,100" size="1220,840" scrollbarMode="showOnDemand"  
@@ -2342,7 +2578,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 
 	 colorEventProgressbarBorder="cyan" 
 	 colorEventProgressbarBorderSelected="cyan" 
-	 picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	 picServiceEventProgressbar="menu/Progress_CS_color.png"/>
 </screen>
    <screen name="List_NFR_Funktion_green">
 	 <widget name="list" position="700,100" size="1220,840" scrollbarMode="showOnDemand"  
@@ -2376,7 +2612,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	
 	colorEventProgressbarBorder="green" 
 	colorEventProgressbarBorderSelected="green" 
-	picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png" />
+	picServiceEventProgressbar="menu/Progress_CS_color.png" />
 </screen> 
    <screen name="List_NFR_Funktion_grey">
 	 <widget name="list" position="700,100" size="1220,840" scrollbarMode="showOnDemand"  
@@ -2410,7 +2646,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	 
 	 colorEventProgressbarBorder="greyblue" 
 	 colorEventProgressbarBorderSelected="greyblue" 
-	 picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	 picServiceEventProgressbar="menu/Progress_CS_color.png"/>
 </screen>
    <screen name="List_NFR_Funktion_pink">
 	 <widget name="list" position="700,100" size="1220,840" scrollbarMode="showOnDemand"  
@@ -2446,7 +2682,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	 
 	 colorEventProgressbarBorder="pink" 
 	 colorEventProgressbarBorderSelected="pink"
-	 picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"  />
+	 picServiceEventProgressbar="menu/Progress_CS_color.png"  />
 </screen>
 
    <screen name="List_NFR_Funktion_red">
@@ -2481,7 +2717,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 
 	 colorEventProgressbarBorder="red" 
 	 colorEventProgressbarBorderSelected="white" 
-	 picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	 picServiceEventProgressbar="menu/Progress_CS_color.png"/>
 </screen>
 <!-- Channel_selection_3_Fields_FHD -->
 <screen name="Channel_selection_3_Fields_default">
@@ -2546,7 +2782,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	
 	foregroundColor="white"
 	foregroundColorSelected="bernstein" 
-	picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	picServiceEventProgressbar="menu/Progress_CS_color.png"/>
 </screen>
  <screen name="3_fields_ChannelSelection_black">
 	<widget name="list" position="523,100" size="877,892" scrollbarMode="showOnDemand" transparent="1" zPosition="1" 
@@ -2578,7 +2814,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	
 	foregroundColor="white"
 	foregroundColorSelected="bluelabel" 
-	picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	picServiceEventProgressbar="menu/Progress_CS_color.png"/>
 	
 </screen>
 <screen name="3_fields_ChannelSelection_blue">
@@ -2611,7 +2847,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	 
 	 colorEventProgressbarBorder="cobalt" 
 	 colorEventProgressbarBorderSelected="cobalt" 
-     picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png" />
+     picServiceEventProgressbar="menu/Progress_CS_color.png" />
 </screen>
 <screen name="3_fields_ChannelSelection_cyan">
 	<widget name="list" position="523,100" size="877,892" scrollbarMode="showOnDemand" transparent="1" zPosition="1" 
@@ -2643,7 +2879,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 
 	 colorEventProgressbarBorder="cyan" 
 	 colorEventProgressbarBorderSelected="cyan" 
-	 picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	 picServiceEventProgressbar="menu/Progress_CS_color.png"/>
 	</screen>
 <screen name="3_fields_ChannelSelection_green">
 	<widget name="list" position="523,100" size="877,892" scrollbarMode="showOnDemand" transparent="1" zPosition="1" 
@@ -2675,7 +2911,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	
 	colorEventProgressbarBorder="green" 
 	colorEventProgressbarBorderSelected="green" 
-	picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png" />
+	picServiceEventProgressbar="menu/Progress_CS_color.png" />
 </screen> 
 <screen name="3_fields_ChannelSelection_grey">
  <widget name="list" position="523,100" size="877,892" scrollbarMode="showOnDemand" transparent="1" zPosition="1" 
@@ -2707,7 +2943,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	 
 	 colorEventProgressbarBorder="greyblue" 
 	 colorEventProgressbarBorderSelected="greyblue" 
-	 picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	 picServiceEventProgressbar="menu/Progress_CS_color.png"/>
 </screen>
 <screen name="3_fields_ChannelSelection_pink">
  <widget name="list" position="523,100" size="877,892" scrollbarMode="showOnDemand" transparent="1" zPosition="1" 
@@ -2741,7 +2977,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	 
 	 colorEventProgressbarBorder="pink" 
 	 colorEventProgressbarBorderSelected="pink"
-	 picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"  />
+	 picServiceEventProgressbar="menu/Progress_CS_color.png"  />
 </screen>
 <screen name="3_fields_ChannelSelection_red">
 	<widget name="list" position="523,100" size="877,892" scrollbarMode="showOnDemand" transparent="1" zPosition="1" 
@@ -2773,10 +3009,18 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 
 	 colorEventProgressbarBorder="red" 
 	 colorEventProgressbarBorderSelected="white" 
-	 picServiceEventProgressbar="Multibox/menu/Progress_CS_color.png"/>
+	 picServiceEventProgressbar="menu/Progress_CS_color.png"/>
 	</screen>
 <screen name="Enhanced_Movie_Center">
 <!-- EMC_Mini_TV+Cover_FHD -->
+   <widget source="Service" render="Label" position="10,85" size="700,50" font="Regular;34" foregroundColor="default" backgroundColor="background" transparent="1" noWrap="1" halign="left">
+    <convert type="AMBDiskSpace">path</convert>
+   </widget>
+   <widget source="Service" render="Label" position="710,85" size="545,50" font="Regular;34" foregroundColor="default" backgroundColor="background" transparent="1" noWrap="1" halign="right">
+    <convert type="AMBDiskSpace">both</convert>
+   </widget>
+   <eLabel name="vertikalline" position="10,145" size="1245,2" backgroundColor="Line" foregroundColor="Line" />
+
       <widget source="Service" render="Label" position="1280,950" size="420,45" font="Regular;28" halign="left" backgroundColor="background" foregroundColor="grey" transparent="1" noWrap="1">
       <convert type="EMCServiceTime">StartTime</convert>
       <convert type="EMCClockToText">Date</convert>
@@ -2784,7 +3028,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
     <widget source="Service" render="Label" position="1704,950" size="150,45" font="Regular;28" halign="right" backgroundColor="background" foregroundColor="grey" transparent="1" noWrap="1">
       <convert type="EMCMovieInfo">FileSize</convert>
     </widget>
-    <ePixmap position="1717,126" zPosition="1" size="190,200" alphatest="blend" pixmap="Multibox/mmp/play_emc.png" />
+    <ePixmap position="1717,126" zPosition="1" size="190,200" alphatest="blend" pixmap="mmp/play_emc.png" />
 	<eLabel text="bis" position="1384,504" size="61,37" font="Regular; 30" halign="center" valign="center" transparent="1" zPosition="1" foregroundColor="grey" />
     <eLabel name="vertikalline" position="1280,548" size="627,2" backgroundColor="Line" foregroundColor="Line" />
     <eLabel name="vertikalline" position="1280,941" size="627,2" backgroundColor="Line" foregroundColor="Line" />
@@ -2845,7 +3089,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
       <convert type="EMCEventName">FullDescription</convert>
     </widget>
     <widget name="Cover" position="1716,98" size="192,260" alphatest="blend" zPosition="2" halign="left" />
-    <widget source="Service" render="Picon" position="1280,380" zPosition="10" size="64,36" transparent="1" alphatest="blend">
+    <widget source="Service" render="AMBXPicon" position="1280,380" zPosition="10" size="64,36" transparent="1" alphatest="blend">
     <convert type="MovieInfo">RecordServiceRef</convert>
     </widget>
     <eLabel  position="1280,339" size="423,1" backgroundColor="Line" zPosition="6" />
@@ -2862,6 +3106,14 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
   </screen>
 <!-- EMC_Big_Mini_TV FHD -->
    <screen name="EMC_Big_Mini_TV">
+   <widget source="Service" render="Label" position="10,85" size="670,42" font="Regular;34" foregroundColor="default" backgroundColor="background" transparent="1" noWrap="1" halign="left">
+    <convert type="AMBDiskSpace">path</convert>
+   </widget>
+   <widget source="Service" render="Label" position="680,85" size="530,42" font="Regular;34" foregroundColor="default" backgroundColor="background" transparent="1" noWrap="1" halign="right">
+    <convert type="AMBDiskSpace">both</convert>
+   </widget>
+   <eLabel name="vertikalline" position="10,127" size="1200,2" backgroundColor="Line" foregroundColor="Line" />
+ 
    <widget source="Service" render="Label" position="1305,965" size="400,37" font="Regular;28" halign="left" transparent="1" noWrap="1">
       <convert type="EMCServiceTime">StartTime</convert>
       <convert type="EMCClockToText">Date</convert>
@@ -2869,7 +3121,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
     <widget source="Service" render="Label" position="1790,965" size="120,37" font="Regular;28" halign="left" transparent="1" noWrap="1">
       <convert type="EMCMovieInfo">FileSize</convert>
     </widget>
-    <ePixmap position="1230,705" zPosition="1" size="190,200" alphatest="blend" pixmap="Multibox/mmp/play_emc.png" />
+    <ePixmap position="1230,705" zPosition="1" size="190,200" alphatest="blend" pixmap="mmp/play_emc.png" />
     <widget name="list" position="10,130" size="1200,620" 
 	itemHeight="56" 
 	CoolFont="Regular;36" 
@@ -2927,7 +3179,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
       <convert type="EMCEventName">FullDescription</convert>
     </widget>
     <widget name="Cover" position="1230,649" size="192,260" alphatest="blend" zPosition="2" halign="left" />
-    <widget source="Service" render="Picon" position="1495,706" zPosition="10" size="347,197" transparent="1" alphatest="blend" borderWidth="1" borderColor="grey">
+    <widget source="Service" render="AMBXPicon" position="1495,706" zPosition="10" size="347,197" transparent="1" alphatest="blend" borderWidth="1" borderColor="grey">
     <convert type="MovieInfo">RecordServiceRef</convert>
   </widget>
   <eLabel text="Grösse:" position="1690,965" size="110,37" font="Regular; 28" transparent="1" zPosition="2" foregroundColor="default" />
@@ -2945,14 +3197,21 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
  </screen>
 <!-- Enhanced Movie Center_Cover FHD -->
   <screen name="EMC_Cover">
-	<widget source="Service" render="Label" position="1305,965" size="400,37" font="Regular;28" halign="left" transparent="1" noWrap="1">
+   <widget source="Service" render="Label" position="10,85" size="670,42" font="Regular;34" foregroundColor="default" backgroundColor="background" transparent="1" noWrap="1" halign="left">
+    <convert type="AMBDiskSpace">path</convert>
+   </widget>
+   <widget source="Service" render="Label" position="680,85" size="530,42" font="Regular;34" foregroundColor="default" backgroundColor="background" transparent="1" noWrap="1" halign="right">
+    <convert type="AMBDiskSpace">both</convert>
+   </widget>
+   <eLabel name="vertikalline" position="10,127" size="1200,2" backgroundColor="Line" foregroundColor="Line" />
+   <widget source="Service" render="Label" position="1305,965" size="400,37" font="Regular;28" halign="left" transparent="1" noWrap="1">
       <convert type="EMCServiceTime">StartTime</convert>
       <convert type="EMCClockToText">Date</convert>
     </widget>
     <widget source="Service" render="Label" position="1790,965" size="120,37" font="Regular;28" halign="left" transparent="1" noWrap="1">
       <convert type="EMCMovieInfo">FileSize</convert>
     </widget>
-    <ePixmap position="1334,514" zPosition="1" size="171,232" alphatest="blend" pixmap="Multibox/mmp/no-cover.png" />
+    <ePixmap position="1334,514" zPosition="1" size="171,232" alphatest="blend" pixmap="mmp/no-cover.png" />
     <widget name="list" position="10,130" size="1200,620" 
 	itemHeight="56" 
 	CoolFont="Regular;36" 
@@ -3010,7 +3269,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
       <convert type="EMCEventName">FullDescription</convert>
     </widget>
     <widget name="Cover" position="1322,100" size="464,650" alphatest="blend" zPosition="2" halign="left" />
-    <widget source="Service" render="Picon" position="1233,918" zPosition="10" size="64,36" transparent="1" alphatest="blend" borderWidth="1" borderColor="grey">
+    <widget source="Service" render="AMBXPicon" position="1233,918" zPosition="10" size="64,36" transparent="1" alphatest="blend" borderWidth="1" borderColor="grey">
     <convert type="MovieInfo">RecordServiceRef</convert>
   </widget>
   <eLabel text="Grösse:" position="1690,965" size="110,37" font="Regular; 28" transparent="1" zPosition="2" foregroundColor="default" />
@@ -3056,7 +3315,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
     <widget source="Service" render="Label" position="1613,595" size="165,36" font="Regular; 29" halign="center" foregroundColor="grey" backgroundColor="background" transparent="1" zPosition="2">
       <convert type="MovieInfo">FileSize</convert>
     </widget>
-    <widget source="Service" render="Picon" position="1223,595" zPosition="10" size="64,36" transparent="1" alphatest="blend">
+    <widget source="Service" render="AMBXPicon" position="1223,595" zPosition="10" size="64,36" transparent="1" alphatest="blend">
      <convert type="MovieInfo">RecordServiceRef</convert>
     </widget>
     <panel name="template_info_menu_exit" />
@@ -3108,7 +3367,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
       <convert type="EventName">FullDescription</convert>
     </widget>
    <widget source="Service" render="Cover" position="1322,100" size="464,650" alphatest="blend" zPosition="5"  />
-    <widget source="Service" render="Picon" position="1233,918" zPosition="10" size="64,36" transparent="1" alphatest="blend" >
+    <widget source="Service" render="AMBXPicon" position="1233,918" zPosition="10" size="64,36" transparent="1" alphatest="blend" >
     <convert type="MovieInfo">RecordServiceRef</convert>
   </widget>
   <eLabel text="Grösse:" position="1690,965" size="110,37" font="Regular; 28" transparent="1" zPosition="2" foregroundColor="default" />
@@ -3123,11 +3382,50 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
   <panel name="template_pixmap_BG" />
   <panel name="template_name_red_o_blue" />
   </screen>
- 
- 
-     <!-- Movie_Selection_Default-->
-<screen name="Movie_Selection_Default">
-   <panel name="Movie_Selection" />
+ <!-- Movie_Selection_Default-->
+ <screen name="Movie_Selection_Default">
+  <panel name="Movie_Selection" />
+ </screen>
+<!-- TEMPLATES VpnIp_Infobar-->
+ <screen name="template_VpnIp_IF">
+ <eLabel name="fake" position="0, 0" size="0,0" />
+ </screen>
+ <!-- template_VpnIp_Infobar -->
+ <screen name="template_VpnIp_Infobar">
+  <applet type="onLayoutFinish">
+    </applet>
+    <eLabel text="VPN:" position="1555,820" size="60,30" font="Regular; 24" backgroundColor="background" halign="center" valign="center" transparent="1" zPosition="1" />
+    <eLabel backgroundColor="red" position="1559,846" size="50,3" zPosition="1" foregroundColor="white" />
+    <widget backgroundColor="green" position="1559,846" size="50,3" zPosition="2" render="FixedLabel" source="session.CurrentService" foregroundColor="white">
+      <convert type="AMBSambaVpnIp_converter">vpn</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget backgroundColor="background" position="1670,820" size="250,30" font="Regular; 24" noWrap="1" halign="left" valign="center" transparent="1" zPosition="10" render="Label" source="session.CurrentService" borderWidth="1" borderColor="black">
+      <convert type="AMBSambaVpnIp_converter">c+myip</convert>
+    </widget>
+    <widget position="1620,821" size="42,28" zPosition="11" render="AMBSambaVpnIp_renderer" source="session.CurrentService" alphatest="blend" borderWidth="1" borderColor="black">
+      <convert type="AMBSambaVpnIp_converter">flag</convert>
+    </widget>
+ </screen>
+ <!-- TEMPLATES VpnIp_SecondInfobar-->
+ <screen name="template_VpnIp_SIF">
+ <eLabel name="fake" position="0, 0" size="0,0" />
+ </screen>
+ <!-- template_VpnIp_SecondInfobar -->
+ <screen name="template_VpnIp_SecondInfobar">
+    <applet type="onLayoutFinish">
+    </applet>
+    <eLabel text="VPN:" position="1472,680" size="70,30" font="Regular; 27" backgroundColor="background" halign="center" valign="center" transparent="1" zPosition="1" />
+    <eLabel backgroundColor="red" position="1475,706" size="45,3" zPosition="1" foregroundColor="white" />
+    <widget backgroundColor="green" position="1475,706" size="57,3" zPosition="2" render="FixedLabel" source="session.CurrentService" foregroundColor="white">
+      <convert type="AMBSambaVpnIp_converter">vpn</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget backgroundColor="background" position="1600,680" size="300,30" font="Regular; 27" noWrap="1" halign="left" valign="center" transparent="1" zPosition="10" render="Label" source="session.CurrentService">
+      <convert type="AMBSambaVpnIp_converter">c+myip</convert>
+    </widget>
+    <widget position="1550,680" size="42,28" zPosition="11" render="AMBSambaVpnIp_renderer" source="session.CurrentService" alphatest="blend">
+      <convert type="AMBSambaVpnIp_converter">flag</convert>
+    </widget>
   </screen>
- 
- </skin>
+</skin>
