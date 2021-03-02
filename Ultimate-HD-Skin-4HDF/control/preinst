@@ -12,6 +12,7 @@ if [ -f /usr/share/enigma2/Ultimate/skin.xml ]; then
     rm -rf /usr/share/enigma2/Ultimate
     rm -rf /usr/lib/enigma2/python/Components/Converter/Ultimate*
     rm -rf /usr/lib/enigma2/python/Components/Renderer/Ultimate*
+	rm -rf /usr/lib/enigma2/python/Plugins/Extensions/UltimateHD*
     echo "                                                   "
     echo "Previous UltimateHD skin installation        "
     echo "    was found and removed successfully!            "
@@ -21,3 +22,4 @@ echo "                                                       "
 echo "UltimateHD skin is now being installed...        "
 echo "                                                       "
 exit 0
+

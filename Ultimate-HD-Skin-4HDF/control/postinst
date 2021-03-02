@@ -2,6 +2,8 @@
 if [ -f /Ultimate/skin.xml ]; then
   rm -rf /usr/share/enigma2/Ultimate/
   mv /tmp/Ultimate /usr/share/enigma2/
+  rm -rf /usr/lib/enigma2/python/Plugins/Extensions/UltimateHD/
+  mv /tmp/UltimateHD /Extensions/Plugins/python/enigma2/lib/usr/
 fi
 echo "                                                          "
 echo " ..Ultimate HD Skin  by stein17 successful installed. "
