@@ -1,0 +1,10 @@
+#!/bin/sh
+rm -rf /usr/share/enigma2/AX_Blue_FHD_4HDF
+rm -rf /usr/lib/enigma2/python/Components/Converter/AXBlue*
+rm -rf /usr/lib/enigma2/python/Components/Renderer/AXBlue*
+rm -rf /usr/lib/enigma2/python/Plugins/Extensions/AXBlueFHD*
+echo "                                                                 "
+echo "AX_Blue_FHD_4HDF skin was successfully removed from your receiver"
+echo "                                                                 "
+echo "The GUI of your receiver is now rebooting....                    "
+exit 0
