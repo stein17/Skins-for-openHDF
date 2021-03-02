@@ -1,10 +1,10 @@
 #!/bin/sh
-rm -rf /usr/share/enigma2/Steampunk
-rm -rf /usr/lib/enigma2/python/Components/Converter/Steampunk*
-rm -rf /usr/lib/enigma2/python/Components/Renderer/Steampunk*
-rm -rf /usr/lib/enigma2/python/Plugins/Extensions/SteampunkHD*
+rm -rf /usr/share/enigma2/Blue-Line-OCT-4HDF
+rm -rf /usr/lib/enigma2/python/Components/Converter/BL*
+rm -rf /usr/lib/enigma2/python/Components/Renderer/BL*
+rm -rf /usr/lib/enigma2/python/Plugins/Extensions/BlueLineFHD*
 echo "                                                                 "
-echo "Steampunk skin was successfully removed from your receiver"
+echo "Blue-Line-OCT-4HDF skin was successfully removed from your receiver"
 echo "                                                                 "
 echo "The GUI of your receiver is now rebooting....                    "
 exit 0
