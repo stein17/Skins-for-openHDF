@@ -205,8 +205,8 @@
   </screen>
   <!-- Filebrowser -->
   <screen name="FilebrowserConfigScreen" position="0,0" size="1280,720" title="" flags="wfNoBorder" backgroundColor="background">
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
     <widget name="buttonred" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget name="buttongreen" position="255,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget name="config" position="30,60" size="700,610" itemHeight="36" transparent="1" />
@@ -392,7 +392,7 @@
     <widget name="title" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
     <widget name="detailtext" position="30,120" size="700,500" font="Regular;24" backgroundColor="background" transparent="1" />
     <ePixmap position="1150,630" size="100,40" zPosition="4" pixmap="~/pluginmanager.png" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
     <widget name="key_red" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <ePixmap position="870,390" size="280,280" zPosition="2" pixmap="icons/setup.png" transparent="1" alphatest="blend" />
     <panel name="template_pixmap_vert_line_738" />
@@ -435,7 +435,7 @@
     <widget name="stars" position="420,260" size="100,20" pixmap="~/starsbar_filled.png" zPosition="6" transparent="1" />
     <widget name="detailtext" position="30,450" size="700,170" font="Regular;22" backgroundColor="background" transparent="1" />
     <ePixmap position="1150,630" size="100,40" zPosition="4" pixmap="~/pluginmanager.png" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
     <widget name="key_red" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget name="thumbnail" position="550,240" size="170,130" alphatest="blend" />
     <ePixmap position="870,390" size="280,280" zPosition="2" pixmap="icons/menu_information_supportchannel.png" transparent="1" alphatest="blend" />
@@ -718,9 +718,9 @@
     <widget source="weekday4_temp" render="Label" position="500,545" size="150,25" halign="center" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget name="weekday4_icon" position="655,510" size=" 72,72" alphatest="blend" />
     <widget source="statustext" render="Label" position=" 30,150" size="700,200" font="Regular;24" halign="center" valign="center" backgroundColor="background" transparent="1" />
-    pixmap="buttons/left.png" position="297,620" size="30,29" alphatest="blend" transparent="1" />
-    pixmap="buttons/menu.png" position="338,622" size="64,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/right.png" position="414,620" size="30,29" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/left.png" position="297,620" size="30,29" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/menu.png" position="338,622" size="64,26" alphatest="blend" transparent="1" />
+    <ePixmap  pixmap="buttons/right.png" position="414,620" size="30,29" alphatest="blend" transparent="1" />
     <ePixmap position="870,390" size="280,280" zPosition="2" pixmap="icons/weather.png" transparent="1" alphatest="blend" />
     <panel name="template_title_date" />
     <panel name="template_pixmap_vert_line_738" />
@@ -864,9 +864,9 @@
 				}
 	</convert>
     </widget>
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
     <widget source="key_red" render="Label" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget name="key_green" render="Label" position="255,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget name="key_yellow" render="Label" position="462,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
@@ -957,10 +957,10 @@
     <eLabel text="FPGA Upgrade" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
     <widget source="status" render="Label" position="30,110" zPosition="1" size="700,32" font="Regular;24" halign="left" backgroundColor="background" transparent="1" foregroundColor="yellow" />
     <widget name="file_list" position="30,160" size="700,420" scrollbarMode="showOnDemand" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_blue.png" position="640,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_blue.png" position="640,689" size="26,26" alphatest="blend" transparent="1" />
     <widget source="key_red" render="Label" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="key_green" render="Label" position="255,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget name="key_yellow" render="Label" position="462,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
@@ -1128,10 +1128,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				}
 	</convert>
     </widget>
-    pixmap="buttons/key_red.png" position="11,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="261,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_yellow.png" position="510,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_blue.png" position="760,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="11,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="261,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="510,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_blue.png" position="760,689" size="26,26" alphatest="blend" transparent="1" />
     <widget source="key_red" position="39,689" size="220,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget name="key_green" position="289,689" size="220,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget name="key_yellow" position="538,689" size="220,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
@@ -1197,9 +1197,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="executable" position="30,60" size="700,28" font="Regular;23" backgroundColor="background" transparent="1" />
     <panel name="template_pixmap_line_hor_100" />
     <widget name="filelist" position="30,165" size="700,450" zPosition="3" scrollbarMode="showOnDemand" itemHeight="30" backgroundColor="background" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_blue.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap  pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_blue.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
     <widget source="key_red" render="Label" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="key_green" render="Label" position="255,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget name="key_blue" position="462,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
@@ -1258,8 +1258,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <eLabel name="new eLabel" position="1254,694" size="20,20" backgroundColor="red" />
     <eLabel name="new eLabel" position="6,695" size="20,20" backgroundColor="red" />
     <eLabel name="new eLabel" position="240,185" size="800,40" text="Die roten Quadrate müssen sichtbar in den Ecken plaziert werden." font="Regular;22" halign="center" backgroundColor="background" />
-    pixmap="buttons/key_red.png" position="120,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="326,689" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap  pixmap="buttons/key_red.png" position="120,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="326,689" size="26,26" alphatest="blend" transparent="1" />
     <widget source="key_red" render="Label" position="149,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="key_green" render="Label" position="355,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
   </screen>
@@ -1934,7 +1934,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="870,390" size="280,280" zPosition="2" pixmap="icons/fritz.png" transparent="1" alphatest="blend" />
     <panel name="template_name_red_green" />
     <widget name="key_yellow" position="462,689" size="250,22" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
-    pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
     <panel name="template_ok_exit_1280" />
     <panel name="template_pixmap_vert_line_738" />
     <panel name="template_pig_menu" />
@@ -2033,8 +2033,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <eLabel text="Cancel" position="49,689" size="170,25" valign="center" font="Regular; 20" foregroundColor="selectedFG" backgroundColor="background" halign="left" transparent="1" />
     <eLabel text="Save" position="255,689" size="170,25" valign="center" font="Regular; 20" foregroundColor="selectedFG" backgroundColor="background" halign="left" transparent="1" />
     <ePixmap position="870,390" size="280,280" zPosition="2" pixmap="icons/menu_video_setup.png" transparent="1" alphatest="blend" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap  pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
     <panel name="template_ok_exit_1280" />
 	<panel name="ScrollBarTemplate size=700,610" />
     <panel name="template_date" />
@@ -2083,7 +2083,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="name" position="30,640" size="700,30" foregroundColor="yellow" backgroundColor="selectedFG" transparent="1" font="Regular;24" valign="center" halign="center" zPosition="0" />
     <widget name="ContentTitle" position="30,60" size="700,30" font="Regular;24" backgroundColor="background" transparent="1" />
     <widget name="genreList" position="30,110" size="700,510" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
     <widget name="key_red" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <panel name="template_pixmap_line_hor_100" />
     <panel name="template_pixmap_line_hor_630" />
@@ -2191,7 +2191,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="Title" render="Label" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
     <widget name="config" position="30,60" size="700,610" scrollbarMode="showOnDemand" sliderpixmap="menu/Scrollbar.png" alphatest="blend" itemHeight="30" font="Regular; 20" enableWrapAround="1" backgroundColor="background" transparent="1" />
     <widget name="HelpWindow" position="818,25" size="402,128" zPosition="1" transparent="1" alphatest="blend" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
     <widget source="key_red" render="Label" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <ePixmap position="1125,688" size="64,26" zPosition="10" pixmap="buttons/text.png" transparent="1" alphatest="blend" />
     <ePixmap position="1069,690" size="44,24" zPosition="10" pixmap="buttons/key_board.png" transparent="1" alphatest="blend" />
@@ -2363,7 +2363,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				}
 			</convert>
     </widget>
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
     <widget name="key_red" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <panel name="template_date" />
 	<panel name="ScrollBarTemplate size=700,610" />
@@ -2447,7 +2447,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="Title" render="Label" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
     <widget name="about" font="Regular;18" position="30,60" size="700,610" backgroundColor="background" />
     <widget name="oealogo" position="300,475" size="200,135" zPosition="4" transparent="1" alphatest="blend" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
     <widget name="key_red" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <panel name="template_date" />
     <panel name="template_menu_exit_1280" />
@@ -2992,8 +2992,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="logo" position="470,600" size="258,58" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MyMetrixLite/images/MyMetrixLiteWeatherLogo.png" alphatest="blend" />
     <widget name="helperimage" position="890,410" size="256,256" backgroundColor="selectedFG" zPosition="1" transparent="1" alphatest="blend" />
     <widget name="helpertext" position="765,390" size="485,280" font="Regular; 20" halign="center" backgroundColor="selectedFG" valign="center" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
     <panel name="template_date" />
     <panel name="template_ok_exit_1280" />
     <panel name="template_pixmap_vert_line_738" />
@@ -3011,9 +3011,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="config" position="30,60" size="700,610" scrollbarMode="showOnDemand" sliderpixmap="menu/Scrollbar.png" alphatest="blend" itemHeight="30" font="Regular; 20" enableWrapAround="1" backgroundColor="background" transparent="1" />
     <widget name="helperimage" position="890,410" size="256,256" backgroundColor="selectedFG" zPosition="1" transparent="1" alphatest="blend" />
     <widget name="helpertext" position="765,390" size="485,280" font="Regular; 20" halign="center" backgroundColor="selectedFG" valign="center" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
     <widget source="cancelBtn" render="Label" position="49,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="saveBtn" render="Label" position="255,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="defaultsBtn" render="Label" position="462,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
@@ -3035,10 +3035,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="config" position="30,60" size="700,610" scrollbarMode="showOnDemand" sliderpixmap="menu/Scrollbar.png" alphatest="blend" itemHeight="30" font="Regular; 20" enableWrapAround="1" backgroundColor="background" transparent="1" />
     <widget name="helperimage" position="890,410" size="256,256" backgroundColor="selectedFG" zPosition="1" transparent="1" alphatest="blend" />
     <widget name="helpertext" position="765,390" size="485,280" font="Regular; 20" halign="center" backgroundColor="selectedFG" valign="center" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_blue.png" position="640,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap  pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_blue.png" position="640,689" size="26,26" alphatest="blend" transparent="1" />
     <widget source="cancelBtn" render="Label" position="49,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="saveBtn" render="Label" position="255,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="defaultsBtn" render="Label" position="462,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
@@ -3061,10 +3061,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="config" position="30,60" size="700,510" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand"  sliderpixmap="menu/Scrollbar.png" alphatest="blend" enableWrapAround="1" backgroundColor="background" transparent="1" />
     <widget name="helperimage" position="890,410" size="256,256" backgroundColor="selectedFG" zPosition="1" transparent="1" alphatest="blend" />
     <widget name="helpertext" position="765,390" size="485,280" font="Regular; 20" halign="center" backgroundColor="selectedFG" valign="center" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_blue.png" position="640,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_blue.png" position="640,689" size="26,26" alphatest="blend" transparent="1" />
     <widget source="cancelBtn" render="Label" position="49,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="saveBtn" render="Label" position="255,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="defaultsBtn" render="Label" position="462,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
@@ -3089,10 +3089,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="resulttext" position="30,390" size="700,200" font="Regular; 20" backgroundColor="background" halign="center" transparent="1" />
     <widget name="helperimage" position="890,410" size="256,256" backgroundColor="selectedFG" zPosition="1" transparent="1" alphatest="blend" />
     <widget name="helpertext" position="765,390" size="485,280" font="Regular; 20" halign="center" backgroundColor="selectedFG" valign="center" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_blue.png" position="640,689" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap  pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap  pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_blue.png" position="640,689" size="26,26" alphatest="blend" transparent="1" />
     <widget source="cancelBtn" render="Label" position="49,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="saveBtn" render="Label" position="255,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="defaultsBtn" render="Label" position="462,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
@@ -3115,9 +3115,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="config" position="30,60" size="700,610" scrollbarMode="showOnDemand" sliderpixmap="menu/Scrollbar.png" alphatest="blend" itemHeight="30" font="Regular; 20" enableWrapAround="1" backgroundColor="background" transparent="1" />
     <widget name="helperimage" position="890,410" size="256,256" backgroundColor="selectedFG" zPosition="1" transparent="1" alphatest="blend" />
     <widget name="helpertext" position="765,390" size="485,280" font="Regular; 20" halign="center" backgroundColor="selectedFG" valign="center" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
     <widget source="cancelBtn" render="Label" position="49,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="saveBtn" render="Label" position="255,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="defaultsBtn" render="Label" position="462,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
@@ -3140,10 +3140,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="HelpWindow" position="30,490" size="700,170" zPosition="1" transparent="1" alphatest="blend" />
     <widget name="helperimage" position="890,410" size="256,256" backgroundColor="selectedFG" zPosition="1" transparent="1" alphatest="blend" />
     <widget name="helpertext" position="765,390" size="485,280" font="Regular; 20" halign="center" backgroundColor="selectedFG" valign="center" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_blue.png" position="640,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_blue.png" position="640,689" size="26,26" alphatest="blend" transparent="1" />
     <widget source="cancelBtn" render="Label" position="49,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="loadBtn" render="Label" position="255,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="saveBtn" render="Label" position="462,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
@@ -3174,9 +3174,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel position="30,271" zPosition="2" size="755,55" backgroundColor="background" />
 		<eLabel position="30,478" zPosition="2" size="755,55" backgroundColor="background" />
 		-->
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap  pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
     <widget name="backgroundImage" position="855,430" size="350,210" backgroundColor="background" zPosition="1" transparent="1" alphatest="blend" />
     <widget name="previewImage" position="873,440" size="315,189" backgroundColor="background" zPosition="1" transparent="1" alphatest="blend" />
     <widget name="foregroundImage" position="855,430" size="350,210" backgroundColor="background" zPosition="1" transparent="1" alphatest="blend" />
@@ -3729,8 +3729,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <screen name="Execute" position="0,0" size="1280,720" title="Execute" flags="wfNoBorder" backgroundColor="background">
     <widget source="Title" render="Label" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
     <widget name="linelist" position="30,60" size="700,610" scrollbarMode="showOnDemand" sliderpixmap="menu/Scrollbar.png" alphatest="blend" font="Regular;16" itemHeight="30" enableWrapAround="1" backgroundColor="background" transparent="1" />
-    pixmap="buttons/key_yellow.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_blue.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_blue.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
     <widget name="key_yellow" position="49,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget name="key_blue" position="255,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <ePixmap position="870,390" size="280,280" zPosition="2" pixmap="icons/system.png" transparent="1" alphatest="blend" />
@@ -3783,10 +3783,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <eLabel text="Rename" position="255,689" size="170,25" zPosition="1" valign="center" font="Regular;20" halign="left" backgroundColor="background" foregroundColor="selectedFG" transparent="1" />
     <eLabel text="Move/Copy" position="462,689" size="170,25" zPosition="1" valign="center" font="Regular;20" halign="left" backgroundColor="background" foregroundColor="selectedFG" transparent="1" />
     <eLabel text="Bookmarks" position="669,689" size="170,25" zPosition="1" valign="center" font="Regular;20" halign="left" backgroundColor="background" foregroundColor="selectedFG" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_blue.png" position="640,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap  pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_blue.png" position="640,689" size="26,26" alphatest="blend" transparent="1" />
     <panel name="template_pixmap_line_hor_100" />
     <panel name="template_date" />
     <panel name="template_info_menu_exit_1280" />
@@ -3825,8 +3825,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="CPto" position="30,120" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand"  sliderpixmap="menu/Scrollbar.png" alphatest="blend" size="700,540" zPosition="4" backgroundColor="background" transparent="1" />
     <eLabel text="MOVE" position="49,689" size="170,25" zPosition="1" valign="center" font="Regular;20" halign="left" backgroundColor="background" foregroundColor="selectedFG" transparent="1" />
     <eLabel text="COPY" position="255,689" size="170,25" zPosition="1" valign="center" font="Regular;20" halign="left" backgroundColor="background" foregroundColor="selectedFG" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_yellow.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
     <panel name="template_pixmap_line_hor_100" />
 	<panel name="ScrollBarTemplate size=700,540_P120" />
     <panel name="template_ok_exit_1280" />
@@ -3848,8 +3848,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="SLto" position="30,110" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand" size="700,550" zPosition="4" backgroundColor="background" transparent="1" />
     <eLabel text="Set name" position="49,689" size="170,25" zPosition="1" valign="center" font="Regular;20" halign="left" backgroundColor="background" foregroundColor="selectedFG" transparent="1" />
     <eLabel text="Make a softlink" position="255,689" size="170,25" zPosition="1" valign="center" font="Regular;20" halign="left" backgroundColor="background" foregroundColor="selectedFG" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_yellow.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
     <panel name="template_pixmap_line_hor_100" />
     <panel name="template_ok_exit_1280" />
     <panel name="template_date" />
@@ -3939,7 +3939,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <screen name="OMBManagerPreferences" position="0,0" size="1280,720" title="OMBManagerPreferences" flags="wfNoBorder" backgroundColor="background">
     <widget source="Title" render="Label" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
     <widget name="config" position="30,60" size="700,610" scrollbarMode="showOnDemand" sliderpixmap="menu/Scrollbar.png" alphatest="blend" itemHeight="30" font="Regular; 20" enableWrapAround="1" backgroundColor="background" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
     <widget name="key_red" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <panel name="template_ok_exit_1280" />
     <ePixmap position="870,390" size="280,280" zPosition="2" pixmap="icons/hardisk_selection.png" transparent="1" alphatest="blend" />
@@ -4119,7 +4119,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="key_red2" position="49,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget name="key_green2" position="255,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/webradioFS/skin/images/wbrl.png" position="811,691" size="120,22" alphatest="blend" zPosition="5" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
     <widget name="green_pic" pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" />
     <ePixmap position="950,689" size="64,26" zPosition="10" pixmap="buttons/help.png" transparent="1" alphatest="blend" />
     <ePixmap position="1050,689" size="64,26" zPosition="10" pixmap="buttons/menu.png" transparent="1" alphatest="blend" />
@@ -4197,8 +4197,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="info" zPosition="3" position="30,130" size="760,470" backgroundColor="background" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="key_red2" position="49,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget name="key_green2" position="255,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap  pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
     <widget source="playtext" render="Label" position="30,610" zPosition="2" size="1220,64" font="Regular;24" valign="center" halign="center" foregroundColor="yellow" backgroundColor="background" transparent="1" />
     <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/webradioFS/skin/images/wbrl.png" position="811,691" size="120,22" alphatest="blend" zPosition="5" transparent="1" />
     <widget name="rec_pic" position="1218,695" pixmap="icons/ico_rec_on.png" size="47,15" zPosition="2" alphatest="blend" />
@@ -4274,8 +4274,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				}
 			</convert>
     </widget>
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
     <widget name="help" zPosition="3" position="30,130" size="760,470" backgroundColor="background" font="Regular;18" transparent="1" />
     <widget name="info" zPosition="3" position="30,130" size="760,470" backgroundColor="background" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="key_red2" position="49,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
@@ -4450,8 +4450,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="template_pixmap_line_hor_100" />
     <ePixmap pixmap="icons/menu_webradio.png" position="870,390" size="280,280" zPosition="2" transparent="1" alphatest="blend" />
     <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/webradioFS/skin/images/wbrl.png" position="811,691" size="120,22" alphatest="blend" zPosition="5" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap  pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
     <widget name="label_red" position="49,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget name="label_green" position="255,689" size="170,25" foregroundColor="selectedFG" backgroundColor="background" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <panel name="template_name_red_green" />
@@ -4843,7 +4843,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <eLabel text="current" position="560,240" size="100,30" font="Regular;18" backgroundColor="background" transparent="1" />
     <widget name="acur" position="560,270" size="100,30" font="Regular;20" backgroundColor="background" transparent="1" />
     <ePixmap pixmap="icons/info.png" position="870,390" size="280,280" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
     <widget name="cancel" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <panel name="template_title_date" />
     <panel name="template_pixmap_vert_line_738" />
@@ -5033,8 +5033,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <screen name="VideoClippingCoordinates" title="Video clipping setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="background">
     <widget source="Title" render="Label" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
     <widget name="config" position="30,60" size="700,610" scrollbarMode="showOnDemand" sliderpixmap="menu/Scrollbar.png" alphatest="blend" backgroundColor="background" itemHeight="30" font="Regular; 20"  transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap  pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
     <eLabel text="cancel" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <eLabel text="ok" position="255,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <panel name="template_date" />
@@ -5057,8 +5057,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="Title" render="Label" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
     <widget name="config" position="30,60" size="700,610" scrollbarMode="showOnDemand" sliderpixmap="menu/Scrollbar.png" alphatest="blend" itemHeight="30" font="Regular; 20" enableWrapAround="1" backgroundColor="background" transparent="1" />
     <widget name="helperimage" position="868,391" size="300,290" zPosition="1" backgroundColor="background" transparent="1" alphatest="blend" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
     <eLabel text="cancel" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <eLabel text="safe" position="255,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <panel name="template_date" />
@@ -5108,7 +5108,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				}
 			</convert>
     </widget>
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap  pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
     <widget source="key_red" render="Label" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <panel name="template_pixmap_vert_line_738" />
 	<panel name="ScrollBarTemplate size=700,610" />
@@ -5241,7 +5241,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <screen name="PU_History" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="background">
     <widget name="History" position="30,60" size="700,610" scrollbarMode="showOnDemand" sliderpixmap="menu/Scrollbar.png" alphatest="blend" itemHeight="30" font="Regular; 20" backgroundColor="background" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
     <widget source="key_red" render="Label" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <panel name="template_exit_1280" />
 	<panel name="ScrollBarTemplate size=700,610" />
@@ -5264,8 +5264,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="introduction" render="Label" position="765,390" size="485,280" font="Regular; 20" halign="center" backgroundColor="selectedFG" valign="center" transparent="1" />
     <eLabel text="Cancel" position="49,689" size="170,25" noWrap="1" zPosition="1" valign="center" font="Regular; 20" halign="left" backgroundColor="background" foregroundColor="selectedFG" transparent="1" />
 	<eLabel text="Save" position="255,689" size="170,25" noWrap="1" zPosition="1" valign="center" font="Regular; 20" halign="left" backgroundColor="background" foregroundColor="selectedFG" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
     <panel name="template_ok_exit_1280" />
 	<panel name="ScrollBarTemplate size=700,610" />
     <panel name="template_title_date" />
@@ -5349,8 +5349,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="post_action" position="30,550" size="700,115" font="Regular; 20" halign="center" backgroundColor="selectedFG" valign="center" transparent="1" />
     <eLabel text="Cancel" position="49,689" size="170,25" noWrap="1" zPosition="1" valign="center" font="Regular; 20" halign="left" backgroundColor="background" foregroundColor="selectedFG" transparent="1" />
     <eLabel text="Change" position="255,689" size="170,25" noWrap="1" zPosition="1" valign="center" font="Regular; 20" halign="left" backgroundColor="background" foregroundColor="selectedFG" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
     <widget name="key_red" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget name="key_green" position="255,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <panel name="template_pixmap_line_hor_100" />
@@ -5382,8 +5382,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="post_action" position="30,550" size="700,120" font="Regular; 20" halign="center" backgroundColor="selectedFG" valign="center" transparent="1" />
     <eLabel text="Cancel" position="49,689" size="170,25" noWrap="1" zPosition="1" valign="center" font="Regular; 20" halign="left" backgroundColor="background" foregroundColor="selectedFG" transparent="1" />
     <eLabel text="Change" position="255,689" size="170,25" noWrap="1" zPosition="1" valign="center" font="Regular; 20" halign="left" backgroundColor="background" foregroundColor="selectedFG" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap  pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
     <widget name="key_red" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget name="key_green" position="255,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <panel name="template_pixmap_line_hor_100" />
@@ -5425,8 +5425,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <screen name="Bootlogo" position="center,center" size="1280,720" title="Bootlogo" flags="wfNoBorder" backgroundColor="background">
     <widget name="config" position="30,60" size="700,320" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand" sliderpixmap="menu/Scrollbar.png" alphatest="blend" enableWrapAround="1" backgroundColor="background" transparent="1" />
     <widget name="bootlogohelperimage" position="30,390" size="700,280" zPosition="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
     <eLabel text="Cancel" position="49,689" size="170,25" noWrap="1" zPosition="1" valign="center" font="Regular; 20" halign="left" backgroundColor="background" foregroundColor="selectedFG" transparent="1" />
     <eLabel text="Save" position="255,689" size="170,25" noWrap="1" zPosition="1" valign="center" font="Regular; 20" halign="left" backgroundColor="background" foregroundColor="selectedFG" transparent="1" />
     <ePixmap position="870,390" size="280,280" zPosition="2" pixmap="icons/setup_userinterface.png" transparent="1" alphatest="blend" />
@@ -5448,7 +5448,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <!-- Opera WebBrowser -->
   <screen name="BrowserBookmarkWindow" position="center,center" size="1280,720" title="Bookmark" flags="wfNoBorder" backgroundColor="background">
     <widget name="bookmarklist" position="30,60" size="700,540" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand"  sliderpixmap="menu/Scrollbar.png" alphatest="blend" enableWrapAround="1" backgroundColor="background" transparent="1" />
-    pixmap="buttons/key_0.png" position="700,631" size="30,29" alphatest="blend" />
+     <ePixmap pixmap="buttons/key_0.png" position="700,631" size="30,29" alphatest="blend" />
     <widget source="key_0" render="Label" position="385,630" zPosition="1" size="300,30" font="Regular;20" halign="right" valign="center" />
     <panel name="template_title_date" />
 	<panel name="ScrollBarTemplate size=700,540" />
@@ -5504,10 +5504,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="template_pixmap_center" />
   </screen>
   <screen name="BrowserHelpWindow" position="center,center" size="710,35" title="" backgroundColor="background">
-    pixmap="buttons/key_red.png" position="5,5" size="26,26" alphatest="blend" />
-    pixmap="buttons/key_green.png" position="179,5" size="26,26" alphatest="blend" />
-    pixmap="buttons/key_yellow.png" position="357,5" size="26,26" alphatest="blend" />
-    pixmap="buttons/key_blue.png" position="533,5" size="26,26" alphatest="blend" />
+     <ePixmap pixmap="buttons/key_red.png" position="5,5" size="26,26" alphatest="blend" />
+     <ePixmap pixmap="buttons/key_green.png" position="179,5" size="26,26" alphatest="blend" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="357,5" size="26,26" alphatest="blend" />
+     <ePixmap pixmap="buttons/key_blue.png" position="533,5" size="26,26" alphatest="blend" />
     <widget source="key_red" render="Label" position="34,3" zPosition="1" size="140,30" noWrap="1" valign="center" font="Regular; 20" halign="left" backgroundColor="background" foregroundColor="selectedFG" transparent="1" />
     <widget source="key_green" render="Label" position="211,3" zPosition="1" size="140,30" noWrap="1" valign="center" font="Regular; 20" halign="left" backgroundColor="background" foregroundColor="selectedFG" transparent="1" />
     <widget source="key_yellow" render="Label" position="389,3" zPosition="1" size="140,30" noWrap="1" valign="center" font="Regular; 20" halign="left" backgroundColor="background" foregroundColor="selectedFG" transparent="1" />
@@ -5593,7 +5593,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <!-- MenuSort -->
   <screen name="SortableMenu" position="center,center" size="1280,720" title="SortableMenu" flags="wfNoBorder" backgroundColor="background">
     <widget name="menu" position="30,60" size="700,610" scrollbarMode="showOnDemand" sliderpixmap="menu/Scrollbar.png" alphatest="blend" font="Regular; 20"  itemHeight="30" />
-    pixmap="buttons/key_blue.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap  pixmap="buttons/key_blue.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
     <widget source="key_blue" render="Label" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <panel name="template_ok_exit_1280" />
 	<panel name="ScrollBarTemplate size=700,610" />
@@ -5638,7 +5638,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <screen name="CityPanel" position="0,0" size="1280,720" title="Select a city" flags="wfNoBorder" backgroundColor="background">
     <widget source="key_blue" render="Label" position="462,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
-    pixmap="buttons/key_blue.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap  pixmap="buttons/key_blue.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
     <ePixmap pixmap="icons/weather.png" position="870,390" size="280,280" zPosition="2" transparent="1" alphatest="blend" />
     <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Foreca/foreca_logo.png" position="50,100" size="100,43" zPosition="3" transparent="1" alphatest="blend" />
     <widget name="Mlist" position="30,150" size="700,480" font="Regular;20" itemHeight="30" column="10" zPosition="3" backgroundColor="background" enableWrapAround="1" scrollbarMode="showOnDemand" />
@@ -5677,7 +5677,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Foreca/foreca_logo.png" position="50,100" size="100,43" zPosition="3" transparent="1" alphatest="blend" />
     <widget name="Mlist" position="30,150" size="700,480" zPosition="3" font="Regular;22" itemHeight="80" backgroundColor="background" enableWrapAround="1" scrollbarMode="showOnDemand" />
     <widget source="key_blue" render="Label" position="49,689" size="170,25" noWrap="1" zPosition="1" valign="center" font="Regular; 20" halign="left" backgroundColor="background" foregroundColor="selectedFG" transparent="1" />
-    pixmap="buttons/key_blue.png" position="20,689" size="26,26" alphatest="blend" />
+    <ePixmap  pixmap="buttons/key_blue.png" position="20,689" size="26,26" alphatest="blend" />
     <panel name="template_ok_exit_1280" />
     <panel name="template_title_date" />
     <panel name="template_pixmap_vert_line_738" />
@@ -5730,8 +5730,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="infomation" position="30,100" size="700,30" font="Regular;24" backgroundColor="background" valign="center" transparent="1" />
     <widget name="startdesc" position="30,170" size="700,30" font="Regular;24" backgroundColor="background" valign="center" transparent="1" />
     <widget name="helpdesc" position="30,240" size="700,30" font="Regular;24" backgroundColor="background" valign="center" transparent="1" />
-    pixmap="buttons/key_green.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_yellow.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
     <widget source="key_green" render="Label" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="key_yellow" render="Label" position="255,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <ePixmap position="870,390" size="280,280" zPosition="2" pixmap="icons/youtube.png" transparent="1" alphatest="blend" />
@@ -5770,8 +5770,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <!-- BitrateViewer -->
   <screen name="BitrateViewerSetup" position="center,center" size="1280,720" title="Bitrate viewer setup" flags="wfNoBorder" backgroundColor="background">
     <widget name="config" position="30,60" size="700,610" scrollbarMode="showOnDemand" sliderpixmap="menu/Scrollbar.png" alphatest="blend" itemHeight="30" font="Regular; 20" enableWrapAround="1" backgroundColor="background" transparent="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
     <widget source="cancel" render="Label" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="ok" render="Label" position="255,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <ePixmap position="870,390" size="280,280" zPosition="2" pixmap="icons/setup.png" transparent="1" alphatest="blend" />
@@ -6364,7 +6364,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <ePixmap position="32,390" size="180,248" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/XCplugin/skin/hd/grid.png" alphatest="blend" zPosition="5" />
   <widget name="version" position="37,398" size="100,20" halign="left" font="Regular;16" foregroundColor="yellow" backgroundColor="black" transparent="1" zPosition="6" />
   <widget name="text_clear" position="545,60" size="710,610" font="Regular;18" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" zPosition="1" />
-  pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+   <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
   <widget name="key_red" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
   <ePixmap pixmap="BG-Pixmaps/Line_Vert/Line_Vert_Org.png" position="524,53" size="21,623" alphatest="blend" transparent="1" zPosition="2" />
   <panel name="template_pig_left" />
@@ -6385,7 +6385,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <widget name="helpdesc" position="525,95" size="730,310" font="Console; 16" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" zPosition="1" />
   <eLabel text="SETTINGS " position="30,384" size="300,30" font="Regular; 24" halign="left" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="1" />
   <widget name="helpdesc2" position="30,415" size="760,260" font="Console;17" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" zPosition="1" />
-  pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+   <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
   <widget name="key_red" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
   <panel name="template_pig_left" />
   <panel name="template_pixmap_pig_left" />

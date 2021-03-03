@@ -65,9 +65,9 @@
   <widget name="config" position="30,60" size="700,610" itemHeight="50" font="Regular;22" backgroundColor="background" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
   <widget name="helperimage" position="895,630" size="0,0" zPosition="1" backgroundColor="red" />
   <widget source="help" render="Label" position="765,390" size="485,285" font="Regular; 20" backgroundColor="background" foregroundColor="white" halign="center" valign="top" transparent="1" />
-  pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-  pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
-  pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
+  <ePixmap  pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+   <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+   <ePixmap pixmap="buttons/key_yellow.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
   <eLabel text="Cancel" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
   <eLabel text="Save" position="255,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
   <eLabel text="Reboot" position="462,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
@@ -135,8 +135,8 @@
   <widget name="menu" position="30,200" size="700,467" scrollbarMode="showAlways" sliderpixmap="menu/Scrollbar.png" alphatest="blend" itemHeight="50" font="Regular; 24" enableWrapAround="1" transparent="1" />
   <ePixmap position="870,379" size="280,280" pixmap="DEV/Ultimate-Logo.png" alphatest="blend" transparent="1" />
   <widget source="lab2" render="Label" position="438,688" size="420,28" font="Regular;22" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="2" />
-  pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-  pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+   <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+   <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
   <eLabel text="Close" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
   <widget name="key_green" position="255,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
   <eLabel text="*Ultimate* HD Skin for HDF Images by stein17" position="765,657" size="485,20" font="Console; 16" align="left" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" zPosition="1" halign="center" />
@@ -168,7 +168,7 @@
   <eLabel text="Skinanpassungen in Menu/Erweiterungen/Ultimate HD Config Tool." position="30,630" size="700,30" zPosition="2" font="Regular; 21" transparent="1" backgroundColor="black" halign="center" foregroundColor="selectedFG" />
   <widget source="introduction" render="Label" position="250,689" size="580,25" font="Regular; 20" halign="center" valign="center" transparent="1" foregroundColor="selectedFG" />
   <widget source="key_red" render="Label" position="49,689" size="170,25" zPosition="1" valign="center" font="Regular;20" halign="left" noWrap="1" transparent="1" />
-  pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+  <ePixmap  pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
   <ePixmap position="870,390" size="280,280" pixmap="icons/skin_selector.png" alphatest="blend" transparent="1" />
   <panel name="template_date" />
   <panel name="template_ok_exit_1280" />
@@ -328,11 +328,11 @@
     <eLabel text="MultiBoot STARTUP Selector" position="10,10" size="550,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
     <eLabel text="Press left/right to select Image" backgroundColor="white" font="Regular; 24" foregroundColor="black" halign="center" position="10,175" size="580,40" transparent="0" zPosition="3" />
     <widget source="config" render="Label" position="10,75" size="680,90" itemHeight="30" halign="center" font="Regular; 30" enableWrapAround="1" transparent="1" scrollbarMode="showOnDemand" />
-    pixmap="buttons/key_red.png" position="20,230" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,230" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap  pixmap="buttons/key_red.png" position="20,230" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,230" size="26,26" alphatest="blend" transparent="1" />
     <widget source="key_red" render="Label" position="49,230" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="key_green" render="Label" position="255,230" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
-    pixmap="buttons/key_leftright.png" position="603,180" size="61,35" zPosition="10" transparent="1" alphatest="blend" />
+     <ePixmap pixmap="buttons/key_leftright.png" position="603,180" size="61,35" zPosition="10" transparent="1" alphatest="blend" />
     <panel name="template_pixmap_line_hor_680" />
   </screen>
   <!-- MultiBoot StartupDS -->
@@ -340,13 +340,13 @@
     <eLabel text="MultiBoot STARTUP Selector" position="10,10" size="550,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
     <eLabel text="Press left/right to select Image" backgroundColor="white" font="Regular; 24" foregroundColor="black" halign="center" position="10,165" size="580,40" transparent="0" zPosition="3" />
     <widget source="config" render="Label" position="10,65" size="680,90" itemHeight="30" halign="center" font="Regular; 30" enableWrapAround="1" transparent="1" scrollbarMode="showOnDemand" />
-    pixmap="buttons/key_red.png" position="20,230" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,230" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_yellow.png" position="433,230" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,230" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,230" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="433,230" size="26,26" alphatest="blend" transparent="1" />
     <widget source="key_red" render="Label" position="49,230" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="key_green" render="Label" position="255,230" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="key_yellow" render="Label" position="462,230" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
-    pixmap="buttons/key_leftright.png" position="603,170" size="61,35" zPosition="10" transparent="1" alphatest="blend" />
+     <ePixmap pixmap="buttons/key_leftright.png" position="603,170" size="61,35" zPosition="10" transparent="1" alphatest="blend" />
     <panel name="template_pixmap_line_hor_680" />
   </screen>
   <!-- ********** Flash Online ********** -->
@@ -596,7 +596,7 @@
 			</convert>
   </widget>
   <ePixmap position="30,60" size="700,107" zPosition="10" pixmap="DEV/HDF_header.png" transparent="1" alphatest="blend" />
-  pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+  <epixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
   <widget source="key_red" render="Label" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
   <eLabel text="Feed-Status" position="28,569" size="150,25" zPosition="1" font="Regular;22" halign="center" backgroundColor="background" transparent="1" foregroundColor="selectedFG" />
   <eLabel text="Its recommend to create a Fullbackup before update!" position="765,630" size="485,22" zPosition="1" font="Regular; 18" halign="left" backgroundColor="background" transparent="1" foregroundColor="red" />
@@ -625,9 +625,9 @@
     <eLabel text="Remove Plugins" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <eLabel text="Download Plugins" position="255,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <eLabel text="Lock Plugins" position="462,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_blue.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="226,689" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap  pixmap="buttons/key_blue.png" position="433,689" size="26,26" alphatest="blend" transparent="1" />
     <panel name="ScrollBarTemplate size=700,610" />
     <panel name="template_date" />
     <panel name="template_pixmap_vert_line_738" />
@@ -1061,10 +1061,10 @@
     <widget name="list3" position="520,220" sliderpixmap="menu/Scrollbar.png" alphatest="blend" scrollbarMode="showAlways" size="240,450" zPosition="1" TimeforegroundColor="selectedFG" TimeBackgroundColor="background" PrimeTimeForegroundColor="green" PrimeTimeBackgroundColor="black" EntryforegroundColor="white" EntryBackgroundColor="background" EntryForegroundColorSelected="white" EntryBackgroundColorSelected="verydarkgrey" EntryForegroundColorNow="white" EntryBackgroundColorNow="black" EntryForegroundColorNowSelected="white" EntryBackgroundColorNowSelected="verydarkgrey" EntryForegroundColorPast="darkgrey" EntryBackgroundColorPast="background" EntryForegroundColorPastSelected="white" EntryBackgroundColorPastSelected="verydarkgrey" EntryBorderColor="selectedFG" TimeFontVertical="Regular;19" EventFontVertical="Regular;18" />
     <widget name="list4" position="765,220" sliderpixmap="menu/Scrollbar.png" alphatest="blend" scrollbarMode="showAlways" size="240,450" zPosition="1" TimeforegroundColor="selectedFG" TimeBackgroundColor="background" PrimeTimeForegroundColor="green" PrimeTimeBackgroundColor="black" EntryforegroundColor="white" EntryBackgroundColor="background" EntryForegroundColorSelected="white" EntryBackgroundColorSelected="verydarkgrey" EntryForegroundColorNow="white" EntryBackgroundColorNow="black" EntryForegroundColorNowSelected="white" EntryBackgroundColorNowSelected="verydarkgrey" EntryForegroundColorPast="darkgrey" EntryBackgroundColorPast="background" EntryForegroundColorPastSelected="white" EntryBackgroundColorPastSelected="verydarkgrey" EntryBorderColor="selectedFG" TimeFontVertical="Regular;19" EventFontVertical="Regular;18" />
     <widget name="list5" position="1010,220" sliderpixmap="menu/Scrollbar.png" alphatest="blend" scrollbarMode="showAlways" size="240,450" zPosition="1" TimeforegroundColor="selectedFG" TimeBackgroundColor="background" PrimeTimeForegroundColor="green" PrimeTimeBackgroundColor="black" EntryforegroundColor="white" EntryBackgroundColor="background" EntryForegroundColorSelected="white" EntryBackgroundColorSelected="verydarkgrey" EntryForegroundColorNow="white" EntryBackgroundColorNow="black" EntryForegroundColorNowSelected="white" EntryBackgroundColorNowSelected="verydarkgrey" EntryForegroundColorPast="darkgrey" EntryBackgroundColorPast="background" EntryForegroundColorPastSelected="white" EntryBackgroundColorPastSelected="verydarkgrey" EntryBorderColor="selectedFG" TimeFontVertical="Regular;19" EventFontVertical="Regular;18" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="176,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_yellow.png" position="375,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_blue.png" position="527,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="176,689" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap  pixmap="buttons/key_yellow.png" position="375,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_blue.png" position="527,689" size="26,26" alphatest="blend" transparent="1" />
     <widget name="key_red" position="49,689" size="120,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget name="key_green" position="205,689" size="167,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget name="key_yellow" position="403,689" size="120,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
@@ -1115,10 +1115,10 @@
     <widget name="list1" position="30,275" sliderpixmap="menu/Scrollbar.png" alphatest="blend" scrollbarMode="showAlways" size="230,400" zPosition="1" transparent="0" TimeforegroundColor="selectedFG" TimeBackgroundColor="background" PrimeTimeForegroundColor="green" PrimeTimeBackgroundColor="black" EntryforegroundColor="white" EntryBackgroundColor="background" EntryForegroundColorSelected="white" EntryBackgroundColorSelected="metrixblue" EntryForegroundColorNow="white" EntryBackgroundColorNow="black" EntryForegroundColorNowSelected="white" EntryBackgroundColorNowSelected="metrixblue" EntryForegroundColorPast="darkgrey" EntryBackgroundColorPast="background" EntryForegroundColorPastSelected="white" EntryBackgroundColorPastSelected="metrixblue" EntryBorderColor="selectedFG" TimeFontVertical="Regular;19" EventFontVertical="Regular;18" />
     <widget name="list2" position="265,275" sliderpixmap="menu/Scrollbar.png" alphatest="blend" scrollbarMode="showAlways" size="230,400" zPosition="1" TimeforegroundColor="selectedFG" TimeBackgroundColor="background" PrimeTimeForegroundColor="green" PrimeTimeBackgroundColor="black" EntryforegroundColor="white" EntryBackgroundColor="background" EntryForegroundColorSelected="white" EntryBackgroundColorSelected="metrixblue" EntryForegroundColorNow="white" EntryBackgroundColorNow="black" EntryForegroundColorNowSelected="white" EntryBackgroundColorNowSelected="metrixblue" EntryForegroundColorPast="darkgrey" EntryBackgroundColorPast="background" EntryForegroundColorPastSelected="white" EntryBackgroundColorPastSelected="metrixblue" EntryBorderColor="selectedFG" TimeFontVertical="Regular;19" EventFontVertical="Regular;18" />
     <widget name="list3" position="500,275" sliderpixmap="menu/Scrollbar.png" alphatest="blend" scrollbarMode="showAlways" size="230,400" zPosition="1" TimeforegroundColor="selectedFG" TimeBackgroundColor="background" PrimeTimeForegroundColor="green" PrimeTimeBackgroundColor="black" EntryforegroundColor="white" EntryBackgroundColor="background" EntryForegroundColorSelected="white" EntryBackgroundColorSelected="metrixblue" EntryForegroundColorNow="white" EntryBackgroundColorNow="black" EntryForegroundColorNowSelected="white" EntryBackgroundColorNowSelected="metrixblue" EntryForegroundColorPast="darkgrey" EntryBackgroundColorPast="background" EntryForegroundColorPastSelected="white" EntryBackgroundColorPastSelected="metrixblue" EntryBorderColor="selectedFG" TimeFontVertical="Regular;19" EventFontVertical="Regular;18" />
-    pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="176,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_yellow.png" position="375,689" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_blue.png" position="527,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="176,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="375,689" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_blue.png" position="527,689" size="26,26" alphatest="blend" transparent="1" />
     <widget name="key_red" position="49,689" size="120,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget name="key_green" position="205,689" size="167,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget name="key_yellow" position="403,689" size="120,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
@@ -1223,9 +1223,9 @@
     <eLabel backgroundColor="black" font="Regular; 21" halign="center" position="453,185" size="374,43" text="Danach die Grüne Taste drücken" valign="center" foregroundColor="selectedFG" />
     <widget name="config" position="453,229" size="374,210" scrollbarMode="showOnDemand" transparent="1" />
     <widget source="status" render="Label" position="453,434" zPosition="1" size="374,96" font="Regular;20" halign="center" valign="center" transparent="1" />
-    pixmap="buttons/key_red.png" position="340,680" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_green.png" position="545,680" size="26,26" alphatest="blend" transparent="1" />
-    pixmap="buttons/key_yellow.png" position="750,680" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_red.png" position="340,680" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_green.png" position="545,680" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="750,680" size="26,26" alphatest="blend" transparent="1" />
     <widget source="key_red" render="Label" position="370,680" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="key_green" render="Label" position="575,680" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
     <widget source="key_yellow" render="Label" position="780,680" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
@@ -1345,7 +1345,7 @@
     <eLabel text="Ultimate HD Config" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
     <widget name="config" position="30,60" size="700,560" font="Regular; 23" itemHeight="32" render="Listbox" scrollbarMode="showNever" sliderpixmap="menu/Scrollbar.png" alphatest="blend" scrollbarWidth="6" transparent="1"  />
     <widget name="Picture" position="765,400" size="475,267" alphatest="on" />
-    pixmap="buttons/key_yellow.png" position="40,586" size="26,26" alphatest="blend" transparent="1" />
+     <ePixmap pixmap="buttons/key_yellow.png" position="40,586" size="26,26" alphatest="blend" transparent="1" />
 	<ePixmap position="30,642" size="64,26" zPosition="10" pixmap="buttons/menu.png" transparent="1" alphatest="blend" />
 	<!-- <widget source="key_yellow" render="Label" position="462,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
  -->    <panel name="template_date" />
@@ -1407,7 +1407,7 @@
 	<eLabel text="Menü - Erweiterungen - Ultimate HD" position="10,80" size="480,40" font="Regular; 24" halign="left" backgroundColor="black" transparent="1" valign="center" foregroundColor="green" />
 	<ePixmap position="720,380" size="64,26" zPosition="10" pixmap="buttons/exit.png" transparent="1" alphatest="blend" />
 	<widget name="key_blue" position="51,381" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
-	pixmap="buttons/key_blue.png" position="15,380" size="26,26" alphatest="blend" transparent="1" />
+	<epixmap="buttons/key_blue.png" position="15,380" size="26,26" alphatest="blend" transparent="1" />
   </screen>
   <!-- ATV AtileHD_About HD  -->
  
