@@ -596,7 +596,7 @@
 			</convert>
   </widget>
   <ePixmap position="30,60" size="700,107" zPosition="10" pixmap="DEV/HDF_header.png" transparent="1" alphatest="blend" />
-  <epixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+  <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
   <widget source="key_red" render="Label" position="49,689" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
   <eLabel text="Feed-Status" position="28,569" size="150,25" zPosition="1" font="Regular;22" halign="center" backgroundColor="background" transparent="1" foregroundColor="selectedFG" />
   <eLabel text="Its recommend to create a Fullbackup before update!" position="765,630" size="485,22" zPosition="1" font="Regular; 18" halign="left" backgroundColor="background" transparent="1" foregroundColor="red" />
@@ -1407,7 +1407,7 @@
 	<eLabel text="Menü - Erweiterungen - Ultimate HD" position="10,80" size="480,40" font="Regular; 24" halign="left" backgroundColor="black" transparent="1" valign="center" foregroundColor="green" />
 	<ePixmap position="720,380" size="64,26" zPosition="10" pixmap="buttons/exit.png" transparent="1" alphatest="blend" />
 	<widget name="key_blue" position="51,381" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
-	<epixmap="buttons/key_blue.png" position="15,380" size="26,26" alphatest="blend" transparent="1" />
+	<ePixmap pixmap="buttons/key_blue.png" position="15,380" size="26,26" alphatest="blend" transparent="1" />
   </screen>
   <!-- ATV AtileHD_About HD  -->
  
