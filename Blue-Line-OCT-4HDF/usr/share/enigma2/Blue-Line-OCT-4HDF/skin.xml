@@ -1,6 +1,6 @@
 <skin>
   <!-- Blue-Line-OCT-4HDF -->
-  <!-- Blue-Line-OCT-4HDF Skin v1.00 for ATV image, by stein17 -->
+  <!-- Blue-Line-OCT-4HDF Skin v1.00 for HDF image, by stein17 -->
   <!-- Recommended to use with XPicons (220x132) -->
   <!-- orginal author="stein17" license="You can change the skin as long as the license/author is not deleted -->
   <!--
@@ -7321,7 +7321,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
  </screen>
    <!-- TEMPLATES Pixmap_Infobar_Flipclock -->
  <screen name="template_pixmap_infobar_flipclock">
- <ePixmap pixmap="menu/InfobarOCTFlip.png" position="0,780" zPosition="-10" size="1920,1080" />
+ <ePixmap pixmap="menu/Infobar_Flipclock.png" position="0,780" zPosition="-10" size="1920,1080" />
  </screen>
   <!-- TEMPLATES Progress_Infobar-->
  <screen name="template_progress_infobar">
