@@ -163,6 +163,28 @@
     <convert type="MSNWeather">temperature_current</convert>
   </widget>
   </screen>
+ <screen name="template_fake_emu_info_infobar">
+ <eLabel name="fake" position="0, 0" size="0,0" />
+ </screen>
+     <!--  emu_info_infobar-->
+<screen name="template_emu_info_infobar">
+    <widget font="Regular;20" foregroundColor="cyan1" backgroundColor="background" halign="left" position="970,857" render="Label" size="150,24" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+    <convert type="AMBEmuInfo">Emu</convert>
+  </widget>
+  <widget font="Regular; 20" foregroundColor="cyan1" backgroundColor="background" halign="left" position="1120,857" render="Label" size="430,24" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+    <convert type="AMBEmuInfo">Address</convert>
+  </widget>
+  <widget font="Regular; 20" foregroundColor="cyan1" backgroundColor="background" halign="left" position="1440,885" render="Label" size="110,24" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+    <convert type="AMBEmuInfo">Hops</convert>
+  </widget>
+  <widget font="Regular; 20" foregroundColor="cyan1" backgroundColor="background" halign="left" position="1220,885" render="Label" size="220,24" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+    <convert type="AMBEmuInfo">Ecmtime</convert>
+  </widget>
+  <widget font="Regular; 20" foregroundColor="cyan1" backgroundColor="background" halign="left" position="970,885" render="Label" size="250,24" source="session.CurrentService" transparent="1" valign="center" zPosition="1" noWrap="1">
+    <convert type="AMBEmuInfo">Caid</convert>
+  </widget>
+    </screen>
+  
   <!-- TEMPLATES SecondInfoBar Poster-->
   <screen name="template_SecondInfoBar_Poster">
   <widget source="session.Event_Next" render="AMBPoster" borderColor="Line" borderWidth="3" position="925,662" size="185,279" zPosition="10" />
