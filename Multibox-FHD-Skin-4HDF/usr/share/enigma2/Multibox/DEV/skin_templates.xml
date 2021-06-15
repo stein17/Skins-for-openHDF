@@ -163,28 +163,6 @@
     <convert type="MSNWeather">temperature_current</convert>
   </widget>
   </screen>
- <screen name="template_fake_emu_info_infobar">
- <eLabel name="fake" position="0, 0" size="0,0" />
- </screen>
-     <!--  emu_info_infobar-->
-<screen name="template_emu_info_infobar">
-    <widget font="Regular;20" foregroundColor="cyan1" backgroundColor="background" halign="left" position="970,857" render="Label" size="150,24" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
-    <convert type="AMBEmuInfo">Emu</convert>
-  </widget>
-  <widget font="Regular; 20" foregroundColor="cyan1" backgroundColor="background" halign="left" position="1120,857" render="Label" size="430,24" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
-    <convert type="AMBEmuInfo">Address</convert>
-  </widget>
-  <widget font="Regular; 20" foregroundColor="cyan1" backgroundColor="background" halign="left" position="1440,885" render="Label" size="110,24" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
-    <convert type="AMBEmuInfo">Hops</convert>
-  </widget>
-  <widget font="Regular; 20" foregroundColor="cyan1" backgroundColor="background" halign="left" position="1220,885" render="Label" size="220,24" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
-    <convert type="AMBEmuInfo">Ecmtime</convert>
-  </widget>
-  <widget font="Regular; 20" foregroundColor="cyan1" backgroundColor="background" halign="left" position="970,885" render="Label" size="250,24" source="session.CurrentService" transparent="1" valign="center" zPosition="1" noWrap="1">
-    <convert type="AMBEmuInfo">Caid</convert>
-  </widget>
-    </screen>
-  
   <!-- TEMPLATES SecondInfoBar Poster-->
   <screen name="template_SecondInfoBar_Poster">
   <widget source="session.Event_Next" render="AMBPoster" borderColor="Line" borderWidth="3" position="925,662" size="185,279" zPosition="10" />
@@ -279,6 +257,10 @@
  <screen name="template_pixmap_Infobar_full">
   <ePixmap pixmap="menu/Infobar_full_default.png" position="0,856" zPosition="-20" size="1920,226" />
  </screen>
+ <screen name="template_pixmap_Infobar_color">
+  <ePixmap pixmap="Skinparts/Infobar_Color_default.png" position="0,830" zPosition="-10" size="1920,250" />
+  <ePixmap pixmap="Skinparts/Color_Progress_background.png" position="370,949" zPosition="-5" size="998,18" />
+ </screen>
  <screen name="template_pixmap_Infobar">
   <ePixmap pixmap="menu/Infobar_default.png" position="0,810" zPosition="-20" size="1920,271" />
  </screen>
@@ -310,6 +292,11 @@
 <ePixmap pixmap="Progress_BG.png" position="284,1013" zPosition="2" size="985,10" alphatest="blend" />
   </screen> 
   <!-- TEMPLATES Progress -->
+   <screen name="template_progress_color">
+   <widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Color_Progress_default.png" position="372,952" size="994,12" zPosition="5" transparent="1" borderWidth="1" borderColor="verygrey">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+ </screen>
   <screen name="template_progress_default">
     <widget source="session.Event_Now" render="Progress" pixmap="Progress.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey" >
       <convert type="EventTime">Progress</convert>
@@ -318,6 +305,11 @@
   
   <screen name="template_progress_verlauf">
 <widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Verlauf.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey" >
+  <convert type="EventTime">Progress</convert>
+  </widget>
+  </screen>
+    <screen name="template_progress_verlauf_2">
+<widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Verlauf_2.png" position="386,964" size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey" >
   <convert type="EventTime">Progress</convert>
   </widget>
   </screen>
@@ -363,6 +355,11 @@
 </screen>
  <screen name="template_progress_light_verlauf">
 <widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Verlauf.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
+  <convert type="EventTime">Progress</convert>
+  </widget>
+</screen>
+ <screen name="template_progress_light_verlauf_2">
+<widget source="session.Event_Now" render="Progress" pixmap="Skinparts/Progress_Verlauf_2.png" position="284,1013"  size="985,10" zPosition="1" transparent="1" borderWidth="1" borderColor="verygrey">
   <convert type="EventTime">Progress</convert>
   </widget>
 </screen>
@@ -567,6 +564,32 @@
   <screen name="template_exit">
     <ePixmap pixmap="buttons/key_exit.png" position="1795,1022" size="103,35" zPosition="10" transparent="1" />
   </screen>
+  
+    <!--  Caminfo_fake-->
+  <screen name="template_cam_info_fake">
+  <eLabel name="cam_info" backgroundColor="background" zPosition="-20" position="1,1" size="1,1" />
+  </screen>
+  
+   <!--  Caminfo-->
+  <screen name="template_cam_info">
+    <widget font="Regular;20" foregroundColor="white" backgroundColor="background" halign="left" position="970,835" render="Label" size="150,24" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+    <convert type="AMBEmuInfo">Emu</convert>
+  </widget>
+  <widget font="Regular; 20" foregroundColor="white" backgroundColor="background" halign="left" position="1120,835" render="Label" size="430,24" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+    <convert type="AMBEmuInfo">Address</convert>
+  </widget>
+  <widget font="Regular; 20" foregroundColor="white" backgroundColor="background" halign="left" position="1440,860" render="Label" size="110,24" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+    <convert type="AMBEmuInfo">Hops</convert>
+  </widget>
+  <widget font="Regular; 20" foregroundColor="white" backgroundColor="background" halign="left" position="1220,860" render="Label" size="220,24" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+    <convert type="AMBEmuInfo">Ecmtime</convert>
+  </widget>
+  <widget font="Regular; 20" foregroundColor="white" backgroundColor="background" halign="left" position="970,860" render="Label" size="250,24" source="session.CurrentService" transparent="1" valign="center" zPosition="1" noWrap="1">
+    <convert type="AMBEmuInfo">Caid</convert>
+  </widget>
+  </screen>
+  
+  
    <screen name="template_crypt_info">
     <!--  Crypt-->
     <eLabel text="Crypt:" position="401,963" size="110,36" font="Regular; 30" halign="left" backgroundColor="background" transparent="1" valign="center" foregroundColor="default" zPosition="5" />

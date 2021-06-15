@@ -176,7 +176,7 @@
   </widget>
   <eLabel text="Provider :" position="568,1033" size="140,44" font="Regular; 27" backgroundColor="background" transparent="1" zPosition="1" valign="center" halign="left" />
  <eLabel text="Orb:" position="1774,1028" size="60,24" font="Regular; 24" backgroundColor="background" transparent="1" zPosition="1" />
-<!--   <widget font="Regular;20" foregroundColor="cyan" backgroundColor="background" halign="left" position="970,857" render="Label" size="150,24" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+  <widget font="Regular;20" foregroundColor="cyan" backgroundColor="background" halign="left" position="970,857" render="Label" size="150,24" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
     <convert type="AMBEmuInfo">Emu</convert>
   </widget>
   <widget font="Regular; 20" foregroundColor="cyan" backgroundColor="background" halign="left" position="1120,857" render="Label" size="430,24" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
@@ -190,8 +190,7 @@
   </widget>
   <widget font="Regular; 20" foregroundColor="cyan" backgroundColor="background" halign="left" position="970,885" render="Label" size="250,24" source="session.CurrentService" transparent="1" valign="center" zPosition="1" noWrap="1">
     <convert type="AMBEmuInfo">Caid</convert>
-  </widget> -->
-  <panel name="template_emu_info_infobar"/>
+  </widget>
   <panel name="template_infobar_digitalclock_widget" />
   <panel name="template_right_tuner_info" />
   <panel name="template_weather" />
