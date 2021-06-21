@@ -1,0 +1,11 @@
+<skin>
+    <!--  Caminfo-->
+  <screen name="template_cam_info_fake">
+  <panel name="template_cam_info" />
+  </screen>
+
+  <!-- TEMPLATES Emu_Info_Infobar -->
+ <screen name="template_fake_emu_info_infobar">
+  <panel name="template_emu_info_infobar"/>
+ </screen>
+ </skin>
