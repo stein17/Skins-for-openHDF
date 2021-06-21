@@ -1,6 +1,0 @@
-<skin>
-    <!--  Caminfo-->
-  <screen name="template_cam_info_fake">
-  <panel name="template_cam_info" />
-   </screen>
-</skin>
