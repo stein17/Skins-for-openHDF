@@ -66,10 +66,10 @@ class ANDFrontend(VariableText, Renderer):
 					sname = info.getInfoObject(serviceref, iServiceInformation.sTransponderData)
 					fq = pol = fec = sr = orb = ""
 					try:
-						if sname.has_key("frequency"):
+						if "frequency" in sname:
 							tmp = int(sname["frequency"])/1000
 							fq = str(tmp) + "  "
-						if sname.has_key("polarization"):
+						if "polarization" in sname:
 							try:
 								pol = {
 									eDVBFrontendParametersSatellite.Polarisation_Horizontal : "H  ",
@@ -78,7 +78,7 @@ class ANDFrontend(VariableText, Renderer):
 									eDVBFrontendParametersSatellite.Polarisation_CircularRight : "CR  "}[sname["polarization"]]
 							except:
 								pol = "N/A  "
-						if sname.has_key("fec_inner"):
+						if "fec_inner" in sname:
 							try:
 								fec = {
 									eDVBFrontendParametersSatellite.FEC_None : _("None  "),
@@ -107,17 +107,17 @@ class ANDFrontend(VariableText, Renderer):
 										eDVBFrontendParametersCable.FEC_8_9 : "8/9  ",}[sname["fec_inner"]]
 								except:
 									fec = "N/A  "
-						if sname.has_key("symbol_rate"):
+						if "symbol_rate" in sname:
 							tmp = int(sname["symbol_rate"])/1000
 							sr = str(tmp) + "  "
-						if sname.has_key("orbital_position"):	
+						if "orbital_position" in sname:	
 							numSat = sname["orbital_position"]
 							if numSat > 1800:
 								idx = str((float(3600 - numSat))/10.0) + "W"
 							else:
 								idx = str((float(numSat))/10.0) + "E"
 							if not self.ena:
-								if self.allSat.has_key(idx):
+								if idx in self.allSat:
 									orb = self.allSat.get(idx)
 								else:
 									orb = "Sat on position: %s" % idx
