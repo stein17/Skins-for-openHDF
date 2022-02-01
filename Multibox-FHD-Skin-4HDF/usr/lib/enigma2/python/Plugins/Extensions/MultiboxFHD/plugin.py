@@ -9,6 +9,7 @@
 
 
 # for localized messages
+from __future__ import print_function
 from __init__ import _
 
 from enigma import eTimer
@@ -96,7 +97,7 @@ class WeatherLocationChoiceList(Screen):
 
 	def createChoiceList(self):
 		list = []
-		print self.location_list
+		print(self.location_list)
 		for x in self.location_list:
 			list.append((str(x[1]), str(x[0])))
 		self["choicelist"].l.setList(list)
@@ -416,9 +417,9 @@ class Multibox_Config(Screen, ConfigListScreen):
 
 	def cancelConfirm(self, result):
 		if result is None or result is False:
-			print "[%s]: Cancel confirmed." % cur_skin
+			print("[%s]: Cancel confirmed." % cur_skin)
 		else:
-			print "[%s]: Cancel confirmed. Config changes will be lost." % cur_skin
+			print("[%s]: Cancel confirmed. Config changes will be lost." % cur_skin)
 			for x in self["config"].list:
 				x[1].cancel()
 			self.close()
@@ -465,10 +466,10 @@ class Multibox_Config(Screen, ConfigListScreen):
 	def search_weather_id_callback(self, res):
 		if res:
 			id_dic = get_woeid_from_yahoo(res)
-			if id_dic.has_key('error'):
+			if 'error' in id_dic:
 				error_txt = id_dic['error']
 				self.session.open(MessageBox, _("Sorry, there was a problem:") + "\n%s" % error_txt, MessageBox.TYPE_ERROR)
-			elif id_dic.has_key('count'):
+			elif 'count' in id_dic:
 				result_no = int(id_dic['count'])
 				location_list = []
 				for i in range(0, result_no):
@@ -477,7 +478,7 @@ class Multibox_Config(Screen, ConfigListScreen):
 
 	def select_weather_id_callback(self, res):
 		if res and isInteger(res):
-			print res
+			print(res)
 			config.plugins.Multibox.woeid.value = int(res)
 
 	def skinChanged(self, ret = None):
@@ -520,7 +521,7 @@ class Multibox_Config(Screen, ConfigListScreen):
 
 			if not path.exists("mySkin_off"):
 				mkdir("mySkin_off")
-				print "makedir mySkin_off"
+				print("makedir mySkin_off")
 			if self.myAtileHD_active.value:
 				if not path.exists("mySkin") and path.exists("mySkin_off"):
 						symlink("mySkin_off","mySkin")
@@ -620,7 +621,7 @@ class MultiboxScreens(Screen):
 		try:
 			self["title"]=StaticText(self.title)
 		except:
-			print 'self["title"] was not found in skin'
+			print('self["title"] was not found in skin')
 		
 		self["key_red"] = StaticText(_("Exit"))
 		self["key_green"] = StaticText(_("on"))
