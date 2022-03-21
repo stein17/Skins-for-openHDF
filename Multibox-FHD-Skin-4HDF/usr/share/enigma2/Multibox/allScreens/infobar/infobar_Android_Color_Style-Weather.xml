@@ -35,7 +35,7 @@
     <convert type="EventTime">EndTime</convert>
     <convert type="ClockToText">Format:- %H:%M</convert>
   </widget>
-  <widget alphatest="blend" position="20,840" size="331,185" render="AMBXPicon" source="session.CurrentService" transparent="1" zPosition="1" borderWidth="1" borderColor="verydarkgrey">
+  <widget alphatest="blend" position="20,840" size="331,185" render="Picon" source="session.CurrentService" transparent="1" zPosition="1" borderWidth="1" borderColor="verydarkgrey">
   <convert type="ServiceName">Reference</convert>
 </widget>
 
@@ -141,7 +141,8 @@
   <panel name="template_weather" />
   <panel name="template_android_tuner_info" />
   <panel name="template_androidclock_widget" />
-  <panel name="template_Poster_Infobar_Now0" />
+  <panel name="template_Poster_Infobar" />
   <panel name="template_VpnIp_IF" />
+   <panel name="template_ethernet_Android_Color_Style_Weather_fake"/>
  </screen>
 </skin>
