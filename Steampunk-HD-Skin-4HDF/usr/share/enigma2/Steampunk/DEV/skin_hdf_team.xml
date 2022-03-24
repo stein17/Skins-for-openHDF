@@ -573,15 +573,26 @@
   </screen>
   <screen name="SkinSelector" position="0,0" size="1280,720" title="Skin Selector" flags="wfNoBorder" backgroundColor="background">
     <eLabel text="Skin Selector" position="130,10" size="600,38" font="Regular;30" halign="left" valign="center" foregroundColor="brown" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
-    <widget name="SkinList" position="50,70" size="680,260" itemHeight="30" font="Regular;20" borderColor="black" borderWidth="1" scrollbarMode="showOnDemand" sliderPixmap="Skinparts/Scrollbar.png" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderBorderColor="brown" backgroundColor="background" enableWrapAround="1" transparent="1" />
-    <widget name="Preview" position="165,335" size="447,260" alphatest="blend" />
+	<widget source="skins" position="50,70" size="680,260" render="Listbox" borderColor="black" borderWidth="1" scrollbarMode="showOnDemand" sliderPixmap="Skinparts/Scrollbar.png" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderBorderColor="brown" backgroundColor="background" enableWrapAround="1" transparent="1">
+		<convert type="TemplatedMultiContent">
+				{
+				"template": [
+					MultiContentEntryText(pos = (10, 0), size = (350, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1), # Skinname
+					MultiContentEntryText(pos = (300, 0), size = (260, 30), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # Label
+				],
+				"fonts": [gFont("Regular", 20),gFont("Regular2", 18)],
+				"itemHeight": 30
+				}
+		</convert>
+	</widget>
+    <widget name="preview" position="165,335" size="447,260" alphatest="blend" />
     <eLabel text="Skinanpassungen in Menü/Erweiterungen/Steampunk HD Configtool" position="50,600" size="680,45" zPosition="2" font="Regular;18" borderColor="black" borderWidth="1" transparent="1" backgroundColor="black" halign="left" foregroundColor="selectedFG" />
-    <widget source="introduction" render="Label" position="560,667" size="520,30" font="Regular;20" borderColor="black" borderWidth="1" halign="center" valign="center" transparent="1" foregroundColor="selectedFG" />
+    <widget source="description" render="Label" position="460,667" size="600,30" font="Regular;20" borderColor="black" borderWidth="1" halign="center" valign="center" transparent="1" foregroundColor="selectedFG" />
     <widget source="key_red" render="Label" position="75,667" size="170,30" zPosition="1" valign="center" font="Regular;20" borderColor="black" borderWidth="1" halign="left" noWrap="1" transparent="1" />
-    <widget source="key_yellow" render="Label" position="285,667" size="270,30" zPosition="1" valign="center" font="Regular;20" borderColor="black" borderWidth="1" halign="left" noWrap="1" transparent="1" />
+    <widget source="key_green" render="Label" position="285,667" size="170,30" zPosition="1" valign="center" font="Regular;20" borderColor="black" borderWidth="1" halign="left" noWrap="1" transparent="1" />
     <ePixmap pixmap="buttons/key_red.png" position="40,667" size="30,30" alphatest="blend" transparent="1" />
     <ePixmap position="805,380" size="415,255" zPosition="2" pixmap="Icons-Steampunk/Icon-28-Steampunk.png" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="buttons/key_yellow.png" position="250,667" size="30,30" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="buttons/key_green.png" position="250,667" size="30,30" alphatest="blend" transparent="1" />
     <panel name="template_date" />
     <panel name="template_ok_exit_1280" />
     <panel name="template_pig_menu" />
