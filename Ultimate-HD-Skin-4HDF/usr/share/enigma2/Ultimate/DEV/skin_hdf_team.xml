@@ -163,14 +163,24 @@
   </screen>
 <screen name="SkinSelector" position="0,0" size="1280,720" title="Skin Selector" flags="wfNoBorder" backgroundColor="background">
   <eLabel text="Skin Selector" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
-  <widget name="SkinList" position="30,60" size="700,260" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand" backgroundColor="background" enableWrapAround="1" transparent="1" />
-  <widget name="Preview" position="140,337" size="480,280" alphatest="blend" />
+  <widget source="skins" render="Listbox" position="30,60" size="700,260" backgroundColor="background" enableWrapAround="1"  transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template": [
+					MultiContentEntryText(pos = (10, 0), size = (350, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1), # Skinname
+					MultiContentEntryText(pos = (300, 0), size = (260, 30), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # Label
+				],
+				"fonts": [gFont("Regular", 20),gFont("Regular2", 18)],
+				"itemHeight": 30
+				}
+			</convert>
+		</widget>
+  <widget name="preview" position="140,337" size="480,280" alphatest="blend" />
   <eLabel text="Skinanpassungen in Menu/Erweiterungen/Ultimate HD Config Tool." position="30,630" size="700,30" zPosition="2" font="Regular; 21" transparent="1" backgroundColor="black" halign="center" foregroundColor="selectedFG" />
-  <widget source="introduction" render="Label" position="250,689" size="580,25" font="Regular; 20" halign="center" valign="center" transparent="1" foregroundColor="selectedFG" />
-  <widget source="key_red" render="Label" position="49,689" size="170,25" zPosition="1" valign="center" font="Regular;20" halign="left" noWrap="1" transparent="1" />
-  <ePixmap  pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
+  <widget source="description" render="Label" position="440,689" size="670,25" font="Regular; 20" halign="center" valign="center" transparent="1" foregroundColor="selectedFG" />
   <ePixmap position="870,390" size="280,280" pixmap="icons/skin_selector.png" alphatest="blend" transparent="1" />
   <panel name="template_date" />
+  <panel name="template_source_red_green" />
   <panel name="template_ok_exit_1280" />
   <panel name="template_pixmap_vert_line_738" />
   <panel name="template_pig_menu" />

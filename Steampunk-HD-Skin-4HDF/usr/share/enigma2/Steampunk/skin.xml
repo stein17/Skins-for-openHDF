@@ -3538,7 +3538,7 @@ self['config'].l.setSeperation(int(300*f))
     <convert type="SteampunkEmuInfo">Caid</convert>
 	</widget>
     <eLabel text="Tuner:" position="350,688" size="80,30" font="Regular;20" borderColor="black" borderWidth="1" halign="right" backgroundColor="background"  transparent="1" zPosition="1" foregroundColor="green" />
-    <widget source="session.FrontendInfo" render="Label" position="435,688" size="270,30" font="Regular;20" borderColor="black" borderWidth="1" halign="left" foregroundColor="green" backgroundColor="background"  shadowColor="black" shadowOffset="-1,-1" transparent="1" zPosition="1">
+    <widget source="session.FrontendInfo" render="Label" position="435,688" size="270,30" font="Regular;20" borderColor="black" borderWidth="1" halign="left" foregroundColor="green" backgroundColor="background"   transparent="1" zPosition="1">
       <convert type="FrontendInfo">STRING</convert>
     </widget>
     <ePixmap position="0,0" zPosition="-20" size="1280,720" pixmap="Skinparts/Steampunk_Infobar.png" />

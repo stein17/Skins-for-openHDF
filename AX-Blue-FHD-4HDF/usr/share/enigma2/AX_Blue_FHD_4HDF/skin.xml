@@ -14,9 +14,9 @@
     <resolution xres="1920" yres="1080" bpp="32" />
   </output>
   <!-- External Files FHD -->
-  <include filename="/usr/share/enigma2/DEV/skin_dev_teams.xml" />
-  <include filename="/usr/share/enigma2/DEV/skin_plugins.xml" />
-<!-- Fonts FHD -->
+  <include filename="/usr/share/enigma2/AX_Blue_FHD_4HDF/DEV/skin_dev_teams.xml" />
+  <include filename="/usr/share/enigma2/AX_Blue_FHD_4HDF/DEV/skin_plugins.xml" />
+
   <fonts>
     <font name="LCD" filename="lcd.ttf" scale="100" />
     <font name="Console" filename="tuxtxt.ttf" scale="100" />
@@ -984,12 +984,12 @@
     </widget>
     <eLabel text="CPU:" position="1470,112" size="90,36" font="Regular; 32" halign="left" valign="center" noWrap="1" backgroundColor="background" transparent="1" foregroundColor="foregroundClock" zPosition="2" />
     <!-- template_cpu_infobar  6.4-->
-    <eLabel text="CPU-Temp:" position="1640,112" size="170,36" font="Regular;32" halign="left" valign="center" backgroundColor="background" foregroundColor="foregroundClock" noWrap="1" transparent="1" zPosition="3" />
-    <widget source="global.CurrentTime" render="AXBlueSYSTemp" position="1810,112" size="105,36" font="Regular;32" halign="left" valign="center" backgroundColor="background" foregroundColor="foregroundClock" noWrap="1" transparent="1" zPosition="3" />
+ <!--    <eLabel text="CPU-Temp:" position="1640,112" size="170,36" font="Regular;32" halign="left" valign="center" backgroundColor="background" foregroundColor="foregroundClock" noWrap="1" transparent="1" zPosition="3" />
+    <widget source="global.CurrentTime" render="AXBlueSYSTemp" position="1810,112" size="105,36" font="Regular;32" halign="left" valign="center" backgroundColor="background" foregroundColor="foregroundClock" noWrap="1" transparent="1" zPosition="3" /> -->
     <!-- template_cpu_infobar  6.5-->
-<!--     <widget source="global.CurrentTime" render="Label" position="1660,112" size="245,36" font="Regular;32" halign="left" valign="center" backgroundColor="background" foregroundColor="foregroundClock" noWrap="1" transparent="1" zPosition="3">
+    <widget source="global.CurrentTime" render="Label" position="1660,112" size="245,36" font="Regular;32" halign="left" valign="center" backgroundColor="background" foregroundColor="foregroundClock" noWrap="1" transparent="1" zPosition="3">
     <convert type="AXBlueSTBinfo">CPUtemp</convert>
-    </widget> -->
+    </widget>
  </screen>
  <!-- TEMPLATES SIB Poster-->
  <screen name="template_sib_poster">
@@ -1676,12 +1676,12 @@
     <convert type="AXBlueReceiverInfo">HddInfo</convert>
    </widget>
    <!-- template_cpu_infobar  6.4-->
-   <eLabel text="CPU Temp:" position="1507,887" size="140,30" font="Regular;24" halign="left" valign="center" backgroundColor="background" foregroundColor="red" noWrap="1" transparent="1" zPosition="3" />
-   <widget source="global.CurrentTime" render="AXBlueSYSTemp" position="1637,887" size="100,30" font="Regular;24" halign="left" valign="center" backgroundColor="background" foregroundColor="red" noWrap="1" transparent="1" zPosition="3"  />
+ <!--   <eLabel text="CPU Temp:" position="1507,887" size="140,30" font="Regular;24" halign="left" valign="center" backgroundColor="background" foregroundColor="red" noWrap="1" transparent="1" zPosition="3" />
+   <widget source="global.CurrentTime" render="AXBlueSYSTemp" position="1637,887" size="100,30" font="Regular;24" halign="left" valign="center" backgroundColor="background" foregroundColor="red" noWrap="1" transparent="1" zPosition="3"  /> -->
     <!-- template_cpu_infobar  6.5-->
-   <!-- <widget source="global.CurrentTime" render="Label" position="1507,887" size="240,30" font="Regular;24" halign="left" valign="center" backgroundColor="background" foregroundColor="red" noWrap="1" transparent="1" zPosition="3">
+   <widget source="global.CurrentTime" render="Label" position="1507,887" size="240,30" font="Regular;24" halign="left" valign="center" backgroundColor="background" foregroundColor="red" noWrap="1" transparent="1" zPosition="3">
     <convert type="AXBlueSTBinfo">CPUtemp</convert>
-  </widget> -->
+  </widget>
   <widget source="session.CurrentService" render="Label" position="1253,887" size="305,30" font="Regular;24" halign="left" valign="center" noWrap="1" backgroundColor="background" transparent="1" foregroundColor="red">
     <convert type="AXBlueCPUInfo">CPU Auslastung:$0 </convert>
   </widget>
@@ -3903,7 +3903,7 @@
     <convert type="MenuEntryCompare">service_info_screen</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="global.CurrentTime" render="AXBlueSYSTemp" position="192,674" size="90,45" font="Regular;32" halign="left" valign="bottom" backgroundColor="background" foregroundColor="orange" noWrap="1" transparent="1" zPosition="3" />
+ 
   <widget source="session.CurrentService" render="Label" position="30,908" size="880,45" zPosition="1" font="Regular; 32" halign="left" valign="center" transparent="0" foregroundColor="lightblue">
     <convert type="AXBlueCPUInfo">CPU Auslastung:$0 Core 1:$1  Core 2:$2</convert>
   </widget>
@@ -3919,8 +3919,10 @@
   <widget source="session.CurrentService" render="Label" position="30,720" size="880,45" zPosition="1" font="Regular; 32" halign="left" valign="center" transparent="0" foregroundColor="white">
     <convert type="AXBlueReceiverInfo">UsbInfo,Long</convert>
   </widget>
-  <eLabel text="SysTemp:" position="30,674" size="160,45" font="Regular; 32" halign="left" valign="bottom" backgroundColor="background" noWrap="1" transparent="1" zPosition="2" foregroundColor="orange" />
-</screen>
+  <widget source="global.CurrentTime" render="Label" position="30,674" size="245,36" font="Regular;32" halign="left" valign="center" backgroundColor="background" foregroundColor="orange" noWrap="1" transparent="1" zPosition="3">
+    <convert type="AXBlueSTBinfo">CPUtemp</convert>
+    </widget>
+  </screen>
   <!-- Info Devices FHD -->
   <screen name="Devices" position="0,0" size="1920,1080" title="Device Information" flags="wfNoBorder" backgroundColor="transparent">
     <widget source="Title" render="Label" position="10,25" size="900,50" font="Regular; 36" halign="left" valign="center" foregroundColor="bluetitle" backgroundColor="black" transparent="1" zPosition="1" />
@@ -4929,12 +4931,23 @@
   <!-- Skin Selector FHD -->
 <screen name="SkinSelector" position="0,0" size="1920,1080" title="Skin Selector" flags="wfNoBorder" backgroundColor="transparent">
     <eLabel text="Skin Selector" position="10,25" foregroundColor="bluetitle" size="900,50" noWrap="1" valign="center" font="Regular; 36" backgroundColor="black" halign="left" transparent="1" zPosition="1" />
-    <widget name="SkinList" position="39,143" size="1150,360" itemHeight="45" font="Regular;30" scrollbarMode="showOnDemand" backgroundColor="background" foregroundColor="white" backgroundColorSelected="trbluelabel" foregroundColorSelected="white" enableWrapAround="1" transparent="1" />
-    <widget name="Preview" position="1263,261" size="620,350" alphatest="blend" zPosition="2" />
-    <widget source="introduction" render="Label" position="396,1000" size="850,70" font="Regular; 32" foregroundColor="white" halign="left" backgroundColor="background" valign="center" transparent="1" />
-    <widget source="global.CurrentTime" render="Label" position="1188,30" size="600,40" font="Regular; 32" halign="right" foregroundColor="foregroundClock" backgroundColor="black" transparent="1">
-      <convert type="ClockToText">Format:%A, %d.%m.%Y   %H:%M</convert>
-    </widget>
+      <widget backgroundColor="background" enableWrapAround="1" position="30,130" render="Listbox" size="900,430" source="skins" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template": [
+					MultiContentEntryText(pos = (15, 0), size = (525, 50), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1), # Skinname
+					MultiContentEntryText(pos = (550, 0), size = (390, 50), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # Label
+				],
+				"fonts": [gFont("Regular", 34),gFont("Regular2", 30)],
+				"itemHeight": 50
+				}
+			</convert>
+		</widget>
+    <widget name="preview" position="1263,261" size="620,350" alphatest="blend" zPosition="2" />
+    <widget source="description" render="Label" position="640,1000" size="1050,70" font="Regular; 32" foregroundColor="white" halign="left" backgroundColor="background" valign="center" transparent="1" />
+    <widget source="global.CurrentTime" render="Label" position="1188,25" size="600,50" font="Regular; 36" halign="right" foregroundColor="foregroundClock" backgroundColor="black" transparent="1">
+  <convert type="ClockToText">Format:%A, %d.%m.%Y   %H:%M</convert>
+</widget>
     <eLabel text="Skinanpassungen " position="30,573" size="600,40" zPosition="2" font="Regular; 34" transparent="1" backgroundColor="black" halign="left" foregroundColor="cyan1" />
     <eLabel position="1248,211" size="649,440" backgroundColor="background" zPosition="1" />
     <eLabel text="Ändern der Transparenz " position="30,754" size="600,40" zPosition="2" font="Regular; 34" transparent="1" backgroundColor="black" halign="left" foregroundColor="cyan1" />
@@ -4945,11 +4958,13 @@
     <ePixmap pixmap="menu/line384.png" position="30,619" size="384,2" alphatest="blend" zPosition="6" />
     <ePixmap pixmap="menu/line648.png" position="1249,652" size="648,2" alphatest="blend" zPosition="6" />
     <ePixmap pixmap="menu/line648.png" position="1247,208" size="649,2" alphatest="blend" zPosition="6" />
-    <ePixmap pixmap="buttons/key_ok.png" position="324,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="buttons/key_exit.png" position="1271,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="buttons/key_red.png" position="23,1018" size="35,35" alphatest="blend" />
     <ePixmap pixmap="AX_Blue_FHD_4HDF/picon_default.png" position="1564,745" size="220,132" zPosition="10" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="buttons/key_ok.png" position="1743,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="buttons/key_exit.png" position="1823,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="buttons/key_red.png" position="23,1018" size="35,35" alphatest="blend" />
+    <ePixmap pixmap="buttons/key_green.png" position="325,1018" size="35,35" alphatest="blend" />
     <widget source="key_red" render="Label" position="67,1000" size="240,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_green" render="Label" position="370,1000" size="240,70" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="black" transparent="1" />
     <ePixmap position="1305,679" size="256,256" zPosition="2" pixmap="icons/menu_osd_menu_skin_setup.png" transparent="1" alphatest="blend" />
     <eLabel text="Dieser Skin kann in   Menü -&gt; Einstellungen -&gt; Bedienung und Oberfläche, angepasst werden. Dort findet ihr auch Infos zum Einstellen Des Wetters in der 2en Infobar." position="30,635" size="1220,100" zPosition="2" font="Regular; 30" transparent="1" backgroundColor="black" halign="left" foregroundColor="foregroundClock" />
     <eLabel text="Für weniger Transparenz in der Benutzeroberfläche, in /usr/share/enigma2/DEV/ diePixmaps: bg1280.png und bg1920.png kopieren und in /usr/share/enigma2/AX_Blue_FHD_4HDF/menu einfügen. -  Benutzer Oberfläche neustarten." position="30,807" size="1190,160" zPosition="2" font="Regular; 30" transparent="1" backgroundColor="black" halign="left" foregroundColor="foregroundClock" valign="center" />
