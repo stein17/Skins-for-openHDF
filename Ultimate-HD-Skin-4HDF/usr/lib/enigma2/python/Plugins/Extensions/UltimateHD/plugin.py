@@ -9,7 +9,7 @@
 
 
 # for localized messages
-from __init__ import _
+from .__init__ import _
 
 from enigma import eTimer
 from Components.ActionMap import ActionMap
