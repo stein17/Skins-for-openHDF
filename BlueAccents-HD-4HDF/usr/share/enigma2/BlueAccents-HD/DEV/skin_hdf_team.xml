@@ -414,14 +414,14 @@
   <screen name="ImageBackup" position="0,0" size="1280,720" title="Image Backup" flags="wfNoBorder" backgroundColor="transparent">
     <widget source="Title" render="Label" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
     <widget name="info-hdd" position="20,75" zPosition="1" size="700,150" font="Regular;22" halign="left" valign="top" transparent="1" backgroundColor="background" />
-    <widget name="info-usb" position="20,230" zPosition="1" size="700,280" font="Regular;22" halign="left" valign="top" transparent="1" backgroundColor="background" />
-    <widget name="info-multi" position="20,380" zPosition="1" size="700,280" font="Regular;22" halign="left" valign="top" transparent="1" backgroundColor="background" />
+    <widget name="info-usb" position="20,235" zPosition="1" size="700,275" font="Regular;22" halign="left" valign="top" transparent="1" backgroundColor="background" />
+    <widget name="info-multi" position="20,520" zPosition="1" size="700,150" font="Regular;22" halign="left" valign="top" transparent="1" backgroundColor="background" />
     <panel name="template_exit" />
     <panel name="template_background_725_trans" />
     <panel name="template_date" />
     <panel name="template_name_red_o_blue" />
   </screen>
-  <screen name="ImageBackup" position="0,0" size="1280,720" title="Image Backup" flags="wfNoBorder" backgroundColor="transparent">
+<!--   <screen name="ImageBackup" position="0,0" size="1280,720" title="Image Backup" flags="wfNoBorder" backgroundColor="transparent">
     <widget source="Title" render="Label" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
     <widget source="options" render="Label" position="20,75" zPosition="1" size="700,440" font="Regular;20" halign="left" valign="top" transparent="1" />
     <widget source="description" render="Label" position="20,520" zPosition="1" size="700,140" font="Regular;20" halign="left" valign="top" transparent="1" />
@@ -431,7 +431,7 @@
     <panel name="template_source_red_green" />
     <panel name="template_exit" />
     <panel name="template_background_725_trans" />
-  </screen>
+  </screen> -->
   <!-- ********** Flash Online ********** -->
   <!-- HDF FlashOnline HD -->
   <screen name="FlashOnline" position="center,center" size="1280,720" title="Flash Online" flags="wfNoBorder" backgroundColor="transparent">
