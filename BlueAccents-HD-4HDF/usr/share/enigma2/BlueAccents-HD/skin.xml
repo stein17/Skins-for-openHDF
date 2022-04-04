@@ -5599,17 +5599,6 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
     <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="10,100" zPosition="1" size="700,3" />
     <widget name="slider" position="10,165" size="700,20" borderColor="grey" foregroundColor="selectedFG" borderWidth="2" transparent="1" />
   </screen>
-  <screen name="ImageBackup" position="0,0" size="1280,720" title="Image Backup" flags="wfNoBorder" backgroundColor="transparent">
-    <widget source="Title" render="Label" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
-    <widget source="options" render="Label" position="20,75" zPosition="1" size="700,440" font="Regular;20" halign="left" valign="top" transparent="1" />
-    <widget source="description" render="Label" position="20,520" zPosition="1" size="700,140" font="Regular;20" halign="left" valign="top" transparent="1" />
-    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="18,515" zPosition="1" size="706,3" />
-    <widget name="config" render="Label" position="20,75" size="700,440" font="Regular;20" halign="left" valign="top" zPosition="1" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" transparent="1" />
-    <panel name="template_date" />
-    <panel name="template_source_red_green" />
-    <panel name="template_exit" />
-    <panel name="template_background_725_trans" />
-  </screen>
   <screen name="BackupSelection" position="0,0" size="1280,720" title="Select files/folders to backup..." flags="wfNoBorder" backgroundColor="transparent">
     <!--eLabel text="Select files/folders to backup..." position="58,36"   size="525,50" valign="bottom" font="Regular;32"  transparent="1" /-->
     <widget source="title_text" render="Label" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
