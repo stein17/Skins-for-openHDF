@@ -2,7 +2,7 @@
  <!-- skin_MovieSelection_cover_Picon -->
 <screen name="MovieSelection" position="0,0" size="1280,720" title="Select a movie" flags="wfNoBorder" backgroundColor="background">
     <eLabel text="Select a movie" position="640,4" size="300,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
-    <widget name="list" position="30,60" size="700,610" scrollbarMode="showOnDemand" sliderpixmap="menu/Scrollbar.png" alphatest="blend" font="Regular;20" itemHeight="30" backgroundColor="background" transparent="1" />
+    <widget name="list" position="30,60" size="700,610" scrollbarMode="showOnDemand" scrollbarWidth="10"  sliderpixmap="menu/Scrollbar.png" alphatest="blend" font="Regular;20" itemHeight="30" backgroundColor="background" transparent="1" />
     <widget name="waitingtext" position="62,443" size="640,100" zPosition="1" font="Regular;24" halign="center" valign="center" transparent="1" />
     <widget name="freeDiskSpace" position="765,650" size="485,25" font="Regular; 20" valign="center" halign="left" transparent="1" />
     <widget source="Service" render="Label" position="765,310" noWrap="1" size="485,25" font="Regular; 22" transparent="1" foregroundColor="selectedFG">

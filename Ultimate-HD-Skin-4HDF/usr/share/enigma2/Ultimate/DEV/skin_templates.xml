@@ -1489,7 +1489,7 @@
   </screen>
   <!--Template Setup Config  -->
   <screen name="template_setup_config">
-    <widget name="config" position="30,60" size="700,440" itemHeight="36" font="Regular; 22" scrollbarMode="showAlways" sliderPixmap="menu/Scrollbar.png"  alphatest="blend" enableWrapAround="1" backgroundColor="background" transparent="1" />
+    <widget name="config" position="30,60" size="700,440" itemHeight="36" font="Regular; 22" scrollbarMode="showAlways" scrollbarWidth="10"  sliderPixmap="menu/Scrollbar.png"  alphatest="blend" enableWrapAround="1" backgroundColor="background" transparent="1" />
     <widget name="description" position="30,520" size="700,100" font="Regular; 22" halign="center" valign="center" transparent="1" foregroundColor="selectedFG" />
     <widget name="HelpWindow" position="78,300" size="600,200" zPosition="2" transparent="1" alphatest="blend" />
     <widget name="footnote" position="30,640" size="700,30" font="Regular; 22" halign="right" valign="center" transparent="1" />
@@ -1497,7 +1497,7 @@
   </screen>
   <!--Template _menu_listbox_430  -->
   <screen name="template_menu_listbox_430">
-    <widget source="menu" render="Listbox" position="30,60" size="440,610"   scrollbarMode="showOnDemand"   sliderPixmap="menu/Scrollbar.png"  enableWrapAround="1" alphatest="blend" transparent="1">
+    <widget source="menu" render="Listbox" position="30,60" size="440,610"   scrollbarMode="showOnDemand" scrollbarWidth="10"    sliderPixmap="menu/Scrollbar.png"  enableWrapAround="1" alphatest="blend" transparent="1">
 	
       <convert type="TemplatedMultiContent">
 					{"template": [ MultiContentEntryText(pos = (2, 4), size = (440, 40), flags = RT_HALIGN_LEFT, text = 0) ],
@@ -1509,7 +1509,7 @@
   </screen>
   <!--Template _menu_listbox_740  -->
   <screen name="template_menu_listbox_740">  
-    <widget source="menu" render="Listbox" position="30,60" size="740,610"  scrollbarMode="showOnDemand" sliderPixmap="menu/Scrollbar.png"  backgroundColor="listboxBG" foregroundColor="foreground"  enableWrapAround="1" transparent="1">
+    <widget source="menu" render="Listbox" position="30,60" size="740,610"  scrollbarMode="showOnDemand" scrollbarWidth="10"  sliderPixmap="menu/Scrollbar.png"  backgroundColor="listboxBG" foregroundColor="foreground"  enableWrapAround="1" transparent="1">
       <convert type="TemplatedMultiContent">
 					{"template": [ MultiContentEntryText(pos = (6, 4), size = (730, 40), flags = RT_HALIGN_LEFT, text = 0) ],
 					"fonts": [gFont("Regular", 26)],
@@ -1526,7 +1526,7 @@
     <widget name="ErrorPixmap" pixmap="Ultimate/skin_default/icons/input_error.png" position="8,8" size="53,53" alphatest="blend" />
     <widget name="QuestionPixmap" pixmap="Ultimate/skin_default/icons/input_question.png" position="8,8" size="53,53" alphatest="blend" />
     <widget name="InfoPixmap" pixmap="Ultimate/skin_default/icons/input_info.png" position="8,8" size="53,53" alphatest="blend" />
-    <widget name="list" position="10,140" size="780,240" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1" />
+    <widget name="list" position="10,140" size="780,240" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand" scrollbarWidth="10"  backgroundColor="background" transparent="1" />
     <applet type="onLayoutFinish">
 # this should be factored out into some helper code,but currently demonstrates applets.
 from enigma import eSize,ePoint, getDesktop
@@ -1609,7 +1609,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
   <screen name="template_wizard">
     <widget name="text" position="185,60" size="695,390" font="Regular;20" valign="bottom" transparent="1" />
     <!-- <ePixmap pixmap="BG-Pixmaps/Line_Hor/Line_Hor_Org.png" position="185,453"  zPosition="3" size="695,5" alphatest="blend" transparent="1" /> -->
-    <widget source="list" render="Listbox" position="185,460" size="695,210" zPosition="13" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" transparent="1">
+    <widget source="list" render="Listbox" position="185,460" size="695,210" zPosition="13" scrollbarMode="showOnDemand" scrollbarWidth="10"  enableWrapAround="1" backgroundColor="background" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (5, 0), size = (680, 30), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular",22)],
@@ -1617,7 +1617,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 				}
 			</convert>
     </widget>
-    <widget name="config" position="185,460" size="695,210" itemHeight="30" zPosition="14" font="Regular; 22" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" backgroundColorSelected="verydarkgrey" foregroundColorSelected="selectedFG" transparent="1" />
+    <widget name="config" position="185,460" size="695,210" itemHeight="30" zPosition="14" font="Regular; 22" scrollbarMode="showOnDemand" scrollbarWidth="10"  enableWrapAround="1" backgroundColor="background" backgroundColorSelected="verydarkgrey" foregroundColorSelected="selectedFG" transparent="1" />
     <widget name="HelpWindow" position="330,180" size="402,128" zPosition="1" transparent="1" alphatest="blend" />
     <ePixmap pixmap="buttons/key_red.png" position="20,689" size="26,26" alphatest="blend" transparent="1" />
     <widget name="languagetext" position="49,689" size="170,25" noWrap="1" zPosition="1" valign="center" font="Regular; 20" halign="left" transparent="1" />
@@ -1743,7 +1743,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	progressInfoFont="Regular;18"
 	transparent="1" 
 	colorServiceRecorded="red" colorServicePseudoRecorded="pink" colorServiceStreamed="orange" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="rosa" 
-	scrollbarMode="showAlways"  progressPercentWidth="100"   sliderPixmap="menu/Scrollbar.png" 
+	scrollbarMode="showAlways" scrollbarWidth="10"   progressPercentWidth="100"   sliderPixmap="menu/Scrollbar.png" 
 	colorServiceDescription="white" 
 	colorServiceDescriptionSelected="selectedFG" 
 	colorEventProgressbarBorder="selectedFG" 
@@ -1756,7 +1756,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
   </screen>
   <screen name="ChannelSelection_color_stein17">
     <widget name="list" position="30,60" size="820,570" 
-	scrollbarMode="showOnDemand" 
+	scrollbarMode="showOnDemand" scrollbarWidth="10"  
 	sliderPixmap="menu/Scrollbar.png" 
 	listMarginLeft="5" 
     listMarginRight="18" 
@@ -1788,7 +1788,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_color_2.png" />
   </screen>
     <screen name="ChannelSelection_color_Lemon">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways"  progressPercentWidth="100"  
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" scrollbarWidth="10"   progressPercentWidth="100"  
 	sliderPixmap="menu/Scrollbar.png" 
 	listMarginLeft="5" 
     listMarginRight="18" 
@@ -1820,7 +1820,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_lemon.png" />
   </screen>
   <screen name="ChannelSelection_color_Bernstein">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" scrollbarWidth="10"  sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -1850,7 +1850,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_bernstein.png" />
   </screen>
   <screen name="ChannelSelection_color_Orange">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" scrollbarWidth="10"  sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -1880,7 +1880,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_orange.png" />
   </screen>
   <screen name="ChannelSelection_color_Green">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" scrollbarWidth="10"  sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -1910,7 +1910,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_green.png" />
   </screen>
   <screen name="ChannelSelection_color_Grey">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" scrollbarWidth="10"  sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -1940,7 +1940,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_color.png" />
   </screen>
   <screen name="ChannelSelection_color_Red_White">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" scrollbarWidth="10"  sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -1970,7 +1970,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_red.png" />
   </screen>
     <screen name="ChannelSelection_color_White_Red">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" scrollbarWidth="10"  sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -2000,7 +2000,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_red.png" />
   </screen>
   <screen name="ChannelSelection_color_Pink">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" scrollbarWidth="10"  sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -2030,7 +2030,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_pink.png" />
 	</screen>
   <screen name="ChannelSelection_color_Cyan">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" scrollbarWidth="10"  sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -2060,7 +2060,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_cyan.png" />
 	</screen>
   <screen name="ChannelSelection_color_Black_White">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" scrollbarWidth="10"  sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -2090,7 +2090,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_grey.png" />
   </screen>
     <screen name="ChannelSelection_color_Grey_Black">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" scrollbarWidth="10"  sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -2120,7 +2120,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_grey.png" />
   </screen>
   <screen name="ChannelSelection_color_Blue">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" scrollbarWidth="10"  sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -2150,7 +2150,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_blue.png" />
   </screen>
   <screen name="ChannelSelection_color_White_Blue">
-    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
+    <widget name="list" position="30,60" size="820,570" scrollbarMode="showAlways" scrollbarWidth="10"  sliderPixmap="menu/Scrollbar.png" alphatest="blend" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -2181,11 +2181,11 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
   </screen>
   <!--Template List ChannelSelection Eventtime left -->
   <screen name="ChannelSelection_color_eventtime_left">
-    <widget name="list" position="30,60" size="820,610" scrollbarMode="showAlways" fieldMargins="5" itemsDistances="5" progressbarHeight="8" progressBarWidth="50" progressbarBorderWidth="1" colorServiceRecorded="red" colorServicePseudoRecorded="rosa" colorServiceStreamed="orange" colorServiceDescription="selectedFG" colorServiceDescriptionSelected="white" picServiceEventProgressbar="Ultimate/menu/Progress_CS_color.png" colorEventProgressbarBorder="white" colorEventProgressbarBorderSelected="white" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="lila" foregroundColorSelected="selectedFG" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;24" serviceInfoFont="Regular;22" transparent="1" backgroundColor="background" backgroundColorSelected="verydarkgrey" />
+    <widget name="list" position="30,60" size="820,610" scrollbarMode="showAlways" scrollbarWidth="10"  fieldMargins="5" itemsDistances="5" progressbarHeight="8" progressBarWidth="50" progressbarBorderWidth="1" colorServiceRecorded="red" colorServicePseudoRecorded="rosa" colorServiceStreamed="orange" colorServiceDescription="selectedFG" colorServiceDescriptionSelected="white" picServiceEventProgressbar="Ultimate/menu/Progress_CS_color.png" colorEventProgressbarBorder="white" colorEventProgressbarBorderSelected="white" foregroundColorServiceNotAvail="lila" foregroundColorMarkedSelected="lila" foregroundColorSelected="selectedFG" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;24" serviceInfoFont="Regular;22" transparent="1" backgroundColor="background" backgroundColorSelected="verydarkgrey" />
   </screen>
    <!--Template List ChannelSelection 3 Fields -->
   <screen name="ChannelSelection_3_fields_color_default">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" sliderPixmap="menu/Scrollbar.png" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" scrollbarWidth="10"  sliderPixmap="menu/Scrollbar.png" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -2215,7 +2215,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_color_2.png" />
   </screen>
    <screen name="ChannelSelection_3_fields_color_Lemon">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" scrollbarWidth="10"  
     sliderPixmap="menu/Scrollbar.png" 
 	listMarginLeft="5" 
     listMarginRight="18" 
@@ -2246,7 +2246,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_lemon.png" />
   </screen>
    <screen name="ChannelSelection_3_fields_color_Bernstein">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" sliderPixmap="menu/Scrollbar.png" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" scrollbarWidth="10"  sliderPixmap="menu/Scrollbar.png" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -2276,7 +2276,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_bernstein.png" />
   </screen>
     <screen name="ChannelSelection_3_fields_color_Orange">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="menu/Scrollbar.png" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" scrollbarWidth="10"   sliderPixmap="menu/Scrollbar.png" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -2306,7 +2306,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_orange.png" />
   </screen>
     <screen name="ChannelSelection_3_fields_color_Green">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="menu/Scrollbar.png" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" scrollbarWidth="10"   sliderPixmap="menu/Scrollbar.png" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -2336,7 +2336,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_green.png" />
   </screen>
     <screen name="ChannelSelection_3_fields_color_Grey">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="menu/Scrollbar.png" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" scrollbarWidth="10"   sliderPixmap="menu/Scrollbar.png" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -2366,7 +2366,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_color.png" />
   </screen>
     <screen name="ChannelSelection_3_fields_color_Red_White">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="menu/Scrollbar.png" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" scrollbarWidth="10"   sliderPixmap="menu/Scrollbar.png" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -2396,7 +2396,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_red.png" />
   </screen>
     <screen name="ChannelSelection_3_fields_color_White_Red">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="menu/Scrollbar.png" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" scrollbarWidth="10"   sliderPixmap="menu/Scrollbar.png" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -2426,7 +2426,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_red.png" />
   </screen>
     <screen name="ChannelSelection_3_fields_color_Pink">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="menu/Scrollbar.png" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" scrollbarWidth="10"   sliderPixmap="menu/Scrollbar.png" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -2456,7 +2456,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_pink.png" />
 	</screen>
     <screen name="ChannelSelection_3_fields_color_Cyan">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" sliderPixmap="menu/Scrollbar.png" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" scrollbarWidth="10"  sliderPixmap="menu/Scrollbar.png" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -2486,7 +2486,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_cyan.png" />
 	</screen>
     <screen name="ChannelSelection_3_fields_color_Black_White">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="menu/Scrollbar.png" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" scrollbarWidth="10"   sliderPixmap="menu/Scrollbar.png" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -2516,7 +2516,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_grey.png" />
   </screen>
     <screen name="ChannelSelection_3_fields_color_Grey_Black">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="menu/Scrollbar.png" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" scrollbarWidth="10"   sliderPixmap="menu/Scrollbar.png" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -2546,7 +2546,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_grey.png" />
   </screen>
     <screen name="ChannelSelection_3_fields_color_Blue">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="menu/Scrollbar.png" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" scrollbarWidth="10"   sliderPixmap="menu/Scrollbar.png" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
@@ -2576,7 +2576,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	picServiceEventProgressbar="Ultimate/BG-Pixmaps/Progress/Progress_CS_blue.png" />
   </screen>
     <screen name="ChannelSelection_3_fields_color_White_Blue">
-    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways"  sliderPixmap="menu/Scrollbar.png" 
+    <widget name="list" position="360,60" size="550,610" scrollbarMode="showAlways" scrollbarWidth="10"   sliderPixmap="menu/Scrollbar.png" 
 	listMarginLeft="5" 
     listMarginRight="18" 
 	fieldMargins="5" 
