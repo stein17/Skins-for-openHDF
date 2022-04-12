@@ -492,13 +492,13 @@
   </screen>
   <!-- Analog-Clock-Infobar-->
   <screen name="template_analog_clock_widget_infobar">
-    <widget source="global.CurrentTime" render="VWatches" position="1162,593" size="68,68" zPosition="4" foregroundColor="red" alphatest="blend">
+    <widget source="global.CurrentTime" render="BlueAWatches" position="1162,593" size="68,68" zPosition="4" foregroundColor="red" alphatest="blend">
       <convert type="BlueAAnalogClock">secHand</convert>
     </widget>
-    <widget source="global.CurrentTime" render="VWatches" position="1162,593" size="68,68" zPosition="3" foregroundColor="listboxBG" alphatest="blend">
+    <widget source="global.CurrentTime" render="BlueAWatches" position="1162,593" size="68,68" zPosition="3" foregroundColor="listboxBG" alphatest="blend">
       <convert type="BlueAAnalogClock">minHand</convert>
     </widget>
-    <widget source="global.CurrentTime" render="VWatches" position="1175,606" size="42,42" zPosition="2" foregroundColor="line" alphatest="blend">
+    <widget source="global.CurrentTime" render="BlueAWatches" position="1175,606" size="42,42" zPosition="2" foregroundColor="line" alphatest="blend">
       <convert type="BlueAAnalogClock">hourHand</convert>
     </widget>
     <widget source="global.CurrentTime" render="Label" position="1115,680" size="160,20" font="Regular; 16" halign="center" backgroundColor="black" transparent="1" zPosition="0" valign="center">
