@@ -189,7 +189,7 @@
   <panel name="template_pixmap_rahmen" />
   <panel name="template_pixmap_Userlogo" />
   <panel name="template_pixmap_center" />
-  <panel name="ScrollBarTemplate size=700,260" />
+  <!--   <panel name="ScrollBarTemplate size=700,260" /> -->
 </screen>
 <screen name="ChoiceBox" position="0,0" size="1280,720" title="Input" flags="wfNoBorder">
   <widget name="text" position="30,60" size="700,60" font="Regular;22" halign="center" transparent="1" zPosition="10" foregroundColor="selectedFG" backgroundColor="background" />
