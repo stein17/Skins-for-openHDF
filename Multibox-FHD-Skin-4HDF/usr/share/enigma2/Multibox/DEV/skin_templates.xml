@@ -193,10 +193,6 @@
    <screen name="template_ChannelSelection_Poster_3">
   <widget source="ServiceEvent" render="AMBPoster" position="1280,470" size="112,169" zPosition="10" borderColor="Line" borderWidth="1" />
   </screen>
-   <!-- skin_infobar_Poster_Infobar_fake -->
-<screen name="template_Poster_Infobar">
- <eLabel name="fake" backgroundColor="background" zPosition="-20" position="1,1" size="1,1" />
-</screen>
  <!-- skin_infobar_Poster_Infobar_Now -->
 <screen name="template_Poster_Infobar_Now">
  <widget source="session.Event_Now" render="AMBPoster" borderColor="Line" borderWidth="3" position="19,280" size="342,514" zPosition="10" />
@@ -298,14 +294,10 @@
   </widget>
 <eLabel name="" position="0,811" size="215,44" zPosition="1" backgroundColor="background40" />
 </screen>
-  <!-- TEMPLATES-EMCMediaCenter-Poster_fake-->
-  <screen name="template_EMC_Backdrop_Poster">
-  <eLabel name="fake" backgroundColor="background" zPosition="-20" position="1,1" size="1,1" />
-  </screen>
-  
   <!-- TEMPLATES-EMCMediaCenter-Poster-->
   <screen name="template_EMCMediaCenter_Backdrop_Poster">
-  <widget source="session.Event_Now" render="AMBPoster" borderColor="Line" borderWidth="3" position="1320,610" size="156,234" zPosition="10" />
+  <widget source="session.Event_Now
+  " render="AMBPoster" borderColor="Line" borderWidth="3" position="1320,610" size="156,234" zPosition="10" />
   <widget source="session.Event_Now" render="AMBBackdrop" borderColor="Line" borderWidth="3" position="1490,610" size="415,234" zPosition="10" />
   </screen> 
    <!-- TEMPLATES-EV_session_Event_Now_Next-Poster-->
@@ -3623,11 +3615,11 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
   <screen name="template_Tuner_Info_SIB">
   <ePixmap position="34,1020" size="120,54" pixmap="Multibox/icons/BG_Tuner.png" zPosition="1" alphatest="blend" />
    <eLabel text="Tuner:" position="26,1031" size="95,30" font="Regular; 24" halign="center" valign="center" backgroundColor="background" foregroundColor="bluetitle" transparent="1" zPosition="3" />
-    <widget source="session.TunerInfo" position="110,1036" size="17,20" render="Pixmap" pixmap="Multibox/tunericons/a_grey.png" zPosition="2" alphatest="blend">
+<!--     <widget source="session.TunerInfo" position="110,1036" size="17,20" render="Pixmap" pixmap="Multibox/tunericons/a_grey.png" zPosition="2" alphatest="blend">
       <convert type="TunerInfo">TunerAvailable</convert>
-      <convert type="ValueRange">1,18</convert>
+      <convert type="ValueRange">1,2</convert>
       <convert type="ConditionalShowHide" />
-    </widget>
+    </widget> -->
     <widget source="session.FrontendInfo" position="110,1036" size="17,20" render="Pixmap" pixmap="Multibox/tunericons/a_green.png" zPosition="5" alphatest="blend">
       <convert type="FrontendInfo">NUMBER</convert>
       <convert type="ValueRange">0,0</convert>
@@ -3638,15 +3630,15 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
       <convert type="ValueBitTest">1</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfo" position="110,1036" size="17,20" render="Pixmap" pixmap="Multibox/tunericons/a_red.png" zPosition="6" alphatest="blend">
+<!--     <widget source="session.FrontendInfo" position="110,1036" size="17,20" render="Pixmap" pixmap="Multibox/tunericons/a_red.png" zPosition="6" alphatest="blend">
       <convert type="AMBFrontendInfo">REC_0</convert>
       <convert type="ConditionalShowHide">Blink</convert>
-    </widget>
-    <widget source="session.TunerInfo" position="130,1036" size="17,20" render="Pixmap" pixmap="Multibox/tunericons/b_grey.png" zPosition="2" alphatest="blend">
+    </widget> -->
+<!--     <widget source="session.TunerInfo" position="130,1036" size="17,20" render="Pixmap" pixmap="Multibox/tunericons/b_grey.png" zPosition="2" alphatest="blend">
       <convert type="TunerInfo">TunerAvailable</convert>
-      <convert type="ValueRange">2,18</convert>
+      <convert type="ValueRange">2,2</convert>
       <convert type="ConditionalShowHide" />
-    </widget>
+    </widget> -->
     <widget source="session.FrontendInfo" position="130,1036" size="17,20" render="Pixmap" pixmap="Multibox/tunericons/b_green.png" zPosition="5" alphatest="blend">
       <convert type="FrontendInfo">NUMBER</convert>
       <convert type="ValueRange">1,1</convert>
@@ -3657,10 +3649,10 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
       <convert type="ValueBitTest">2</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfo" position="130,1036" size="17,20" render="Pixmap" pixmap="Multibox/tunericons/b_red.png" zPosition="6" alphatest="blend">
+<!--     <widget source="session.FrontendInfo" position="130,1036" size="17,20" render="Pixmap" pixmap="Multibox/tunericons/b_red.png" zPosition="6" alphatest="blend">
       <convert type="AMBFrontendInfo">REC_1</convert>
       <convert type="ConditionalShowHide">Blink</convert>
-    </widget>
+    </widget> -->
   </screen>
     <!-- 4 TUNER INFO -->
   <screen name="template_4_Tuner_Info_SIB">

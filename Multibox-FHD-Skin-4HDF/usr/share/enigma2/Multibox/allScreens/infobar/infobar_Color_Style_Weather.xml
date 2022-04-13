@@ -64,12 +64,12 @@
     <convert type="AMBCPUInfo">$0</convert>
   </widget>
   <!-- Python 2 -->
- <!--  <eLabel text="CPU-Temp:" position="1730,1055" size="130,25" font="Regular; 24" backgroundColor="black" halign="left" valign="center" transparent="1" zPosition="1" />
- <widget source="global.CurrentTime" position="1846,1055" size="80,25" font="Regular; 24" backgroundColor="black" halign="left" valign="center" transparent="1" zPosition="1" render="AMBSYSTemp" /> -->
+  <eLabel text="CPU-Temp:" position="1730,1055" size="130,25" font="Regular; 24" backgroundColor="black" halign="left" valign="center" transparent="1" zPosition="1" />
+ <widget source="global.CurrentTime" position="1846,1055" size="80,25" font="Regular; 24" backgroundColor="black" halign="left" valign="center" transparent="1" zPosition="1" render="AMBSYSTemp" />
   <!-- Python 3 -->
-  <widget source="global.CurrentTime" render="Label" position="1730,1055" size="200,24" font="Regular; 24" backgroundColor="black" halign="left" valign="center" transparent="1" zPosition="1">
+<!--   <widget source="global.CurrentTime" render="Label" position="1730,1055" size="200,24" font="Regular; 24" backgroundColor="black" halign="left" valign="center" transparent="1" zPosition="1">
     <convert type="AMBSTBinfo">CPUtemp</convert>
-  </widget>
+  </widget> -->
   <eLabel text="CPU:" position="1625,1055" size="55,24" font="Regular; 24" backgroundColor="background" transparent="1" zPosition="1" />
   <widget alphatest="blend" position="20,840" size="331,185" render="Picon" source="session.CurrentService" transparent="1" zPosition="1" borderWidth="1" borderColor="verydarkgrey">
     <convert type="ServiceName">Reference</convert>
@@ -181,8 +181,7 @@
   <panel name="template_progress_color" />
   <panel name="template_pixmap_Infobar_color" />
   <panel  name="template_cam_info_fake" />
-  <panel name="template_Poster_Infobar" />
+  <panel name="template_Poster_Infobar_Now0" />
   <panel name="template_VpnIp_IF" />
-   <panel name="template_ethernet_Color_Style_Weather Infobar_Default_fake"/>
  </screen>
 </skin>

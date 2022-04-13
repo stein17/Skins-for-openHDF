@@ -111,6 +111,6 @@
    <widget source="session.CurrentService" render="Picon" alphatest="blend" position="24,930" size="240,144" transparent="1" zPosition="1">
    <convert type="AMB_MovieReference" />
    </widget>
-   <panel name="template_EMC_Backdrop_Poster" />
+   <panel name="template_EMCMediaCenter_Backdrop_Poster0" />
   </screen>
  </skin>

@@ -118,9 +118,9 @@
     <convert type="ServiceName2">%R</convert>
     <convert type="ConverterRotator">3</convert>
   </widget>
-<!--   <widget source="session.CurrentService" render="Label" position="850,957" size="300,45" font="Regular; 27" transparent="1" halign="left" noWrap="1" valign="center" zPosition="3" backgroundColor="background" foregroundColor="default">
+  <widget source="session.CurrentService" render="Label" position="850,957" size="300,45" font="Regular; 27" transparent="1" halign="left" noWrap="1" valign="center" zPosition="3" backgroundColor="background" foregroundColor="default">
     <convert type="CryptoInfo">VerboseInfo</convert>
-  </widget> -->
+  </widget>
   <widget source="session.CurrentService" render="Label" position="1160,957" size="300,45" font="Regular; 27" transparent="1" halign="left" noWrap="1" valign="center" zPosition="3" backgroundColor="background" foregroundColor="default">
     <convert type="AMBEmuInfo">Emu</convert>
   </widget>

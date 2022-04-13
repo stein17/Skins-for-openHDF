@@ -89,6 +89,6 @@
   <panel name="template_pixmap_BG" />
   <panel name="Channel_selection_3_Fields_default" />
   <panel name="template_fullscreen" />
- <!--  <panel name="template_ChannelSelection_Poster000" /> -->
+  <panel name="template_ChannelSelection_Poster000" />
   </screen>
  </skin>
