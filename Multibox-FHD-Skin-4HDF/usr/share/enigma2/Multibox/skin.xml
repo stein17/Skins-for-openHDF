@@ -143,7 +143,7 @@
     <alias name="PartnerBoxChannelEPGList0" font="Regular" size="32" height="38" />
     <alias name="PiconManagerList" font="Regular" size="30" height="50" />
     <alias name="PartnerBoxChannelEPGList1" font="Regular" size="24" />
-    <alias name="VirtualKeyboard"           font="Regular" size="34" height="45"/>
+    <alias name="VirtualKeyboard" font="Regular" size="34" height="45"/>
     <alias name="HelpMenuList" font="Regular" size="36" height="50" />
     <alias name="HelpMenuListExt0" font="Regular" size="32" height="75" />
     <alias name="HelpMenuListExt1" font="Regular" size="28" />
@@ -488,7 +488,7 @@
   <panel name="template_progress_color" />
   <panel name="template_pixmap_Infobar_color" />
   <panel  name="template_cam_info_fake" />
-  <panel name="template_Poster_Infobar" />
+  <panel name="template_Poster_Infobar_Now0" />
   <panel name="template_VpnIp_IF" />
    <panel name="template_ethernet_Color_Style_Weather Infobar_Default_fake"/>
 </screen>
@@ -3915,18 +3915,18 @@ self['config'].l.setSeperation(int(300*f))
   </screen>
   <!-- VirtualKeyBoard -->
 <screen name="VirtualKeyBoard" position="center,center" size="960,510" title="Virtual KeyBoard" zPosition="99" backgroundColor="transparent">
-   <widget source="Title" render="Label" position="5,0" size="600,40" valign="bottom" font="Regular;32" transparent="1" foregroundColor="Line" />
-  <widget name="header" position="5,0" size="950,45" font="Regular;33" backgroundColor="background" foregroundColor="white" halign="center" transparent="1" noWrap="1" />
-  <widget name="text" position="7,52" size="935,63" backgroundColor="background" foregroundColor="white" zPosition="3" font="Regular;45" noWrap="1" valign="center" halign="right" />
+   <widget source="Title" render="Label" position="5,5" size="600,40" valign="bottom" font="Regular;32" transparent="1" foregroundColor="Line" />
+  <widget name="header" position="5,5" size="950,40" font="Regular;32" backgroundColor="background" foregroundColor="white" halign="center" transparent="1" noWrap="1" />
   <widget name="list" position="10,130" size="700,290" selectionDisabled="1" transparent="1" />
   <widget source="country" render="Label" position="440,455" size="150,35" noWrap="1" zPosition="1" valign="center" font="Regular;27" halign="left" backgroundColor="background" foregroundColor="white" transparent="1" />
   <widget source="country" render="Pixmap" position="792,167" size="90,60" alphatest="blend" borderWidth="0">
     <convert type="ValueToPixmap">LanguageCode</convert>
   </widget>
+  <widget position="7,52" size="944,63" name="text"  backgroundColor="background" foregroundColor="white" zPosition="3" font="Regular;45" noWrap="1" valign="center" halign="left" />
   <eLabel position="5,50" size="948,67" backgroundColor="Line" zPosition="1" />
-  <eLabel position="0,435" size="960,2" backgroundColor="Line" zPosition="-1" />
   <eLabel position="7,52" size="944,63" backgroundColor="background" zPosition="-1" />
   <eLabel position="0,0" size="960,510" backgroundColor="background" zPosition="-2" />
+  <eLabel position="0,435" size="960,2" backgroundColor="Line" zPosition="-1" />
   <ePixmap pixmap="buttons/key_red.png" position="10,455" size="35,35" alphatest="blend" />
   <ePixmap pixmap="buttons/key_green.png" position="210,455" size="35,35" alphatest="blend" />
   <ePixmap pixmap="buttons/key_blue.png" position="600,455" size="35,35" alphatest="blend" />
@@ -3937,6 +3937,7 @@ self['config'].l.setSeperation(int(300*f))
   <ePixmap pixmap="buttons/key_exit.png" position="810,455" size="103,35" zPosition="10" transparent="1" alphatest="blend" />
   <ePixmap position="730,250" size="220,120" zPosition="2" pixmap="icons/keyboard.png" transparent="1" alphatest="blend" />
 </screen>
+
   <screen name="NetworkPassword" position="0,0" size="1920,1080" title="NetworkPassword" flags="wfNoBorder">
   <ePixmap name="VKeyIcon" pixmap="buttons/key_text.png" alphatest="on" zPosition="1" position="925,1024" size="103,35" />
   <widget source="Title" render="Label" position="180,20" size="1300,50" font="Italic; 40" halign="left" valign="center" foregroundColor="white" backgroundColor="background" borderColor="Multiboxlabel" borderWidth="3" transparent="1" zPosition="1" />

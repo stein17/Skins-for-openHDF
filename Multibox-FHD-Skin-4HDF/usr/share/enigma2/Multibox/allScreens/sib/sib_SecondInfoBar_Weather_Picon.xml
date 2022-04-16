@@ -270,54 +270,15 @@
   <panel name="template_SecondInfoBar_Poster" />
   <panel name="template_SIB_session_Event_Now_Next" />
   <panel name="template_VpnIp_SIF" />
-  <panel name="template_ModuleControl_SIB" />
-  <panel name="template_EMU_Info_SIB" />
+  <panel name="template_ModuleControl_Info" />
+  <panel name="template_EMU_Info" />
   <panel name="template_SNR_AGC_SIB" />
   <panel name="template_SAT_info_SIB" />
-  <panel name="template_Prov_Info_SIB" />
-  <panel name="template_Caid_Info_SIB" />
-<!--   <panel name="template_Ethernet_Info_SIB" /> -->
-  <panel name="template_Ethernet_ON_OFF_Info_SIB" />
-  <!-- <panel name="template_Tuner_Info_SIB" /> -->
-   <ePixmap position="34,1020" size="120,54" pixmap="Multibox/icons/BG_Tuner.png" zPosition="1" alphatest="blend" />
-   <eLabel text="Tuner:" position="26,1031" size="95,30" font="Regular; 24" halign="center" valign="center" backgroundColor="background" foregroundColor="bluetitle" transparent="1" zPosition="3" />
-<!--     <widget source="session.TunerInfo" position="110,1036" size="17,20" render="Pixmap" pixmap="Multibox/tunericons/a_grey.png" zPosition="2" alphatest="blend">
-      <convert type="TunerInfo">TunerAvailable</convert>
-      <convert type="ValueRange">1,2</convert>
-      <convert type="ConditionalShowHide" />
-    </widget> -->
-    <widget source="session.FrontendInfo" position="110,1036" size="17,20" render="Pixmap" pixmap="Multibox/tunericons/a_green.png" zPosition="5" alphatest="blend">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">0,0</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" position="110,1036" size="17,20" render="Pixmap" pixmap="Multibox/tunericons/a_yellow.png" zPosition="3" alphatest="blend">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">1</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-<!--     <widget source="session.FrontendInfo" position="110,1036" size="17,20" render="Pixmap" pixmap="Multibox/tunericons/a_red.png" zPosition="6" alphatest="blend">
-      <convert type="AMBFrontendInfo">REC_0</convert>
-      <convert type="ConditionalShowHide">Blink</convert>
-    </widget> -->
-<!--     <widget source="session.TunerInfo" position="130,1036" size="17,20" render="Pixmap" pixmap="Multibox/tunericons/b_grey.png" zPosition="2" alphatest="blend">
-      <convert type="TunerInfo">TunerAvailable</convert>
-      <convert type="ValueRange">2,2</convert>
-      <convert type="ConditionalShowHide" />
-    </widget> -->
-    <widget source="session.FrontendInfo" position="130,1036" size="17,20" render="Pixmap" pixmap="Multibox/tunericons/b_green.png" zPosition="5" alphatest="blend">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">1,1</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" position="130,1036" size="17,20" render="Pixmap" pixmap="Multibox/tunericons/b_yellow.png" zPosition="3" alphatest="blend">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">2</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-<!--     <widget source="session.FrontendInfo" position="130,1036" size="17,20" render="Pixmap" pixmap="Multibox/tunericons/b_red.png" zPosition="6" alphatest="blend">
-      <convert type="AMBFrontendInfo">REC_1</convert>
-      <convert type="ConditionalShowHide">Blink</convert>
-    </widget> -->
+  <panel name="template_Prov_Info" />
+  <panel name="template_Caid_Info" />
+  <panel name="template_Ethernet_Info" />
+  <panel name="template_Ethernet_ON_OFF_Info" />
+  <panel name="template_Tuner_Info_SIB" />
+   
   </screen>
  </skin>
