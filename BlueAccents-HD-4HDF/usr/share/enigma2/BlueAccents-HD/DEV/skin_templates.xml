@@ -1254,7 +1254,7 @@
       <convert type="BlueASambaVpnIp_converter">vpn</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget backgroundColor="background" position="925,360" size="150,25" font="Regular; 18" noWrap="1" halign="left" valign="center" foregroundColor="selectedFG" transparent="1" zPosition="10" render="Label" source="session.CurrentService">
+    <widget backgroundColor="background" position="925,360" size="180,25" font="Regular; 18" noWrap="1" halign="left" valign="center" foregroundColor="selectedFG" transparent="1" zPosition="10" render="Label" source="session.CurrentService">
       <convert type="BlueASambaVpnIp_converter">c+myip</convert>
     </widget>
     <widget position="888,360" size="30,20" zPosition="10" render="BlueASambaVpnIp_renderer" source="session.CurrentService" alphatest="blend">
@@ -1384,7 +1384,7 @@
       <convert type="BlueASambaVpnIp_converter">vpn</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget backgroundColor="background" position="925,360" size="150,20" font="Regular; 18" noWrap="1" halign="left" valign="center" foregroundColor="selectedFG" transparent="1" zPosition="10" render="Label" source="session.CurrentService">
+    <widget backgroundColor="background" position="925,360" size="180,20" font="Regular; 18" noWrap="1" halign="left" valign="center" foregroundColor="selectedFG" transparent="1" zPosition="10" render="Label" source="session.CurrentService">
       <convert type="BlueASambaVpnIp_converter">c+myip</convert>
     </widget>
     <widget position="888,360" size="30,20" zPosition="10" render="BlueASambaVpnIp_renderer" source="session.CurrentService" alphatest="blend">
@@ -1951,7 +1951,7 @@
       <convert type="BlueASambaVpnIp_converter">vpn</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget backgroundColor="background" position="925,360" size="150,20" font="Regular; 18" noWrap="1" halign="left" valign="center" foregroundColor="selectedFG" transparent="1" zPosition="10" render="Label" source="session.CurrentService">
+    <widget backgroundColor="background" position="925,360" size="180,20" font="Regular; 18" noWrap="1" halign="left" valign="center" foregroundColor="selectedFG" transparent="1" zPosition="10" render="Label" source="session.CurrentService">
       <convert type="BlueASambaVpnIp_converter">c+myip</convert>
     </widget>
     <widget position="888,360" size="30,20" zPosition="10" render="BlueASambaVpnIp_renderer" source="session.CurrentService" alphatest="blend">
