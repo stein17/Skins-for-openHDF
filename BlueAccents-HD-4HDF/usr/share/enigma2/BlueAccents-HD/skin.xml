@@ -4699,28 +4699,29 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
   <screen name="VideoMode" position="center,center" size="250,60">
     <widget name="videomode" position="10,10" size="230,40" font="Regular;23" halign="left" />
   </screen>
-  <screen name="VirtualKeyBoard" position="215,250" size="850,385" zPosition="99" title="Virtual KeyBoard" backgroundColor="background" flags="wfNoBorder">
+ <screen name="VirtualKeyBoard" position="215,250" size="850,430" zPosition="99" title="Virtual KeyBoard" backgroundColor="background" flags="wfNoBorder">
     <widget source="Title" render="Label" position="5,0" size="760,44" font="Regular;32" halign="left" valign="bottom" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" />
-    <widget name="header" position="5,0" size="760,44" backgroundColor="background" font="Regular;32" foregroundColor="selectedFG" borderColor="black" borderWidth="2" halign="right" valign="bottom" transparent="1" />
-    <widget name="text" position="7,55" size="832,42" zPosition="3" font="Regular;32" noWrap="1" valign="center" halign="left" transparent="1" />
+    <widget name="header" position="6,55" size="838,42" backgroundColor="background" font="Regular;32" foregroundColor="selectedFG" borderColor="black" borderWidth="2" halign="center" valign="center" transparent="1" />
+    <widget name="text" position="10,105" size="832,45" zPosition="3" font="Regular;34" foregroundColor="white" borderColor="black" backgroundColor="background" borderWidth="2" noWrap="1" valign="bottom" halign="left" transparent="1" />
     <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="5,50" zPosition="10" size="840,3" />
-    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="5,340" zPosition="10" size="840,3" />
-    <eLabel name="" position="6,55" size="838,42" zPosition="2" backgroundColor="background" transparent="0" />
-    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="5,97" zPosition="1" size="840,3" />
-    <widget name="list" position="8,105" size="735,230" selectionDisabled="1" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="5,150" zPosition="10" size="840,3" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="5,100" zPosition="1" size="840,3" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="5,390" zPosition="10" size="840,3" />
+    <eLabel name="" position="7,105" size="838,45" zPosition="2" backgroundColor="metrixtranzp" transparent="0" />
+    <widget name="list" position="8,155" size="735,230" selectionDisabled="1" transparent="1" alphatest="blend" />
     <widget name="language" conditional="language" position="0,0" size="0,0" font="Regular;22" backgroundColor="background" foregroundColor="white" transparent="1" noWrap="1" />
     <widget source="country" render="Pixmap" position="753,167" size="90,60" alphatest="blend" borderWidth="0">
     <convert type="ValueToPixmap">LanguageCode</convert>
     </widget>
-    <ePixmap pixmap="BlueAccents-HD/buttons/exit.png" position="768,352" size="40,25" zPosition="10" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="BlueAccents-HD/buttons/key_red.png" position="10,355" size="16,16" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="BlueAccents-HD/buttons/key_green.png" position="190,355" size="16,16" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="BlueAccents-HD/buttons/key_yellow.png" position="360,355" size="16,16" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="BlueAccents-HD/buttons/key_blue.png" position="535,355" size="16,16" alphatest="blend" transparent="1" />
-    <eLabel text="Delete" position="35,350" size="150,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
-    <eLabel text="OK" position="215,350" size="140,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
-    <widget source="country" render="Label" position="380,350" size="150,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
-    <eLabel text="Umstellen" position="555,350" size="170,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/exit.png" position="768,402" size="40,25" zPosition="10" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_red.png" position="10,405" size="16,16" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_green.png" position="190,405" size="16,16" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_yellow.png" position="360,405" size="16,16" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_blue.png" position="535,405" size="16,16" alphatest="blend" transparent="1" />
+    <eLabel text="Delete" position="35,400" size="150,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <eLabel text="OK" position="215,400" size="140,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <widget source="country" render="Label" position="380,400" size="150,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <eLabel text="Umstellen" position="555,400" size="170,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
   </screen>
   <!-- Wizzard's -->
   <screen name="NetworkWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder" backgroundColor="transparent">
