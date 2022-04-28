@@ -75,7 +75,7 @@
     <ePixmap pixmap="BG-Pixmaps/Line_Hor_Vert/Line_Vert_Big.png" position="525,69" zPosition="1" size="20,594" />
     <ePixmap pixmap="BG-Pixmaps/Line_Hor_Vert/Line_Vert_Big.png" position="815,69" zPosition="1" size="20,594" />
     <ePixmap position="1225,688" size="40,25" zPosition="10" pixmap="BlueAccents-HD/buttons/menu.png" transparent="1" alphatest="blend" />
-    <panel name="template_progress_Eventview" />
+ <panel name="template_progress_Eventview" />
 	<panel name="template_weather_Secondinfobar" />
     <panel name="template_date" />
     <panel name="TemplateAllColorButtons_Automatic" />
@@ -83,11 +83,11 @@
     <panel name="template_background_full_black" />
 	<panel name="template_SNR_AGC_EV" />
     <panel name="template_SAT_info_EV" />
-    <panel name="template_EMU_Info_EV" />
+    <panel name="template_EMU_EV" />
 	<!-- <panel name="template_Prov_Info_EV" /> -->
-    <panel name="template_Caid_Info_EV" />
-    <panel name="template_Ethernet_Info_EV" />
-    <panel name="template_Ethernet_ON_OFF_Info_EV" />
+    <panel name="template_Caid_EV" />
+    <panel name="template_Ethernet_EV" />
+    <panel name="template_Ethernet_ON_OFF_EV" />
     <panel name="template_Tuner_Info_EV" />
 	<panel name="template_fullinfo_sib_picon" />
 	<panel name="template_epg_description_EV" />

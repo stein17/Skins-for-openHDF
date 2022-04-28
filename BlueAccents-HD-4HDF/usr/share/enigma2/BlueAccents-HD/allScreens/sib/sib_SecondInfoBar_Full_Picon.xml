@@ -57,7 +57,7 @@
   <ePixmap pixmap="BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="19,330" zPosition="10" size="505,3" />
   <ePixmap pixmap="BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="19,620" zPosition="10" size="505,3" />
   <ePixmap pixmap="BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="19,367" zPosition="10" size="505,3" />
-  <panel name="template_weather_Secondinfobar" />
+   <panel name="template_weather_Secondinfobar" />
   <panel name="template_fullinfo_sib_picon" />
   <panel name="template_date" />
   <panel name="template_SecondInfoBar_Poster" />
@@ -67,13 +67,13 @@
   <panel name="template_progress_secondinfobar" />
   <panel name="template_SNR_AGC_SIB" />
   <panel name="template_SAT_info_SIB" />
-  <panel name="template_EMU_Info_SIB" />
-  <panel name="template_Prov_Info_SIB" />
-  <panel name="template_Module_1_Control_SIB" />
-  <panel name="template_Module_2_Control_SIB" />
-  <panel name="template_Caid_Info_SIB" />
-  <panel name="template_Ethernet_Info_SIB" />
-  <panel name="template_Ethernet_ON_OFF_Info_SIB" />
+  <panel name="template_EMU_Info" />
+  <panel name="template_Prov_Info" />
+  <panel name="template_Module_1_Control" />
+  <panel name="template_Module_2_Control" />
+  <panel name="template_Caid_Info" />
+  <panel name="template_Ethernet_Info" />
+  <panel name="template_Ethernet_ON_OFF_Info" />
   <panel name="template_Tuner_Info_SIB" />
   <panel name="template_orbital_picon_SIB" />
  </screen>
