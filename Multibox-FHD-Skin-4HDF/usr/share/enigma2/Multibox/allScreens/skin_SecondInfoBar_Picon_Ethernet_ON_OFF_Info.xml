@@ -1,14 +1,7 @@
 <skin>
 <!-- skin_SIB_Ethernet_ON_OFF_Info -->
   <screen name="template_Ethernet_ON_OFF_Info">
-   <widget source="session.CurrentService" position="1090,1020" size="96,54" render="Pixmap" backgroundColor="black" pixmap="Multibox/icons/ethernet_on.png" zPosition="3" transparent="1" alphatest="blend">
-    <convert type="AMBNetConnection">216.58.214.142</convert>
-    <convert type="ConditionalShowHide" />
-   </widget>
-   <widget source="global.CurrentTime" render="Pixmap" pixmap="Multibox/icons/ethernet_off.png" position="1090,1020" size="96,54"  halign="center" zPosition="2" alphatest="blend" transparent="1">
-    <convert type="AMBBlinkingClock" />
-    <convert type="ConditionalShowHide">Blink</convert>
-   </widget>
-  </screen> 
+   <panel name="template_Ethernet_ON_OFF_Info_SIB" />
+  </screen>
 </skin>
   

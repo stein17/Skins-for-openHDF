@@ -1,14 +1,7 @@
 <skin>
 <!-- skin_SIB_Ethernet_Info -->
   <screen name="template_Ethernet_Info">
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/wireless_on.png" position="960,1020" zPosition="3" size="96,54"  alphatest="blend">
-      <convert type="AMBInternetConnectionInfo">Wifi</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Multibox/icons/lan_on.png" position="960,1020" zPosition="3" size="96,54"  alphatest="blend">
-      <convert type="AMBInternetConnectionInfo">Lan</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-  </screen> 
+   <panel name="template_Ethernet_Info_SIB" />
+  </screen>
 </skin>
   
