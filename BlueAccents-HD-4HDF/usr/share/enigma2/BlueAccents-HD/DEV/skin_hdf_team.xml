@@ -1,0 +1,779 @@
+ <skin>
+ <!-- HDF_TEAM_Screen_HD  -->
+  <!--######################################### -->
+  <screen name="QuickMenu" position="0,0" size="1280,720" title="Quick Launch Menu" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="list" position="22,75" size="417,580" itemHeight="50" font="Regular;20" selectionPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_50.png" backgroundPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_50_BG.png" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1" />
+    <widget name="sublist" position="467,75" size="417,580" itemHeight="50" font="Regular;20" selectionPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_50.png" backgroundPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_50_BG.png" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1" />
+    <widget name="description" position="910,310" size="350,350" zPosition="1" font="Regular;20" halign="center" valign="center" transparent="1" foregroundColor="selectedFG" />
+    <eLabel text="Quick Launch Menu" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Vert_Big.png" position="887,69" zPosition="10" size="20,595" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Vert_Big.png" position="443,69" zPosition="10" size="20,595" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="908,105" zPosition="1" size="354,3" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="908,299" zPosition="1" size="354,3" />
+    <widget position="922,110" size="325,182" source="session.VideoPicture" render="Pig" zPosition="3" backgroundColor="background-pig" />
+    <widget position="910,75" size="350,30" source="session.CurrentService" render="Label" font="Regular; 20" transparent="1" valign="center" halign="left" noWrap="1" zPosition="5" backgroundColor="background" foregroundColor="selectedFG">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <panel name="template_background_full_black" />
+    <panel name="template_title_date" />
+    <panel name="template_name_red_o_blue" />
+  </screen>
+  <!-- RemoteControlCode -->
+  <screen name="RemoteControlCode" position="0,0" size="1280,720" title=" Position Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="template_background_725_trans" />
+    <panel name="template_setup_config" />
+    <panel name="template_title_date" />
+  </screen>
+  <!-- TaskListScreen -->
+  <screen name="TaskListScreen" position="0,0" size="1280,720" flags="wfNoBorder" title="Task list" backgroundColor="transparent">
+    <widget source="tasklist" render="Listbox" position="20,75" size="700,580" itemHeight="90" font="Regular; 20" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (5, 1), size = (690, 60), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text = 1), # name
+						MultiContentEntryText(pos = (5, 61), size = (150, 29), font=1, flags = RT_HALIGN_CENTER, text = 2), # state
+						MultiContentEntryProgress(pos = (160, 70), size = (400, 10), percent = -3), # progress
+						MultiContentEntryText(pos = (575, 61), size = (120, 29), font=1, flags = RT_HALIGN_CENTER, text = 4), # percentage
+					],
+				"fonts": [gFont("Regular", 19),gFont("Regular", 20)],
+				"itemHeight": 90
+				}
+			</convert>
+    </widget>
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_red.png" position="20,692" size="16,16" alphatest="blend" transparent="1" />
+    <widget name="key_red" position="49,687" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <panel name="template_title_date" />
+    <panel name="template_background_725_trans" />
+    <panel name="template_ok_exit" />
+  </screen>
+  <!--   Weather Location HD  -->
+  <screen name="WeatherLocationChoiceList" position="0,0" size="1280,720" title="Location list" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel text="WeatherLocationChoiceList" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget name="choicelist" position="20,75" size="700,580" itemHeight="30" font="Regular;20" selectionPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30.png" backgroundPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30_BG.png" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1" />
+    <panel name="template_date" />
+    <panel name="template_source_red_o_blue" />
+    <panel name="template_ok_exit" />
+    <panel name="template_background_725_trans" />
+  </screen>
+  <!-- Menu Horizental-->
+  <!--   <screen name="Animmain" position="0,0" size="1280,720" title="Mainmenu" flags="wfNoBorder" backgroundColor="transparent">
+    <widget source="label1" render="Label" position="33,560" size="200,100" font="Regular;22" halign="center" valign="center" zPosition="2" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget source="label2" render="Label" position="287,560" size="200,100" font="Regular;22" halign="center" valign="center" zPosition="2" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget source="label3" render="Label" position="540,560" size="200,100" font="Regular;24" halign="center" valign="center" zPosition="2" borderWidth="1" borderColor="grey" foregroundColor="white" backgroundColor="background" transparent="0" />
+    <widget source="label4" render="Label" position="793,560" size="200,100" font="Regular;22" halign="center" valign="center" zPosition="2" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget source="label5" render="Label" position="1045,560" size="200,100" font="Regular;22" halign="center" valign="center" zPosition="2" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="Title" position="40,480" size="1200,66" font="Regular; 42" halign="center" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="3" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Background/Background_Overlay.png" position="0,0" zPosition="-25" size="1280,720" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Background/Background_Center.png" position="0,52" zPosition="-20" size="1280,624" />
+    <panel name="template_date" />
+  </screen> -->
+  <!--   <screen name="Iconmain" position="0,0" size="1280,720" title="Mainmenu" flags="wfNoBorder" backgroundColor="transparent">
+    <widget source="label1" render="Label" position="25,560" size="200,100" font="Regular;22" halign="center" valign="center" zPosition="2" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget source="label1s" render="Label" position="25,560" size="200,100" font="Regular;24" borderWidth="1" borderColor="grey" halign="center" valign="center" zPosition="2" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="pixmap1" position="25,560" size="200,100" zPosition="1" transparent="1" alphatest="on" />
+    <widget source="label2" render="Label" position="230,560" size="200,100" font="Regular;22" halign="center" valign="center" zPosition="2" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget source="label2s" render="Label" position="230,560" size="200,100" font="Regular;24" borderWidth="1" borderColor="grey" halign="center" valign="center" zPosition="2" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="pixmap2" position="230,560" size="200,100" zPosition="1" transparent="1" alphatest="on" />
+    <widget source="label3" render="Label" position="435,560" size="200,100" font="Regular;22" halign="center" valign="center" zPosition="2" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget source="label3s" render="Label" position="435,560" size="200,100" font="Regular;24" borderWidth="1" borderColor="grey" halign="center" valign="center" zPosition="2" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="pixmap3" position="435,560" size="200,100" zPosition="1" transparent="1" alphatest="on" />
+    <widget source="label4" render="Label" position="645,560" size="200,100" font="Regular;22" halign="center" valign="center" zPosition="2" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget source="label4s" render="Label" position="645,560" size="200,100" font="Regular;24" borderWidth="1" borderColor="grey" halign="center" valign="center" zPosition="2" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="pixmap4" position="645,560" size="200,100" zPosition="1" transparent="1" alphatest="on" />
+    <widget source="label5" render="Label" position="850,560" size="200,100" font="Regular;22" halign="center" valign="center" zPosition="2" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget source="label5s" render="Label" position="850,560" size="200,100" font="Regular;24" borderWidth="1" borderColor="grey" halign="center" valign="center" zPosition="2" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="pixmap5" position="850,560" size="200,100" zPosition="1" transparent="1" alphatest="on" />
+    <widget source="label6" render="Label" position="1055,560" size="200,100" font="Regular;22" halign="center" valign="center" zPosition="2" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget source="label6s" render="Label" position="1055,560" size="200,100" font="Regular;24" borderWidth="1" borderColor="grey" halign="center" valign="center" zPosition="2" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="pixmap6" position="1055,560" size="200,100" zPosition="1" transparent="1" alphatest="on" />
+    <widget name="Title" position="40,480" size="1200,66" font="Regular; 42" halign="center" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="3" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Background/Background_Overlay.png" position="0,0" zPosition="-25" size="1280,720" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Background/Background_Center.png" position="0,52" zPosition="-20" size="1280,624" />
+    <panel name="template_date" />
+  </screen> -->
+  <!--Menu Horizental-->
+  <!-- BlueAccents-HDHD Setup -->
+  <screen name="BlueAccents_Config" position="0,0" size="1280,720" title="BlueAccents Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel text="/ Speichern" position="280,687" size="160,26" font="Regular; 20" halign="center" backgroundColor="black" transparent="1" valign="center" />
+    <eLabel text="Gelbe Taste Drücken, um die Skinparts auszuwählen" position="80,585" size="645,30" font="Regular; 24" halign="left" backgroundColor="black" transparent="1" valign="center" foregroundColor="yellow" />
+    <eLabel text="Drücken Sie Menü, um das Wetter einzustellen" position="80,625" size="645,30" font="Regular; 24" halign="left" backgroundColor="black" transparent="1" valign="center" foregroundColor="green" />
+    <eLabel text="BlueAccents-HD HD Config" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget name="config" position="20,75" size="700,500" itemHeight="30" font="Regular;20" selectionPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30.png" backgroundPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30_BG.png" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1" />
+    <widget name="Picture" position="775,410" size="455,250" alphatest="on" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="19,575" size="705,3" zPosition="10" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_red.png" position="10,692" size="16,16" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_green.png" position="255,692" size="16,16" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_yellow.png" position="500,692" size="16,16" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_yellow.png" position="50,590" size="16,16" alphatest="blend" transparent="1" />
+    <widget name="key_red" position="30,687" size="220,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <widget name="key_green" position="275,687" size="220,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <widget name="key_yellow" position="520,687" size="220,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <ePixmap position="35,627" size="40,25" zPosition="10" pixmap="BlueAccents-HD/buttons/menu.png" transparent="1" alphatest="blend" />
+    <panel name="template_date" />
+    <panel name="template_ok_exit" />
+    <panel name="template_VideoPicture_Large" />
+    <panel name="template_background_full_black" />
+    <panel name="template_Line_Vert_Big_725" />
+  </screen>
+  <!-- BlueAccents-HD SetupHD -->
+  <screen name="BlueAccentsScreens" position="0,0" size="1280,720" title="BlueAccents Setup" flags="wfNoBorder" backgroundColor="background">
+    <eLabel text="Configure BlueAccents-HD Skin" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget source="menu" render="Listbox" position="20,75" size="700,580" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" transparent="1">
+      <convert type="TemplatedMultiContent">{"template":
+   [
+    MultiContentEntryPixmapAlphaTest(pos = (5, 3), size = (30, 30), png = 2),
+    MultiContentEntryText(pos = (40, 2), size = (620, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),
+   ],
+   "fonts": [gFont("Regular", 24),gFont("Regular", 18)],
+   "itemHeight": 40
+     }</convert>
+    </widget>
+    <widget name="Picture" position="780,408" size="444,250" alphatest="on" />
+    <panel name="template_date" />
+    <panel name="template_source_red_green" />
+    <panel name="template_ok_exit" />
+    <panel name="template_VideoPicture_Large" />
+    <panel name="template_background_full_black" />
+    <panel name="template_Line_Vert_Big_725" />
+  </screen>
+  <!-- AtileHD_Config HD -->
+  <screen name="AtileHD_Config" position="center,center" size="800,420" backgroundColor="background20">
+    <eLabel text="BlueAccents-HD" position="10,4" size="350,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget source="global.CurrentTime" render="Label" position="450,4" size="240,44" font="Regular;32" halign="right" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1">
+      <convert type="ClockToText">Format:%a, %d.%m.%Y</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="705,3" size="94,44" font="Regular;32" halign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1">
+      <convert type="ClockToText">Format:%H:%M</convert>
+    </widget>
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="10,50" size="785,3" zPosition="10" />
+    <ePixmap pixmap="DEV/BlueAccents-HD_Setup.png" position="500,70" size="280,280" zPosition="1" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BlueAccentsHD/plugin.png" position="350,250" size="100,40" zPosition="1" alphatest="blend" transparent="1" />
+    <eLabel text="um Ihre Einstellungen vorzunehmen." position="10,290" size="480,40" font="Regular; 24" halign="left" backgroundColor="black" transparent="1" valign="center" foregroundColor="selectedFG" />
+    <eLabel text="Bitte rufen Sie das Plugin auf" position="10,250" size="480,40" font="Regular; 24" halign="left" backgroundColor="black" transparent="1" valign="center" foregroundColor="selectedFG" />
+    <eLabel text="Menü - Erweiterungen - BlueAccents-HD" position="10,80" size="480,60" font="Regular; 24" halign="left" backgroundColor="black" transparent="1" valign="center" foregroundColor="green" />
+    <ePixmap position="720,380" size="40,25" zPosition="10" pixmap="BlueAccents-HD/buttons/exit.png" transparent="1" alphatest="blend" />
+    <widget name="key_blue" position="40,380" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_blue.png" position="15,385" size="16,16" alphatest="blend" transparent="1" />
+  </screen>
+  <!--  AtileHD_About HD  -->
+  <screen name="AtileHD_About" position="0,0" size="1280,720" title="AtileHD_About" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel position="20,75" size="700,30" zPosition="2" font="Regular; 22" text="Einstellungen MSN-Wetter" transparent="1" backgroundColor="black" halign="left" valign="top" foregroundColor="selectedFG" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,105" zPosition="1" size="707,3" />
+    <eLabel text="*BlueAccents-HD* HD Skin for HDF Images by stein17" position="13,685" size="580,26" font="Regular; 20" align="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="1" halign="center" />
+    <eLabel position="20,120" size="700,210" zPosition="2" font="Regular; 22" text="Erweiterungen/Wetterinformationen/Menu, dann Grün Hinzufügen. Wenn ihr den Ort Eingegeben habt, ein mal runter auf Location-Code. Gelb für Code suchen, mit Grün (OK)bestätigen, wichtig wieder OK. Noch wichtiger mit Rot zurück, sonst müsst ihr wieder von vorne anfangen. Jetzt mit Exit beenden, Benutzer Oberfläche neustarten, eventuell kompletter Neustart.." transparent="1" backgroundColor="black" halign="left" valign="top" />
+    <eLabel position="20,450" size="700,210" zPosition="2" font="Regular; 22" text="Menu/ Einstellungen/ Bedienung und Oberfläche/ OSD, *2nd Infoleiste*  auf *2nd Infoleiste INFO* einstellen. Infotase mit Eventview belegen: Menu/ Einstellungen/ Bedienung und Oberfläche/ Hotkey-Einstellungen/Info Taste drücken,EPG auswählen, in EPG *Sendungs-Details anzeigen* auswählen.  Der Eintrag der vorhanden ist, durch klicken der OK Taste deaktivieren." transparent="1" backgroundColor="black" halign="left" valign="top" />
+    <eLabel position="20,380" size="700,55" zPosition="2" font="Regular; 21" text="Einstellungen 2te Infobar mit 2x Ok aufrufen, EventView durch Infotaste anzeigen lassen" transparent="1" backgroundColor="black" halign="left" valign="top" foregroundColor="selectedFG" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,375" zPosition="1" size="707,3" />
+    <eLabel text="BlueAccents-HD HD About" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="19,440" zPosition="10" size="705,3" />
+    <panel name="template_background_725_trans" />
+    <panel name="template_date" />
+  </screen>
+  <!-- HDF_DEV_TEAM_Screens_HD  -->
+  <!--######################################### -->
+  <!-- ********** HDF TOOLBOX ********** -->
+  <!-- HDF DownloadMenu HD -->
+<screen name="Hdf_Downloader" position="0,0" size="1280,720" title="Select your Download" backgroundColor="transparent" flags="wfNoBorder">
+    <widget source="Title" render="Label" position="30,6" size="900,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget name="downloadmenu" position="20,75" size="500,340" itemHeight="26" font="Regular;22" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" transparent="1" />
+    <widget source="introduction" render="Label" position="20,630" size="700,30" zPosition="10" font="Regular; 22" halign="center" valign="center" backgroundColor="background" transparent="1" />
+    <widget source="size" render="Label" position="615,116" size="100,30" zPosition="10" font="Regular;22" halign="left" valign="top" backgroundColor="background" transparent="1" />
+    <widget source="size2" render="Label" position="545,116" size="100,30" zPosition="10" font="Regular;22" halign="left" valign="top" backgroundColor="background" transparent="1" />
+    <widget source="description" render="Label" position="20,440" size="700,180" zPosition="10" font="Regular;20" halign="left" valign="top" backgroundColor="background" transparent="1" />
+    <widget source="description2" render="Label" position="545,166" size="150,30" zPosition="10" font="Regular;22" halign="left" valign="top" backgroundColor="background" transparent="1" />
+    <ePixmap name="1" position="844,415" size="24,24" pixmap="buttons/key_1.png" transparent="1" alphatest="blend" zPosition="1" />
+    <widget name="key_1" position="890,415" size="300,24" halign="left" font="Regular;22" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="2" />
+    <ePixmap name="2" position="844,445" size="24,24" pixmap="buttons/key_2.png" transparent="1" alphatest="blend" zPosition="1" />
+    <widget name="key_2" position="890,445" size="300,24" halign="left" font="Regular;22" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="2" />
+    <ePixmap name="3" position="844,475" size="24,24" pixmap="buttons/key_3.png" transparent="1" alphatest="blend" zPosition="1" />
+    <widget name="key_3" position="890,475" size="300,24" halign="left" font="Regular;22" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="2" />
+    <ePixmap name="4" position="844,505" size="24,24" pixmap="buttons/key_4.png" transparent="1" alphatest="blend" zPosition="1" />
+    <widget name="key_4" position="890,505" size="300,24" halign="left" font="Regular;22" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="2" />
+    <ePixmap name="5" position="844,535" size="24,24" pixmap="buttons/key_5.png" transparent="1" alphatest="blend" zPosition="1" />
+    <widget name="key_5" position="890,535" size="300,24" halign="left" font="Regular;22" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="2" />
+    <ePixmap name="6" position="844,565" size="24,24" pixmap="buttons/key_6.png" transparent="1" alphatest="blend" zPosition="1" />
+    <widget name="key_6" position="890,565" size="300,24" halign="left" font="Regular;22" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="2" />
+    <ePixmap name="7" position="844,595" size="24,24" pixmap="buttons/key_7.png" transparent="1" alphatest="blend" zPosition="1" />
+    <widget name="key_7" position="890,595" size="300,24" halign="left" font="Regular;22" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="2" />
+    <ePixmap name="0" position="844,625" size="24,24" pixmap="buttons/key_0.png" transparent="1" alphatest="blend" zPosition="1" />
+    <widget name="key_0" position="890,625" size="300,24" halign="left" font="Regular;22" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="2" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,430" zPosition="1" size="708,3" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,625" zPosition="1" size="708,3" />
+    <panel name="template_date" />
+    <panel name="template_VideoPicture_Large" />
+    <panel name="template_background_full_black" />
+    <panel name="template_Line_Vert_Big_725" />
+    <panel name="template_source_red_o_blue" />
+    <panel name="template_info_exit" />
+  </screen>
+  <!-- HDF Download File HD  -->
+  <screen name="downloadfile" position="center,center" size="1280,720" title="Download File" backgroundColor="transparent" flags="wfNoBorder">
+    <widget name="info" position="20,75" size="700,530" font="Regular;22" backgroundColor="background" halign="center" valign="center" transparent="1" />
+    <widget name="progress" position="20,620" size="550,30" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" />
+    <widget name="precent" position="590,610" size="120,50" font="Regular; 36" halign="center" valign="center" foregroundColor="yellow" backgroundColor="background" transparent="1" zPosition="6" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,605" zPosition="1" size="708,3" />
+    <panel name="template_background_725_trans" />
+    <panel name="template_title_date" />
+    <panel name="template_name_red_o_green" />
+  </screen>
+  <!-- HDF Download File class HD  -->
+  <screen name="XionHDF" position="0,0" size="1280,720" title="XionHDF Configuration" backgroundColor="transparent" flags="wfNoBorder">
+    <ePixmap position="1225,688" size="40,25" zPosition="10" pixmap="BlueAccents-HD/buttons/exit.png" transparent="1" alphatest="blend" />
+    <widget name="config" position="20,75" size="700,585" itemHeight="50" font="Regular;22" backgroundColor="background" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+    <widget name="helperimage" position="895,630" size="0,0" zPosition="1" backgroundColor="red" />
+    <widget source="help" render="Label" position="750,410" size="510,250" font="Regular; 20" backgroundColor="background" foregroundColor="white" halign="center" valign="top" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_red.png" position="15,692" size="16,16" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_green.png" position="210,692" size="16,16" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_yellow.png" position="405,692" size="16,16" alphatest="blend" transparent="1" />
+    <eLabel text="Cancel" position="35,687" size="170,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <eLabel text="Save" position="230,687" size="170,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <eLabel text="Reboot" position="425,687" size="170,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <panel name="template_VideoPicture_Large" />
+    <panel name="template_background_full_black" />
+    <panel name="template_Line_Vert_Big_725" />
+    <panel name="template_title_date" />
+  </screen>
+  <!-- HDF Toolbox HD -->
+  <screen name="Fantastic" position="0,0" size="1280,720" title="HDF Toolbox" backgroundColor="transparent" flags="wfNoBorder">
+    <widget name="menu" itemHeight="34" font="Regular; 23" position="17,173" size="410,490"  backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/menu/Icon_BG.png" position="389,56" zPosition="2" size="102,102" alphatest="blend" />
+    <ePixmap pixmap="BlueAccents-HD/menu/Menu_HDF_Toolbox.png" position="390,57" size="100,100" zPosition="2" alphatest="blend" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Background/Background_Overlay.png" position="0,0" zPosition="-25" size="1280,720" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Background/Background_Center.png" position="0,144" zPosition="-15" size="445,532" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Vert_Big_2.png" position="425,52" zPosition="1" size="20,624" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="16,143" zPosition="1" size="410,3" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,661" zPosition="1" size="408,3" />
+    <eLabel name="" position="0,52" zPosition="-20" size="445,93" backgroundColor="background" />
+    <panel name="template_title_date" />
+  </screen>
+  <!-- ********** HDF TOOLBOX ********** -->
+  <!--HDF About HD -->
+  <screen name="About" position="0,0" size="1280,720" title="About" flags="wfNoBorder" backgroundColor="transparent">
+    <widget backgroundColor="background" font="Regular;24" foregroundColor="white" position="20,74" render="Label" size="700,30" source="EnigmaVersion" transparent="1" />
+    <widget backgroundColor="background" font="Regular;24" foregroundColor="white" position="20,110" render="Label" size="700,30" source="ImageVersion" transparent="1" />
+    <widget backgroundColor="background" font="Regular;24" foregroundColor="white" position="20,150" render="Label" size="700,30" source="FPVersion" transparent="1" />
+    <widget backgroundColor="background" font="Regular;24" foregroundColor="white" position="20,190" render="Label" size="700,30" source="TunerHeader" transparent="1" />
+    <widget backgroundColor="background" font="Regular;24" foregroundColor="white" position="20,230" render="Label" size="700,30" source="Tuner0" transparent="1" />
+    <widget backgroundColor="background" font="Regular;24" foregroundColor="white" position="20,270" render="Label" size="700,30" source="Tuner1" transparent="1" />
+    <widget backgroundColor="background" font="Regular;24" foregroundColor="white" position="20,310" render="Label" size="700,30" source="Tuner2" transparent="1" />
+    <widget backgroundColor="background" font="Regular;24" foregroundColor="white" position="20,350" render="Label" size="700,30" source="Tuner3" transparent="1" />
+    <eLabel backgroundColor="background" font="Regular;24" foregroundColor="white" position="20,390" size="700,30" text="Support for Image: " transparent="1" />
+    <eLabel backgroundColor="background" font="Regular;24" foregroundColor="white" position="20,430" size="700,30" text="www.hdfreaks.cc" transparent="1" />
+    <widget backgroundColor="background" font="Regular;24" foregroundColor="white" position="20,470" render="Label" size="700,30" source="HDDHeader" transparent="1" />
+    <widget backgroundColor="background" font="Regular;24" foregroundColor="white" position="20,510" render="Label" size="700,68" source="hddA" transparent="1" />
+    <eLabel text="OPEN SOURCE" position="20,590" size="613,30" font="Console; 24" transparent="1" zPosition="1" backgroundColor="background" foregroundColor="white" />
+    <eLabel text="*BlueAccents-HD* HD Skin for HDF Images by stein17" position="20,630" size="700,30" font="Console; 24" align="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="1" halign="left" />
+    <panel name="template_title_date" />
+    <panel name="template_background_725_trans" />
+  </screen>
+  <!-- HDF AboutOE HD -->
+<screen name="AboutOE" position="0,0" size="1280,720" title="Image Information" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel text="Image Information" position="30,6" size="340,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <eLabel text="Vom openHDF-Imageteam" position="390,6" size="560,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget name="menu" position="20,200" size="700,460" itemHeight="50" font="Regular; 24" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" transparent="1" />
+    <widget name="AboutScrollLabel" render="Listbox" position="20,75" size="700,580" font="Regular;22" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" transparent="1" />
+    <eLabel text="https://github.com/openhdf" position="450,688" size="250,22" font="Regular; 18" backgroundColor="background" foregroundColor="foreground" halign="right" transparent="1" zPosition="1" />
+    <widget source="lab2" render="Label" position="760,640" size="510,34" font="Regular;24" halign="center" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="1" transparent="1" zPosition="2" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_red.png" position="20,692" size="16,16" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_green.png" position="226,692" size="16,16" alphatest="blend" transparent="1" />
+    <eLabel text="Close" position="49,687" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <widget name="key_green" position="255,687" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <eLabel text="*BlueAccents-HD* HD Skin for HDF Images by stein17" position="706,693" size="455,20" font="Console; 15" align="left" valign="center" foregroundColor="scrollbarcolor" backgroundColor="background" transparent="1" zPosition="1" halign="center" />
+    <panel name="template_date" />
+    <panel name="template_info_exit" />
+    <panel name="template_background_725_trans" />
+  </screen>
+
+  <screen name="ChoiceBox" position="0,0" size="1280,720" title="Input" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="text" position="20,130" size="700,110" font="Regular;22" halign="center" transparent="1" zPosition="10" foregroundColor="selectedFG" backgroundColor="background" />
+    <widget name="list" position="20,250" size="700,410" itemHeight="35" font="Regular;22" selectionPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_35.png" backgroundPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_35_BG.png" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1" />
+    <widget source="windowtitle" render="Label" position="20,75" size="700,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <panel name="template_title_date" />
+    <panel name="template_menu_ok_exit" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="19,120" zPosition="10" size="705,3" />
+    <panel name="template_background_725_trans" />
+  </screen>
+  <screen name="Console" position="0,0" size="1280,720" title="Command execution..." flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="text" position="20,75" size="700,580" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" font="Regular; 22" transparent="1" />
+    <panel name="template_exit" />
+    <panel name="template_title_date" />
+    <panel name="template_background_725_trans" />
+    <panel name="template_source_red_o_yellow" />
+  </screen>
+  <!-- HDF HotkeySetup HD  -->
+  <screen name="HotkeySetup" position="0,0" size="1280,720" title="Tasteneinstellungen" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="list" position="20,75" size="700,395" itemHeight="30" font="Regular;20" selectionPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30.png" backgroundPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30_BG.png" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1" />
+    <widget name="choosen" position="20,475" size="700,50" itemHeight="30" font="Regular;20" selectionPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30.png" backgroundPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30_BG.png" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1" foregroundColor="bernstein" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,470" zPosition="1" size="707,3" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,525" zPosition="1" size="707,3" />
+    <widget name="description" position="20,530" size="700,130" font="Regular; 20" halign="center" valign="center" transparent="1" foregroundColor="selectedFG" backgroundColor="bluelabeltranzp" />
+    <panel name="template_ok_exit" />
+    <panel name="template_title_date" />
+    <panel name="template_background_725_trans" />
+    <panel name="template_source_red_green_blue" />
+  </screen>
+  <!-- HDF ButtonSetupSelect HD  -->
+  <screen name="ButtonSetupSelect" position="0,0" size="1280,720" title="Tasteneinstellungen" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="list" position="20,75" size="700,395" itemHeight="30" font="Regular;20" selectionPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30.png" backgroundPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30_BG.png" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1" />
+    <widget name="choosen" position="20,475" size="700,50" itemHeight="30" font="Regular;20" selectionPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30.png" backgroundPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30_BG.png" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1" foregroundColor="bernstein" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,470" zPosition="1" size="707,3" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,525" zPosition="1" size="707,3" />
+    <widget name="description" position="20,530" size="700,130" font="Regular; 20" halign="center" valign="center" transparent="1" foregroundColor="selectedFG" backgroundColor="bluelabeltranzp" />
+    <panel name="template_title_date" />
+    <panel name="template_name_red_green_blue" />
+    <panel name="template_ok_exit" />
+    <panel name="template_background_725_trans" />
+  </screen>
+  <!-- ********** MultiBoot ********** -->
+  <!-- MultiBootWizard -->
+  <screen name="MultiBootWizard" position="0,0" size="1280,720" flags="wfNoBorder" title="MultiBoot Manager" backgroundColor="transparent">
+    <eLabel text="Manage your images in the multiboot" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget source="description" render="Label" position="20,75" size="700,70" itemHeight="30" font="Regular;20" selectionPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30.png" backgroundPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30_BG.png" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1" />
+    <widget name="config" position="20,220" size="700,440" zPosition="1" transparent="1" alphatest="blend" font="Regular; 22" />
+    <widget source="options" render="Label" position="20,150" size="700,60" font="Regular; 22" foregroundColor="green" halign="left" backgroundColor="background" valign="center" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,145" zPosition="1" size="707,3" />
+    <panel name="template_background_725_trans" />
+    <panel name="template_date" />
+    <panel name="template_source_red_green" />
+  </screen>
+  <!-- Multiboot Selector -->
+  <screen name="MultiBootSelector" position="0,0" size="1280,720" flags="wfNoBorder" title="Multiboot Image Selector" backgroundColor="transparent">
+    <widget source="description" render="Label" position="20,75" size="700,110" itemHeight="30" font="Regular;20" selectionPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30.png" backgroundPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30_BG.png" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1" />
+    <widget name="config" position="20,310" size="700,350" zPosition="1" transparent="1" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" font="Regular; 22" />
+    <widget source="options" render="Label" position="20,190" size="700,110" font="Regular; 22" foregroundColor="green" halign="center" backgroundColor="background" valign="center" transparent="1" />
+    <panel name="template_title_date" />
+    <panel name="template_source_red_green" />
+    <panel name="template_background_725_trans" />
+  </screen>
+  <!-- MultiBoot StartupOPT -->
+  <screen name="MultiBootStartupOPT" position="0,0" size="1280,720" backgroundColor="transparent" title="MultiBoot STARTUP Selector" flags="wfNoBorder" zPosition="9">
+    <widget source="config" render="Label" position="20,75" size="700,36" itemHeight="40" valign="center" halign="center" font="Regular; 28" enableWrapAround="1" transparent="1" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" />
+    <eLabel text="Press left/right to select Image" backgroundColor="background" font="Regular; 22" foregroundColor="selectedFG" halign="left" position="80,120" size="640,29" transparent="1" zPosition="3" />
+    <eLabel text="Press up/down to select Bootoption (Standard/Experimental)" backgroundColor="background" font="Regular; 22" foregroundColor="selectedFG" halign="left" position="80,240" size="640,29" transparent="1" zPosition="3" />
+    <widget source="options" render="Label" position="20,160" size="700,36" halign="center" valign="center" font="Regular; 28" backgroundColor="white" foregroundColor="black" transparent="1" />
+    <widget name="description" position="20,280" size="700,50" halign="center" valign="center" font="Regular; 20" backgroundColor="background" foregroundColor="green" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,275" zPosition="1" size="707,3" />
+    <ePixmap position="20,122" size="40,25" zPosition="10" pixmap="BlueAccents-HD/buttons/key_leftright.png" transparent="1" alphatest="blend" />
+    <ePixmap position="20,242" size="40,25" zPosition="10" pixmap="BlueAccents-HD/buttons/key_updown.png" transparent="1" alphatest="blend" />
+    <ePixmap position="1225,688" size="40,25" zPosition="10" pixmap="BlueAccents-HD/buttons/info.png" transparent="1" alphatest="blend" />
+    <widget name="cancel" position="0,0" size="0,0" />
+    <widget name="ok" position="0,0" size="0,0" />
+    <panel name="template_title_date" />
+    <panel name="template_source_red_o_yellow" />
+    <panel name="template_background_725_trans" />
+  </screen>
+  <!-- MultiBoot Startup -->
+  <screen name="MultiBootStartup" position="center,200" size="700,265" title="" backgroundColor="background">
+    <eLabel text="MultiBoot STARTUP Selector" position="10,10" size="550,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <eLabel text="Press left/right to select Image" backgroundColor="white" font="Regular; 22" foregroundColor="black" halign="center" position="10,175" size="580,40" transparent="0" zPosition="3" />
+    <widget source="config" render="Label" position="10,75" size="680,90" itemHeight="30" font="Regular;20" selectionPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30.png" backgroundPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30_BG.png" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_red.png" position="20,235" size="16,16" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_green.png" position="226,235" size="16,16" alphatest="blend" transparent="1" />
+    <widget source="key_red" render="Label" position="49,230" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <widget source="key_green" render="Label" position="255,230" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_leftright.png" position="603,182" size="40,25" zPosition="10" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- MultiBoot StartupDS -->
+  <screen name="MultiBootStartupDS" position="center,200" size="700,265" title="" backgroundColor="background">
+    <eLabel text="MultiBoot STARTUP Selector" position="10,10" size="550,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <eLabel text="Press left/right to select Image" backgroundColor="white" font="Regular; 22" foregroundColor="black" halign="center" position="10,165" size="580,40" transparent="0" zPosition="3" />
+    <widget source="config" render="Label" position="10,65" size="680,90" itemHeight="30" font="Regular;20" selectionPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30.png" backgroundPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30_BG.png" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_red.png" position="20,235" size="16,16" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_green.png" position="226,235" size="16,16" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_yellow.png" position="433,235" size="16,16" alphatest="blend" transparent="1" />
+    <widget source="key_red" render="Label" position="49,230" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <widget source="key_green" render="Label" position="255,230" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <widget source="key_yellow" render="Label" position="462,230" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_leftright.png" position="603,172" size="40,25" zPosition="10" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- HDF Image Backup HD -->
+  <screen name="ImageBackup" position="0,0" size="1280,720" title="Image Backup" flags="wfNoBorder" backgroundColor="transparent">
+    <widget source="Title" render="Label" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget name="info-hdd" position="20,75" zPosition="1" size="700,150" font="Regular;22" halign="left" valign="top" transparent="1" backgroundColor="background" />
+    <widget name="info-usb" position="20,235" zPosition="1" size="700,275" font="Regular;22" halign="left" valign="top" transparent="1" backgroundColor="background" />
+    <widget name="info-multi" position="20,520" zPosition="1" size="700,150" font="Regular;22" halign="left" valign="top" transparent="1" backgroundColor="background" />
+    <panel name="template_exit" />
+    <panel name="template_background_725_trans" />
+    <panel name="template_date" />
+    <panel name="template_name_red_o_blue" />
+  </screen>
+<!--   <screen name="ImageBackup" position="0,0" size="1280,720" title="Image Backup" flags="wfNoBorder" backgroundColor="transparent">
+    <widget source="Title" render="Label" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget source="options" render="Label" position="20,75" zPosition="1" size="700,440" font="Regular;20" halign="left" valign="top" transparent="1" />
+    <widget source="description" render="Label" position="20,520" zPosition="1" size="700,140" font="Regular;20" halign="left" valign="top" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="18,515" zPosition="1" size="706,3" />
+    <widget name="config" render="Label" position="20,75" size="700,440" font="Regular;20" halign="left" valign="top" zPosition="1" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" transparent="1" />
+    <panel name="template_date" />
+    <panel name="template_source_red_green" />
+    <panel name="template_exit" />
+    <panel name="template_background_725_trans" />
+  </screen> -->
+  <!-- ********** Flash Online ********** -->
+  <!-- HDF FlashOnline HD -->
+  <screen name="FlashOnline" position="center,center" size="1280,720" title="Flash Online" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="list" position="20,75" zPosition="1" size="700,540" font="Regular;20" halign="left" valign="top" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" transparent="1" />
+    <widget name="description" position="20,630" zPosition="1" size="700,30" font="Regular;20" halign="left" valign="top" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,625" zPosition="1" size="707,3" />
+    <panel name="template_background_725_trans" />
+    <panel name="template_title_date" />
+    <panel name="template_source_red_o_blue" />
+    <panel name="template_ok_exit" />
+  </screen>
+  <!-- HDF doFlashImage HD  -->
+  <screen name="doFlashImage" position="center,center" size="1280,720" title="doFlashImage" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel text="Flash On the fly (select a image)" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget name="imageList" position="20,75" zPosition="1" size="700,580" font="Regular;22" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" transparent="1" />
+    <panel name="template_date" />
+    <panel name="template_name_red_o_blue" />
+    <panel name="template_ok_exit" />
+    <panel name="template_background_725_trans" />
+  </screen>
+  <!-- ********** Flash Image ********** -->
+  <screen name="FlashImage" position="0,0" size="1280,720" title="FlashImage" flags="wfNoBorder" backgroundColor="background">
+    <widget name="header" position="20,75" size="700,30" font="Regular;24" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="1" />
+    <widget name="info" position="20,120" size="700,540" itemHeight="30" font="Regular;20" selectionPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30.png" backgroundPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30_BG.png" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1" />
+    <widget name="progress" position="20,560" size="700,40" font="Regular; 20" borderWidth="2" borderColor="white" foregroundColor="selectedFG" halign="left" backgroundColor="background" valign="center" transparent="1" />
+    <panel name="template_background_725_trans" />
+    <panel name="template_title_date" />
+    <panel name="template_ok_exit" />
+    <panel name="template_name_red_o_blue" />
+  </screen>
+  <!-- HDF SoftwareUpdateChanges HD  -->
+  <screen name="SoftwareUpdateChanges" position="0,0" size="1280,720" title="About" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="text" position="20,75" size="700,550" font="Regular;18" zPosition="3" transparent="1" />
+    <widget source="message" render="Label" position="20,630" size="700,30" font="Regular; 22" halign="center" transparent="1" zPosition="1" foregroundColor="selectedFG" />
+    <eLabel text="https://github.com/openhdf" position="830,690" size="380,22" font="Regular; 18" backgroundColor="background" foregroundColor="foreground" halign="center" transparent="1" zPosition="1" />
+    <panel name="template_background_725_trans" />
+    <panel name="template_title_date" />
+    <panel name="template_source_red_o_yellow" />
+    <panel name="template_exit" />
+  </screen>
+  <!-- HDF DeviceBrowser HD  -->
+  <screen name="DeviceBrowser" position="center,center" size="1280,720" title="Please select target medium" flags="wfNoBorder" backgroundColor="transparent">
+    <widget source="message" render="Label" position="20,480" size="700,180" font="Regular;16" transparent="1" />
+    <widget name="filelist" position="20,75" size="700,400" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" transparent="1" />
+    <eLabel text="https://github.com/openhdf" position="800,690" size="380,22" font="Regular; 18" backgroundColor="background" foregroundColor="foreground" halign="center" transparent="1" zPosition="1" />
+    <panel name="template_title_date" />
+    <panel name="template_name_red_green" />
+    <panel name="template_source_red_green" />
+    <panel name="template_ok_exit" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="19,475" zPosition="10" size="705,3" />
+    <panel name="template_background_725_trans" />
+  </screen>
+  <screen name="StreamingClientsInfo" position="0,0" size="1280,720" title="Streaming clients info" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="ScrollLabel" position="20,75" size="700,40" font="Regular;24" backgroundColor="background" transparent="1" zPosition="1" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,115" zPosition="1" size="707,3" />
+    <widget name="ScrollLabel2" position="20,120" size="700,540" font="Regular;20" backgroundColor="background" transparent="1" zPosition="1" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="19,115" zPosition="10" size="705,3" />
+    <panel name="template_background_725_trans" />
+    <panel name="template_title_date" />
+    <panel name="template_name_red_o_blue" />
+  </screen>
+  <screen name="SystemMemoryInfo" position="0,0" size="1280,720" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
+    <widget source="lab1" render="Label" position="20,75" size="700,30" font="Regular;24" zPosition="2" foregroundColor="selectedFG" backgroundColor="background" transparent="1" />
+    <widget source="lab2" render="Label" position="20,110" size="700,30" font="Regular; 22" zPosition="2" foregroundColor="selectedFG" backgroundColor="background" transparent="1" />
+    <widget name="AboutScrollLabel" position="20,150" size="700,510" font="Regular; 24" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,105" zPosition="1" size="707,3" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,140" zPosition="1" size="707,3" />
+    <panel name="template_background_725_trans" />
+    <panel name="template_title_date" />
+    <panel name="template_ok_exit" />
+  </screen>
+  <screen name="SystemNetworkInfo" position="0,0" size="1280,720" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="AboutScrollLabel" position="20,75" size="700,330" valign="left" font="Regular; 22" transparent="1" />
+    <widget source="IFtext" render="Label" position="20,450" size="140,30" zPosition="10" font="Regular; 22" halign="left" transparent="1" />
+    <widget source="IF" render="Label" position="20,420" size="700,30" zPosition="10" font="Regular; 22" halign="left" transparent="1" />
+    <widget source="Statustext" render="Label" position="20,510" size="140,30" zPosition="10" font="Regular; 22" halign="left" transparent="1" />
+    <widget name="statuspic" pixmaps="BlueAccents-HD/icons/lock_on.png,BlueAccents-HD/icons/lock_error.png" position="190,510" zPosition="10" size="32,30" transparent="1" alphatest="on" />
+    <widget source="LabelBSSID" render="Label" position="20,480" size="200,30" valign="center" font="Regular;20" transparent="1" />
+    <widget source="BSSID" render="Label" position="240,480" size="490,30" valign="center" font="Regular;20" transparent="1" />
+    <widget source="LabelESSID" render="Label" position="240,450" size="200,30" valign="center" font="Regular;20" transparent="1" />
+    <widget source="ESSID" render="Label" position="240,510" size="490,30" valign="center" font="Regular;20" transparent="1" />
+    <widget source="LabelQuality" render="Label" position="20,540" size="200,30" valign="center" font="Regular;20" transparent="1" />
+    <widget source="quality" render="Label" position="240,540" size="490,30" valign="center" font="Regular;20" transparent="1" />
+    <widget source="LabelSignal" render="Label" position="20,570" size="200,30" valign="center" font="Regular;20" transparent="1" />
+    <widget source="signal" render="Label" position="240,570" size="490,30" valign="center" font="Regular;20" transparent="1" />
+    <widget source="LabelBitrate" render="Label" position="20,600" size="200,30" valign="center" font="Regular;20" transparent="1" />
+    <widget source="bitrate" render="Label" position="240,600" size="490,30" valign="center" font="Regular;20" transparent="1" />
+    <widget source="LabelEnc" render="Label" position="20,630" size="200,30" valign="center" font="Regular;20" transparent="1" />
+    <widget source="enc" render="Label" position="240,630" size="490,30" valign="center" font="Regular;20" transparent="1" />
+    <panel name="template_background_725_trans" />
+    <panel name="template_title_date" />
+    <panel name="template_info_ok_exit" />
+  </screen>
+  <screen name="Devices" position="0,0" size="1280,720" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
+    <widget source="TunerHeader" render="Label" position="20,75" size="700,30" font="Regular;20" zPosition="1" transparent="1" />
+    <widget source="nims" render="Label" position="20,110" size="700,160" font="Regular; 22" zPosition="1" enableWrapAround="0" transparent="1" />
+    <widget source="HDDHeader" render="Label" position="20,275" size="700,30" font="Regular; 22" zPosition="1" foregroundColor="selectedFG" transparent="1" />
+    <widget source="hdd" render="Label" position="20,310" size="700,160" font="Regular; 22" transparent="1" zPosition="1" enableWrapAround="0" />
+    <widget source="MountsHeader" render="Label" position="20,475" size="700,30" font="Regular;20" zPosition="1" foregroundColor="selectedFG" transparent="1" />
+    <widget source="mounts" render="Label" position="20,510" size="700,150" font="Regular; 22" transparent="1" zPosition="1" enableWrapAround="0" />
+    <!-- <widget name="allinonedevices" position="20,75" size="700,590" itemHeight="30" font="Regular;20" selectionPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30.png" backgroundPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_30_BG.png" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1" /> -->
+    <panel name="template_background_725_trans" />
+    <panel name="template_title_date" />
+    <panel name="template_ok_exit" />
+  </screen>
+  <!-- Software Manager HD -->
+  <!--HDF Update Plugin Menu HD -->
+  <screen name="UpdatePluginMenu" position="0,0" size="1280,720" title="Update Plugin Menu" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="hdfStatusPic" position="190,540" size="100,118" backgroundColor="background" transparent="1" alphatest="on" />
+    <widget source="menu" render="Listbox" position="20,75" size="700,460" selectionPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_40.png" backgroundPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_40_BG.png" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (15, 5), size = (700, 34), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
+					],
+				"fonts": [gFont("Regular",24)],
+				"itemHeight": 40
+				}
+			</convert>
+    </widget>
+    <widget source="menu" render="Listbox" position="750,405" size="510,200" zPosition="3" selectionDisabled="1" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (0, 0), size = (475, 240), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 2 is the Description,
+					],
+				"fonts": [gFont("Regular",20)],
+				"itemHeight": 200
+				}
+			</convert>
+    </widget>
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_red.png" position="20,692" size="16,16" alphatest="blend" transparent="1" />
+    <widget source="key_red" render="Label" position="49,687" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <eLabel text="Feed-Status" position="28,549" size="150,25" zPosition="1" font="Regular;22" halign="center" backgroundColor="background" transparent="1" foregroundColor="selectedFG" />
+    <eLabel text="Its recommend to create a Fullbackup before update!" position="765,610" size="485,22" zPosition="1" font="Regular; 18" halign="left" backgroundColor="background" transparent="1" foregroundColor="red" />
+    <eLabel text="A full backup is recommended before the update!" position="765,635" size="485,22" zPosition="1" font="Regular; 18" halign="left" backgroundColor="background" transparent="1" foregroundColor="yellow" />
+    <eLabel text="Update recommend" position="302,620" size="396,25" zPosition="1" font="Regular;20" halign="left" foregroundColor="black" backgroundColor="green" transparent="0" />
+    <eLabel text="No Update!" position="302,550" size="396,25" zPosition="1" font="Regular;20" foregroundColor="white" halign="left" backgroundColor="red" transparent="0" />
+    <eLabel text="update at your own risk!" position="302,585" size="396,25" zPosition="1" font="Regular;18" halign="left" foregroundColor="black" backgroundColor="yellow" transparent="0" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="747,605" zPosition="1" size="515,3" />
+    <panel name="template_menu_exit" />
+    <panel name="template_title_date" />
+    <panel name="template_VideoPicture_Large" />
+    <panel name="template_background_full_black" />
+    <panel name="template_Line_Vert_Big_725" />
+  </screen>
+  <!--HDF Plugin browser HD -->
+  <screen name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel text="Plugin browser" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget name="list" position="20,75" size="700,580" itemHeight="50" font="Regular;24" selectionPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_50.png" backgroundPixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/selektor720_50_BG.png" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_red.png" position="10,692" size="16,16" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_green.png" position="255,692" size="16,16" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_blue.png" position="500,692" size="16,16" alphatest="blend" transparent="1" />
+    <eLabel text="Remove Plugins" position="30,687" size="220,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <eLabel text="Download Plugins" position="275,687" size="220,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <eLabel text="Lock Plugins" position="520,687" size="220,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <panel name="template_date" />
+    <panel name="template_menu_ok_exit" />
+    <panel name="template_background_725_trans" />
+  </screen>
+  <!--HDF Softcam Cardserver Manager HD -->
+  <screen name="ScSelection" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" title="Softcam Cardserver Manager">
+    <widget name="entries" position="20,270" size="700,390" itemHeight="26" font="Regular;22" enableWrapAround="1" backgroundColor="background" transparent="1" />
+    <eLabel font="Regular; 20" halign="left" valign="top" position="20,75" size="90,30" text="ECM:" zPosition="2" transparent="1" backgroundColor="background" />
+    <widget source="session.CurrentService" render="Label" position="90,75" size="630,60" transparent="1" zPosition="2" font="Regular; 20" valign="top" halign="left" noWrap="1" backgroundColor="background">
+      <convert type="CryptoInfo">VerboseInfo</convert>
+    </widget>
+    <eLabel font="Regular; 20" halign="left" valign="top" position="20,140" size="90,30" text="Channel:" zPosition="2" transparent="1" backgroundColor="background" />
+    <widget source="session.CurrentService" render="Label" position="110,140" size="600,30" transparent="1" zPosition="2" font="Regular; 20" valign="top" halign="left" backgroundColor="background">
+      <convert type="ServiceName">All</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="20,230" size="700,30" transparent="1" zPosition="2" font="Regular; 20" valign="top" halign="left" noWrap="1" backgroundColor="background">
+      <convert type="XionHDFExtraInfo">CryptoInfo</convert>
+    </widget>
+    <eLabel font="Regular; 20" halign="left" valign="top" position="20,180" size="90,30" text="RES:" zPosition="2" transparent="1" backgroundColor="background" />
+    <widget source="session.CurrentService" render="Label" zPosition="2" position="110,180" size="80,30" halign="left" valign="top" font="Regular; 20" transparent="1" backgroundColor="background">
+      <convert type="XionHDFServiceInfo">VideoWidth</convert>
+    </widget>
+    <eLabel text="x" zPosition="2" position="190,180" size="30,30" halign="center" valign="top" font="Regular; 20" transparent="1" backgroundColor="background" />
+    <widget source="session.CurrentService" render="Label" zPosition="2" position="220,180" size="80,30" halign="left" valign="top" font="Regular; 20" transparent="1" backgroundColor="background">
+      <convert type="XionHDFServiceInfo">VideoHeight</convert>
+    </widget>
+    <panel name="template_background_725_trans" />
+    <panel name="template_title_date" />
+    <panel name="template_ok_exit" />
+    <panel name="template_source_red_o_blue" />
+  </screen>
+  <!--HDF CrashlogAutoSubmitConfiguration -->
+  <screen name="CrashlogAutoSubmitConfiguration" position="center,center" size="1280,720" title="CrashlogAutoSubmit settings" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="config" position="20,75" size="700,550" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget source="status" render="Label" position="20,630" size="700,30" font="Regular;20" transparent="1" backgroundColor="background" halign="left" zPosition="10" />
+    <widget name="HelpWindow" position="120,470" size="1,1" zPosition="10" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,625" zPosition="1" size="707,3" />
+    <panel name="template_background_725_trans" />
+    <panel name="template_title_date" />
+    <panel name="template_ok_exit" />
+    <panel name="template_source_red_o_blue" />
+  </screen>
+  <!--HDF CrashlogReportConfiguration -->
+  <screen name="CrashlogReportConfiguration" position="center,center" size="1280,720" title="CrashlogReport Setting" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="config" position="20,75" size="700,550" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget source="status" render="Label" position="20,630" size="700,30" font="Regular;20" transparent="1" backgroundColor="background" halign="left" />
+    <widget name="HelpWindow" position="180,705" size="2,2" zPosition="10" />
+    <ePixmap position="1125,688" size="40,25" zPosition="10" pixmap="BlueAccents-HD/buttons/text.png" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,625" zPosition="1" size="707,3" />
+    <panel name="template_background_725_trans" />
+    <panel name="template_title_date" />
+    <panel name="template_source_red_o_blue" />
+    <panel name="template_ok_exit" />
+  </screen>
+  <!--HDF HddMount HD -->
+  <screen name="HddMount" flags="wfNoBorder" position="0,0" size="1280,720" title="Hard Drive Mount" backgroundColor="transparent">
+    <eLabel text="Hard Drive Setup" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget source="menu" render="Listbox" position="20,120" size="700,540" transparent="1" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder">
+      <convert type="TemplatedMultiContent">
+					{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),
+					MultiContentEntryText(pos = (70, 3), size = (430, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (515, 3), size = (135, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+					],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 50
+				}</convert>
+    </widget>
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="19,115" zPosition="10" size="705,3" />
+    <panel name="template_background_725_trans" />
+    <panel name="template_date" />
+    <panel name="template_source_red_o_blue" />
+    <panel name="template_ok_exit" />
+  </screen>
+  <!--HDF HddPartitions HD -->
+  <screen name="HddPartitions" flags="wfNoBorder" position="0,0" size="1280,720" title="Hard Drive Partitions" backgroundColor="transparent">
+    <widget name="label_disk" position="20,75" size="700,40" font="Regular;24" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="1" />
+    <eLabel text="Hard Drive Partitions" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget source="menu" render="Listbox" position="20,120" size="700,540" transparent="1" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder">
+      <convert type="TemplatedMultiContent">
+	                {"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (5, 7), size = (48, 48), png = 0),
+					MultiContentEntryText(pos = (70, 1), size = (630, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (70, 25), size = (630, 38), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+					],
+					"fonts": [gFont("Regular", 22), gFont("Regular", 20)],
+					"itemHeight": 50
+				}</convert>
+    </widget>
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="19,115" zPosition="10" size="705,3" />
+    <panel name="template_background_725_trans" />
+    <panel name="template_date" />
+    <panel name="template_source_red_o_blue" />
+    <panel name="template_ok_exit" />
+  </screen>
+  <!--HDF HddSetup HD -->
+  <screen name="HddSetup" flags="wfNoBorder" position="0,0" size="1280,720" title="Hard Drive Setup" backgroundColor="transparent">
+    <eLabel text="Hard Drive Setup" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget source="menu" render="Listbox" position="20,120" size="700,540" transparent="1" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder">
+      <convert type="TemplatedMultiContent">
+					{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),
+					MultiContentEntryText(pos = (70, 3), size = (430, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (515, 3), size = (135, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+					],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 50
+				}</convert>
+    </widget>
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="19,115" zPosition="10" size="705,3" />
+    <panel name="template_background_725_trans" />
+    <panel name="template_date" />
+    <panel name="template_source_red_o_blue" />
+    <panel name="template_ok_exit" />
+  </screen>
+  <!--HDF HddFastRemove HD -->
+  <screen name="HddFastRemove" position="center,center" size="1280,720" title="Hard Drive Fast Umount" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel text="HddFastRemove" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget source="menu" render="Listbox" position="20,120" size="700,540" transparent="1" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder">
+      <convert type="TemplatedMultiContent">
+					{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),
+					MultiContentEntryText(pos = (65, 3), size = (190, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (65, 27), size = (190, 38), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+					],
+					"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
+					"itemHeight": 50
+				}</convert>
+    </widget>
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="19,115" zPosition="10" size="705,3" />
+    <panel name="template_background_725_trans" />
+    <panel name="template_date" />
+    <panel name="template_source_red_o_blue" />
+    <panel name="template_ok_exit" />
+  </screen>
+  <screen name="UserInterfacePositioner" position="0,0" size="1280,720" title="UserInterfacePositioner" flags="wfNoBorder" backgroundColor="background">
+    <ePixmap position="center,center" zPosition="-10" size="1280,720" pixmap="BlueAccents-HD/menu/Testbild.png" />
+    <eLabel backgroundColor="black" font="Regular; 27" halign="center" position="310,45" size="653,62" text="Die roten Winkel genau in den Ecken des TV-Bildschirms positionieren" valign="center" foregroundColor="red" />
+    <eLabel backgroundColor="black" font="Regular; 21" halign="center" position="453,185" size="374,43" text="Danach die Grüne Taste drücken" valign="center" foregroundColor="selectedFG" />
+    <widget name="config" position="453,229" size="374,210" scrollbarMode="showOnDemand" transparent="1" />
+    <widget source="status" render="Label" position="453,434" zPosition="1" size="374,96" font="Regular;20" halign="center" valign="center" transparent="1" />
+    <ePixmap pixmap="buttons/key_red.png" position="340,680" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="buttons/key_green.png" position="545,680" size="26,26" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="buttons/key_yellow.png" position="750,680" size="26,26" alphatest="blend" transparent="1" />
+    <widget source="key_red" render="Label" position="370,680" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <widget source="key_green" render="Label" position="575,680" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <widget source="key_yellow" render="Label" position="780,680" size="170,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" />
+    <eLabel name="" position="320,680" size="640,25" zPosition="-1" />
+  </screen>
+  <!-- SkinSelector Python3 -->
+<!--    <screen name="SkinSelector" position="0,0" size="1280,720" title="Skin Selector" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel text="Skin Selector" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    		<widget source="skins" render="Listbox" position="20,75" size="700,242" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template": [
+					MultiContentEntryText(pos = (10, 0), size = (350, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1), # Skinname
+					MultiContentEntryText(pos = (300, 0), size = (260, 30), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # Label
+				],
+				"fonts": [gFont("Regular", 20),gFont("Regular2", 18)],
+				"itemHeight": 30
+				}
+			</convert>
+		</widget>
+    <widget name="preview" position="140,330" size="450,260" zPosition="1" transparent="1" alphatest="blend" />
+    <eLabel text="Skinanpassungen in Menu/Einstellungen/Bedienung und Oberfläche/Setup-BlueAccents-HD." position="20,605" size="700,55" zPosition="2" font="Regular; 20" transparent="1" backgroundColor="bluelabeltranzp" halign="center" foregroundColor="selectedFG" valign="bottom" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,600" zPosition="1" size="707,3" />
+    <widget source="description" render="Label" position="430,687" size="740,25" font="Regular; 20" halign="left" valign="center" transparent="1" backgroundColor="background" foregroundColor="selectedFG" />
+    <widget source="key_red" render="Label" position="49,687" size="170,25" zPosition="1" valign="center" backgroundColor="background" font="Regular;20" halign="left" noWrap="1" transparent="1" />
+    <widget source="key_green" render="Label" position="255,687" size="170,25" zPosition="1" valign="center" backgroundColor="background" font="Regular;20" halign="left" noWrap="1" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_red.png" position="20,692" size="16,16" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_green.png" position="226,692" size="16,16" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,322" zPosition="1" size="708,3" />
+    <panel name="template_date" />
+    <panel name="template_ok_exit" />
+    <panel name="template_background_725_trans" />
+  </screen> -->
+  
+  		<!-- VFDSkinSelector -->
+
+<screen name="VFDSkinSelector" position="0,0" size="1280,720" flags="wfNoBorder" title="VFD Skin-Selector" backgroundColor="transparent">
+    <eLabel text="VFD Skin Selector" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget name="SkinList" render="Listbox" position="20,75" size="410,520" itemHeight="30" font="Regular;20" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1" />
+    <widget name="Preview" position="440,130" size="280,420" zPosition="10" transparent="1" alphatest="blend" />
+    <eLabel text="Select your skin and press OK to activate the selected skin" position="20,605" size="700,55" zPosition="2" font="Regular; 20" transparent="1" backgroundColor="bluelabeltranzp" halign="center" foregroundColor="selectedFG" valign="bottom" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,600" zPosition="1" size="707,3" />
+    <widget source="key_red" render="Label" position="49,687" size="170,25" zPosition="1" valign="center" backgroundColor="background" font="Regular;20" halign="left" noWrap="1" transparent="1" />
+    <widget source="key_green" render="Label" position="255,687" size="170,25" zPosition="1" valign="center" backgroundColor="background" font="Regular;20" halign="left" noWrap="1" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_red.png" position="20,692" size="16,16" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_green.png" position="226,692" size="16,16" alphatest="blend" transparent="1" />
+    <panel name="template_date" />
+    <panel name="template_ok_exit" />
+    <panel name="template_background_725_trans" />
+  </screen>
+	
+	
+	<!-- SkinSelector -->
+	<screen name="SkinSelector" position="0,0" size="1280,720" title="SkinSelector" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel text="Skin Selector" position="30,6" size="760,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+    <widget name="SkinList"  position="20,75" size="700,242" itemHeight="30" font="Regular;20" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="2" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarcolor" scrollbarSliderBorderColor="scrollbarborder" enableWrapAround="1" alphatest="blend" transparent="1"/>
+    <widget name="Preview" position="140,330" size="450,260" zPosition="1" transparent="1" alphatest="blend" />
+    <eLabel text="Skinanpassungen in Menu/Einstellungen/Bedienung und Oberfläche/Setup-BlueAccents-HD." position="20,605" size="700,55" zPosition="2" font="Regular; 20" transparent="1" backgroundColor="bluelabeltranzp" halign="center" foregroundColor="selectedFG" valign="bottom" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,600" zPosition="1" size="707,3" />
+    <widget source="introduction" render="Label" position="430,687" size="740,25" font="Regular; 20" halign="left" valign="center" transparent="1" backgroundColor="background" foregroundColor="selectedFG" />
+    <widget source="key_red" render="Label" position="49,687" size="170,25" zPosition="1" valign="center" backgroundColor="background" font="Regular;20" halign="left" noWrap="1" transparent="1" />
+    <widget source="key_green" render="Label" position="255,687" size="170,25" zPosition="1" valign="center" backgroundColor="background" font="Regular;20" halign="left" noWrap="1" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_red.png" position="20,692" size="16,16" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/buttons/key_green.png" position="226,692" size="16,16" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="BlueAccents-HD/BG-Pixmaps/Line_Hor_Vert/Line_Hor_Big.png" position="17,322" zPosition="1" size="708,3" />
+    <panel name="template_date" />
+    <panel name="template_ok_exit" />
+    <panel name="template_background_725_trans" />
+  </screen>
+</skin>
+
+
