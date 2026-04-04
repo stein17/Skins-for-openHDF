@@ -4,7 +4,7 @@ Section: base
 Priority: optional
 Architecture: all
 Maintainer: stein17
-Description: stein17 GradientFHD Skin for OpenHDF Images
+Description: stein17 GradientFHD Skin for HDF Images 
 Source: https://www.hdfreaks.cc/
 Homepage: https://github.com/stein17/Skins-for-openHDF/tree/Python3
 OE: Enigma2 Skin
