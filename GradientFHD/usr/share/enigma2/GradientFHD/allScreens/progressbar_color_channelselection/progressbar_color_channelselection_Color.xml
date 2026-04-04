@@ -1,0 +1,94 @@
+<skin>
+ <!-- Color_EventName_Progressbar_Color -->
+   <screen name="Channelselection_List_Progressbar_Color">
+<widget name="list" position="39,90" size="1110,873" 
+		serviceItemHeight="32" 
+		serviceNumberFont="Gradient_Font;32" 
+		serviceNameFont="Italic;32" 
+		serviceInfoFont="Gradient_Font;32" 
+		
+
+		progressbarHeight="14" 
+		
+		progressbarBorderWidth="1" 
+		backgroundColor="gradient_background" 
+		foregroundColor="foregroundColor_Channel" 
+		backgroundColorSelected="Channel_Selected" 
+		foregroundColorSelected="foregroundColor_Channel_Selected" 
+		colorServiceRecorded="red" 
+		colorServicePseudoRecorded="lightblue" 
+		colorServiceStreamed="infobar_tuner_rec" 
+		colorServiceDescription="foregroundColor_Event" 
+		colorServiceDescriptionSelected="foregroundColor_Event_Selected" 
+		colorEventProgressbar="scrollbarSliderColor" 
+		colorEventProgressbarBorder="ProgressbarColorBorder_ChannelSelection" 
+		colorEventProgressbarBorderSelected="ProgressbarColorBorder_ChannelSelection" 
+		foregroundColorServiceNotAvail="#00555555" 
+		scrollbarMode="showOnDemand" 
+		selectionPixmap="gfx/current/sel__1160.png"
+		transparent="1" />
+
+     </screen>
+<!-- 	 		listMarginLeft="7" 
+		listMarginRight="28" 
+		fieldMargins="8" 
+		progressInfoFont="Gradient_Font;27" 
+		progressBarWidth="106" 
+		itemsDistances="8"  -->
+<!-- 	 picServiceEventProgressbar="GradientFHD/infobar/Progress_Ch_List_Gradient.png" -->
+	  <!-- Color_EventName_Progressbar_Gradient -->
+   <screen name="Channelselection_List_3_Fields_Progressbar_Color">	 
+ <widget name="list" position="30,84" size="780,896" scrollbarMode="showOnDemand" 
+  serviceItemHeight="30" 
+  serviceNumberFont="Gradient_Font;30" 
+  serviceNameFont="Italic;30" 
+  serviceInfoFont="Gradient_Font;30" 
+
+  progressbarHeight="14" 
+
+  progressbarBorderWidth="1" 
+  backgroundColor="gradient_background" 
+  foregroundColor="foregroundColor_Channel" 
+  backgroundColorSelected="Channel_Selected" 
+  foregroundColorSelected="foregroundColor_Channel_Selected" 
+  colorServiceRecorded="red" 
+  foregroundColorMarkedSelected="#00cc33ff"
+  colorServicePseudoRecorded="lightblue" 
+  colorServiceStreamed="infobar_tuner_rec" 
+  colorServiceDescription="foregroundColor_Event" 
+  colorServiceDescriptionSelected="foregroundColor_Event_Selected" 
+ colorEventProgressbar="scrollbarSliderColor" 
+  colorEventProgressbarBorder="ProgressbarColorBorder_ChannelSelection" 
+  colorEventProgressbarBorderSelected="ProgressbarColorBorder_ChannelSelection" 
+  foregroundColorServiceNotAvail="#00555555" 
+   selectionPixmap="gfx/current/sel__780.png"
+  transparent="1" /> 
+       </screen>
+    <screen name="progress_Default_List_4_Poster_ChannelSelection">	 
+ <widget name="list" position="30,350" size="780,623"  scrollbarMode="showOnDemand" 
+  serviceItemHeight="30" 
+  serviceNumberFont="Gradient_Font;30" 
+  serviceNameFont="Italic;30" 
+  serviceInfoFont="Gradient_Font;30" 
+
+  progressbarHeight="14" 
+
+  progressbarBorderWidth="1" 
+  backgroundColor="gradient_background" 
+  foregroundColor="foregroundColor_Channel" 
+  backgroundColorSelected="Channel_Selected" 
+  foregroundColorSelected="foregroundColor_Channel_Selected" 
+  colorServiceRecorded="red" 
+  foregroundColorMarkedSelected="#00cc33ff"
+  colorServicePseudoRecorded="lightblue" 
+  colorServiceStreamed="infobar_tuner_rec" 
+  colorServiceDescription="foregroundColor_Event" 
+  colorServiceDescriptionSelected="foregroundColor_Event_Selected" 
+ colorEventProgressbar="scrollbarSliderColor"  
+  colorEventProgressbarBorder="ProgressbarColorBorder_ChannelSelection" 
+  colorEventProgressbarBorderSelected="ProgressbarColorBorder_ChannelSelection" 
+  foregroundColorServiceNotAvail="#00555555" 
+   selectionPixmap="gfx/current/sel__780.png"
+  transparent="1" /> 
+       </screen>
+</skin>

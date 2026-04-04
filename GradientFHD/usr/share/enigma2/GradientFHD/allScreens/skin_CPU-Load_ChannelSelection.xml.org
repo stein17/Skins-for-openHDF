@@ -1,0 +1,7 @@
+<skin>
+<!-- CPU-Load_ChannelSelection -->
+  <screen name="CPU-Load">
+   <panel name="CPU-Load_ChannelSelection" />
+  </screen>
+</skin>
+  

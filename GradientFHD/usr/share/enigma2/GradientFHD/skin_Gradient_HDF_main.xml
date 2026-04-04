@@ -1,0 +1,1530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin>
+	<!--######################################### -->
+	<!-- HDF_TEAM_Screen_HD  -->
+	<!--######################################### -->
+	<!--   OPEN_SOURCE_INFO -->
+	<screen name="OPEN_SOURCE_INFO">
+		<eLabel text="OPEN SOURCE" position="960,75" size="450,54" font="Gradient_Font; 39" backgroundColor="gradient_background" foregroundColor="gradient_foreground" halign="center" valign="center" transparent="1" zPosition="1" />
+		<eLabel text="https://github.com/openhdf" position="960,132" size="450,39" font="Gradient_Font; 27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" halign="center" valign="center" transparent="1" zPosition="1" />
+		<eLabel text="https://github.com/oe-alliance" position="960,174" size="450,39" font="Gradient_Font; 27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" halign="center" valign="center" transparent="1" zPosition="1" />
+	</screen>
+	<screen name="information_common">
+		<widget name="description" position="27,693" size="1395,135" font="Gradient_Font;30" conditional="description" foregroundColor="gradient_foreground" halign="center" backgroundColor="gradient_background" valign="center" transparent="1" />
+		<widget name="information" position="27,84" size="1405,600" colPosition="460" conditional="information" divideChar="|" font="Gradient_Font;30" leftColAlign="left" rightColAlign="left" split="1" backgroundColor="gradient_background" transparent="1" />
+		<panel name="TemplateButton_Automatic_all" />
+	</screen>
+	<screen name="information_common2">
+		<widget name="description" position="center,915" size="1845,45" font="Gradient_Font;30" conditional="description" foregroundColor="gradient_foreground" halign="center" backgroundColor="gradient_background" valign="center" transparent="1" />
+		<widget name="information" position="39,99" size="1845,789" conditional="information" font="Gradient_Font; 27" backgroundColor="gradient_background" transparent="1" />
+		<panel name="Template_FullScreen_Base" />
+		<panel position="459,147" size="330,57">
+			<panel name="Template_Text_Buttons_I_O_E" />
+		</panel>
+	</screen>
+	<!--  DistributionInformation title="About" -->
+	<screen name="DistributionInformation" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="About">
+		<panel name="information_common" />
+		<panel name="Template_Text_Buttons_H_E" />
+		<panel name="Setup_Title_TopPanel" />
+		<panel name="OPEN_SOURCE_INFO" />
+		<!--  <ePixmap position="992,632" size="420,190" zPosition="-1" pixmap="gfx/current/bg__420x190_r10_e9d9248590.png" alphatest="blend" /> -->
+		<!--     =========================
+     System Information Block
+     ========================= -->
+		<!-- CPU -->
+		<!-- Disk Temperatur -->
+		<eLabel position="1000,640" size="110,24" text="CPU-Load" font="Gradient_Font;22" foregroundColor="grey" backgroundColor="background" transparent="1" />
+		<widget source="global.CurrentTime" render="Progress" position="1115,644" size="150,16" borderWidth="2" borderColor="scrollbarBorderColor" backgroundColor="#202020" foregroundColor="gradient_Line">
+			<convert type="GradientSystemInfo">CPU</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1255,640" size="150,24" font="Gradient_Font;22" halign="right" foregroundColor="white" backgroundColor="background" transparent="1">
+			<convert type="GradientSystemInfo">CPU</convert>
+		</widget>
+		<!-- RAM -->
+		<eLabel position="1000,700" size="110,24" text="RAM" font="Gradient_Font;22" foregroundColor="grey" backgroundColor="background" transparent="1" />
+		<widget source="global.CurrentTime" render="Progress" position="1115,704" size="150,16" borderWidth="2" borderColor="scrollbarBorderColor" backgroundColor="#202020" foregroundColor="gradient_Line">
+			<convert type="GradientSystemInfo">MEMUSEDPCT</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1255,700" size="150,24" font="Gradient_Font;22" halign="right" foregroundColor="white" backgroundColor="background" transparent="1">
+			<convert type="GradientSystemInfo">MEMFREETXT</convert>
+		</widget>
+		<!-- TEMP -->
+		<eLabel position="1000,670" size="110,24" text="CPU-Temp" font="Gradient_Font;22" foregroundColor="grey" backgroundColor="background" transparent="1" />
+		<widget source="global.CurrentTime" render="Progress" position="1115,674" size="150,16" borderWidth="2" borderColor="scrollbarBorderColor" backgroundColor="#202020" foregroundColor="gradient_Line">
+			<convert type="GradientSystemInfo">TEMP</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1255,670" size="150,24" font="Gradient_Font;22" halign="right" foregroundColor="white" backgroundColor="background" transparent="1">
+			<convert type="GradientSystemInfo">TEMP</convert>
+		</widget>
+		<!-- Flash -->
+		<eLabel position="1000,730" size="110,24" text="Flash" font="Gradient_Font;22" foregroundColor="grey" backgroundColor="background" transparent="1" />
+		<widget source="global.CurrentTime" render="Progress" position="1115,734" size="150,16" borderWidth="2" borderColor="scrollbarBorderColor" backgroundColor="#202020" foregroundColor="gradient_Line">
+			<convert type="GradientSystemInfo">FLASHUSEDPCT</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1255,730" size="150,24" font="Gradient_Font;22" halign="right" foregroundColor="white" backgroundColor="background" transparent="1">
+			<convert type="GradientSystemInfo">FLASHFREETXT</convert>
+		</widget>
+		<!-- HDD -->
+		<eLabel position="1000,760" size="110,24" text="HDD" font="Gradient_Font;22" foregroundColor="grey" backgroundColor="background" transparent="1" />
+		<widget source="global.CurrentTime" render="Progress" position="1115,764" size="150,16" borderWidth="2" borderColor="scrollbarBorderColor" backgroundColor="#202020" foregroundColor="gradient_Line">
+			<convert type="GradientSystemInfo">HDDUSEDPCT</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1255,760" size="150,24" font="Gradient_Font;22" halign="right" foregroundColor="white" backgroundColor="background" transparent="1">
+			<convert type="GradientSystemInfo">HDDFREETXT</convert>
+		</widget>
+		<!-- USB -->
+		<eLabel position="1000,790" size="110,24" text="USB" font="Gradient_Font;22" foregroundColor="grey" backgroundColor="background" transparent="1" />
+		<widget source="global.CurrentTime" render="Progress" position="1115,794" size="150,16" borderWidth="2" borderColor="scrollbarBorderColor" backgroundColor="#202020" foregroundColor="gradient_Line">
+			<convert type="GradientSystemInfo">USBUSEDPCT</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1255,790" size="150,24" font="Gradient_Font;22" halign="right" foregroundColor="white" backgroundColor="background" transparent="1">
+			<convert type="GradientSystemInfo">USBFREETXT</convert>
+		</widget>
+	</screen>
+	<!-- DebugInformation -->
+	<screen name="DebugInformation" position="center,center" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder" title="About">
+		<panel name="information_common2" />
+	</screen>
+	<!-- Information -->
+	<screen name="Information" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="About">
+		<panel name="information_common" />
+		<panel name="Template_Text_Buttons_H_E" />
+		<panel name="Setup_Title_TopPanel" />
+	</screen>
+	<!-- Info -->
+	<screen name="Info" position="center,center" size="1101,900" flags="wfNoBorder" backgroundColor="transparent" title="Info">
+		<widget name="label2" position="27,75" foregroundColor="gradient_foreground" size="1050,75" valign="bottom" font="Gradient_Font;51" backgroundColor="gradient_background" transparent="1" />
+		<widget name="label1" position="27,150" size="1050,675" font="Console; 27" zPosition="1" transparent="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" scrollbarMode="showOnDemand" />
+		<panel name="Template_Menu_Text_Button_O_E" />
+		<panel name="Line_Menu" />
+		<panel name="Menu_Title_TopPanel" />
+	</screen>
+	<!--  PictureInformation -->
+	<screen name="PictureInformation" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="description" position="center,915" size="1845,45" font="Gradient_Font;30" conditional="description" foregroundColor="gradient_foreground" halign="center" backgroundColor="gradient_background" valign="center" transparent="1" />
+		<widget name="information" position="39,99" size="1845,789" conditional="information" font="Gradient_Font; 27" backgroundColor="gradient_background" transparent="1" />
+		<panel name="Template_FullScreen_Base" />
+		<panel position="459,147" size="330,57">
+			<panel name="Template_Text_Buttons_I_O_E" />
+		</panel>
+	</screen>
+	<!--  SystemInformation -->
+	<screen name="SystemInformation" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="description" position="center,915" size="1845,45" font="Gradient_Font;30" conditional="description" foregroundColor="gradient_foreground" halign="center" backgroundColor="gradient_background" valign="center" transparent="1" />
+		<widget name="information" position="39,99" size="1845,789" conditional="information" font="Gradient_Font; 27" backgroundColor="gradient_background" transparent="1" />
+		<panel name="Template_FullScreen_Base" />
+		<panel position="459,147" size="330,57">
+			<panel name="Template_Text_Buttons_I_O_E" />
+		</panel>
+	</screen>
+	<!--   CommitLogInformation -->
+	<screen name="CommitLogInformation" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="description" position="center,915" size="1845,45" font="Gradient_Font;30" conditional="description" foregroundColor="gradient_foreground" halign="center" backgroundColor="gradient_background" valign="center" transparent="1" />
+		<widget name="information" position="39,99" size="1845,789" conditional="information" font="Gradient_Font; 27" backgroundColor="gradient_background" transparent="1" />
+		<panel name="Template_FullScreen_Base" />
+		<panel position="459,147" size="330,57">
+			<panel name="Template_Text_Buttons_I_O_E" />
+		</panel>
+	</screen>
+	<!-- HDF AboutOE HD -->
+	<screen name="AboutOE" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Image Information">
+		<eLabel text="HDF Update Info" position="740,1030" size="255,37" zPosition="1" font="Gradient_Font;27" halign="left" transparent="1" valign="center" noWrap="1" />
+		<widget name="AboutScrollLabel" position="27,210" size="895,615" transparent="1" zPosition="1" font="Gradient_Font;30" scrollbarMode="showOnDemand" />
+		<widget source="lab1" render="Label" position="27,75" size="900,54" font="Gradient_Font;45" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" zPosition="1" />
+		<widget source="lab2" render="Label" position="27,129" size="900,39" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" zPosition="1" />
+		<!--   <ePixmap position="992,632" size="420,190" zPosition="-1" pixmap="gfx/current/bg__420x190_r10_e9d9248590.png" alphatest="blend" /> -->
+		<!--     =========================
+     System Information Block
+     ========================= -->
+		<!-- CPU -->
+		<eLabel position="1000,640" size="110,24" text="CPU-Load" font="Gradient_Font;22" foregroundColor="grey" backgroundColor="background" transparent="1" />
+		<widget source="global.CurrentTime" render="Progress" position="1115,644" size="150,16" borderWidth="2" borderColor="scrollbarBorderColor" backgroundColor="#202020" foregroundColor="gradient_Line">
+			<convert type="GradientSystemInfo">CPU</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1255,640" size="150,24" font="Gradient_Font;22" halign="right" foregroundColor="white" backgroundColor="background" transparent="1">
+			<convert type="GradientSystemInfo">CPU</convert>
+		</widget>
+		<!-- RAM -->
+		<eLabel position="1000,700" size="110,24" text="RAM" font="Gradient_Font;22" foregroundColor="grey" backgroundColor="background" transparent="1" />
+		<widget source="global.CurrentTime" render="Progress" position="1115,704" size="150,16" borderWidth="2" borderColor="scrollbarBorderColor" backgroundColor="#202020" foregroundColor="gradient_Line">
+			<convert type="GradientSystemInfo">MEMUSEDPCT</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1255,700" size="150,24" font="Gradient_Font;22" halign="right" foregroundColor="white" backgroundColor="background" transparent="1">
+			<convert type="GradientSystemInfo">MEMFREETXT</convert>
+		</widget>
+		<!-- TEMP -->
+		<eLabel position="1000,670" size="110,24" text="CPU-Temp" font="Gradient_Font;22" foregroundColor="grey" backgroundColor="background" transparent="1" />
+		<widget source="global.CurrentTime" render="Progress" position="1115,674" size="150,16" borderWidth="2" borderColor="scrollbarBorderColor" backgroundColor="#202020" foregroundColor="gradient_Line">
+			<convert type="GradientSystemInfo">TEMP</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1255,670" size="150,24" font="Gradient_Font;22" halign="right" foregroundColor="white" backgroundColor="background" transparent="1">
+			<convert type="GradientSystemInfo">TEMP</convert>
+		</widget>
+		<!-- Flash -->
+		<eLabel position="1000,730" size="110,24" text="Flash" font="Gradient_Font;22" foregroundColor="grey" backgroundColor="background" transparent="1" />
+		<widget source="global.CurrentTime" render="Progress" position="1115,734" size="150,16" borderWidth="2" borderColor="scrollbarBorderColor" backgroundColor="#202020" foregroundColor="gradient_Line">
+			<convert type="GradientSystemInfo">FLASHUSEDPCT</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1255,730" size="150,24" font="Gradient_Font;22" halign="right" foregroundColor="white" backgroundColor="background" transparent="1">
+			<convert type="GradientSystemInfo">FLASHFREETXT</convert>
+		</widget>
+		<!-- HDD -->
+		<eLabel position="1000,760" size="110,24" text="HDD" font="Gradient_Font;22" foregroundColor="grey" backgroundColor="background" transparent="1" />
+		<widget source="global.CurrentTime" render="Progress" position="1115,764" size="150,16" borderWidth="2" borderColor="scrollbarBorderColor" backgroundColor="#202020" foregroundColor="gradient_Line">
+			<convert type="GradientSystemInfo">HDDUSEDPCT</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1255,760" size="150,24" font="Gradient_Font;22" halign="right" foregroundColor="white" backgroundColor="background" transparent="1">
+			<convert type="GradientSystemInfo">HDDFREETXT</convert>
+		</widget>
+		<!-- USB -->
+		<eLabel position="1000,790" size="110,24" text="USB" font="Gradient_Font;22" foregroundColor="grey" backgroundColor="background" transparent="1" />
+		<widget source="global.CurrentTime" render="Progress" position="1115,794" size="150,16" borderWidth="2" borderColor="scrollbarBorderColor" backgroundColor="#202020" foregroundColor="gradient_Line">
+			<convert type="GradientSystemInfo">USBUSEDPCT</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1255,790" size="150,24" font="Gradient_Font;22" halign="right" foregroundColor="white" backgroundColor="background" transparent="1">
+			<convert type="GradientSystemInfo">USBFREETXT</convert>
+		</widget>
+		<ePixmap pixmap="buttons/key_red.png" position="25,850" size="30,30" alphatest="blend" transparent="1" />
+		<eLabel text="Cancel" position="60,836" size="255,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<!--     <ePixmap pixmap="buttons/key_blue.png" position="320,850" size="30,30" alphatest="blend" transparent="1" />
+   <widget text="Memory Info" position="355,836" size="255,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" /> -->
+		<panel name="OPEN_SOURCE_INFO" />
+		<panel name="Setup_Title_TopPanel" />
+		<panel name="Template_Text_Buttons_I_E" />
+	</screen>
+	<!--  TranslationInfo -->
+	<screen name="ServiceInfo" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Serviceinfo">
+		<widget name="infolist" position="30,110" size="1390,675" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" selectionDisabled="1" enableWrapAround="1" selectionPixmap="gfx/current/sel__1390.png" transparent="1" />
+		<ePixmap pixmap="buttons/key_red.png" position="25,850" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="red" position="60,836" size="255,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<ePixmap pixmap="buttons/key_green.png" position="320,850" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="green" position="355,836" size="255,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<ePixmap pixmap="buttons/key_yellow.png" position="625,850" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="yellow" position="660,836" size="255,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<ePixmap pixmap="buttons/key_blue.png" position="930,850" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="blue" position="965,836" size="305,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<panel name="Template_Text_Buttons_E" />
+		<panel name="Setup_Title_TopPanel" />
+	</screen>
+	<!-- StreamingClientsInfo -->
+	<screen name="StreamingClientsInfo" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Streaming clients info">
+		<widget name="ScrollLabel" position="105,84" size="1050,45" font="Gradient_Font;33" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" zPosition="1" />
+		<widget name="ScrollLabel2" position="107,159" size="1050,585" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" zPosition="1" />
+		<panel name="Template_Setup_Base" />
+	</screen>
+	<!-- HDF DeviceBrowser HD  -->
+	<screen name="DeviceBrowser" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Please select target medium">
+		<widget source="message" render="Label" position="27,780" size="900,45" font="Gradient_Font;30" backgroundColor="gradient_background" foregroundColor="gradient_foreground" halign="center" transparent="1" zPosition="1" />
+		<widget name="filelist" position="27,84" size="900,675" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" selectionPixmap="gfx/current/sel__900.png" transparent="1" />
+		<panel name="OPEN_SOURCE_INFO" />
+		<panel name="Template_Setup_Base" />
+	</screen>
+	<!--   Devices -->
+	<screen name="Devices" position="center,center" size="1450,900" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
+		<widget source="TunerHeader" render="Label" position="30,80" size="1050,40" font="Gradient_Font; 34" zPosition="1" transparent="1" />
+		<widget source="nims" render="Label" position="30,130" size="1050,380" font="Gradient_Font; 30" zPosition="1" transparent="1" />
+		<widget source="HDDHeader" render="Label" position="30,520" size="1050,40" font="Gradient_Font; 34" zPosition="1" foregroundColor="gradient_foreground" transparent="1" />
+		<widget source="hdd" render="Label" position="30,570" size="1050,200" font="Gradient_Font; 30" transparent="1" zPosition="1" />
+		<widget source="MountsHeader" render="Label" position="30,780" size="1050,40" font="Gradient_Font; 34" zPosition="1" foregroundColor="gradient_foreground" transparent="1" />
+		<widget source="mounts" render="Label" position="280,784" size="1150,40" font="Gradient_Font; 30" transparent="1" zPosition="1" />
+		<panel name="Template_Text_Buttons_E" />
+		<panel name="Setup_Title_TopPanel" />
+	</screen>
+	<!--   SystemMemoryInfo -->
+	<screen name="SystemMemoryInfo" position="center,center" size="1450,900" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
+		<widget source="lab1" render="Label" position="30,90" size="1000,45" font="Gradient_Font;36" backgroundColor="background" transparent="1" zPosition="2" foregroundColor="foreground" />
+		<!-- <widget source="lab2" render="Label" position="30,140" size="1000,36" font="Gradient_Font;27" backgroundColor="background" transparent="1" zPosition="2" foregroundColor="foreground" /> -->
+		<widget name="AboutScrollLabel" position="30,190" size="900,620" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" transparent="1" />
+		<panel name="Template_Setup_Base" />
+	</screen>
+	<!--  SystemNetworkInfo -->
+	<screen name="SystemNetworkInfo" position="center,center" size="1450,900" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="AboutScrollLabel" position="30,80" size="1050,340" valign="left" font="Gradient_Font; 30" transparent="1" />
+		<widget source="IFtext" render="Label" position="30,475" size="210,45" zPosition="10" font="Gradient_Font;33" halign="left" transparent="1" />
+		<widget source="IF" render="Label" position="30,430" size="1020,45" zPosition="10" font="Gradient_Font;33" halign="left" transparent="1" />
+		<widget source="Statustext" render="Label" position="30,565" size="210,46" zPosition="10" font="Gradient_Font;33" halign="left" transparent="1" />
+		<widget name="statuspic" pixmaps="icons/lock_on.png,icons/lock_error.png" position="286,570" zPosition="10" size="35,35" transparent="1" alphatest="on" />
+		<widget source="LabelBSSID" render="Label" position="30,520" size="300,45" valign="center" font="Gradient_Font;30" foregroundColor="gradient_foreground" backgroundColor="gradient_background" transparent="1" />
+		<widget source="BSSID" render="Label" position="360,520" size="735,45" valign="center" font="Gradient_Font;30" foregroundColor="gradient_foreground" backgroundColor="gradient_background" transparent="1" />
+		<widget source="LabelESSID" render="Label" position="360,475" size="300,45" valign="center" font="Gradient_Font;30" foregroundColor="gradient_foreground" backgroundColor="gradient_background" transparent="1" />
+		<widget source="ESSID" render="Label" position="360,565" size="735,45" valign="center" font="Gradient_Font;30" foregroundColor="gradient_foreground" backgroundColor="gradient_background" transparent="1" />
+		<widget source="LabelQuality" render="Label" position="30,610" size="300,45" valign="center" font="Gradient_Font;30" foregroundColor="gradient_foreground" backgroundColor="gradient_background" transparent="1" />
+		<widget source="quality" render="Label" position="360,610" size="735,45" valign="center" font="Gradient_Font;30" foregroundColor="gradient_foreground" backgroundColor="gradient_background" transparent="1" />
+		<widget source="LabelSignal" render="Label" position="30,655" size="300,45" valign="center" font="Gradient_Font;30" foregroundColor="gradient_foreground" backgroundColor="gradient_background" transparent="1" />
+		<widget source="signal" render="Label" position="360,655" size="735,45" valign="center" font="Gradient_Font;30" foregroundColor="gradient_foreground" backgroundColor="gradient_background" transparent="1" />
+		<widget source="LabelBitrate" render="Label" position="30,700" size="300,45" valign="center" font="Gradient_Font;30" foregroundColor="gradient_foreground" backgroundColor="gradient_background" transparent="1" />
+		<widget source="bitrate" render="Label" position="360,700" size="735,45" valign="center" font="Gradient_Font;30" foregroundColor="gradient_foreground" backgroundColor="gradient_background" transparent="1" />
+		<widget source="LabelEnc" render="Label" position="30,745" size="300,45" valign="center" font="Gradient_Font;30" foregroundColor="gradient_foreground" backgroundColor="gradient_background" transparent="1" />
+		<widget source="enc" render="Label" position="360,745" size="735,45" valign="center" font="Gradient_Font;30" foregroundColor="gradient_foreground" backgroundColor="gradient_background" transparent="1" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_O_E" />
+	</screen>
+	<!--   LocationBox -->
+	<screen name="LocationBox" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Location Box">
+		<widget name="text" position="105,75" size="1050,45" font="Gradient_Font;33" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<widget name="targetfreespace" position="915,126" size="240,45" font="Gradient_Font;30" halign="right" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<widget name="target" position="105,126" size="825,45" font="Gradient_Font;30" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<widget name="fileheading" position="105,174" size="1050,45" font="Gradient_Font;33" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<ePixmap position="80,219" size="1080,2" pixmap="gfx/current/bg__1080x2_Line_Menu.png" alphatest="blend" />
+		<widget name="filelist" position="105,225" size="1050,315" itemHeight="45" font="Gradient_Font;30" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selection="0" selectionPixmap="gfx/current/sel__1050.png" />
+		<widget name="bookmarkheading" position="105,534" size="1050,45" font="Gradient_Font;33" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<ePixmap position="80,579" size="1080,2" pixmap="gfx/current/bg__1080x2_Line_Menu.png" alphatest="blend" />
+		<widget name="bookmarklist" position="105,585" size="1050,225" itemHeight="45" font="Gradient_Font;30" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selection="0" zPosition="3" selectionPixmap="gfx/current/sel__1050.png" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_M_O_E" />
+		<widget name="quickselect" position="75,75" size="1140,750" backgroundColor="gradient_background" foregroundColor="gradient_foreground" font="Gradient_Font;150" halign="center" transparent="1" valign="center" zPosition="+1" />
+	</screen>
+	<!--  HdmiCECSetupScreen -->
+	<screen name="HdmiCECSetupScreen" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="HDMI CEC setup">
+		<widget name="config" position="30,81" size="1390,510" font="Gradient_Font;36" itemHeight="51" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" backgroundColorSelected="gradient_TBGL" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" selectionPixmap="gfx/current/sel__1390.png" />
+		<widget name="description" position="40,604" size="1380,136" font="Gradient_Font; 32" valign="center" transparent="1" />
+		<!-- <widget name="HelpWindow" position="860,640" size="780,180" zPosition="1" transparent="1" alphatest="blend" /> -->
+		<ePixmap name="Line_Setup" position="15,595" size="1420,2" zPosition="10" pixmap="gfx/current/bg__1420x2_Line_Setup.png" alphatest="blend" />
+		<widget source="current_address" render="Label" position="40,742" size="570,40" font="Gradient_Font;30" backgroundColor="gradient_background" halign="left" foregroundColor="bernstein" valign="center" transparent="1" />
+		<widget source="fixed_address" render="Label" position="40,785" size="570,40" font="Gradient_Font;30" backgroundColor="gradient_background" halign="left" foregroundColor="bernstein" valign="center" transparent="1" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_O_E" />
+	</screen>
+	<!-- Volume_adjust -->
+	<screen name="Volume_adjust" position="center,center" size="1450,900" backgroundColor="transparent" title="Volume Adjust" flags="wfNoBorder">
+		<widget name="ServiceList" position="30,80" size="1390,561" font="Gradient_Font;36" itemHeight="51" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" backgroundColorSelected="gradient_TBGL" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" selectionPixmap="gfx/current/sel__1390.png" />
+		<widget source="press_menu" render="Label" position="45,654" size="1380,132" font="Gradient_Font;30" valign="center" transparent="1" />
+		<widget name="HelpWindow" position="1120,890" size="780,180" zPosition="1" transparent="1" alphatest="blend" />
+		<ePixmap name="Line_Setup" position="15,645" size="1420,2" zPosition="10" pixmap="gfx/current/bg__1420x2_Line_Setup.png" alphatest="blend" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_M_O_E" />
+	</screen>
+	<!--  Volume_Config -->
+	<screen name="Volume_Config" position="center,center" size="1450,900" title="Volume Config" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="config" position="30,80" size="1390,561" font="Gradient_Font;36" itemHeight="51" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" backgroundColorSelected="gradient_TBGL" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" selectionPixmap="gfx/current/sel__1390.png" />
+		<widget name="infotext" position="45,654" size="1380,175" font="Gradient_Font;30" valign="center" transparent="1" />
+		<widget name="HelpWindow" position="1120,890" size="780,180" zPosition="1" transparent="1" alphatest="blend" />
+		<ePixmap name="Line_Setup" position="15,645" size="1420,2" zPosition="10" pixmap="gfx/current/bg__1420x2_Line_Setup.png" alphatest="blend" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_O_E" />
+	</screen>
+	<!-- LanguageSelection -->
+	<screen name="LanguageSelection" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Language selection">
+		<widget source="languages" render="Listbox" position="30,80" size="1390,720" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" zPosition="1" transparent="1" selectionPixmap="gfx/current/sel__1390.png">
+			<convert type="TemplatedMultiContent">{"template": [
+				MultiContentEntryText(pos = (180, 22), size = (867, 46), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
+				MultiContentEntryPixmap(pos = (40, 25), size = (60, 40), png = 2), # index 2 is the pixmap
+				],
+				"fonts": [gFont("Gradient_Font", 36)],
+				"itemHeight": 90
+				}</convert>
+		</widget>
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_O_E" />
+	</screen>
+	<!-- setup_autolanguagesetup -->
+	<screen name="setup_autolanguagesetup" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Setup">
+		<widget name="config" position="30,80" size="1390,561" font="Gradient_Font;36" itemHeight="51" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" backgroundColorSelected="gradient_TBGL" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" selectionPixmap="gfx/current/sel__1390.png" />
+		<widget name="footnote" position="45,789" size="1380,39" font="Gradient_Font;30" valign="center" foregroundColor="bernstein" backgroundColor="gradient_background" transparent="1" />
+		<widget name="description" position="45,654" size="1380,132" font="Gradient_Font;30" valign="center" transparent="1" />
+		<widget name="HelpWindow" position="1120,890" size="780,180" zPosition="1" transparent="1" alphatest="blend" />
+		<ePixmap name="Line_Setup" position="15,645" size="1420,2" zPosition="10" pixmap="gfx/current/bg__1420x2_Line_Setup.png" alphatest="blend" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_O_E" />
+	</screen>
+	<!--   UserInterfacePositioner -->
+	<!--   <screen  name="UserInterfacePositioner" position="center,center" size="1100,900" flags="wfNoBorder" title="UserInterfacePositioner" backgroundColor="transparent"> 
+  <widget  name="config"   position="30,90" size="1040,720" font="Gradient_Font;34" itemHeight="60"  foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" backgroundColor="gradient_background" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="gfx/current/sel__1050.png" />
+    <panel name="TemplateButton_Automatic_all_Menu" />
+    <panel name="Menu_Title_TopPanel" />
+    <panel name="Template_Menu_Text_Button_O_E" />
+  </screen> -->
+	<!--  QuickMenu -->
+	<screen name="QuickMenu" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Quick Launch Menu">
+		<widget name="list" position="27,156" size="675,675" itemHeight="75" font="Gradient_Font;30" scrollbarMode="showNever" transparent="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" selectionPixmap="gfx/current/sel__720.png" />
+		<widget name="sublist" position="750,156" size="675,675" itemHeight="75" font="Gradient_Font;30" scrollbarMode="showNever" transparent="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" selectionPixmap="gfx/current/sel__720.png" />
+		<widget name="description" position="27,75" size="1395,75" zPosition="1" font="Gradient_Font;30" halign="center" valign="center" foregroundColor="gradient_foreground" backgroundColor="gradient_background" transparent="1" />
+		<ePixmap name="Line_Setup" position="15,150" size="1420,2" zPosition="10" pixmap="gfx/current/bg__1420x2_Line_Setup.png" alphatest="blend" />
+		<eLabel name="Line_Vert" position="726,159" size="2,666" zPosition="10" backgroundColor="gradient_BGLM" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_O_E" />
+	</screen>
+	<!-- TaskListScreen -->
+	<screen name="TaskListScreen" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Task list">
+		<widget source="tasklist" render="Listbox" position="27,84" size="1395,675" itemHeight="135" font="Gradient_Font;30" scrollbarMode="showOnDemand" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1390.png">
+			<convert type="TemplatedMultiContent">{"template": [
+						MultiContentEntryText(pos = (8, 2), size = (1035, 90), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text = 1), # name
+						MultiContentEntryText(pos = (8, 92), size = (225, 44), font=1, flags = RT_HALIGN_CENTER, text = 2), # state
+						MultiContentEntryProgress(pos = (240, 105), size = (600, 15), percent = -3), # progress
+						MultiContentEntryText(pos = (864, 92), size = (180, 44), font=1, flags = RT_HALIGN_CENTER, text = 4), # percentage
+					],
+				"fonts": [gFont("Gradient_Font", 29),gFont("Gradient_Font", 30)],
+				"itemHeight": 135
+				}</convert>
+		</widget>
+		<panel name="Template_Setup_Base" />
+	</screen>
+	<!-- Misc Screens -->
+	<screen name="JobView" position="center,center" size="1101,900" flags="wfNoBorder" backgroundColor="transparent" title="JobView">
+		<widget source="job_name" render="Label" position="45,165" size="990,135" font="Gradient_Font;33" halign="center" valign="center" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<widget source="job_task" render="Label" position="45,330" size="990,45" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_BGLM" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1050.png" />
+		<widget source="job_progress" render="Progress" position="45,390" size="990,45" borderColor="gradient_BGLM" foregroundColor="blue" borderWidth="3" transparent="1" />
+		<widget source="job_progress" render="Label" position="45,390" size="990,45" font="Gradient_Font;33" foregroundColor="gradient_foreground" backgroundColor="blue" zPosition="2" valign="center" halign="center" transparent="1">
+			<convert type="ProgressToText" />
+		</widget>
+		<widget source="job_status" render="Label" position="45,450" size="990,45" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_BGLM" transparent="1" />
+		<widget name="config" position="45,525" size="990,45" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1050.png" />
+		<widget source="cancelable" render="FixedLabel" text="Cancel" position="18,740" size="255,45" zPosition="1" valign="center" font="Gradient_Font;30" halign="left" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="finished" render="FixedLabel" text="OK" position="288,740" size="255,45" zPosition="1" valign="center" font="Gradient_Font;30" halign="left" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="backgroundable" render="FixedLabel" text="Continue in background" position="825,740" size="330,45" zPosition="1" valign="center" font="Gradient_Font;30" halign="left" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<panel name="TemplateButton_Automatic_all" />
+		<panel name="Menu_Title_TopPanel" />
+	</screen>
+	<!-- HelpMenu -->
+	<screen name="HelpMenu" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Menu">
+		<widget name="description" position="2040,639" size="825,954" font="Gradient_Font;30" halign="center" valign="center" backgroundColor="gradient_background" transparent="1" zPosition="2" />
+		<widget source="list" render="Listbox" position="27,75" size="1050,735" itemHeight="45" font="Gradient_Font;30" transparent="1" foregroundColorSelected="gradient_foreground_selection" scrollbarMode="showOnDemand" selectionPixmap="gfx/current/sel__1050.png" />
+		<widget name="long_key" position="27,840" size="750,51" font="Gradient_Font; 36" halign="center" zPosition="2" foregroundColor="gradient_foreground" backgroundColor="gradient_background" transparent="1" scrollbarMode="showNever" />
+		<panel name="wizard_rc_templateNew" />
+		<panel name="Template_Text_Buttons_H_E" />
+		<panel name="Setup_Title_TopPanel" />
+	</screen>
+	<!--HDF NetworkSATPI -->
+	<screen name="NetworkSATPI" title="NetworkSATPI Setup" position="center,center" size="1450,900" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="lab1" position="600,645" size="150,45" font="Gradient_Font;30" valign="center" halign="right" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<widget name="labdisabled" position="825,645" size="150,45" font="Gradient_Font;30" valign="center" halign="center" backgroundColor="red" zPosition="1" transparent="0" />
+		<widget name="labactive" position="825,645" size="150,45" font="Gradient_Font;30" valign="center" halign="center" backgroundColor="green" zPosition="2" transparent="0" foregroundColor="ButtonBack" />
+		<widget name="lab2" position="75,645" size="225,45" font="Gradient_Font;30" valign="center" halign="right" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<widget name="labstop" position="375,645" size="150,45" font="Gradient_Font;30" valign="center" halign="center" backgroundColor="red" zPosition="1" transparent="0" />
+		<widget name="labrun" position="375,645" size="150,45" font="Gradient_Font;30" valign="center" halign="center" backgroundColor="green" zPosition="2" transparent="0" foregroundColor="ButtonBack" />
+		<widget name="key" position="27,705" size="1395,120" font="Gradient_Font;30" backgroundColor="gradient_background" halign="center" foregroundColor="gradient_foreground" valign="center" transparent="1" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_E" />
+	</screen>
+	<!-- ********** HDF TOOLBOX ********** -->
+	<!-- HDF DownloadMenu HD -->
+	<screen name="Hdf_Downloader" position="0,0" size="1920,1080" title="Select your Download" backgroundColor="transparent" flags="wfNoBorder">
+		<widget name="downloadmenu" position="30,90" size="1050,450" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1050.png" />
+		<widget source="introduction" render="Label" position="32,920" size="1050,45" zPosition="10" font="Gradient_Font; 32" halign="center" valign="center" backgroundColor="background" transparent="1" />
+		<widget source="size" render="Label" position="920,560" size="150,45" zPosition="10" font="Gradient_Font;32" halign="left" valign="top" backgroundColor="background" transparent="1" />
+		<widget source="size2" render="Label" position="760,560" size="150,45" zPosition="10" font="Gradient_Font;32" halign="right" valign="top" backgroundColor="background" transparent="1" />
+		<widget source="description" render="Label" position="30,620" size="1050,280" zPosition="10" font="Gradient_Font;30" halign="left" valign="top" backgroundColor="background" transparent="1" />
+		<widget source="description2" render="Label" position="30,560" size="225,45" zPosition="10" font="Gradient_Font;32" halign="left" valign="top" backgroundColor="background" transparent="1" />
+		<ePixmap name="1" position="1266,550" size="44,38" pixmap="GradientFHD/buttons/key_1.png" transparent="1" alphatest="blend" zPosition="1" />
+		<widget name="key_1" position="1335,550" size="450,36" halign="left" font="Gradient_Font;32" foregroundColor="gradient_foreground" backgroundColor="background" transparent="1" zPosition="2" />
+		<ePixmap name="2" position="1266,600" size="44,38" pixmap="GradientFHD/buttons/key_2.png" transparent="1" alphatest="blend" zPosition="1" />
+		<widget name="key_2" position="1335,600" size="450,36" halign="left" font="Gradient_Font;32" foregroundColor="gradient_foreground" backgroundColor="background" transparent="1" zPosition="2" />
+		<ePixmap name="3" position="1266,650" size="44,38" pixmap="GradientFHD/buttons/key_3.png" transparent="1" alphatest="blend" zPosition="1" />
+		<widget name="key_3" position="1335,650" size="450,36" halign="left" font="Gradient_Font;32" foregroundColor="gradient_foreground" backgroundColor="background" transparent="1" zPosition="2" />
+		<ePixmap name="4" position="1266,700" size="44,38" pixmap="GradientFHD/buttons/key_4.png" transparent="1" alphatest="blend" zPosition="1" />
+		<widget name="key_4" position="1335,700" size="450,36" halign="left" font="Gradient_Font;32" foregroundColor="gradient_foreground" backgroundColor="background" transparent="1" zPosition="2" />
+		<ePixmap name="5" position="1266,750" size="44,38" pixmap="GradientFHD/buttons/key_5.png" transparent="1" alphatest="blend" zPosition="1" />
+		<widget name="key_5" position="1335,750" size="450,36" halign="left" font="Gradient_Font;32" foregroundColor="gradient_foreground" backgroundColor="background" transparent="1" zPosition="2" />
+		<ePixmap name="6" position="1266,800" size="44,38" pixmap="GradientFHD/buttons/key_6.png" transparent="1" alphatest="blend" zPosition="1" />
+		<widget name="key_6" position="1335,800" size="450,36" halign="left" font="Gradient_Font;32" foregroundColor="gradient_foreground" backgroundColor="background" transparent="1" zPosition="2" />
+		<ePixmap name="7" position="1266,850" size="44,38" pixmap="GradientFHD/buttons/key_7.png" transparent="1" alphatest="blend" zPosition="1" />
+		<widget name="key_7" position="1335,850" size="450,36" halign="left" font="Gradient_Font;32" foregroundColor="gradient_foreground" backgroundColor="background" transparent="1" zPosition="2" />
+		<ePixmap name="0" position="1266,900" size="44,38" pixmap="GradientFHD/buttons/key_0.png" transparent="1" alphatest="blend" zPosition="1" />
+		<widget name="key_0" position="1335,900" size="450,36" halign="left" font="Gradient_Font;32" foregroundColor="gradient_foreground" backgroundColor="background" transparent="1" zPosition="2" />
+		<ePixmap name="Line_Setup" position="20,550" size="1080,2" zPosition="10" pixmap="gfx/current/bg__1080x2_Line_Menu.png" alphatest="blend" />
+		<ePixmap name="Line_Setup" position="20,910" size="1080,2" zPosition="10" pixmap="gfx/current/bg__1080x2_Line_Menu.png" alphatest="blend" />
+		<panel name="Template_FullScreen_Base" />
+		<panel position="459,147" size="330,57">
+			<panel name="Template_Text_Buttons_I_O_E" />
+		</panel>
+	</screen>
+	<!-- HDF Download File HD  -->
+	<!-- HDF Download File class HD  -->
+	<screen name="XionHDF" position="center,center" size="1920,1080" title="XionHDF Configuration" backgroundColor="transparent" flags="wfNoBorder">
+		<widget name="config" position="30,90" size="1050,855" itemHeight="45" font="Gradient_Font;32" scrollbarMode="showOnDemand" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" enableWrapAround="1" transparent="1" selectionPixmap="gfx/current/sel__1050.png" />
+		<widget name="helperimage" position="1230,200" size="520,290" zPosition="1" backgroundColor="gradient_background" alphatest="blend" />
+		<ePixmap pixmap="buttons/key_red.png" position="35,1000" size="30,30" alphatest="blend" zPosition="10" transparent="1" />
+		<ePixmap pixmap="buttons/key_green.png" position="335,1000" size="30,30" alphatest="blend" zPosition="10" transparent="1" />
+		<ePixmap pixmap="buttons/key_yellow.png" position="635,1000" size="30,30" alphatest="blend" zPosition="10" transparent="1" />
+		<widget source="help" render="Label" position="1120,550" size="765,375" font="Gradient_Font;30" halign="center" valign="center" transparent="1" />
+		<eLabel text="Cancel" position="75,995" size="255,39" zPosition="1" font="Gradient_Font;27" halign="left" transparent="1" valign="center" noWrap="1" />
+		<eLabel text="Save" position="375,995" size="255,39" zPosition="1" font="Gradient_Font;27" halign="left" transparent="1" valign="center" noWrap="1" />
+		<eLabel text="Reboot" position="675,995" size="255,39" zPosition="1" font="Gradient_Font;27" halign="left" transparent="1" valign="center" noWrap="1" />
+		<panel name="Fullscreen_Title_TopPanel" />
+		<panel position="459,147" size="330,57">
+			<panel name="Template_Text_Buttons_M_O_E" />
+		</panel>
+	</screen>
+	<!-- HDF Toolbox HD -->
+	<!-- ********** HDF TOOLBOX ********** -->
+	<screen name="Fantastic" title="HDF Toolbox" position="center,center" size="1100,900" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="menu" position="30,90" size="1040,720" itemHeight="45" font="Gradient_Font;34" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" backgroundColor="gradient_background" transparent="1" scrollbarMode="showOnDemand" selectionPixmap="gfx/current/sel__1050.png" />
+		<ePixmap position="740,85" size="380,57" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/HDF-Toolbox/banner.png" zPosition="2" alphatest="on" />
+		<panel name="Menu_Title_TopPanel" />
+		<panel name="Template_Menu_Text_Button_O_E" />
+	</screen>
+	<!-- PluginDownloadBrowser -->
+	<screen name="PluginDownloadBrowser" title="Downloadable plugins" position="center,center" size="1100,900" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="list" position="30,90" size="1040,720" itemHeight="81" font="Gradient_Font;34" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" backgroundColor="gradient_background" transparent="1" scrollbarMode="showOnDemand" selectionPixmap="gfx/current/sel__1050.png" />
+		<widget position="30,840" size="850,48" font="Gradient_Font;32" backgroundColor="background" foregroundColor="gradient_foreground" halign="center" name="text" transparent="1" valign="center" zPosition="1" />
+		<panel name="Menu_Title_TopPanel" />
+		<panel name="Template_Menu_Text_Button_O_E" />
+	</screen>
+	<!--HDF About HD -->
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="About" position="center,center" size="1450,900" title="About">
+		<widget backgroundColor="background" font="Gradient_Font;32" position="30,90" render="Label" size="1050,40" source="EnigmaVersion" transparent="1" />
+		<widget backgroundColor="background" font="Gradient_Font;32" position="30,140" render="Label" size="1050,40" source="ImageVersion" transparent="1" />
+		<widget backgroundColor="background" font="Gradient_Font;32" position="30,190" render="Label" size="1050,40" source="FPVersion" transparent="1" />
+		<widget backgroundColor="background" font="Gradient_Font;32" position="30,240" render="Label" size="1050,40" source="TunerHeader" transparent="1" />
+		<widget backgroundColor="background" font="Gradient_Font;32" position="30,290" render="Label" size="1050,40" source="Tuner0" transparent="1" />
+		<widget backgroundColor="background" font="Gradient_Font;32" position="30,340" render="Label" size="1050,40" source="Tuner1" transparent="1" />
+		<widget backgroundColor="background" font="Gradient_Font;32" position="30,390" render="Label" size="1050,40" source="Tuner2" transparent="1" />
+		<widget backgroundColor="background" font="Gradient_Font;32" position="30,440" render="Label" size="1050,40" source="Tuner3" transparent="1" />
+		<eLabel backgroundColor="background" font="Gradient_Font;32" position="33,490" size="1050,40" text="Support for Image: " transparent="1" />
+		<eLabel backgroundColor="background" font="Gradient_Font;32" position="30,540" size="1050,40" text="www.hdfreaks.cc" transparent="1" />
+		<widget backgroundColor="background" font="Gradient_Font;32" position="30,590" render="Label" size="1050,40" source="HDDHeader" transparent="1" />
+		<widget backgroundColor="background" font="Gradient_Font;32" position="30,740" render="Label" size="1050,78" source="hddA" transparent="1" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_E" />
+	</screen>
+	<screen name="ChoiceBox" position="center,center" size="1450,900" title="Input" backgroundColor="transparent" flags="wfNoBorder">
+		<widget source="windowtitle" render="Label" position="27,84" foregroundColor="gradient_foreground" size="1395,60" valign="bottom" font="Gradient_Font; 42" backgroundColor="gradient_background" transparent="1" />
+		<widget name="list" position="27,153" size="1395,546" itemHeight="51" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColorSelected="gradient_foreground_selection" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" selectionPixmap="gfx/current/sel__1390.png" />
+		<widget name="text" position="27,705" size="1395,126" font="Gradient_Font;30" backgroundColor="gradient_background" halign="center" foregroundColor="gradient_foreground" valign="center" transparent="1" />
+		<panel name="Template_Line_Setup_description" />
+		<panel name="Template_Text_Buttons_T_O_E" />
+		<panel name="Setup_Title_TopPanel" />
+	</screen>
+	<!-- HDF HotkeySetup HD  -->
+	<screen name="HotkeySetup" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Tasteneinstellungen">
+		<eLabel text="Hotkey Settings" position="27,75" foregroundColor="gradient_foreground" size="900,45" valign="bottom" font="Gradient_Font; 33" backgroundColor="gradient_background" transparent="1" />
+		<widget name="list" position="27,129" size="900,405" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__900.png" />
+		<ePixmap position="10,540" size="1080,2" zPosition="10" pixmap="gfx/current/bg__1080x2_Line_Menu.png" alphatest="blend" />
+		<widget name="choosen" position="27,549" size="900,270" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__900.png" />
+		<widget name="description" position="945,129" size="480,435" font="Gradient_Font;30" backgroundColor="gradient_background" halign="center" foregroundColor="gradient_foreground" valign="center" transparent="1" />
+		<panel name="Template_Text_Buttons_O_E" />
+		<panel name="Setup_Title_TopPanel" />
+	</screen>
+	<!-- HDF ButtonSetupSelect HD  -->
+	<screen name="ButtonSetupSelect" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Tasteneinstellungen">
+		<eLabel text="Hotkey Setup" position="27,75" foregroundColor="gradient_foreground" size="900,45" valign="bottom" font="Gradient_Font; 33" backgroundColor="gradient_background" transparent="1" />
+		<widget name="list" position="27,129" size="900,405" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__900.png" />
+		<ePixmap position="10,540" size="1080,2" zPosition="10" pixmap="gfx/current/bg__1080x2_Line_Menu.png" alphatest="blend" />
+		<widget name="choosen" position="27,549" size="900,270" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__900.png" />
+		<widget name="description" position="945,129" size="480,435" font="Gradient_Font;30" backgroundColor="gradient_background" halign="center" foregroundColor="gradient_foreground" valign="center" transparent="1" />
+		<panel name="Template_Text_Buttons_O_E" />
+		<panel name="Setup_Title_TopPanel" />
+	</screen>
+	<!-- ********** MultiBoot ********** -->
+	<!-- Multiboot Selector -->
+	<screen name="MultiBootSelector" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Multiboot Image Selector">
+		<widget source="description" render="Label" position="27,84" size="1395,150" font="Gradient_Font;30" foregroundColor="gradient_foreground" backgroundColor="gradient_background" halign="center" valign="center" transparent="1" />
+		<ePixmap position="25,234" size="1420,2" zPosition="1" pixmap="gfx/current/bg__1420x2_Line_Setup.png" alphatest="blend" />
+		<widget name="config" position="27,240" size="1395,459" itemHeight="51" zPosition="1" font="Gradient_Font;30" foregroundColorSelected="gradient_foreground_selection" scrollbarMode="showOnDemand" selectionPixmap="gfx/current/sel__1390.png" />
+		<widget source="options" render="Label" position="27,705" size="1395,126" font="Gradient_Font;30" backgroundColor="gradient_background" halign="center" foregroundColor="gradient_foreground" valign="center" transparent="1" />
+		<panel name="Template_Setup_Base" />
+	</screen>
+	<!-- MultiBootWizard -->
+	<screen name="MultiBootWizard" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="MultiBoot maintenance">
+		<widget source="description" render="Label" position="27,84" size="1395,150" font="Gradient_Font;30" foregroundColor="gradient_foreground" backgroundColor="gradient_background" halign="center" valign="center" transparent="1" />
+		<ePixmap position="20,234" size="1420,2" zPosition="1" pixmap="gfx/current/bg__1420x2_Line_Setup.png" alphatest="blend" />
+		<widget name="config" position="27,240" size="1395,459" itemHeight="51" zPosition="1" font="Gradient_Font;30" foregroundColorSelected="gradient_foreground_selection" scrollbarMode="showOnDemand" selectionPixmap="gfx/current/sel__1390.png" />
+		<widget source="options" render="Label" position="27,705" size="1395,126" font="Gradient_Font;30" backgroundColor="gradient_background" halign="center" foregroundColor="gradient_foreground" valign="center" transparent="1" />
+		<panel name="Template_Setup_Base" />
+	</screen>
+	<!-- MultiBoot StartupOPT -->
+	<screen name="MultiBootStartupOPT" position="center,center" size="1100,900" title="MultiBoot STARTUP Selector" flags="wfNoBorder" backgroundColor="transparent">
+		<widget source="config" render="Label" position="27,84" size="885,60" halign="center" valign="center" font="Gradient_Font;42" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<widget source="options" render="Label" position="27,147" size="885,60" halign="center" valign="center" font="Gradient_Font;33" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<ePixmap position="10,300" size="1080,2" pixmap="gfx/current/bg__1080x2_Line_Menu.png" alphatest="blend" />
+		<widget name="description" position="27,240" size="1035,45" halign="center" valign="center" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<ePixmap position="930,96" size="60,38" zPosition="10" pixmap="buttons/key_leftright.png" transparent="1" alphatest="blend" />
+		<ePixmap position="930,159" size="60,38" zPosition="10" pixmap="buttons/key_updown.png" transparent="1" alphatest="blend" />
+		<ePixmap pixmap="buttons/info.png" position="860,846" size="60,38" alphatest="blend" zPosition="1" />
+		<panel name="TemplateButton_Automatic_all_Menu" />
+		<panel name="Menu_Title_TopPanel" />
+		<panel name="Template_Menu_Text_Button_O_E" />
+	</screen>
+	<!-- MultiBoot Startup -->
+	<screen name="MultiBootStartup" position="center,center" size="1100,900" title="MultiBoot STARTUP Selector" flags="wfNoBorder" backgroundColor="transparent">
+		<widget source="config" render="Label" position="27,84" size="885,60" halign="center" valign="center" font="Gradient_Font;42" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<ePixmap position="930,96" size="60,38" zPosition="10" pixmap="buttons/key_leftright.png" transparent="1" alphatest="blend" />
+		<ePixmap pixmap="buttons/info.png" position="860,846" size="60,38" alphatest="blend" zPosition="1" />
+		<panel name="TemplateButton_Automatic_all_Menu" />
+		<panel name="Menu_Title_TopPanel" />
+		<panel name="Template_Menu_Text_Button_O_E" />
+	</screen>
+	<!-- MultiBoot StartupDS -->
+	<screen name="MultiBootStartupDS" position="center,center" size="1100,900" title="MultiBoot STARTUP Selector" flags="wfNoBorder" backgroundColor="transparent">
+		<widget source="config" render="Label" position="27,84" size="885,60" halign="center" valign="center" font="Gradient_Font;42" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<ePixmap position="10,300" size="1080,2" pixmap="gfx/current/bg__1080x2_Line_Menu.png" alphatest="blend" />
+		<widget name="description" position="27,240" size="1035,45" halign="center" valign="center" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<ePixmap position="930,96" size="60,38" zPosition="10" pixmap="buttons/key_leftright.png" transparent="1" alphatest="blend" />
+		<ePixmap pixmap="buttons/info.png" position="860,846" size="60,38" alphatest="blend" zPosition="1" />
+		<panel name="TemplateButton_Automatic_all_Menu" />
+		<panel name="Menu_Title_TopPanel" />
+		<panel name="Template_Menu_Text_Button_O_E" />
+	</screen>
+	<!-- MultiBootManager -->
+	<screen name="MultiBootManager" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Multiboot Image Manager">
+		<widget name="slotlist" position="27,84" size="1050,594" itemHeight="54" zPosition="1" font="Gradient_Font;30" foregroundColorSelected="gradient_foreground_selection" scrollbarMode="showOnDemand" selectionPixmap="gfx/current/sel__1050.png" />
+		<widget name="description" position="27,690" size="1050,135" font="Gradient_Font;30" backgroundColor="gradient_background" halign="center" foregroundColor="gradient_foreground" valign="center" transparent="1" />
+		<panel name="Template_Setup_Base" />
+	</screen>
+	<!-- HDF Image Backup HD -->
+	<screen name="ImageBackup" position="center,center" size="1450,900" title="Image Backup" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="info-hdd" position="40,90" zPosition="1" size="1050,230" font="Gradient_Font;32" halign="left" valign="center" transparent="1" foregroundColorSelected="gradient_foreground_selection" backgroundColor="background" />
+		<widget name="info-usb" position="40,340" zPosition="1" size="1050,230" font="Gradient_Font;32" halign="left" valign="center" transparent="1" foregroundColorSelected="gradient_foreground_selection" backgroundColor="background" />
+		<widget name="info-multi" position="40,590" zPosition="1" size="1050,230" font="Gradient_Font;32" halign="left" valign="center" transparent="1" foregroundColorSelected="gradient_foreground_selection" backgroundColor="background" />
+		<ePixmap position="20,330" size="1080,2" zPosition="1" pixmap="gfx/current/bg__1080x2_Line_Menu.png" alphatest="blend" />
+		<ePixmap position="20,580" size="1080,2" zPosition="1" pixmap="gfx/current/bg__1080x2_Line_Menu.png" alphatest="blend" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_O_E" />
+	</screen>
+	<screen name="BackupSelection" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Select files/folders to backup...">
+		<widget name="checkList" position="105,84" size="1050,585" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1050.png" />
+		<!-- <widget source="summary_description" render="Label" position="105,690" size="1050,135" font="Gradient_Font;30" backgroundColor="gradient_background" halign="center" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" valign="center" transparent="1" selectionPixmap="gfx/current/sel__1160.png" /> -->
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_O_E" />
+	</screen>
+	<!-- ********** Flash Online ********** -->
+	<!-- FlashOnline -->
+	<screen name="FlashImage" position="center,225" size="1101,450" title="FlashImage" flags="wfNoBorder" backgroundColor="transparent">
+		<ePixmap position="10,414" size="1080,2" pixmap="gfx/current/bg__1080x2_Line_Menu.png" alphatest="blend" />
+		<widget name="header" position="15,84" size="1071,75" font="Gradient_Font;60" backgroundColor="gradient_background" transparent="1" />
+		<widget name="info" position="15,180" size="1071,195" font="Gradient_Font;36" backgroundColor="gradient_background" transparent="1" />
+		<widget name="progress" position="15,399" size="1071,36" backgroundColor="gradient_background" transparent="1" />
+		<panel name="Menu_Title_TopPanel" />
+	</screen>
+	<!-- HDF FlashOnline HD -->
+	<screen name="FlashOnline" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Flash Online">
+		<widget name="list" position="27,84" zPosition="1" size="900,741" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" transparent="1" selectionPixmap="gfx/current/sel__900.png" />
+		<widget name="description" position="27,80" zPosition="1" size="900,741" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" transparent="1" selectionPixmap="gfx/current/sel__900.png" />
+		<panel name="OPEN_SOURCE_INFO" />
+		<panel name="Template_Setup_Base" />
+	</screen>
+	<!-- HDF doFlashImage HD  -->
+	<screen name="doFlashImage" position="center,center" size="1450,900" title="doFlashImage" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="imageList" position="30,80" zPosition="1" size="900,735" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" transparent="1" selectionPixmap="gfx/current/sel__900.png" />
+		<panel name="OPEN_SOURCE_INFO" />
+		<panel name="Template_Setup_Base" />
+	</screen>
+	<!--HDF SoftwareUpdateChanges HD -->
+	<screen name="SoftwareUpdateChanges" position="center,center" size="1450,900" title="About" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="text" position="30,90" size="1400,680" font="Gradient_Font;27" zPosition="3" transparent="1" />
+		<widget source="message" render="Label" position="30,780" size="1050,40" font="Gradient_Font; 32" halign="center" transparent="1" zPosition="1" foregroundColor="gradient_foreground" />
+		<eLabel text="https://github.com/openhdf" position="862,784" size="570,33" font="Gradient_Font;27" backgroundColor="background" foregroundColor="foreground" halign="right" transparent="1" zPosition="1" />
+		<panel name="Template_Setup_Base" />
+	</screen>
+	<!--HDF ShowUpdatePackages -->
+	<screen name="ShowUpdatePackages" position="center,center" size="1450,900" title="New Packages" backgroundColor="transparent" flags="wfNoBorder">
+		<widget source="list" render="Listbox" position="30,90" size="1050,720" itemHeight="75" font="Gradient_Font;30" scrollbarMode="showOnDemand" transparent="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" selectionPixmap="gfx/current/sel__1050.png">
+			<convert type="TemplatedMultiContent">{"template": [
+					MultiContentEntryText(pos = (25, 1), size = (970, 40), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+					MultiContentEntryText(pos = (25, 42), size = (970, 32), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+					MultiContentEntryPixmapAlphaTest(pos = (990, 14), size = (48, 48), png = 4), # index 4 is the status pixmap
+					MultiContentEntryPixmapAlphaTest(pos = (9, 78), size = (0, 0), png = 5), # index 4 is the div pixmap
+				],
+				"fonts": [gFont("Gradient_Font", 32),gFont("Gradient_Font", 26)],
+				"itemHeight": 75
+			}</convert>
+		</widget>
+		<panel name="Template_Setup_Base" />
+	</screen>
+	<!--HDF SelectImage -->
+	<screen name="SelectImage" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Image Selector">
+		<widget name="description" position="27,84" size="1395,150" font="Gradient_Font;30" foregroundColor="gradient_foreground" backgroundColor="gradient_background" halign="center" valign="center" transparent="1" />
+		<ePixmap position="15,234" size="1420,2" zPosition="1" pixmap="gfx/current/bg__1420x2_Line_Setup.png" alphatest="blend" />
+		<widget name="list" position="27,250" size="1395,561" itemHeight="51" zPosition="1" font="Gradient_Font;30" foregroundColorSelected="gradient_foreground_selection" scrollbarMode="showOnDemand" selectionPixmap="gfx/current/sel__1390.png" />
+		<panel name="Template_Setup_Base" />
+	</screen>
+	<!-- Software Manager HD -->
+	<!--HDF Update Plugin Menu HD -->
+	<screen name="UpdatePluginMenu" position="center,center" size="1920,1080" title="Update Plugin Menu" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel text="Its recommend to create a Fullbackup before update!" position="1124,870" size="765,40" zPosition="1" font="Gradient_Font; 30" halign="left" backgroundColor="background" transparent="1" foregroundColor="red" />
+		<eLabel text="A full backup is recommended before the update!" position="1124,920" size="765,40" zPosition="1" font="Gradient_Font; 30" halign="left" backgroundColor="background" transparent="1" foregroundColor="yellow" />
+		<widget source="menu" render="Listbox" position="30,90" size="1040,660" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" selectionPixmap="gfx/current/sel__1050.png">
+			<convert type="TemplatedMultiContent">{"template": [
+						MultiContentEntryText(pos = (20, 10), size = (1020, 60), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
+					],
+				"fonts": [gFont("Gradient_Font",32)],
+				"itemHeight": 60
+				}</convert>
+		</widget>
+		<widget source="menu" render="Listbox" position="1125,560" size="765,300" zPosition="3" selectionDisabled="1" foregroundColor="gradient_foreground" backgroundColor="background" transparent="1" scrollbarMode="showNever">
+			<convert type="TemplatedMultiContent">{"template": [
+						MultiContentEntryText(pos = (0, 0), size = (745, 300), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 2 is the Description,
+					],
+				"fonts": [gFont("Gradient_Font",30)],
+				"itemHeight": 300
+				}</convert>
+		</widget>
+		<panel name="Template_FullScreen_Base" />
+		<panel position="459,147" size="330,57">
+			<panel name="Template_Text_Buttons_M_O_E" />
+		</panel>
+		<widget backgroundColor="background" name="hdfStatusPic" position="70,840" size="100,118" alphatest="on" />
+		<eLabel backgroundColor="background" text="Feed-Status" position="30,770" size="180,40" font="Gradient_Font;30" foregroundColor="ButtonYellow" noWrap="1" transparent="1" halign="center" />
+		<widget backgroundColor="ButtonRed" name="RedText" position="220,830" size="860,40" font="Gradient_Font;32" foregroundColor="black" transparent="0" />
+		<widget backgroundColor="ButtonYellow" name="YellowText" position="220,880" size="860,40" font="Gradient_Font;32" foregroundColor="black" transparent="0" />
+		<widget backgroundColor="green" name="GreenText" position="220,930" size="860,40" font="Gradient_Font;32" foregroundColor="black" transparent="0" />
+		<widget backgroundColor="background" name="InfoText" position="220,770" size="860,40" font="Gradient_Font;30" foregroundColor="foreground" noWrap="1" transparent="1" />
+	</screen>
+	<!-- UpdatePluginMenu -->
+	<!--   <screen name="UpdatePluginMenu" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Softwaremanager...">
+    <widget source="menu" render="Listbox" position="105,90" size="1050,400" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" scrollbarMode="showNever" enableWrapAround="1" transparent="1" selectionPixmap="gfx/current/sel__1050.png">
+      <convert type="TemplatedMultiContent">{"template": [
+						MultiContentEntryText(pos = (24, 8), size = (1050, 45), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
+					],
+				"fonts": [gFont("Gradient_Font",32)],
+				"itemHeight": 60
+				}</convert>
+    </widget>
+    <widget source="menu" render="Listbox" position="105,525" size="1050,285" scrollbarMode="showNever" selectionDisabled="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1050.png">
+      <convert type="TemplatedMultiContent">{"template": [
+						MultiContentEntryText(pos = (0, 0), size = (1050, 285), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 2 is the Description,
+					],
+				"fonts": [gFont("Gradient_Font",30)],
+				"itemHeight": 285
+				}</convert>
+    </widget>
+    <panel name="Template_Setup_Base" />
+    <panel name="Template_Text_Buttons_M_E" />
+  </screen> -->
+	<!-- UpdatePlugin -->
+	<screen name="UpdatePlugin" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Software Update...">
+		<widget name="activityslider" position="105,150" size="1050,30" borderColor="gradient_BGLM" foregroundColor="blue" borderWidth="3" transparent="1" />
+		<widget source="package" render="Label" position="105,270" size="1050,45" font="Gradient_Font;30" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<widget source="status" render="Label" position="105,345" size="1050,45" font="Gradient_Font;30" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<widget name="slider" position="105,480" size="1050,30" borderColor="gradient_BGLM" foregroundColor="blue" borderWidth="3" transparent="1" />
+		<panel name="Template_Text_Buttons_O_E" />
+		<panel name="Setup_Title_TopPanel" />
+	</screen>
+	<!--HDF Plugin browser HD -->
+	<screen name="PluginBrowser" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Plugin browser">
+		<widget name="list" position="30,75" size="1050,750" itemHeight="75" font="Gradient_Font;30" scrollbarMode="showOnDemand" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" enableWrapAround="1" transparent="1" selectionPixmap="gfx/current/sel__1050.png" />
+		<panel name="Setup_Title_TopPanel" />
+		<panel name="Template_Text_Buttons_M_E" />
+		<ePixmap pixmap="XionHDF/picon_default.png" position="1150,100" size="220,132" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="buttons/key_red.png" position="25,850" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="red" position="60,836" size="255,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<ePixmap pixmap="buttons/key_green.png" position="320,850" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="green" position="355,836" size="255,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<!-- 		<ePixmap pixmap="buttons/key_yellow.png" position="625,850" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="yellow" position="660,836" size="255,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" /> -->
+		<ePixmap pixmap="buttons/key_blue.png" position="930,850" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="blue" position="965,836" size="305,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+	</screen>
+	<!--  PositionerSetup -->
+	<screen name="PositionerSetup" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Positioner setup">
+		<widget name="list" position="center,90" size="720,315" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__720.png" />
+		<ePixmap position="80,405" size="1080,2" transparent="0" pixmap="gfx/current/bg__1080x2_Line_Menu.png" alphatest="blend" />
+		<widget name="snr_db" position="240,459" size="300,39" halign="center" valign="center" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<eLabel text="SNR:" position="105,510" size="120,39" font="Gradient_Font;27" backgroundColor="gradient_background" transparent="1" />
+		<widget name="snr_bar" position="240,510" size="300,30" borderColor="gradient_BGLM" foregroundColor="blue" borderWidth="3" transparent="1" />
+		<widget name="snr_percentage" position="555,510" size="120,39" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<eLabel text="BER:" position="105,564" size="120,39" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<widget name="ber_bar" position="240,564" size="300,30" borderColor="gradient_BGLM" foregroundColor="blue" borderWidth="3" transparent="1" />
+		<widget name="ber_value" position="555,564" size="120,39" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<eLabel text="Lock:" position="105,615" size="120,39" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<widget name="lock_state" position="240,615" size="300,39" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<eLabel text="Status:" position="105,669" size="225,39" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<widget name="status_bar" position="240,669" size="450,39" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<eLabel text="Frequency:" position="735,510" size="225,39" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<widget name="frequency_value" position="975,510" size="225,39" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<eLabel text="Symbolrate:" position="735,564" size="225,39" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<widget name="symbolrate_value" position="975,564" size="225,39" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<eLabel text="FEC:" position="735,615" size="225,39" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<widget name="fec_value" position="975,615" size="225,39" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<eLabel text="Polarisation:" position="735,669" size="225,39" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<widget name="polarisation" position="975,669" size="225,39" font="Gradient_Font;27" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<ePixmap pixmap="buttons/key_red.png" position="25,850" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="red" position="60,836" size="255,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<ePixmap pixmap="buttons/key_green.png" position="320,850" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="green" position="355,836" size="255,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<ePixmap pixmap="buttons/key_yellow.png" position="625,850" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="yellow" position="660,836" size="255,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<ePixmap pixmap="buttons/key_blue.png" position="930,850" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="blue" position="965,836" size="305,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<panel name="Setup_Title_TopPanel" />
+		<panel name="Template_Text_Buttons_I_O_E" />
+	</screen>
+	<!--   TimerEditList ???-->
+	<screen name="TimerEditList" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Timer Editor">
+		<widget name="description" position="center,560" size="1206,268" font="Gradient_Font;30" backgroundColor="gradient_background" halign="left" foregroundColor="gradient_foreground" valign="top" transparent="1" />
+		<widget name="timerlist" position="center,74" size="1390,480" itemHeight="84" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1390.png" />
+		<widget name="red" pixmap="buttons/key_red.png" position="25,850" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="key_red" position="60,836" size="255,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<!-- <widget name="green" pixmap="buttons/key_green.png" position="320,850" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="key_green" position="355,836" size="255,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+	 -->
+		<widget name="yellow" pixmap="buttons/key_yellow.png" position="625,850" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="key_yellow" position="660,836" size="255,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<widget name="blue" pixmap="buttons/key_blue.png" position="930,850" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="key_blue" position="965,836" size="305,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<panel name="Setup_Title_TopPanel" />
+		<panel name="Template_Text_Buttons_I_O_E" />
+		<panel name="Template_Setup_Base" />
+	</screen>
+	<!--   TimerSelection -->
+	<screen name="TimerSelection" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Timer selection">
+		<widget name="description" position="27,560" size="1395,268" font="Gradient_Font;30" backgroundColor="gradient_background" halign="left" foregroundColor="gradient_foreground" valign="top" scrollbarMode="showAlways" transparent="1" />
+		<widget name="timerlist" position="27,74" size="1390,480" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1390.png" />
+		<panel name="Template_Text_Buttons_O_E" />
+		<panel name="Setup_Title_TopPanel" />
+		<panel name="Template_Setup_Base" />
+	</screen>
+	<!--   SleepTimerEdit -->
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="SleepTimerEdit" position="center,center" size="1450,900" title="Sleep Timer">
+		<widget name="config" position="30,90" size="1390,610" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1390.png" />
+		<widget name="description" position="30,750" size="1050,80" font="Gradient_Font; 30" transparent="1" backgroundColor="background" halign="left" zPosition="10" />
+		<panel name="Template_Text_Buttons_O_E" />
+		<panel name="Setup_Title_TopPanel" />
+		<panel name="Template_Setup_Base" />
+	</screen>
+	<!-- TimerEdit -->
+	<screen name="TimerEdit" title="Timer Edit" position="center,center" size="1100,900" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="description" position="70,120" size="800,50" font="Gradient_Font; 36" foregroundColor="foreground" transparent="1" />
+		<widget name="lbegin" position="440,200" size="200,50" font="Gradient_Font; 36" foregroundColor="red" transparent="1" />
+		<widget name="lend" position="440,310" size="200,50" font="Gradient_Font; 36" foregroundColor="green" transparent="1" />
+		<widget name="begin" position="670,220" size="200,50" font="Gradient_Font; 36" foregroundColor="foreground" transparent="1" />
+		<widget name="end" position="670,290" size="200,50" font="Gradient_Font; 36" foregroundColor="foreground" transparent="1" />
+		<widget name="apply" position="70,445" size="800,50" transparent="1" foregroundColor="foreground" font="Gradient_Font; 32" />
+		<panel name="Menu_Title_TopPanel" />
+		<panel name="Template_Menu_Text_Button_O_E" />
+		<panel name="Template_Setup_Base" />
+	</screen>
+	<!--   TimerEntry -->
+	<screen name="TimerEntry" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Timer entry">
+		<widget name="config" position="27,74" size="1390,540" itemHeight="75" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1390.png" />
+		<widget name="HelpWindow" position="150,630" size="780,180" zPosition="1" transparent="1" alphatest="blend" />
+		<ePixmap pixmap="buttons/key_red.png" position="25,850" size="30,30" alphatest="blend" transparent="1" />
+		<eLabel text="Abort" position="60,836" size="255,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<ePixmap pixmap="buttons/key_green.png" position="320,850" size="30,30" alphatest="blend" transparent="1" />
+		<eLabel text="OK" position="355,836" size="255,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<panel name="Setup_Title_TopPanel" />
+		<panel name="Template_Text_Buttons_I_O_E" />
+		<panel name="Template_Setup_Base" />
+	</screen>
+	<!--   TimerLog -->
+	<screen name="TimerLog" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Timer log">
+		<widget name="loglist" position="27,84" size="1390,635" font="Gradient_Font;30" scrollbarMode="showOnDemand" backgroundColor="gradient_background" foregroundColorSelected="gradient_foreground_selection" transparent="1" conditional="log" selectionPixmap="gfx/current/sel__1390.png" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_O_E" />
+		<widget font="Gradient_Font;30" foregroundColor="foreground" name="logentry" position="30,740" size="1395,90" transparent="1" />
+	</screen>
+	<!--   TimerSanityConflict -->
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="TimerSanityConflict" position="center,center" size="1450,900" title="Timer sanity error">
+		<widget backgroundColor="background" name="list" font="Gradient_Font;32" foregroundColor="ButtonText" itemHeight="45" position="63,120" size="1104,135" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+		<widget backgroundColor="background" name="timer1" itemHeight="80" foregroundColor="ButtonText" position="63,285" enableWrapAround="1" scrollbarMode="showOnDemand" size="1104,160" transparent="1" />
+		<widget backgroundColor="background" name="timer2" itemHeight="80" foregroundColor="ButtonText" position="63,570" enableWrapAround="1" scrollbarMode="showOnDemand" size="1104,160" transparent="1" />
+		<ePixmap pixmap="buttons/key_red.png" position="80,476" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="key_red" position="120,464" size="255,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<ePixmap pixmap="buttons/key_green.png" position="600,476" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="key_green" position="642,464" size="255,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<ePixmap pixmap="buttons/key_yellow.png" position="80,762" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="key_yellow" position="120,750" size="255,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<ePixmap pixmap="buttons/key_blue.png" position="600,762" size="30,30" alphatest="blend" transparent="1" />
+		<widget name="key_blue" position="642,750" size="305,58" backgroundColor="ButtonBack" font="Gradient_Font;27" foregroundColor="ButtonText" zPosition="1" valign="center" halign="left" transparent="1" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Setup_Title_TopPanel" />
+		<panel name="Template_Text_Buttons_I_O_E" />
+	</screen>
+	<!-- AutoTimerOverview ??? -->
+	<screen name="AutoTimerOverview" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="AutoTimer Overview">
+		<!-- <widget backgroundColor="gradient_background" name="entries" itemHeight="80" rowSplit1="41" rowSplit2="41" rowHeight="40" iconMargin="8" DayNamefont="Gradient_Font;30" EventNamefont="Gradient_Font;32" ServiceNamefont="Gradient_Font;30" foregroundColor="gradient_foreground" position="63,120" size="1104,800" enableWrapAround="1" scrollbarMode="showOnDemand"  transparent="1" />
+ -->
+		<widget name="entries" position="center,84" size="1390,735" itemHeight="105" rowSplit1="39" rowSplit2="65" rowHeight="42" iconMargin="5" sepLinePixmap="div-h.png" DayNameFont="Gradient_Font;27" EventNameFont="Gradient_Font;30" ServiceNameFont="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1390.png" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_M_E" />
+	</screen>
+	<!--   RecordTimerQuestion -->
+	<screen name="RecordTimerQuestion" position="center,center" size="753,180" zPosition="98" flags="wfNoBorder">
+		<widget name="text" position="3,3" size="750,135" backgroundColor="gradient_background" zPosition="-1" transparent="0" />
+		<widget name="list" position="18,18" size="720,108" itemHeight="51" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColorSelected="gradient_foreground_selection" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" selectionPixmap="gfx/current/sel__720.png" />
+	</screen>
+	<!--HDF Softcam Cardserver Manager HD -->
+	<screen name="ScSelection" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Softcam Cardserver Manager">
+		<widget name="entries" position="30,400" size="1050,405" itemHeight="45" font="Gradient_Font; 32" transparent="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" scrollbarMode="showOnDemand" selectionPixmap="gfx/current/sel__1050.png" />
+		<eLabel font="Gradient_Font; 30" halign="left" valign="center" position="30,115" size="90,40" text="ECM:" zPosition="2" transparent="1" backgroundColor="background" />
+		<widget source="session.CurrentService" render="Label" position="130,90" size="950,90" transparent="1" zPosition="2" font="Gradient_Font; 30" valign="center" halign="left" noWrap="1" backgroundColor="background">
+			<convert type="CryptoInfo">VerboseInfo</convert>
+		</widget>
+		<eLabel font="Gradient_Font; 30" halign="left" valign="top" position="30,190" size="135,40" text="Channel:" zPosition="2" transparent="1" backgroundColor="background" />
+		<widget source="session.CurrentService" render="Label" position="160,190" size="920,40" transparent="1" zPosition="2" font="Gradient_Font; 30" valign="top" halign="left" backgroundColor="background">
+			<convert type="ServiceName">All</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="30,315" size="1050,40" transparent="1" zPosition="2" font="Gradient_Font; 30" valign="top" halign="left" noWrap="1" backgroundColor="background">
+			<convert type="XionHDFExtraInfo">CryptoInfo</convert>
+		</widget>
+		<eLabel font="Gradient_Font; 30" halign="left" valign="top" position="30,250" size="150,40" text="RES:" zPosition="2" transparent="1" backgroundColor="background" />
+		<widget source="session.CurrentService" render="Label" zPosition="2" position="110,250" size="120,40" halign="right" valign="top" font="Gradient_Font; 30" transparent="1" backgroundColor="background">
+			<convert type="XionHDFServiceInfo">VideoWidth</convert>
+		</widget>
+		<eLabel text="x" zPosition="2" position="240,250" size="40,40" halign="center" valign="top" font="Gradient_Font; 30" transparent="1" backgroundColor="background" />
+		<widget source="session.CurrentService" render="Label" zPosition="2" position="290,250" size="120,40" halign="left" valign="top" font="Gradient_Font; 30" transparent="1" backgroundColor="background">
+			<convert type="XionHDFServiceInfo">VideoHeight</convert>
+		</widget>
+		<ePixmap position="15,380" size="1080,2" zPosition="1" pixmap="gfx/current/bg__1080x2_Line_Menu.png" alphatest="blend" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_M_E" />
+	</screen>
+	<!--HDF CrashlogAutoSubmitConfiguration -->
+	<screen name="CrashlogAutoSubmitConfiguration" position="center,center" size="1450,900" title="CrashlogAutoSubmit settings" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="config" position="30,90" size="1050,665" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1050.png" />
+		<widget source="status" render="Label" position="30,790" size="1050,40" font="Gradient_Font; 30" transparent="1" backgroundColor="background" halign="left" zPosition="10" />
+		<widget name="HelpWindow" position="120,470" size="1,1" zPosition="10" />
+		<ePixmap position="15,780" size="1080,2" transparent="0" pixmap="gfx/current/bg__1080x2_Line_Menu.png" alphatest="blend" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_M_E" />
+	</screen>
+	<!--HDF CrashlogReportConfiguration -->
+	<screen name="CrashlogReportConfiguration" position="center,center" size="1450,900" title="CrashlogReport Setting" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="config" position="30,90" size="1050,665" zPosition="1" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1050.png" />
+		<widget source="status" render="Label" position="30,790" size="1050,40" font="Gradient_Font; 30" transparent="1" backgroundColor="background" halign="left" zPosition="10" />
+		<widget name="HelpWindow" position="120,470" size="1,1" zPosition="10" />
+		<ePixmap position="15,780" size="1080,2" transparent="0" pixmap="gfx/current/bg__1080x2_Line_Menu.png" alphatest="blend" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_M_E" />
+	</screen>
+	<!--HDF HddMount HD -->
+	<screen name="HddMount" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Hard Drive Mount">
+		<widget source="menu" render="Listbox" position="27,150" size="1120,660" scrollbarMode="showOnDemand" transparent="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" selectionPixmap="gfx/current/sel__1160.png">
+			<convert type="TemplatedMultiContent">{"template": [
+				 MultiContentEntryText(pos = (135, 0), size = (900, 45), font=0, text = 0),
+				 MultiContentEntryText(pos = (165, 45), size = (900, 75), font=1, flags = RT_VALIGN_TOP, text = 1),
+				 MultiContentEntryPixmapAlphaBlend(pos = (0, 0), size = (120, 120), png = 2, flags = BT_SCALE),
+				],
+				"fonts": [gFont("Gradient_Font",36),gFont("Gradient_Font",30)],
+				"itemHeight": 128
+				}</convert>
+		</widget>
+		<widget name="lab1" zPosition="2" position="75,75" size="900,60" font="Gradient_Font;33" backgroundColor="gradient_background" foregroundColor="gradient_foreground" halign="center" transparent="1" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_E" />
+	</screen>
+	<!-- HddMount -->
+	<screen name="HddMount" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="HddMount">
+		<widget source="menu" position="30,90" size="1050,700" font="Gradient_Font;32" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" selectionPixmap="gfx/current/sel__1050.png" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_E" />
+	</screen>
+	<!--HDF HddPartitions HD -->
+	<screen name="HddPartitions" flags="wfNoBorder" position="center,center" size="1450,900" title="Hard Drive Partitions" backgroundColor="transparent">
+		<widget name="label_disk" position="30,80" size="1050,45" font="Gradient_Font; 34" foregroundColor="gradient_foreground" backgroundColor="background" transparent="1" zPosition="1" />
+		<widget source="menu" render="Listbox" position="30,140" size="1050,680" itemHeight="75" scrollbarMode="showOnDemand" transparent="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" selectionPixmap="gfx/current/sel__1050.png">
+			<convert type="TemplatedMultiContent">{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (10, 10), size = (48, 48), png = 0),
+					MultiContentEntryText(pos = (72, 14), size = (730, 40), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (850, 14), size = (200, 40), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+					],
+					"fonts": [gFont("Gradient_Font", 32)],
+					"itemHeight": 75
+				}</convert>
+		</widget>
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_E" />
+	</screen>
+	<!--HDF HddSetup HD -->
+	<screen name="HddSetup" flags="wfNoBorder" position="center,center" size="1450,900" title="Hard Drive Setup" backgroundColor="transparent">
+		<widget source="menu" render="Listbox" position="30,80" size="1050,750" itemHeight="75" scrollbarMode="showOnDemand" transparent="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" selectionPixmap="gfx/current/sel__1050.png">
+			<convert type="TemplatedMultiContent">{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (8, 0), size = (72, 72), png = 0),
+					MultiContentEntryText(pos = (98, 15), size = (495, 57), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (608, 15), size = (188, 57), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+					],
+					"fonts": [gFont("Gradient_Font", 33)],
+					"itemHeight": 75
+				}</convert>
+		</widget>
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_E" />
+	</screen>
+	<!--HDF HddFastRemove HD -->
+	<screen name="HddFastRemove" position="center,center" size="1450,900" title="Hard Drive Fast Umount" flags="wfNoBorder" backgroundColor="transparent">
+		<widget source="menu" render="Listbox" position="30,80" size="1050,750" itemHeight="75" scrollbarMode="showOnDemand" transparent="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" selectionPixmap="gfx/current/sel__1050.png">
+			<convert type="TemplatedMultiContent">{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (3, 0), size = (72, 72), png = 0),
+					MultiContentEntryText(pos = (98, 15), size = (495, 57), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (712, 15), size = (188, 57), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+					],
+					"fonts": [gFont("Gradient_Font", 33)],
+					"itemHeight": 75
+				}</convert>
+		</widget>
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_E" />
+	</screen>
+	<!-- HddInfo -->
+	<screen name="HddInfo" position="center,center" size="1450,900" backgroundColor="transparent" title="HDD Info" flags="wfNoBorder">
+		<widget backgroundColor="gradient_background" name="model" font="Gradient_Font;32" foregroundColor="gradient_foreground" position="63,120" size="1104,41" halign="left" valign="center" transparent="1" />
+		<widget backgroundColor="gradient_background" name="serial" font="Gradient_Font;32" foregroundColor="gradient_foreground" position="63,165" size="1104,41" halign="left" valign="center" transparent="1" />
+		<widget backgroundColor="gradient_background" name="firmware" font="Gradient_Font;32" foregroundColor="gradient_foreground" position="63,210" size="1104,41" halign="left" valign="center" transparent="1" />
+		<widget backgroundColor="gradient_background" name="cylinders" font="Gradient_Font;32" foregroundColor="gradient_foreground" position="63,255" size="1104,41" halign="left" valign="center" transparent="1" />
+		<widget backgroundColor="gradient_background" name="heads" font="Gradient_Font;32" foregroundColor="gradient_foreground" position="63,300" size="1104,41" halign="left" valign="center" transparent="1" />
+		<widget backgroundColor="gradient_background" name="sectors" font="Gradient_Font;32" foregroundColor="gradient_foreground" position="63,345" size="1104,41" halign="left" valign="center" transparent="1" />
+		<widget backgroundColor="gradient_background" name="readDisk" font="Gradient_Font;32" foregroundColor="gradient_foreground" position="63,390" size="1104,41" halign="left" valign="center" transparent="1" />
+		<widget backgroundColor="gradient_background" name="readCache" font="Gradient_Font;32" foregroundColor="gradient_foreground" position="63,435" size="1104,41" halign="left" valign="center" transparent="1" />
+		<widget backgroundColor="gradient_background" name="temp" font="Gradient_Font;32" foregroundColor="gradient_foreground" position="63,480" size="1104,41" halign="left" valign="center" transparent="1" />
+		<widget name="config" font="Gradient_Font;32" itemHeight="45" position="63,570" size="1104,45" scrollbarMode="showOnDemand" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" selectionPixmap="gfx/current/sel__1160.png" transparent="1" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_E" />
+	</screen>
+	<!-- SkinSelector -->
+	<screen name="SkinSelector" position="center,center" size="1920,1080" title="Skin Selector" flags="wfNoBorder" backgroundColor="transparent">
+		<widget source="skins" render="Listbox" position="30,90" size="1020,760" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" selectionPixmap="gfx/current/sel__1050.png">
+			<convert type="TemplatedMultiContent">{"template":
+   [
+					MultiContentEntryText(pos = (25, 6), size = (525, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1), # Skinname
+					MultiContentEntryText(pos = (600, 4), size = (400, 36), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # Label
+   ],
+   "fonts": [gFont("Gradient_Font", 30),gFont("Gradient_Font", 24)],
+   "itemHeight": 45
+     }</convert>
+		</widget>
+		<widget source="description" render="Label" position="30,880" size="1020,90" font="Gradient_Font;32" backgroundColor="gradient_background" halign="center" foregroundColor="gradient_foreground" valign="center" transparent="1" />
+		<widget name="preview" position="1100,100" size="782,484" alphatest="on" zPosition="2" />
+		<panel name="Template_FullScreen_Base" />
+		<panel position="459,147" size="330,57">
+			<panel name="Template_Text_Buttons_O_E" />
+		</panel>
+	</screen>
+	<!-- 	OscamInfoMenu -->
+	<screen name="OscamInfoMenu" position="center,center" size="1450,900" title="OscamInfo Menu" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="mainmenu" position="30,90" size="1190,720" font="Gradient_Font;32" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColorSelected="gradient_foreground_selection" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" selectionPixmap="gfx/current/sel__1390.png" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_E" />
+	</screen>
+	<screen name="OscamInfoConfigScreen" position="center,center" size="1450,900" title="OscamInfo Menu" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="config" position="30,90" size="1390,450" font="Gradient_Font;32" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColorSelected="gradient_foreground_selection" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" selectionPixmap="gfx/current/sel__1390.png" />
+		<widget backgroundColor="gradient_background" name="status" position="30,560" size="1390,250" font="Gradient_Font;30" foregroundColor="green" halign="center" valign="center" transparent="1" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_E" />
+	</screen>
+	<screen name="oscInfo" position="center,center" size="1920,1080" title="Client Info" flags="wfNoBorder" backgroundColor="transparent">
+		<widget backgroundColor="gradient_background" name="output" position="30,90" size="1860,870" font="Gradient_Font;32" foregroundColor="gradient_foreground" scrollbarMode="showOnDemand" transparent="1" />
+		<panel name="Template_FullScreen_Base" />
+		<panel position="459,147" size="330,57">
+			<panel name="Template_Text_Buttons_I_O_E" />
+		</panel>
+	</screen>
+	<screen name="oscECMInfo" position="center,center" size="1450,900" title="OscamECM Info" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="output" position="30,90" size="1190,720" font="Gradient_Font;32" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColorSelected="gradient_foreground_selection" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" selectionPixmap="gfx/current/sel__1390.png" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_E" />
+	</screen>
+	<screen name="oscReaderStats" position="0,0" size="1920,1080" title="OscamReader Stats" flags="wfNoBorder" backgroundColor="transparent">
+		<widget backgroundColor="gradient_background" source="output" render="Listbox" position="30,90" size="1860,870" foregroundColor="gradient_foreground" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">{"templates":
+					{"default": (30,[
+							MultiContentEntryText(pos = (0, 1), size = (100, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+							MultiContentEntryText(pos = (100, 1), size = (50, 24), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+							MultiContentEntryText(pos = (150, 1), size = (150, 24), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+							MultiContentEntryText(pos = (300, 1), size = (60, 24), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+							MultiContentEntryText(pos = (360, 1), size = (60, 24), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+							MultiContentEntryText(pos = (420, 1), size = (80, 24), font=0, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+							MultiContentEntryText(pos = (510, 1), size = (80, 24), font=0, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+							MultiContentEntryText(pos = (590, 1), size = (80, 24), font=0, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+							]),
+					"HD": (45,[
+							MultiContentEntryText(pos = (5, 2), size = (246, 38), font=1, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+							MultiContentEntryText(pos = (266, 2), size = (111, 38), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+							MultiContentEntryText(pos = (392, 2), size = (441, 38), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+							MultiContentEntryText(pos = (848, 2), size = (156, 38), font=1, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+							MultiContentEntryText(pos = (1019, 2), size = (156, 38), font=1, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+							MultiContentEntryText(pos = (1190, 2), size = (201, 38), font=1, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+							MultiContentEntryText(pos = (1406, 2), size = (201, 38), font=1, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+							MultiContentEntryText(pos = (1622, 2), size = (156, 38), font=1, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+							]),
+					},
+					"fonts": [gFont("Gradient_Font", 26),gFont("Gradient_Font", 29),gFont("Gradient_Font", 26),gFont("Gradient_Font", 29)],
+					"itemHeight": 45
+				}</convert>
+		</widget>
+		<panel name="Template_FullScreen_Base" />
+		<panel position="459,147" size="330,57">
+			<panel name="Template_Text_Buttons_I_O_E" />
+		</panel>
+	</screen>
+	<screen name="oscEntitlements" position="0,0" size="1920,1080" title="OscamReader Stats" flags="wfNoBorder" backgroundColor="transparent">
+		<widget backgroundColor="gradient_background" source="output" render="Listbox" position="30,90" size="1860,870" foregroundColor="gradient_foreground" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">{"templates":
+					{"default": (60,[
+							MultiContentEntryText(pos = (0, 1), size = (80, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+							MultiContentEntryText(pos = (90, 1), size = (150, 24), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+							MultiContentEntryText(pos = (250, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+							MultiContentEntryText(pos = (290, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+							MultiContentEntryText(pos = (330, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+							MultiContentEntryText(pos = (370, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+							MultiContentEntryText(pos = (410, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+							MultiContentEntryText(pos = (480, 1), size = (70, 24), font=0, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+							MultiContentEntryText(pos = (550, 1), size = (80, 24), font=0, flags = RT_HALIGN_LEFT, text = 8), # index 8 is reshare
+							MultiContentEntryText(pos = (0, 25), size = (700, 24), font=1, flags = RT_HALIGN_LEFT, text = 9), # index 9 is providers
+							]),
+					"HD": (90,[
+							MultiContentEntryText(pos = (5, 2), size = (240, 38), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+							MultiContentEntryText(pos = (266, 2), size = (366, 38), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+							MultiContentEntryText(pos = (647, 2), size = (126, 38), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+							MultiContentEntryText(pos = (788, 2), size = (126, 38), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+							MultiContentEntryText(pos = (929, 2), size = (126, 38), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+							MultiContentEntryText(pos = (1070, 2), size = (126, 38), font=0, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+							MultiContentEntryText(pos = (1211, 2), size = (126, 38), font=0, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+							MultiContentEntryText(pos = (1352, 2), size = (186, 38), font=0, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+							MultiContentEntryText(pos = (1558, 2), size = (231, 38), font=0, flags = RT_HALIGN_LEFT, text = 8), # index 8 is reshare
+							MultiContentEntryText(pos = (5, 47), size = (1767, 38), font=1, flags = RT_HALIGN_LEFT, text = 9), # index 9 is providers
+							]),
+					},
+					"fonts": [gFont("Gradient_Font", 29),gFont("Gradient_Font", 29),gFont("Gradient_Font", 29),gFont("Gradient_Font", 29)],
+					"itemHeight": 90
+				}</convert>
+		</widget>
+		<panel name="Template_FullScreen_Base" />
+		<panel position="459,147" size="330,57">
+			<panel name="Template_Text_Buttons_I_O_E" />
+		</panel>
+	</screen>
+	<screen name="EcmInfoConfigMenu" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title=" ">
+		<widget name="config" position="30,90" size="1190,720" font="Gradient_Font;32" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColorSelected="gradient_foreground_selection" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" selectionPixmap="gfx/current/sel__1390.png" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_E" />
+	</screen>
+	<screen name="InputDeviceSelection" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Select input device">
+		<widget source="list" render="Listbox" position="30,75" size="1390,630" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" selectionPixmap="gfx/current/sel__1390.png">
+			<convert type="TemplatedMultiContent">{"template": [
+									MultiContentEntryPixmapAlphaBlend(pos = (12, 12), size = (48, 48), png = 2, flags = BT_SCALE), # index 3 is the interface pixmap
+									MultiContentEntryText(pos = (100, 12), size = (675, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text = 1), # index 1 is the interfacename
+								],
+							"fonts": [gFont("Gradient_Font",34),gFont("Gradient_Font",30)],
+							"itemHeight": 75
+							}</convert>
+		</widget>
+		<widget source="introduction" render="Label" position="27,705" size="1395,129" font="Gradient_Font;33" valign="center" transparent="1" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_E" />
+	</screen>
+	<screen name="IPv6Setup" title="IPv6 setup" position="center,center" size="1450,900" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="config" font="Gradient_Font;32" position="30,90" size="1050,630" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" selectionPixmap="gfx/current/sel__1050.png" />
+		<widget backgroundColor="background" source="introduction" render="Label" position="30,730" size="1050,90" font="Gradient_Font;32" halign="center" valign="center" transparent="1" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_E" />
+	</screen>
+	<!-- MessageBox -->
+	<!-- MessageBoxTemplate -->
+	<screen name="MessageBox" position="center,center" size="1430,600" zPosition="10" title="Message" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="12,10" size="80,80" alphatest="blend" />
+		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="12,10" size="80,80" alphatest="blend" />
+		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="12,10" size="80,80" alphatest="blend" />
+		<panel name="MessageBoxTemplate0" />
+		<ePixmap name="MessageBox_bg" position="center,center" size="1430,600" zPosition="-10" pixmap="gfx/current/bg___MessageBox.png" alphatest="blend" />
+		<widget source="Title" render="Label" position="108,24" size="1227,52" font="Italic; 42" foregroundColor="gradient_foreground_selection" backgroundColor="background" borderColor="black" borderWidth="1" noWrap="1" valign="center" transparent="1" />
+		<widget name="text" position="15,120" size="1370,75" font="Gradient_Font;33" valign="center" halign="center" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<widget name="list" position="15,210" size="1370,360" itemHeight="40" font="Gradient_Font;32" scrollbarMode="showOnDemand" foregroundColorSelected="gradient_foreground_selection" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" selectionPixmap="gfx/current/sel__1390.png" />
+		<applet type="onLayoutFinish"># this should be factored out into some helper code,but currently demonstrates applets.
+from enigma import eSize,ePoint, getDesktop
+#orgwidth = self.instance.size().width()
+#orgheight = self.instance.size().height()
+#---
+offset_listposx = 35
+offset_listposy = 135
+offset_listwidth = 15
+offset_listheight = 40
+offset_textwidth = 255
+offset_textheight = 30
+min_width = 600
+min_height = 75
+#----
+deskwidth = getDesktop(0).size().width()
+deskheight = getDesktop(0).size().height()
+textsize = self["text"].getSize()
+textwidth = textsize[0] + offset_textwidth
+textheight = textsize[1] + offset_textheight
+
+listwidth = 0
+listheight = 0
+
+if self.list:
+	try:
+		for i in self.list:
+			if len(i[0]) &gt; listwidth:
+				listwidth = len(i[0])
+		listwidth = listwidth * offset_listwidth
+		listheight = len(self.list) * offset_listheight
+	except:
+		pass
+
+if (min_height &gt; textheight):
+	textheight = min_height
+if (min_width &gt; textwidth):
+	textwidth = min_width
+if (listheight &gt; 0):
+	offset = 32
+else:
+	offset = 20
+if (textwidth &gt; listwidth):
+	wsizex = textwidth + offset_listposx * 2
+else:
+	textwidth = listwidth - offset_listposx
+	wsizex = listwidth + offset_listposx
+
+wsizey = textheight + listheight + offset
+
+if ((wsizey + offset_listposy - offset_listposx) &gt; deskheight):
+	textheight = deskheight - listheight - offset - offset_listposy + offset_listposx
+	wsizey = textheight + listheight + offset
+
+if (wsizex &gt; deskwidth):
+	textwidth = deskwidth - offset_listposx * 2
+	listwidth = wsizex = deskwidth
+
+wsize = (wsizex,wsizey + offset_listposy - offset_listposx)
+
+# resize
+self.instance.resize(eSize(*wsize))
+
+# resize label
+textsize = (textwidth,textheight)
+self["text"].instance.resize(eSize(*textsize))
+
+# move list
+listsize = (wsizex - offset_listposx * 2,listheight)
+self["list"].instance.move(ePoint(offset_listposx,textheight + offset_listposy))
+self["list"].instance.resize(eSize(*listsize))
+
+# center window
+newwidth = wsize[0]
+newheight = wsize[1]
+self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight)/2))</applet>
+	</screen>
+	<screen name="MessageBoxSimple" position="center,center" size="1430,600" zPosition="10" title="Message" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="12,10" size="80,80" alphatest="blend" />
+		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="12,10" size="80,80" alphatest="blend" />
+		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="12,10" size="80,80" alphatest="blend" />
+		<panel name="MessageBoxTemplate0" />
+		<ePixmap name="MessageBox_bg" position="center,center" size="1430,600" zPosition="-10" pixmap="gfx/current/bg___MessageBox.png" alphatest="blend" />
+		<widget source="Title" render="Label" position="108,24" size="1227,52" font="Italic; 42" foregroundColor="gradient_foreground_selection" backgroundColor="background" borderColor="black" borderWidth="1" noWrap="1" valign="center" transparent="1" />
+		<widget name="text" position="15,120" size="1370,75" font="Gradient_Font;33" valign="center" halign="center" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<widget name="list" position="15,210" size="1370,360" itemHeight="40" font="Gradient_Font;32" scrollbarMode="showOnDemand" foregroundColorSelected="gradient_foreground_selection" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" selectionPixmap="gfx/current/sel__1390.png" />
+		<applet type="onLayoutFinish"># this should be factored out into some helper code,but currently demonstrates applets.
+from enigma import eSize,ePoint, getDesktop
+#orgwidth = self.instance.size().width()
+#orgheight = self.instance.size().height()
+#---
+offset_listposx = 35
+offset_listposy = 135
+offset_listwidth = 15
+offset_listheight = 40
+offset_textwidth = 255
+offset_textheight = 30
+min_width = 600
+min_height = 75
+#----
+deskwidth = getDesktop(0).size().width()
+deskheight = getDesktop(0).size().height()
+textsize = self["text"].getSize()
+textwidth = textsize[0] + offset_textwidth
+textheight = textsize[1] + offset_textheight
+
+listwidth = 0
+listheight = 0
+
+if self.list:
+	try:
+		for i in self.list:
+			if len(i[0]) &gt; listwidth:
+				listwidth = len(i[0])
+		listwidth = listwidth * offset_listwidth
+		listheight = len(self.list) * offset_listheight
+	except:
+		pass
+
+if (min_height &gt; textheight):
+	textheight = min_height
+if (min_width &gt; textwidth):
+	textwidth = min_width
+if (listheight &gt; 0):
+	offset = 32
+else:
+	offset = 20
+if (textwidth &gt; listwidth):
+	wsizex = textwidth + offset_listposx * 2
+else:
+	textwidth = listwidth - offset_listposx
+	wsizex = listwidth + offset_listposx
+
+wsizey = textheight + listheight + offset
+
+if ((wsizey + offset_listposy - offset_listposx) &gt; deskheight):
+	textheight = deskheight - listheight - offset - offset_listposy + offset_listposx
+	wsizey = textheight + listheight + offset
+
+if (wsizex &gt; deskwidth):
+	textwidth = deskwidth - offset_listposx * 2
+	listwidth = wsizex = deskwidth
+
+wsize = (wsizex,wsizey + offset_listposy - offset_listposx)
+
+# resize
+self.instance.resize(eSize(*wsize))
+
+# resize label
+textsize = (textwidth,textheight)
+self["text"].instance.resize(eSize(*textsize))
+
+# move list
+listsize = (wsizex - offset_listposx * 2,listheight)
+self["list"].instance.move(ePoint(offset_listposx,textheight + offset_listposy))
+self["list"].instance.resize(eSize(*listsize))
+
+# center window
+newwidth = wsize[0]
+newheight = wsize[1]
+self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight)/2))</applet>
+	</screen>
+	<screen name="SystemMessage" position="center,center" size="1430,600" flags="wfNoBorder">
+		<ePixmap name="MessageBox_bg" position="0,0" size="1430,600" zPosition="-10" pixmap="gfx/current/bg___MessageBox.png" alphatest="blend" />
+		<widget source="Title" render="Label" position="108,23" size="927,52" font="Italic; 42" foregroundColor="gradient_foreground_selection" backgroundColor="background" borderColor="black" borderWidth="1" noWrap="1" valign="center" transparent="1" />
+		<widget name="text" position="15,120" size="1020,75" font="Gradient_Font;33" valign="center" halign="center" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<ePixmap pixmap="icons/input_error.png" position="12,10" size="80,80" alphatest="blend" />
+	</screen>
+	<screen name="RemoveTimerQuestion" position="center,center" size="1430,600" zPosition="10" title="Message" flags="wfNoBorder" backgroundColor="transparent">
+		<ePixmap pixmap="icons/input_question.png" position="12,10" size="80,80" alphatest="blend" />
+		<panel name="MessageBoxTemplate" />
+	</screen>
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="ExtraMessageBox" position="center,center" size="1450,900" title="">
+		<widget source="menu" render="Listbox" position="30,90" size="1040,675" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" selectionPixmap="gfx/current/sel__1050.png">
+			<convert type="TemplatedMultiContent">{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (pos = (12, 10), size = (48, 48), png = 0),
+					MultiContentEntryText(pos = (72, 13), size = (920, 41), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					],
+					"fonts": [gFont("Gradient_Font", 32)],
+					"itemHeight": 75
+				}</convert>
+		</widget>
+		<widget backgroundColor="background" name="message" position="30,780" size="1104,40" font="Gradient_Font;32" foregroundColor="foreground" halign="center" valign="center" transparent="1" />
+		<panel name="Template_Setup_Base" />
+		<panel name="Template_Text_Buttons_E" />
+	</screen>
+	<!-- MessageBoxGenuine -->
+	<screen name="MessageBoxGenuine" position="center,center" size="1430,600" zPosition="10" title="Message" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="12,10" size="80,80" alphatest="blend" />
+		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="12,10" size="80,80" alphatest="blend" />
+		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="12,10" size="80,80" alphatest="blend" />
+		<panel name="MessageBoxTemplate0" />
+		<ePixmap name="MessageBox_bg" position="center,center" size="1430,600" zPosition="-10" pixmap="gfx/current/bg___MessageBox.png" alphatest="blend" />
+		<widget source="Title" render="Label" position="108,24" size="1227,52" font="Italic; 42" foregroundColor="gradient_foreground_selection" backgroundColor="background" borderColor="black" borderWidth="1" noWrap="1" valign="center" transparent="1" />
+		<widget name="text" position="15,120" size="1370,75" font="Gradient_Font;33" valign="center" halign="center" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" />
+		<widget name="list" position="15,210" size="1370,360" itemHeight="40" font="Gradient_Font;32" scrollbarMode="showOnDemand" foregroundColorSelected="gradient_foreground_selection" backgroundColor="gradient_background" foregroundColor="gradient_foreground" transparent="1" selectionPixmap="gfx/current/sel__1390.png" />
+		<applet type="onLayoutFinish"># this should be factored out into some helper code,but currently demonstrates applets.
+from enigma import eSize,ePoint, getDesktop
+#orgwidth = self.instance.size().width()
+#orgheight = self.instance.size().height()
+#---
+offset_listposx = 35
+offset_listposy = 135
+offset_listwidth = 15
+offset_listheight = 40
+offset_textwidth = 255
+offset_textheight = 30
+min_width = 600
+min_height = 75
+#----
+deskwidth = getDesktop(0).size().width()
+deskheight = getDesktop(0).size().height()
+textsize = self["text"].getSize()
+textwidth = textsize[0] + offset_textwidth
+textheight = textsize[1] + offset_textheight
+
+listwidth = 0
+listheight = 0
+
+if self.list:
+	try:
+		for i in self.list:
+			if len(i[0]) &gt; listwidth:
+				listwidth = len(i[0])
+		listwidth = listwidth * offset_listwidth
+		listheight = len(self.list) * offset_listheight
+	except:
+		pass
+
+if (min_height &gt; textheight):
+	textheight = min_height
+if (min_width &gt; textwidth):
+	textwidth = min_width
+if (listheight &gt; 0):
+	offset = 32
+else:
+	offset = 20
+if (textwidth &gt; listwidth):
+	wsizex = textwidth + offset_listposx * 2
+else:
+	textwidth = listwidth - offset_listposx
+	wsizex = listwidth + offset_listposx
+
+wsizey = textheight + listheight + offset
+
+if ((wsizey + offset_listposy - offset_listposx) &gt; deskheight):
+	textheight = deskheight - listheight - offset - offset_listposy + offset_listposx
+	wsizey = textheight + listheight + offset
+
+if (wsizex &gt; deskwidth):
+	textwidth = deskwidth - offset_listposx * 2
+	listwidth = wsizex = deskwidth
+
+wsize = (wsizex,wsizey + offset_listposy - offset_listposx)
+
+# resize
+self.instance.resize(eSize(*wsize))
+
+# resize label
+textsize = (textwidth,textheight)
+self["text"].instance.resize(eSize(*textsize))
+
+# move list
+listsize = (wsizex - offset_listposx * 2,listheight)
+self["list"].instance.move(ePoint(offset_listposx,textheight + offset_listposy))
+self["list"].instance.resize(eSize(*listsize))
+
+# center window
+newwidth = wsize[0]
+newheight = wsize[1]
+self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight)/2))</applet>
+	</screen>
+	<!-- ********** HDf File Commander ********** -->
+	<screen name="FileCommanderScreen" position="center,center" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="list_left_head1" position="30,90" size="910,40" font="Gradient_Font;28" valign="center" foregroundColor="gradient_foreground_selection" backgroundColor="background" transparent="1" scrollbarMode="showNever" />
+		<widget name="sort_left" position="30,934" size="910,33" halign="center" font="Gradient_Font;27" foregroundColor="ButtonYellow" backgroundColor="background" transparent="1" />
+		<widget name="list_left" position="30,230" size="910,675" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1050.png" />
+		<widget name="list_left_filename" position="30,130" size="910,40" font="Gradient_Font;28" noWrap="1" zPosition="1" foregroundColor="white" backgroundColor="background" transparent="1" scrollbarMode="showNever" />
+		<widget name="list_left_select" position="30,170" size="910,40" zPosition="1" font="Gradient_Font;27" backgroundColor="background" transparent="1" foregroundColor="white" scrollbarMode="showNever" />
+		<widget name="list_left_free" position="30,934" size="150,33" font="Gradient_Font;27" halign="center" foregroundColor="ButtonYellow" backgroundColor="background" transparent="1" itemHeight="20" scrollbarMode="showNever" />
+		<widget source="list_left_head2" render="Listbox" position="30,170" size="910,40" foregroundColor="gradient_foreground_selection" selectionDisabled="1" backgroundColor="background" transparent="1" scrollbarMode="showNever">
+			<convert type="TemplatedMultiContent">{"template": [
+					MultiContentEntryText(pos = (0, 0), size = (172, 30), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
+					MultiContentEntryText(pos = (195, 0), size = (135, 30), font = 0, flags = RT_HALIGN_RIGHT, text = 11), # index 11 is the scaled size
+					MultiContentEntryText(pos = (352, 0), size = (390, 30), font = 0, flags = RT_HALIGN_LEFT, text = 15), # index 15 is the modification time
+					],
+					"fonts": [gFont("Gradient_Font", 27)],
+					"itemHeight": 45,
+					"selectionEnabled": False
+				}</convert>
+		</widget>
+		<widget name="list_right_head1" position="980,90" size="910,40" font="Gradient_Font;28" valign="center" foregroundColor="gradient_foreground_selection" backgroundColor="background" transparent="1" scrollbarMode="showNever" />
+		<widget name="sort_right" position="980,934" size="910,33" halign="center" font="Gradient_Font;27" foregroundColor="ButtonYellow" backgroundColor="background" transparent="1" />
+		<widget name="list_right" position="980,230" size="910,675" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1050.png" />
+		<widget name="list_right_filename" position="980,130" size="910,40" font="Gradient_Font;28" noWrap="1" foregroundColor="white" backgroundColor="background" transparent="1" zPosition="1" scrollbarMode="showNever" />
+		<widget name="list_right_select" position="980,170" size="910,40" zPosition="1" font="Gradient_Font;27" backgroundColor="background" transparent="1" foregroundColor="white" scrollbarMode="showNever" />
+		<widget name="list_right_free" position="980,934" size="150,33" font="Gradient_Font;27" foregroundColor="ButtonYellow" backgroundColor="background" transparent="1" scrollbarMode="showNever" />
+		<widget source="list_right_head2" render="Listbox" position="980,170" size="910,40" foregroundColor="gradient_foreground_selection" backgroundColor="background" selectionDisabled="1" transparent="1" scrollbarMode="showNever">
+			<convert type="TemplatedMultiContent">{"template": [
+					MultiContentEntryText(pos = (0, 0), size = (172, 30), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
+					MultiContentEntryText(pos = (195, 0), size = (135, 30), font = 0, flags = RT_HALIGN_RIGHT, text = 11), # index 11 is the scaled size
+					MultiContentEntryText(pos = (352, 0), size = (390, 30), font = 0, flags = RT_HALIGN_LEFT, text = 15), # index 15 is the modification time
+					],
+					"fonts": [gFont("Gradient_Font", 27)],
+					"itemHeight": 45,
+					"selectionEnabled": False
+				}</convert>
+		</widget>
+		<ePixmap position="30,215" size="1860,2" pixmap="gfx/current/bg__1872x2_Line_Fullscreen.png" alphatest="blend" />
+		<ePixmap position="30,920" size="1860,2" pixmap="gfx/current/bg__1872x2_Line_Fullscreen.png" alphatest="blend" />
+		<eLabel position="center,90" size="2,110" backgroundColor="gradient_background_selection" />
+		<eLabel position="center,230" size="2,675" backgroundColor="gradient_background_selection" />
+		<panel name="Template_FullScreen_Base" />
+		<panel position="459,147" size="330,57">
+			<panel name="Template_Text_Buttons_M_O_E" />
+		</panel>
+		<widget name="status" position="67,797" size="1749,51" font="Gradient_Font;30" backgroundColor="bernstein" borderColor="black" borderWidth="3" foregroundColor="white" halign="center" valign="center" zPosition="+1" />
+	</screen>
+	<screen name="FileCommanderContextMenu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="menu" position="990,90" size="750,810" font="Gradient_Font;30" foregroundColorSelected="gradient_foreground_selection" backgroundColor="dark" foregroundColor="gradient_foreground" scrollbarMode="showNever" itemHeight="54" enableWrapAround="1" selectionPixmap="gfx/current/sel__720.png" />
+		<widget source="Title" render="Label" position="0,900" size="1920,180" halign="center" valign="bottom" font="Gradient_Font;135" backgroundColor="gradient_background" foregroundColor="gradient_foreground" zPosition="-50" />
+		<eLabel position="108,735" zPosition="-1" size="801,165" backgroundColor="dark" transparent="0" />
+		<widget name="description" position="120,741" size="780,150" font="Gradient_Font;30" backgroundColor="gradient_background" foregroundColor="gradient_foreground" halign="left" valign="center" transparent="1" />
+	</screen>
+	<screen name="FileCommanderTextEditor" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="path" position="30,135" size="1560,75" font="Gradient_Font;27" valign="center" foregroundColor="gradient_BGLM" backgroundColor="gradient_background" transparent="1" />
+		<widget name="data" position="30,210" size="1860,720" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1860.png" />
+		<widget name="location" position="1665,135" size="150,75" font="Gradient_Font;27" valign="center" foregroundColor="gradient_BGLM" backgroundColor="gradient_background" transparent="1" />
+		<panel name="Template_FullScreen_Base" />
+		<panel position="459,147" size="330,57">
+			<panel name="Template_Text_Buttons_O_E" />
+		</panel>
+	</screen>
+	<screen name="FileCommanderData" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="data" position="30,135" size="1860,780" font="Gradient_Font;30" splitPosition="250" scrollbarMode="showOnDemand" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1860.png" />
+		<panel name="Template_FullScreen_Base" />
+		<panel position="459,147" size="330,57">
+			<panel name="Template_Text_Buttons_O_E" />
+		</panel>
+	</screen>
+	<screen name="FileCommanderImageViewer" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel position="0,0" zPosition="0" size="1920,1080" backgroundColor="black" />
+		<widget name="image" position="0,0" size="1920,1080" zPosition="1" alphatest="on" />
+		<!-- 	<ePixmap position="0,0" size="1920,45" zPosition="1" pixmap="colorgradient_imageviewer.png" transparent="1" alphatest="blend" /> -->
+		<widget name="status" position="12,12" size="30,30" zPosition="2" pixmap="icons/record.png" alphatest="blend" />
+		<widget name="icon" position="45,12" size="30,30" zPosition="2" pixmap="icons/ico_mp_play.png" alphatest="blend" />
+		<widget source="message" render="Label" position="81,0" size="1800,45" font="Gradient_Font;30" halign="left" foregroundColor="green" backgroundColor="gradient_background" zPosition="2" transparent="1" />
+		<widget name="infolabels" position="15,90" size="375,900" backgroundColor="gradient_background" borderWidth="3" font="Gradient_Font;30" foregroundColor="green" halign="right" transparent="1" zPosition="+3" />
+		<widget name="infodata" position="405,90" size="1500,900" backgroundColor="gradient_background" borderWidth="3" font="Gradient_Font;30" foregroundColor="green" halign="left" transparent="1" zPosition="+3" />
+	</screen>
+	<screen name="FileCommanderFileViewer" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="path" position="30,135" size="1860,75" font="Gradient_Font;27" valign="center" foregroundColor="gradient_BGLM" backgroundColor="gradient_background" transparent="1" />
+		<widget name="data" position="30,210" size="1860,720" font="Gradient_Font;30" scrollbarMode="showOnDemand" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1860.png" />
+		<panel name="Template_FullScreen_Base" />
+		<panel position="459,147" size="330,57">
+			<panel name="Template_Text_Buttons_O_E" />
+		</panel>
+	</screen>
+	<screen name="vEditorScreen" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="list_head" position="30,100" size="1860,75" font="Gradient_Font;27" valign="center" foregroundColor="gradient_BGLM" backgroundColor="gradient_background" transparent="1" conditional="list_head" scrollbarMode="showNever" />
+		<widget name="filedata" position="30,210" size="1860,720" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1860.png" />
+		<widget name="InputBoxWide_input" position="0,0" size="1080,0" font="Gradient_Font;22" backgroundColor="background" transparent="1" />
+		<panel name="Template_FullScreen_Base" />
+		<panel position="459,147" size="330,57">
+			<panel name="Template_Text_Buttons_O_E" />
+		</panel>
+	</screen>
+	<screen name="ArchiverInfoScreen" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="list_left_head" position="30,90" size="1860,90" font="Gradient_Font;27" valign="center" foregroundColor="gradient_BGLM" backgroundColor="gradient_background" transparent="1" scrollbarMode="showNever" />
+		<widget name="list_left" position="30,210" size="1860,720" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1860.png" />
+		<panel name="Fullscreen_Title_TopPanel" />
+		<panel position="459,147" size="330,57">
+			<panel name="Template_Text_Buttons_O_E" />
+		</panel>
+	</screen>
+	<screen name="ImageViewer" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel position="0,0" zPosition="0" size="1920,1080" backgroundColor="black" />
+		<widget name="image" position="0,0" size="1920,1080" zPosition="1" alphatest="on" />
+		<!-- <ePixmap position="0,0" size="1920,45" zPosition="1" pixmap="colorgradient_imageviewer.png" transparent="1" alphatest="blend" /> -->
+		<widget name="status" position="12,12" size="30,30" zPosition="2" pixmap="icons/record.png" alphatest="blend" />
+		<widget name="icon" position="45,12" size="30,30" zPosition="2" pixmap="icons/ico_mp_play.png" alphatest="blend" />
+		<widget source="message" render="Label" position="81,0" size="1800,45" font="Gradient_Font;30" halign="left" foregroundColor="green" backgroundColor="gradient_background" zPosition="2" transparent="1" />
+	</screen>
+	<screen name="FileCommanderFileStatInfo" title="File/Directory Status Information" position="center,center" size="1100,900" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="filename" position="30,90" size="1040,90" font="Gradient_Font;30" valign="center" foregroundColor="gradient_foreground_selection" backgroundColor="background" transparent="1" />
+		<widget source="list" render="Listbox" position="30,190" size="1040,620" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" backgroundColor="gradient_background" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="gfx/current/sel__1050.png">
+			<convert type="TemplatedMultiContent">{"template": [
+					# 0   100 200 300 400 500
+					# |   |   |   |   |   |
+					# 00000000 1111111111111
+					MultiContentEntryText(pos = (0, 0), size = (450, 45), font = 0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is a label
+					MultiContentEntryText(pos = (480, 0), size = (570, 45), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the information
+					],
+					"fonts": [gFont("Gradient_Font", 30)],
+					"itemHeight": 45,
+					"selectionEnabled": False
+				}</convert>
+		</widget>
+		<panel name="TemplateButton_Automatic_all_Menu" />
+		<panel name="Menu_Title_TopPanel" />
+		<panel name="Template_Menu_Text_Button_O_E" />
+	</screen>
+	<screen name="ArchiverMenuScreen" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="list_left_head" position="30,90" size="1860,90" font="Gradient_Font;27" valign="center" foregroundColor="gradient_BGLM" backgroundColor="gradient_background" transparent="1" scrollbarMode="showNever" />
+		<widget name="list_left" position="30,200" size="1860,720" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1860.png" />
+		<widget name="unpacking" position="30,930" size="1050,45" font="Gradient_Font; 30" backgroundColor="background" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+		<panel name="Fullscreen_Title_TopPanel" />
+		<panel position="459,147" size="330,57">
+			<panel name="Template_Text_Buttons_O_E" />
+		</panel>
+	</screen>
+	<!-- File Commander -->
+</skin>

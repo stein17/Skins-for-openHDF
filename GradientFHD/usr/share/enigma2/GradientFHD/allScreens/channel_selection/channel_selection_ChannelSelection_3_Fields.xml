@@ -1,0 +1,5 @@
+<skin>
+    <screen name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ChannelSelection_3_Fields" />
+  </screen> 
+ </skin>
