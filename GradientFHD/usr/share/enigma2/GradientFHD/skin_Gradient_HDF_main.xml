@@ -766,7 +766,7 @@
 	<!--   TimerSelection -->
 	<screen name="TimerSelection" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Timer selection">
 		<widget name="description" position="27,560" size="1395,268" font="Gradient_Font;30" backgroundColor="gradient_background" halign="left" foregroundColor="gradient_foreground" valign="top" scrollbarMode="showAlways" transparent="1" />
-		<widget name="timerlist" position="27,74" size="1390,480" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1390.png" />
+		<widget name="timerlist" position="27,74" size="1390,480" itemHeight="75" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__1390.png" />
 		<panel name="Template_Text_Buttons_O_E" />
 		<panel name="Setup_Title_TopPanel" />
 		<panel name="Template_Setup_Base" />

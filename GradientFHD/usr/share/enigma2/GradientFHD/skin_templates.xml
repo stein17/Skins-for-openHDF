@@ -668,7 +668,7 @@
 			<convert type="GradientVPNInfo">ConnType</convert>
 		</widget>
 		<!-- Länderflagge-->
-		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="188,279" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/contry_flags/" missing="missing.png" preferName="0" fuzzy="0">
+		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="188,279" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/country_flags/" missing="missing.png" preferName="0" fuzzy="0">
 			<convert type="GradientVPNInfo">CountryCode</convert>
 		</widget>
 		<!-- Ländertext (z. B. "DE – Deutschland") -->
@@ -705,7 +705,7 @@
 			<convert type="GradientVPNInfo">ConnType</convert>
 		</widget>
 		<!-- Länderflagge-->
-		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="19,279" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/contry_flags/" missing="missing.png" preferName="0" fuzzy="0">
+		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="19,279" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/country_flags/" missing="missing.png" preferName="0" fuzzy="0">
 			<convert type="GradientVPNInfo">CountryCode</convert>
 		</widget>
 		<!-- Öffentliche IP -->
@@ -738,7 +738,7 @@
 			<convert type="GradientVPNInfo">ConnType</convert>
 		</widget>
 		<!-- Länderflagge -->
-		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="1778,279" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/contry_flags/" missing="missing.png" preferName="0" fuzzy="0">
+		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="1778,279" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/country_flags/" missing="missing.png" preferName="0" fuzzy="0">
 			<convert type="GradientVPNInfo">CountryCode</convert>
 		</widget>
 		<!-- Ländertext (z. B. "DE – Deutschland") -->
@@ -797,7 +797,7 @@
 			<convert type="GradientVPNInfo">VpnActive</convert>
 		</widget>
 		<!-- Länderflagge-->
-		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="1609,279" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/contry_flags/" missing="missing.png" preferName="0" fuzzy="0">
+		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="1609,279" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/country_flags/" missing="missing.png" preferName="0" fuzzy="0">
 			<convert type="GradientVPNInfo">CountryCode</convert>
 		</widget>
 	</screen>
@@ -809,7 +809,7 @@
 			<convert type="GradientVPNInfo">ConnType</convert>
 		</widget>
 		<!-- Länderflagge -->
-		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="706,733" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/contry_flags/" missing="missing.png" preferName="0" fuzzy="0">
+		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="706,733" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/country_flags/" missing="missing.png" preferName="0" fuzzy="0">
 			<convert type="GradientVPNInfo">CountryCode</convert>
 		</widget>
 		<!-- Ländertext (z. B. "DE – Deutschland") -->
@@ -865,7 +865,7 @@
 			<convert type="GradientVPNInfo">VpnActive</convert>
 		</widget>
 		<!-- Länderflagge-->
-		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="1028,733" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/contry_flags/" missing="missing.png" preferName="0" fuzzy="0">
+		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="1028,733" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/country_flags/" missing="missing.png" preferName="0" fuzzy="0">
 			<convert type="GradientVPNInfo">CountryCode</convert>
 		</widget>
 	</screen>
@@ -891,7 +891,7 @@
 			<convert type="GradientVPNInfo">IP</convert>
 		</widget>
 		<!-- Länderflagge -->
-		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="1740,1008" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/contry_flags/" missing="missing.png" preferName="0" fuzzy="0">
+		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="1740,1008" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/country_flags/" missing="missing.png" preferName="0" fuzzy="0">
 			<convert type="GradientVPNInfo">CountryCode</convert>
 		</widget>
 		<!-- Verbindungs-Icon (LAN/WLAN/NET-OFF) -->
@@ -914,7 +914,7 @@
 			<convert type="GradientVPNInfo">IP</convert>
 		</widget>
 		<!-- Länderflagge -->
-		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="1740,1008" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/contry_flags/" missing="missing.png" preferName="0" fuzzy="0">
+		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="1740,1008" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/country_flags/" missing="missing.png" preferName="0" fuzzy="0">
 			<convert type="GradientVPNInfo">CountryCode</convert>
 		</widget>
 		<!-- Verbindungs-Icon (LAN/WLAN/NET-OFF) -->
@@ -937,7 +937,7 @@
 			<convert type="GradientVPNInfo">ConnType</convert>
 		</widget>
 		<!-- Länderflagge -->
-		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="1250,569" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/contry_flags/" missing="missing.png" preferName="0" fuzzy="0">
+		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="1250,569" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/country_flags/" missing="missing.png" preferName="0" fuzzy="0">
 			<convert type="GradientVPNInfo">CountryCode</convert>
 		</widget>
 		<!-- Ländertext (z. B. "DE – Deutschland") -->
@@ -1000,7 +1000,7 @@
 			<convert type="GradientVPNInfo">VpnActive</convert>
 		</widget>
 		<!-- Länderflagge-->
-		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="1240,524" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/contry_flags/" missing="missing.png" preferName="0" fuzzy="0">
+		<widget source="session.CurrentService" render="GradientCountryFlagPixmap" position="1240,524" size="34,34" zPosition="5" alphatest="blend" scaled="1" basePath="/usr/lib/enigma2/python/Plugins/Extensions/GradientFHD/country_flags/" missing="missing.png" preferName="0" fuzzy="0">
 			<convert type="GradientVPNInfo">CountryCode</convert>
 		</widget>
 	</screen>

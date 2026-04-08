@@ -1663,7 +1663,18 @@ self['config'].l.setSeperation(int(300*f))</applet>
 		</widget>
 		<widget source="ServiceEvent" render="GradientFrontend" position="1150,997" size="520,38" font="Gradient_Font; 24" backgroundColor="gradient_background" transparent="1" halign="left" valign="center" zPosition="3" foregroundColor="green" noWrap="1" />
 		<eLabel position="1310,465" size="250,2" backgroundColor="gradient_foreground_title" zPosition="1" />
-		<panel name="Template_FullScreen_Base" />
+		<!-- <panel name="Template_FullScreen_Base" /> -->
+		
+  <widget source="global.CurrentTime" render="Label" position="1635,15" size="240,60" font="Italic; 42" foregroundColor="gradient_foreground_selection" backgroundColor="background" borderColor="black" borderWidth="1" halign="right" valign="center" transparent="1" zPosition="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="1125,15" size="510,60" font="Italic; 30" foregroundColor="gradient_foreground_selection" backgroundColor="background" borderColor="black" borderWidth="1" halign="right" valign="center" transparent="1" zPosition="1">
+    <convert type="ClockToText">Date</convert>
+  </widget>
+  <widget source="Title" render="Label" position="45,15" size="1110,60" font="Italic; 42" halign="left" valign="center" transparent="1" foregroundColor="gradient_foreground_selection" backgroundColor="background" borderColor="black" borderWidth="1" zPosition="1" />
+  <!-- <panel name="Gradient_Fullscreen_BLUE" /> -->
+   <ePixmap name="fullscreen_bg" position="0,0" size="1920,1080" zPosition="-8" pixmap="gfx/current/bg___Fullscreen_BG.png" alphatest="blend" />
+
 		<panel position="459,150" size="330,57">
 			<panel name="Template_Text_Buttons_M_I_EPG" />
 		</panel>
@@ -3361,6 +3372,14 @@ self['config'].l.setSeperation(int(300*f))</applet>
 		<widget font="Gradient_Font;27" halign="right" position="595,490" render="Label" size="120,40" source="Service" backgroundColor="gradient_background" foregroundColor="EventTimeColor" transparent="1">
 			<convert type="MovieInfo">FileSize</convert>
 		</widget>
+		<eLabel text="Free:" position="970,15" size="80,60" font="Italic; 30" halign="left" valign="center" transparent="1" foregroundColor="gradient_foreground_selection" backgroundColor="background" borderColor="black" borderWidth="1" zPosition="1" /> 
+		<eLabel text="Size:" position="700,15" size="80,60" font="Italic; 30" halign="left" valign="center" transparent="1" foregroundColor="gradient_foreground_selection" backgroundColor="background" borderColor="black" borderWidth="1" zPosition="1" /> 
+		<widget source="Service" render="Label" position="1050,15" size="180,60" font="Italic; 30" foregroundColor="gradient_foreground_selection" backgroundColor="background" borderColor="black" borderWidth="1" halign="left" valign="center" transparent="1" zPosition="1">
+			<convert type="XionHDFDiskSpace">free</convert>
+		</widget>
+		<widget source="Service" render="Label" position="780,15" size="180,60" font="Italic; 30" foregroundColor="gradient_foreground_selection" backgroundColor="background" borderColor="black" borderWidth="1" halign="left" valign="center" transparent="1" zPosition="1">
+			<convert type="XionHDFDiskSpace">size</convert>
+		</widget>
 		<widget font="Gradient_Font; 32" position="120,530" render="Label" size="595,40" source="Service" halign="left" valign="center" backgroundColor="gradient_background" foregroundColor="gradient_foreground_selection" transparent="1">
 			<convert type="EMCMovieInfo">RecordServiceName</convert>
 		</widget>
@@ -3379,6 +3398,8 @@ self['config'].l.setSeperation(int(300*f))</applet>
 		</panel>
 		<panel name="Template_FullScreen_Color_Buttons" />
 		<panel name="Fullscreen_TopPanel" />
+		
+
 	</screen>
 	<screen name="MovieSelection" position="center,center" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder" title="Select a movie">
 		<widget name="waitingtext" position="33,93" size="1110,879" zPosition="10" font="Gradient_Font;60" backgroundColor="gradient_background" halign="center" valign="center" />
