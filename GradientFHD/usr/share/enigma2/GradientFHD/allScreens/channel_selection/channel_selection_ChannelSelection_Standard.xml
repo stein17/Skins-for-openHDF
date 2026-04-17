@@ -24,7 +24,7 @@
 		<widget source="ServiceEvent" render="Picon" position="1185,90" size="120,72" zPosition="6" alphatest="blend" transparent="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget source="ServiceEvent" position="1185,934" size="690,40" font="Gradient_Font;32" render="RunningText" options="movetype=running,startdelay=600,steptime=60,direction=left,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" noWrap="1" zPosition="2" backgroundColor="gradient_background" foregroundColor="EventNameColor" transparent="1">
+		<widget source="ServiceEvent" position="1185,934" size="690,40" font="Gradient_Font;32" render="RunningText" options="movetype=running,startdelay=600,steptime=20,direction=left,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" noWrap="1" zPosition="2" backgroundColor="gradient_background" foregroundColor="EventNameColor" transparent="1">
 			<convert type="GradientPrimeTime">PrimeTime,noDuration</convert>
 		</widget>
 		<widget source="ServiceEvent" render="GradientFrontend" position="1150,997" size="520,38" font="Gradient_Font; 24" backgroundColor="gradient_background" transparent="1" halign="left" valign="center" zPosition="3" foregroundColor="green" noWrap="1" />

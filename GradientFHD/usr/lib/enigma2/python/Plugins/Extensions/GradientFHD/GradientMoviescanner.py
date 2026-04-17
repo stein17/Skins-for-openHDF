@@ -1026,101 +1026,10 @@ def _is_flat_movie_root(path):
 	return False
 
 
-def _is_storage_root(path):
-	"""
-	Reject plain storage/mount roots. These must never appear as selectable scan paths.
-	Examples:
-	  /media
-	  /media/hdd
-	  /media/usb
-	  /media/mmc
-	  /media/net
-	  /media/autofs
-	  /media/autofs/HOST
-	  /media/net/HOST
-	"""
-	np = _norm_real_path(path).rstrip("/")
-	if not np:
-		return True
-
-	bad_exact = {
-		"/",
-		"/media",
-		"/media/hdd",
-		"/media/usb",
-		"/media/mmc",
-		"/media/net",
-		"/media/autofs",
-	}
-	if np in bad_exact:
-		return True
-
-	parts = [p for p in np.split("/") if p]
-
-	# /media/autofs/<host>  -> reject
-	# /media/net/<host>     -> reject
-	# but /media/autofs/<host>/<share> may be valid candidate
-	if len(parts) == 3 and parts[0] == "media" and parts[1] in ("autofs", "net"):
-		return True
-
-	return False
-
-
-def _contains_videos_root_only(path):
-	try:
-		for f in os.listdir(path):
-			fp = os.path.join(path, f)
-			if os.path.isfile(fp) and f.lower().endswith(VIDEO_EXTS):
-				return True
-	except Exception:
-		pass
-	return False
-
-
-def _looks_like_movie_dir(path):
-	"""
-	Accept only real movie/recording folders.
-	Allowed:
-	  - .../movie
-	  - .../movies
-	  - .../film / .../filme
-	  - directories that directly contain video files
-	Rejected:
-	  - plain mount roots like /media, /media/hdd, /media/autofs/HOST
-	"""
-	try:
-		if not path or not os.path.isdir(path):
-			return False
-	except Exception:
-		return False
-
-	np = _norm_real_path(path)
-	if _is_storage_root(np):
-		return False
-
-	base = os.path.basename(np.rstrip("/")).lower()
-
-	if base in ("movie", "movies", "film", "filme", "recordings", "aufnahme", "aufnahmen"):
-		return True
-
-	if _contains_videos_root_only(np):
-		return True
-
-	return False
-
-
 def _configured_video_dirs():
-	"""
-	Try Enigma2 recording/movie config paths as additional scan start points.
-
-	Important:
-	- reject plain storage roots like /media or /media/hdd
-	- accept only real movie dirs or subdirs below them
-	"""
+	"""Try Enigma2 recording/movie config paths as additional scan start points."""
 	out = []
-	seen = set()
 	candidates = []
-
 	try:
 		vd = getattr(getattr(config, 'movielist', None), 'videodirs', None)
 		if vd is not None:
@@ -1129,7 +1038,6 @@ def _configured_video_dirs():
 				candidates.extend([x for x in val if isinstance(x, str)])
 	except Exception:
 		pass
-
 	try:
 		last_videodir = getattr(getattr(config, 'movielist', None), 'last_videodir', None)
 		if last_videodir is not None:
@@ -1138,39 +1046,12 @@ def _configured_video_dirs():
 				candidates.append(val)
 	except Exception:
 		pass
-
 	for p in candidates:
 		try:
-			if not isinstance(p, str):
-				continue
-			p = p.strip()
-			if not p or not os.path.isdir(p):
-				continue
-
-			np = _norm_real_path(p)
-
-			# Never show storage roots
-			if _is_storage_root(np):
-				continue
-
-			# Accept only real movie dirs / recording dirs
-			if _looks_like_movie_dir(np):
-				if np not in seen:
-					seen.add(np)
-					out.append(p)
-				continue
-
-			# If current path is a subdir below a real movie dir, allow it
-			parent = os.path.dirname(np.rstrip("/"))
-			if parent and parent != np and _looks_like_movie_dir(parent):
-				if np not in seen:
-					seen.add(np)
-					out.append(p)
-				continue
-
+			if isinstance(p, str) and p and os.path.isdir(p):
+				out.append(p)
 		except Exception:
 			pass
-
 	return out
 
 
@@ -1186,72 +1067,42 @@ def scan_start_points():
 	"""
 	Build selectable scan roots.
 
-	Show only:
-	  - real movie folders
-	  - direct subfolders of those movie folders
-
-	Never show:
-	  - /media
-	  - /media/hdd
-	  - /media/usb
-	  - host-only autofs/net roots
+	Legacy behavior is kept (/media/hdd/movie + subdirs), but we additionally
+	support NAS/autofs structures like:
+	  /media/autofs/DISKSTATION/Filme
+	and configured movielist video dirs.
 	"""
 	roots = []
 	seen = set()
 
 	# 1) Known local movie roots (legacy + common alternatives)
 	for base in LOCAL_MOVIE_ROOTS:
-		if os.path.isdir(base) and _looks_like_movie_dir(base):
+		if os.path.isdir(base):
 			_append_unique_dir(roots, seen, base)
 			_add_children(roots, seen, base)
 
 	# 2) Explicitly configured movie/recording dirs from Enigma2 config
 	for p in _configured_video_dirs():
-		np = _norm_real_path(p)
-
-		if _looks_like_movie_dir(np):
-			_append_unique_dir(roots, seen, p)
+		_append_unique_dir(roots, seen, p)
+		# If this is a movie root, expose its direct subfolders as selectable items
+		if _is_flat_movie_root(p):
 			_add_children(roots, seen, p)
-			continue
-
-		# allow a direct subfolder below a valid movie dir
-		parent = os.path.dirname(np.rstrip("/"))
-		if parent and parent != np and _looks_like_movie_dir(parent):
-			_append_unique_dir(roots, seen, p)
 
 	# 3) Network automount roots (/media/autofs, /media/net)
-	#    Host level itself is NOT selectable.
-	#    Only shares/movie dirs and their first-level children are selectable.
+	#    Add host/share level and one level below, so users can select either
+	#    the complete share or a dedicated movie folder (e.g. .../Filme).
 	for net_root in NETWORK_SCAN_ROOTS:
 		if not os.path.isdir(net_root):
 			continue
-
-		for host in listdir_filtered(net_root):
-			host_path = os.path.join(net_root, host)
+		for host_or_share in listdir_filtered(net_root):
+			host_path = os.path.join(net_root, host_or_share)
 			if not os.path.isdir(host_path) or is_excluded_dir(host_path):
 				continue
-
-			for share in listdir_filtered(host_path):
-				share_path = os.path.join(host_path, share)
-				if not os.path.isdir(share_path) or is_excluded_dir(share_path):
-					continue
-
-				# If the share itself is already the movie dir, show it + its children
-				if _looks_like_movie_dir(share_path):
-					_append_unique_dir(roots, seen, share_path)
-					_add_children(roots, seen, share_path)
-					continue
-
-				# Otherwise inspect one level below the share and only add real movie dirs
-				for child in listdir_filtered(share_path):
-					child_path = os.path.join(share_path, child)
-					if not os.path.isdir(child_path) or is_excluded_dir(child_path):
-						continue
-					if _looks_like_movie_dir(child_path):
-						_append_unique_dir(roots, seen, child_path)
-						_add_children(roots, seen, child_path)
+			_append_unique_dir(roots, seen, host_path)
+			_add_children(roots, seen, host_path)
 
 	return roots
+
 
 def nice_folder_label(path):
 	is_root_movie = _is_flat_movie_root(path)
@@ -1497,21 +1348,79 @@ def clean_title_from_filename(name, fullpath=None):
 	return base, year
 
 
-def detect_media_type(path_or_name):
-	s = path_or_name.lower()
-	if any(k in s for k in ('doku', 'dokumentation', 'dokumentar', 'documentary')):
-		return "tv"
-	if any(k in s for k in ('staffel', 'season', 'serie', 'episode', 'folge')):
-		return "tv"
+def _extract_recording_channel(path_or_name):
+	"""Best-effort channel extraction from recording filenames like
+	'20251226 1322 - Sky Cinema Action HD - Rambo.ts'.
+	Returns the channel part or ''.
+	"""
+	try:
+		base = os.path.splitext(os.path.basename(path_or_name or ''))[0]
+		base = _fix_mojibake_text(base)
+		parts = [p.strip() for p in re.split(r'\s*[-–]\s*', base) if p and p.strip()]
+		if len(parts) >= 3:
+			if re.match(r'^\d{6,8}\s+\d{3,4}$', parts[0]) or re.match(r'^\d{6,8}$', parts[0]):
+				return parts[1]
+	except Exception:
+		pass
+	return ''
+
+
+def _is_movie_channel_hint(channel_name):
+	"""Channels with a strong movie bias should not force recordings into TV mode."""
+	try:
+		ch = re.sub(r'\s+', ' ', (channel_name or '').strip().lower())
+	except Exception:
+		ch = ''
+	if not ch:
+		return False
+	for hint in (
+		'sky cinema', 'cinema', 'kinowelt', 'warner tv film', 'tnt film',
+		'mgm', 'silverline', 'axn movies', 'movie channel'
+	):
+		if hint in ch:
+			return True
+	return False
+
+
+def detect_media_type(path_or_name, title_hint=None, fullpath=None):
+	"""Classify recording as movie or tv.
+
+	Important fix:
+	Recordings from clear movie channels like 'Sky Cinema ...' must stay movie,
+	even if the raw filename uses a typical recording schema with many ' - '.
+	"""
+	try:
+		raw = ' '.join([x for x in (path_or_name, fullpath, title_hint) if x]).lower()
+	except Exception:
+		raw = (path_or_name or '').lower()
+	title_s = ((title_hint or '') if isinstance(title_hint, str) else str(title_hint or '')).lower()
 	import re as _re
-	if _re.search(r'\bS\d{1,2}E\d{1,3}\b', s) or _re.search(r'\bE\d{1,3}\b', s):
+
+	if any(k in raw for k in ('doku', 'dokumentation', 'dokumentar', 'documentary')):
+		return "tv"
+	if any(k in raw for k in ('staffel', 'season', 'serie', 'episode', 'folge')):
+		return "tv"
+	if _re.search(r'\bS\d{1,2}E\d{1,3}\b', raw) or _re.search(r'\bE\d{1,3}\b', raw):
 		return "tv"
 	# Episoden-/Teil-Nummern in Aufnahmenamen ("1. ...", "Teil 2")
-	if _re.search(r'\b(teil|part)\s*\d+\b', s) or _re.search(r'\b\d+\.\s+[^\d/]', s):
+	if _re.search(r'\b(teil|part)\s*\d+\b', raw) or _re.search(r'\b\d+\.\s+[^\d/]', raw):
 		return "tv"
+
+	# Strong movie-channel override for recordings like:
+	# 20251226 1322 - Sky Cinema Action HD - Rambo.ts
+	channel_hint = _extract_recording_channel(fullpath or path_or_name)
+	if _is_movie_channel_hint(channel_hint):
+		return "movie"
+
 	# Aufnahme-Schema: Datum - Sender - Serie - Episode
-	if s.count(' - ') >= 3 or s.replace('_', ' - ').count(' - ') >= 3:
+	if raw.count(' - ') >= 3 or raw.replace('_', ' - ').count(' - ') >= 3:
 		return "tv"
+
+	# If title itself clearly looks episodic, keep TV.
+	if title_s and (' - ' in title_s or ' – ' in title_s):
+		if any(k in title_s for k in ('staffel', 'season', 'serie', 'episode', 'folge')):
+			return "tv"
+
 	return "movie"
 
 
@@ -2611,7 +2520,7 @@ class MovieScannerMain(Screen):
 				break
 			try:
 				title_guess, year = clean_title_from_filename(os.path.basename(fp), fullpath=fp)
-				mtype = detect_media_type(fp + " " + os.path.dirname(fp))
+				mtype = detect_media_type(fp + " " + os.path.dirname(fp), title_hint=title_guess, fullpath=fp)
 				title_key = title_guess
 				title_search = title_guess
 				if mtype == 'tv':
@@ -4753,7 +4662,7 @@ class MovieScannerCleanupAdvanced(Screen, ConfigListScreen):
 					fp = os.path.join(root, fn)
 					try:
 						title_guess, _year = clean_title_from_filename(fn, fullpath=fp)
-						mtype = detect_media_type(fp + ' ' + os.path.dirname(fp))
+						mtype = detect_media_type(fp + ' ' + os.path.dirname(fp), title_hint=title_guess, fullpath=fp)
 						title_key = title_guess
 						if mtype == 'tv':
 							_norm = _normalize_emc_title(title_guess, os.path.splitext(os.path.basename(fp))[0])
