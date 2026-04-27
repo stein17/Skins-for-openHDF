@@ -494,23 +494,25 @@
 	</screen>
 	<!-- HDF HotkeySetup HD  -->
 	<screen name="HotkeySetup" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Tasteneinstellungen">
-		<eLabel text="Hotkey Settings" position="27,75" foregroundColor="gradient_foreground" size="900,45" valign="bottom" font="Gradient_Font; 33" backgroundColor="gradient_background" transparent="1" />
-		<widget name="list" position="27,129" size="900,405" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__900.png" />
-		<ePixmap position="10,540" size="1080,2" zPosition="10" pixmap="gfx/current/bg__1080x2_Line_Menu.png" alphatest="blend" />
-		<widget name="choosen" position="27,549" size="900,270" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__900.png" />
-		<widget name="description" position="945,129" size="480,435" font="Gradient_Font;30" backgroundColor="gradient_background" halign="center" foregroundColor="gradient_foreground" valign="center" transparent="1" />
+		<!-- <eLabel text="Hotkey Settings" position="720,8" foregroundColor="gradient_foreground" size="400,40" valign="bottom" font="Gradient_Font; 32" backgroundColor="gradient_background" transparent="1" /> -->
+		<widget name="list" position="20,80" size="700,600" itemHeight="40" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__900.png" />
+		<ePixmap position="10,685" size="1420,2" zPosition="10" pixmap="gfx/current/bg__1420x2_Line_Setup.png" alphatest="blend" />
+		<widget name="choosen" position="730,80" size="700,600" itemHeight="40" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__900.png" />
+		<widget name="description" position="100,690" size="1300,135" font="Gradient_Font;30" backgroundColor="gradient_background" halign="left" foregroundColor="gradient_foreground" valign="center" transparent="1" />
 		<panel name="Template_Text_Buttons_O_E" />
 		<panel name="Setup_Title_TopPanel" />
+		<panel name="Template_Setup_Button_Automatic_all" />
 	</screen>
 	<!-- HDF ButtonSetupSelect HD  -->
 	<screen name="ButtonSetupSelect" position="center,center" size="1450,900" backgroundColor="transparent" flags="wfNoBorder" title="Tasteneinstellungen">
-		<eLabel text="Hotkey Setup" position="27,75" foregroundColor="gradient_foreground" size="900,45" valign="bottom" font="Gradient_Font; 33" backgroundColor="gradient_background" transparent="1" />
-		<widget name="list" position="27,129" size="900,405" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__900.png" />
-		<ePixmap position="10,540" size="1080,2" zPosition="10" pixmap="gfx/current/bg__1080x2_Line_Menu.png" alphatest="blend" />
-		<widget name="choosen" position="27,549" size="900,270" itemHeight="45" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__900.png" />
-		<widget name="description" position="945,129" size="480,435" font="Gradient_Font;30" backgroundColor="gradient_background" halign="center" foregroundColor="gradient_foreground" valign="center" transparent="1" />
+		<!-- <eLabel text="Hotkey Setup" position="720,8" foregroundColor="gradient_foreground" size="400,40" valign="bottom" font="Gradient_Font; 32" backgroundColor="gradient_background" transparent="1" /> -->
+		<widget name="list" position="20,80" size="700,600" itemHeight="40" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__900.png" />
+		<ePixmap position="10,685" size="1420,2" zPosition="10" pixmap="gfx/current/bg__1420x2_Line_Setup.png" alphatest="blend" />
+		<widget name="choosen" position="730,80" size="700,600" itemHeight="40" font="Gradient_Font;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="gradient_background" foregroundColor="gradient_foreground" foregroundColorSelected="gradient_foreground_selection" transparent="1" selectionPixmap="gfx/current/sel__900.png" />
+		<widget name="description" position="100,690" size="1300,135" font="Gradient_Font;30" backgroundColor="gradient_background" halign="left" foregroundColor="gradient_foreground" valign="center" transparent="1" />
 		<panel name="Template_Text_Buttons_O_E" />
 		<panel name="Setup_Title_TopPanel" />
+		<panel name="Template_Setup_Button_Automatic_all" />
 	</screen>
 	<!-- ********** MultiBoot ********** -->
 	<!-- Multiboot Selector -->
